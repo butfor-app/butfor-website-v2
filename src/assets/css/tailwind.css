@@ -1,0 +1,16 @@
+@import "./main.css";
+@import "./fonts.css";
+
+@layer base {
+  .h1,
+  h1 {
+    @apply text-primary font-bold text-2xl;
+  }
+  .h3,
+  h3 {
+    @apply text-primary font-medium text-base;
+  }
+  .btn {
+    @apply bg-primary text-white font-medium text-base rounded-4xl hover:bg-primarydark;
+  }
+}
