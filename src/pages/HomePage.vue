@@ -28,17 +28,38 @@
         <button>Book Demo</button>
       </div>
     </div>
+    <div id="heading">
+      <div id="bg">
+        <img src="@/assets/images/laptop.png" alt="" />
+      </div>
+      <div id="gradient"></div>
+      <div id="content">
+        <div id="heading">SIMPLIFYING COMPLEX CLAIMS</div>
+        <div id="subheading">
+          Tueri automates business interruption insurance claims.<br />
+          Calculate your losses & build comprehensive reports in a fraction of
+          the time.
+        </div>
+        <div id="buttons">
+          <button id="productVid">See Product Video</button>
+          <button id="demo">Book Demo</button>
+        </div>
+      </div>
+    </div>
+    <div id="clients">
+      <div id="heading">Solving compensation for leading brands</div>
+      <CompaniesSlider />
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "HomePage",
-};
+<script setup>
+import CompaniesSlider from "@/components/CompaniesSlider.vue";
 </script>
 
 <style lang="postcss" scoped>
 #app_wrapper {
+  @apply w-[1440px] mx-auto;
   > #navbar {
     > #navbar_top {
       @apply px-18 h-18 bg-primaryDark;
@@ -87,6 +108,51 @@ export default {
         @apply h-10 bg-primary text-white text-sm font-medium px-4 rounded-md;
         @apply cursor-pointer;
       }
+    }
+  }
+  > #heading {
+    @apply relative w-full h-[690px] pt-56 px-[360px];
+    > #bg {
+      @apply h-96 -z-20 bg-primary absolute top-0 left-0;
+      > img {
+        @apply h-[690px];
+      }
+    }
+    > #gradient {
+      @apply h-full w-full -z-10 absolute top-0 left-0;
+      @apply bg-gradient-to-t from-primary to-primaryDark opacity-60;
+    }
+    > #content {
+      @apply w-full h-full;
+      @apply flex items-center justify-center flex-col;
+      > #heading {
+        @apply text-[46px] text-center font-extrabold text-white;
+      }
+      > #subheading {
+        @apply text-white text-center;
+        @apply px-2 mt-6 mb-9;
+        @apply font-medium;
+      }
+      > #buttons {
+        @apply flex items-center gap-x-8;
+
+        > button {
+          @apply h-11 w-[168px] font-medium rounded-full;
+          @apply cursor-pointer px-6 py-2;
+        }
+        > #productVid {
+          @apply bg-primary text-white;
+        }
+        > #demo {
+          @apply bg-white text-primary;
+        }
+      }
+    }
+  }
+  > #clients {
+    @apply h-[260px] py-16;
+    > #heading {
+      @apply text-black text-center font-semibold text-2xl mb-9;
     }
   }
 }
