@@ -71,7 +71,6 @@
     </div>
     <div id="features">
       <div id="header">BUTFOR HELPS YOU</div>
-      <!-- :key="feature.heading" -->
       <FeatureRow
         v-for="feature in features"
         :heading="feature.heading"
@@ -79,7 +78,27 @@
         :icon="feature.icon"
         :rtl="feature.rtl"
       />
+      <h1>end</h1>
     </div>
+    <div id="about">
+      <div id="bg">
+        <img src="@/assets/images/about-bg.png" alt="" />
+      </div>
+      <div id="gradient"></div>
+      <div id="content">
+        <div id="heading">ABOUT BUTFOR</div>
+        <div id="desc">
+          Our founder has worked in the world of BI claims for his entire career
+          and has spent numerous long nights and countless hours organizing,
+          reviewing, and calculating data, fixing mistakes and thinking through
+          different scenarios. He felt like there had to be a more efficient way
+          to do this. With recent innovations in technology, there was an
+          opportunity to integrate computer learning into a previously manual
+          process. We were able to marry the two worlds with Butfor
+        </div>
+      </div>
+    </div>
+    <h1>Should be outside features</h1>
   </div>
 </template>
 
@@ -250,9 +269,33 @@ const features = [
     }
   }
   > #features {
-    @apply h-[260px] py-16 flex flex-col pl-18 pr-44;
+    @apply py-16 flex flex-col pl-18 pr-44;
     > #header {
       @apply text-black text-center font-extrabold text-[46px] mb-9;
+    }
+  }
+  > #about {
+    @apply h-[634px] w-full relative pt-56 px-48;
+    > #bg {
+      @apply w-full -z-20 absolute top-0 left-0;
+      > img {
+        /* @apply ; */
+      }
+    }
+    > #gradient {
+      @apply h-full w-full -z-10 absolute top-0 left-0;
+      @apply bg-primary opacity-70;
+      /* @apply bg-gradient-to-t from-primary to-primaryDark ; */
+    }
+    > #content {
+      > #heading {
+        @apply text-[46px] text-center font-extrabold text-white;
+      }
+      > #desc {
+        @apply text-white text-xl text-center font-aneklatin;
+        @apply px-2 mt-6 mb-9;
+        @apply font-medium;
+      }
     }
   }
 }
