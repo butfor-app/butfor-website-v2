@@ -71,6 +71,11 @@
     </div>
     <div id="features">
       <div id="header">BUTFOR HELPS YOU</div>
+      <FeatureRow
+        :heading="'Automate file transfers and retrieval'"
+        :desc="'File acquisition process\: It eliminates the amount of work client is required and time client needs to spend pulling data and spend on the case. Making clients time more efficient. Saving client time.'"
+        :icon="'help-1'"
+      />
     </div>
   </div>
 </template>
@@ -78,6 +83,7 @@
 <script setup>
 import CompaniesSlider from "@/components/CompaniesSlider.vue";
 import SolutionsSlider from "@/components/SolutionsSlider.vue";
+import FeatureRow from "@/components/FeatureRow.vue";
 </script>
 
 <style lang="postcss" scoped>
@@ -196,9 +202,9 @@ import SolutionsSlider from "@/components/SolutionsSlider.vue";
     }
   }
   > #features {
-    @apply h-[260px] py-16;
+    @apply h-[260px] py-16 flex flex-col;
     > #header {
-      @apply text-black text-center font-semibold text-2xl mb-9;
+      @apply text-black text-center font-extrabold text-[46px] mb-9;
     }
   }
 }
