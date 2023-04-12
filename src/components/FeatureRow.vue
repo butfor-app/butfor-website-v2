@@ -1,20 +1,21 @@
 <template>
   <div id="feature_wrapper">
-    <!-- <div id="icon">
-      <img :src="icon" alt="" />
-    </div> -->
     <template v-if="rtl">
       <div id="content">
         <div id="heading">{{ heading }}</div>
         <div id="desc">{{ desc }}</div>
+        <div id="shadow_box"></div>
       </div>
       <img :src="image" alt="" />
     </template>
-    <!-- <template v-else>
-      <div>{{ icon }}</div>
-      <div id="heading">{{ heading }}</div>
-      <div id="desc">{{ desc }}</div>
-    </template> -->
+    <template v-else>
+      <img :src="image" alt="" />
+      <div id="content">
+        <div id="heading">{{ heading }}</div>
+        <div id="desc">{{ desc }}</div>
+        <div id="shadow_box"></div>
+      </div>
+    </template>
   </div>
 </template>
 <script setup>
@@ -34,7 +35,7 @@ const props = defineProps({
   },
   rtl: {
     type: Boolean,
-    default: true,
+    required: true,
   },
 });
 const image = require(`@/assets/images/${props.icon}.svg`);
@@ -42,16 +43,19 @@ const image = require(`@/assets/images/${props.icon}.svg`);
 <style lang="postcss" scoped>
 #feature_wrapper {
   @apply flex justify-between items-center;
-  @apply gap-x-4;
+  @apply gap-x-4 my-18;
 
   > #content {
-    @apply flex flex-col w-[687px];
+    @apply flex flex-col w-[687px] my-18;
 
     > #heading {
-      @apply text-4xl text-left font-bold;
+      @apply text-4xl text-left font-bold mb-4;
     }
     > #desc {
-      @apply text-xl text-left;
+      @apply text-xl font-medium font-aneklatin text-left text-primary;
+    }
+    > #shadow_box {
+      @apply w-[100px] h-1 bg-[#1245591A] rounded-full mt-6;
     }
   }
 }

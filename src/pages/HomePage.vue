@@ -71,10 +71,13 @@
     </div>
     <div id="features">
       <div id="header">BUTFOR HELPS YOU</div>
+      <!-- :key="feature.heading" -->
       <FeatureRow
-        :heading="'Automate file transfers and retrieval'"
-        :desc="'File acquisition process\: It eliminates the amount of work client is required and time client needs to spend pulling data and spend on the case. Making clients time more efficient. Saving client time.'"
-        :icon="'help-1'"
+        v-for="feature in features"
+        :heading="feature.heading"
+        :desc="feature.desc"
+        :icon="feature.icon"
+        :rtl="feature.rtl"
       />
     </div>
   </div>
@@ -84,6 +87,51 @@
 import CompaniesSlider from "@/components/CompaniesSlider.vue";
 import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import FeatureRow from "@/components/FeatureRow.vue";
+
+const features = [
+  {
+    heading: "Automate file transfers and retrieval",
+    desc: "File acquisition process: It eliminates the amount of work client is required and time client needs to spend pulling data and spend on the case. Making clients time more efficient. Saving client time.",
+    icon: "help-1",
+    rtl: true,
+  },
+  {
+    heading: "Save Time & Effort",
+    desc: "From file transfers to running advanced calculations, our tool automates the most tedious and time consuming aspects of the claims process.",
+    icon: "help-2",
+    rtl: false,
+  },
+  {
+    heading: "Minimize Human Error",
+    desc: "Claims traditionally require manual reviews of thousands of rows of data and a significant number of complex calculations with mistakes being inevitable; we solve for this using machine learning and software automation.",
+    icon: "help-3",
+    rtl: true,
+  },
+  {
+    heading: "Run Multiple Scenarios",
+    desc: "Our tool can find data trends and process various claim scenarios, presenting the best possible outcome in a more efficient manner.",
+    icon: "help-4",
+    rtl: false,
+  },
+  {
+    heading: "AutomatE Claims Approval Process",
+    desc: "Centralize claim data & build custom approval chains to assist in the submission process.",
+    icon: "help-5",
+    rtl: true,
+  },
+  {
+    heading: "Reducing Discrepancy Between Parties",
+    desc: "Our tool can find data trends and process various claim scenarios, presenting the best possible outcome in a more efficient manner.",
+    icon: "help-6",
+    rtl: false,
+  },
+  {
+    heading: "Security & Centralizing of Data",
+    desc: "Data is secure on our servers, not living on desktops and in insecure places like excel.",
+    icon: "help-7",
+    rtl: true,
+  },
+];
 </script>
 
 <style lang="postcss" scoped>
@@ -202,7 +250,7 @@ import FeatureRow from "@/components/FeatureRow.vue";
     }
   }
   > #features {
-    @apply h-[260px] py-16 flex flex-col;
+    @apply h-[260px] py-16 flex flex-col pl-18 pr-44;
     > #header {
       @apply text-black text-center font-extrabold text-[46px] mb-9;
     }
