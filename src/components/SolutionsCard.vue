@@ -14,16 +14,16 @@
   @apply h-[276px] w-[414px] bg-primary px-7 pt-10 pb-7;
   @apply flex flex-col items-center justify-center gap-y-4;
   @apply rounded-2xl;
-  @apply shadow-lg text-white;
+  @apply shadow-lg text-white font-aneklatin;
   > #icon {
     @apply text-primaryLight;
     /* @apply bg-red-900; */
   }
   > #heading {
-    @apply text-2xl font-medium;
+    @apply text-[32px] font-bold;
   }
   > #desc {
-    @apply text-sm text-center;
+    @apply text-xl font-medium text-center;
   }
 }
 </style>

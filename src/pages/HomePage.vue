@@ -215,7 +215,7 @@ const features = [
 
         > button {
           @apply h-11 w-[168px] font-medium rounded-full;
-          @apply cursor-pointer px-6 py-2;
+          @apply font-sourcesanspro cursor-pointer px-6 py-2;
         }
         > #productVid {
           @apply bg-primary text-white;
