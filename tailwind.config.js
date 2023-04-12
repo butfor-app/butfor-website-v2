@@ -13,7 +13,8 @@ module.exports = {
         18: "75px",
       },
       fontFamily: {
-        sans: ["Poppins"],
+        poppins: ["Poppins"],
+        aneklatin: ["AnekLatin"],
       },
     },
   },

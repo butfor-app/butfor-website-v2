@@ -3,6 +3,9 @@
 @import "vue3-carousel/dist/carousel.css";
 
 @layer base {
+  html{
+    @apply font-poppins;
+  }
   .h1,
   h1 {
     @apply text-primary font-bold text-2xl;

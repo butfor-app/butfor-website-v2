@@ -38,4 +38,46 @@
     font-display: swap;
     src: url("../fonts/Poppins-Bold.ttf");
   }
+  
+  /* new fonts */
+
+  @font-face {
+    font-family: "AnekLatin";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("../fonts/AnekLatin-Light.ttf");
+  }
+
+  @font-face {
+    font-family: "AnekLatin";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/AnekLatin-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "AnekLatin";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../fonts/AnekLatin-Medium.ttf");
+  }
+
+  @font-face {
+    font-family: "AnekLatin";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../fonts/AnekLatin-SemiBold.ttf");
+  }
+
+  @font-face {
+    font-family: "AnekLatin";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/AnekLatin-Bold.ttf");
+  }
 }
