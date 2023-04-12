@@ -8,9 +8,9 @@
     "dev": "vue-cli-service serve"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.13",
     "vue": "^3.2.13",
     "vue3-carousel": "^0.3.0"
-
   },
   "devDependencies": {
     "@vue/cli-service": "~5.0.0",

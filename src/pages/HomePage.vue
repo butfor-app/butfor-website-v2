@@ -97,6 +97,15 @@
         </div>
       </div>
     </div>
+    <div id="faq">
+      <div id="heading">FAQS</div>
+      <div id="faq_wrapper">
+        <FaqDisclosure />
+      </div>
+      <div id="btn">
+        <button>View All</button>
+      </div>
+    </div>
     <div id="footer">
       <div id="top">
         <div id="left">
@@ -155,7 +164,7 @@
 import CompaniesSlider from "@/components/CompaniesSlider.vue";
 import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import FeatureRow from "@/components/FeatureRow.vue";
-
+import FaqDisclosure from "@/components/FaqDisclosure.vue";
 const features = [
   {
     heading: "Automate file transfers and retrieval",
@@ -344,6 +353,21 @@ const features = [
         @apply text-white text-xl text-center font-aneklatin;
         @apply px-2 mt-6 mb-9;
         @apply font-medium;
+      }
+    }
+  }
+  > #faq {
+    > #heading {
+      @apply text-center  font-extrabold text-[46px] mb-16;
+    }
+    > #faq_wrapper {
+      @apply px-18;
+    }
+    >#btn{
+      @apply w-full flex items-center justify-center mt-9 mb-16;
+      >button{
+        @apply text-primary text-base font-medium h-11 w-[168px] rounded-full border border-primary;
+        @apply cursor-pointer ;
       }
     }
   }
