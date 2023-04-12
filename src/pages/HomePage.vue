@@ -48,13 +48,36 @@
     </div>
     <div id="clients">
       <div id="heading">Solving compensation for leading brands</div>
+
       <CompaniesSlider />
+    </div>
+    <div id="solutions">
+      <div id="heading">OUR SOLUTIONS</div>
+      <div class="solution_category">
+        <div id="heading">BY COMPANY TYPE</div>
+        <SolutionsSlider />
+        <button>View All</button>
+      </div>
+      <div class="solution_category">
+        <div id="heading">BY ROLE</div>
+        <SolutionsSlider />
+        <button>View All</button>
+      </div>
+      <div class="solution_category">
+        <div id="heading">BY CLAIM TYPE</div>
+        <SolutionsSlider />
+        <button>View All</button>
+      </div>
+    </div>
+    <div id="features">
+      <div id="header">BUTFOR HELPS YOU</div>
     </div>
   </div>
 </template>
 
 <script setup>
 import CompaniesSlider from "@/components/CompaniesSlider.vue";
+import SolutionsSlider from "@/components/SolutionsSlider.vue";
 </script>
 
 <style lang="postcss" scoped>
@@ -152,6 +175,29 @@ import CompaniesSlider from "@/components/CompaniesSlider.vue";
   > #clients {
     @apply h-[260px] py-16;
     > #heading {
+      @apply text-black text-center font-semibold text-2xl mb-9;
+    }
+  }
+  > #solutions {
+    @apply overflow-x-hidden flex flex-col items-center justify-center bg-[#5983921A];
+    @apply pt-16;
+    > #heading {
+      @apply text-[46px] font-extrabold text-center text-black mb-9;
+    }
+    > .solution_category {
+      @apply flex flex-col justify-center items-center text-black text-center font-semibold text-2xl mb-14;
+      > #heading {
+        @apply text-2xl font-semibold mb-12;
+      }
+      > button {
+        @apply text-primary text-base font-medium h-11 w-[168px] rounded-full border border-primary;
+        @apply cursor-pointer mt-9;
+      }
+    }
+  }
+  > #features {
+    @apply h-[260px] py-16;
+    > #header {
       @apply text-black text-center font-semibold text-2xl mb-9;
     }
   }

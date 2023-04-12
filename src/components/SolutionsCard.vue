@@ -1,0 +1,29 @@
+<template>
+  <div id="solution_card">
+    <div id="icon">icon</div>
+    <div id="heading">Heading</div>
+    <div id="desc">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard.
+    </div>
+  </div>
+</template>
+<script></script>
+<style lang="postcss" scoped>
+#solution_card {
+  @apply h-[276px] w-[414px] bg-primary px-7 pt-10 pb-7;
+  @apply flex flex-col items-center justify-center gap-y-4;
+  @apply rounded-2xl;
+  @apply shadow-lg text-white;
+  > #icon {
+    @apply text-primaryLight;
+    /* @apply bg-red-900; */
+  }
+  > #heading {
+    @apply text-2xl font-medium;
+  }
+  > #desc {
+    @apply text-sm text-center;
+  }
+}
+</style>

@@ -1,5 +1,6 @@
 @import "./main.css";
 @import "./fonts.css";
+@import "vue3-carousel/dist/carousel.css";
 
 @layer base {
   .h1,
