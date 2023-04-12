@@ -39,7 +39,7 @@
     src: url("../fonts/Poppins-Bold.ttf");
   }
   
-  /* new fonts */
+  /* AnekLatin */
 
   @font-face {
     font-family: "AnekLatin";
@@ -79,5 +79,38 @@
     font-weight: 700;
     font-display: swap;
     src: url("../fonts/AnekLatin-Bold.ttf");
+  }
+  /* SourceSansPro */
+
+  @font-face {
+    font-family: "SourceSansPro";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("../fonts/SourceSansPro-Light.ttf");
+  }
+
+  @font-face {
+    font-family: "SourceSansPro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/SourceSansPro-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "SourceSansPro";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../fonts/SourceSansPro-SemiBold.ttf");
+  }
+
+  @font-face {
+    font-family: "SourceSansPro";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/SourceSansPro-Bold.ttf");
   }
 }

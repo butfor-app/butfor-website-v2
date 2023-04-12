@@ -15,6 +15,7 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins"],
         aneklatin: ["AnekLatin"],
+        sourcesanspro: ["Source Sans Pro"],
       },
     },
   },
