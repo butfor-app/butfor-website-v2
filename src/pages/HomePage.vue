@@ -1,33 +1,6 @@
 <template>
   <div id="app_wrapper">
-    <div id="navbar">
-      <div id="navbar_top">
-        <div>
-          <button>New</button>
-          <div id="msg">
-            Automate your California Pay Report with Pequity by March 27 >
-          </div>
-        </div>
-        <div>
-          <button id="contact">Contact Sales</button>
-          <button id="login">Login</button>
-        </div>
-      </div>
-      <div id="navbar_bottom">
-        <div id="left">
-          <img id="logo" src="@/assets/BFlogo.png" alt="logo" />
-          <div id="popover_group_wrapper">
-            <div>Solutions <img src="@/assets/icons/arrow.svg" alt="" /></div>
-            <div>Product <img src="@/assets/icons/arrow.svg" alt="" /></div>
-            <div>Resources <img src="@/assets/icons/arrow.svg" alt="" /></div>
-            <div>
-              Integrations <img src="@/assets/icons/arrow.svg" alt="" />
-            </div>
-          </div>
-        </div>
-        <button>Book Demo</button>
-      </div>
-    </div>
+    <NavBar />
     <div id="heading">
       <div id="bg">
         <img src="@/assets/images/laptop.png" alt="" />
@@ -165,6 +138,7 @@ import CompaniesSlider from "@/components/CompaniesSlider.vue";
 import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import FeatureRow from "@/components/FeatureRow.vue";
 import FaqDisclosure from "@/components/FaqDisclosure.vue";
+import NavBar from "@/components/NavBar.vue";
 const features = [
   {
     heading: "Automate file transfers and retrieval",
@@ -214,7 +188,7 @@ const features = [
 <style lang="postcss" scoped>
 #app_wrapper {
   @apply w-[1440px] mx-auto;
-  > #navbar {
+  /* > #navbar {
     > #navbar_top {
       @apply px-18 h-18 bg-primaryDark;
       @apply flex items-center justify-between;
@@ -263,7 +237,7 @@ const features = [
         @apply cursor-pointer;
       }
     }
-  }
+  } */
   > #heading {
     @apply relative w-full h-[690px] pt-56 px-[360px];
     > #bg {
@@ -363,11 +337,11 @@ const features = [
     > #faq_wrapper {
       @apply px-18;
     }
-    >#btn{
+    > #btn {
       @apply w-full flex items-center justify-center mt-9 mb-16;
-      >button{
+      > button {
         @apply text-primary text-base font-medium h-11 w-[168px] rounded-full border border-primary;
-        @apply cursor-pointer ;
+        @apply cursor-pointer;
       }
     }
   }

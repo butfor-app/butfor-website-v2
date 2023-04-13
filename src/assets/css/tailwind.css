@@ -15,6 +15,6 @@
     @apply text-primary font-medium text-base;
   }
   .btn {
-    @apply bg-primary text-white font-medium text-base rounded-3xl hover:bg-primaryDark;
+    @apply focus:outline-none;
   }
 }
