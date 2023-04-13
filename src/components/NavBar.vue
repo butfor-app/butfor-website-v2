@@ -319,7 +319,7 @@
               </MenuItems>
             </transition>
           </Menu>
-          <div>Integrations</div>
+          <a href="#">Integrations</a>
         </div>
       </div>
       <button>Book Demo</button>
@@ -365,6 +365,9 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
       }
       > #popover_group_wrapper {
         @apply flex items-center gap-x-12;
+        > a {
+          @apply text-primary font-medium;
+        }
         > div {
           > button {
             @apply text-primary font-medium;
