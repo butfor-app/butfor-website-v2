@@ -165,7 +165,7 @@ const features = [
     rtl: false,
   },
   {
-    heading: "AutomatE Claims Approval Process",
+    heading: "Automate Claims Approval Process",
     desc: "Centralize claim data & build custom approval chains to assist in the submission process.",
     icon: "help-5",
     rtl: true,
