@@ -9,6 +9,20 @@
     </div>
     <button>Learn More</button>
   </div>
+  <div id="trial">
+    <img src="@/assets/images/trial.png" alt="" />
+    <div id="wrapper">
+      <div id="header">Try Butfor For free</div>
+      <div id="desc">
+        Learn the platform in less than an hour.<br />Become a power user in
+        less than a day.
+      </div>
+      <div id="input_wrapper">
+        <input type="text" placeholder="Enter your email" />
+        <button>Start Trial</button>
+      </div>
+    </div>
+  </div>
   <Footer />
 </template>
 <script setup>
@@ -35,6 +49,34 @@ import Footer from "../components/Footer.vue";
   > button {
     @apply w-44 h-11 bg-white rounded-full;
     @apply text-primary  font-semibold font-aneklatin;
+  }
+}
+
+#trial {
+  @apply h-[520px] px-18 py-32 relative bg-[#EFF3F5];
+  > img {
+    @apply absolute top-16 right-18;
+  }
+  > #wrapper {
+    @apply w-1/2;
+    > #header {
+      @apply mb-9 text-[46px] font-bold;
+    }
+    > #desc {
+      @apply mb-11 text-[28px] text-[#6D998F];
+    }
+    > #input_wrapper {
+      @apply flex justify-start items-center;
+      > input {
+        @apply w-[500px] h-14 px-4 rounded-l-xl;
+        @apply border-y-2 border-l-2 border-[#D9D9D9] text-[#D9D9D9];
+        @apply font-medium font-aneklatin;
+      }
+      > button {
+        @apply w-24 h-14 bg-[#6D998F] rounded-r-xl;
+        @apply text-white  font-semibold font-aneklatin;
+      }
+    }
   }
 }
 </style>
