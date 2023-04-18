@@ -37,7 +37,8 @@ const props = defineProps({
     required: true,
   },
 });
-const image = new URL(`/src/assets/images/${props.icon}.svg`, import.meta.url).href;
+const image = new URL(`/src/assets/images/${props.icon}.svg`, import.meta.url)
+  .href;
 </script>
 <style lang="postcss" scoped>
 #feature_wrapper {
