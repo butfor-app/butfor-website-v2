@@ -9,6 +9,13 @@
     </div>
     <button>Learn More</button>
   </div>
+  <div id="possibilities">
+    <div id="header">What you can do with ButFor</div>
+    <img src="@/assets/images/possibilities.png" alt="" />
+    <!-- <div id="wrapper">
+      <img src="@/assets/images/dotted_circle.png" alt="" id="circle" />
+    </div> -->
+  </div>
   <div id="trial">
     <img src="@/assets/images/trial.png" alt="" />
     <div id="wrapper">
@@ -51,7 +58,19 @@ import Footer from "../components/Footer.vue";
     @apply text-primary  font-semibold font-aneklatin;
   }
 }
+#possibilities {
+  @apply p-10 flex flex-col justify-center items-center;
 
+  /* #wrapper {
+    @apply w-[882px] h-[882px] relative;
+    #circle {
+      @apply absolute top-0 left-1/2 -z-10;
+    }
+  } */
+  #header {
+    @apply text-[46px] mb-10 pb-10 font-bold text-center;
+  }
+}
 #trial {
   @apply h-[520px] px-18 py-32 relative bg-[#EFF3F5];
   > img {
