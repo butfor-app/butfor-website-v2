@@ -16,6 +16,60 @@
       <img src="@/assets/images/dotted_circle.png" alt="" id="circle" />
     </div> -->
   </div>
+  <div id="use_cases">
+    <div id="heading">Customer stories and use cases</div>
+    <div id="desc">
+      Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry.<br />
+      Lorem Ipsum has been the industry's standard dummy.
+    </div>
+    <div id="wrapper">
+      <div class="card">
+        <img src="@/assets/images/usecase_placeholder.png" alt="" />
+        <div id="header">
+          Lorem Ipsum is simply dummy text of the printing industry.
+        </div>
+        <div id="desc">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since 1500s.
+        </div>
+      </div>
+      <div class="card">
+        <img src="@/assets/images/usecase_placeholder.png" alt="" />
+        <div id="header">
+          Lorem Ipsum is simply dummy text of the printing industry.
+        </div>
+        <div id="desc">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since 1500s.
+        </div>
+      </div>
+      <div class="card">
+        <img src="@/assets/images/usecase_placeholder.png" alt="" />
+        <div id="header">
+          Lorem Ipsum is simply dummy text of the printing industry.
+        </div>
+        <div id="desc">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since 1500s.
+        </div>
+      </div>
+      <div class="card">
+        <img src="@/assets/images/usecase_placeholder.png" alt="" />
+        <div id="header">
+          Lorem Ipsum is simply dummy text of the printing industry.
+        </div>
+        <div id="desc">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since 1500s.
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="trial">
     <img src="@/assets/images/trial.png" alt="" />
     <div id="wrapper">
@@ -69,6 +123,31 @@ import Footer from "../components/Footer.vue";
   } */
   #header {
     @apply text-[46px] mb-10 pb-10 font-bold text-center;
+  }
+}
+#use_cases {
+  @apply flex flex-col items-center p-24;
+  > #heading {
+    @apply mb-9 text-[46px] font-bold text-center;
+  }
+  > #desc {
+    @apply mb-16 text-[28px] text-[#6D998F];
+  }
+  > #wrapper {
+    @apply w-full flex gap-x-10  justify-center items-center;
+
+    .card {
+      @apply w-72 text-center flex flex-col justify-center items-center font-aneklatin;
+      > img {
+        @apply w-full mb-6;
+      }
+      > #header {
+        @apply mb-4 text-[28px]  font-semibold;
+      }
+      > #desc {
+        @apply text-xl text-[#00000080];
+      }
+    }
   }
 }
 #trial {
