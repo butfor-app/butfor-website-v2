@@ -11,11 +11,11 @@
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
 const logos = [
-  require("@/assets/logos/dxc_logo.svg"),
-  require("@/assets/logos/symbility_logo.svg"),
-  require("@/assets/logos/guidewire_logo.svg"),
-  require("@/assets/logos/appian_logo.svg"),
-  require("@/assets/logos/insurity_logo.svg"),
+  new URL("@/assets/logos/dxc_logo.svg", import.meta.url).href,
+  new URL("@/assets/logos/symbility_logo.svg", import.meta.url).href,
+  new URL("@/assets/logos/guidewire_logo.svg", import.meta.url).href,
+  new URL("@/assets/logos/appian_logo.svg", import.meta.url).href,
+  new URL("@/assets/logos/insurity_logo.svg", import.meta.url).href,
 ];
 </script>
 <style lang="postcss" scoped>
