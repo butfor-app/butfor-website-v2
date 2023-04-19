@@ -9,6 +9,45 @@
     </div>
     <button>Learn More</button>
   </div>
+  <div id="features">
+    <div id="heading">
+      Over 80% of midsize businesses that start<br />with BUTFOR stick around
+      for 4 or more years
+    </div>
+    <div id="desc">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      <br />Lorem Ipsum has been the industry's standard dummy.
+    </div>
+    <div id="wrapper">
+      <div id="card">
+        <img src="@/assets/images/feature_2.svg" alt="" />
+        <div id="heading">Serve more <br />customers</div>
+        <div id="desc">
+          By reducing time spent on manual labor and reducing the corresponding
+          fees, users are able to take on more claims at a greater benefit to
+          their client.
+        </div>
+      </div>
+      <div id="card">
+        <img src="@/assets/images/feature_1.svg" alt="" />
+        <div id="heading">Reduce email <br />volume by 50%</div>
+        <div id="desc">
+          Our ERP integration tool minimizes wasteful back and forth with the
+          client and lessens the time and effort placed on the client for data
+          retrieval.
+        </div>
+      </div>
+      <div id="card">
+        <img src="@/assets/images/feature_1.svg" alt="" />
+        <div id="heading">Get started in <br />an hour</div>
+        <div id="desc">
+          We provide an centralized system that allows the user to organize and
+          manage multiple claims in once place with limited involvement from the
+          client.
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="possibilities">
     <div id="header">What you can do with ButFor</div>
     <img src="@/assets/images/possibilities.png" alt="" />
@@ -110,6 +149,30 @@ import Footer from "../components/Footer.vue";
   > button {
     @apply w-44 h-11 bg-white rounded-full;
     @apply text-primary  font-semibold font-aneklatin;
+  }
+}
+#features {
+  @apply px-18 py-10 text-center flex flex-col items-center;
+  > #heading {
+    @apply mb-9 text-[46px] font-bold;
+  }
+  > #desc {
+    @apply mb-16 text-[28px] text-[#6D998F];
+  }
+  > #wrapper {
+    @apply w-full flex gap-x-24  justify-center items-center;
+    > #card {
+      @apply w-72 text-center flex flex-col justify-center;
+      img {
+        @apply mb-9;
+      }
+      > #heading {
+        @apply mb-4 text-[28px] font-bold;
+      }
+      > #desc {
+        @apply text-[18px] text-[#6D998F];
+      }
+    }
   }
 }
 #possibilities {
