@@ -9,6 +9,56 @@
     </div>
     <button>Learn More</button>
   </div>
+  <div id="slider">
+    <div id="heading">THE FEATURES YOU NEED</div>
+    <div id="wrapper">
+      <Carousel
+        id="thumbnails"
+        :snapAlign="'center'"
+        :items-to-show="3"
+        :wrap-around="false"
+        v-model="currentSlide"
+        ref="thumbnail_carousel"
+      >
+        <!-- <template #slides="{ slideWidth }"> -->
+        <Slide
+          v-for="(tab, index) in featureSlider_tabs"
+          :key="index + 1"
+          :class="[currentSlide === index ? 'active_slide' : '']"
+        >
+          <button @click="currentSlide = index">
+            {{ tab }}
+          </button>
+        </Slide>
+        <!-- </template> -->
+      </Carousel>
+      <Carousel
+        id="gallery"
+        :transition="300"
+        :items-to-show="1"
+        :itemsToScroll="1"
+        :wrap-around="false"
+        :mouseDrag="false"
+        :touchDrag="false"
+        v-model="currentSlide"
+      >
+        <Slide v-for="(slide, index) in featureSlider_slides" :key="index + 1">
+          <!-- {{ slide }} -->
+          <div>
+            <div>
+              <div id="heading">
+                {{ slide.heading }}
+              </div>
+              <div id="desc">
+                {{ slide.desc }}
+              </div>
+            </div>
+            <img :src="slide.img" alt="" />
+          </div>
+        </Slide>
+      </Carousel>
+    </div>
+  </div>
   <div id="features">
     <div id="heading">
       Over 80% of midsize businesses that start<br />with BUTFOR stick around
@@ -128,6 +178,61 @@
 <script setup>
 import NavBar from "../components/NavBar.vue";
 import Footer from "../components/Footer.vue";
+import { Carousel, Pagination, Slide } from "vue3-carousel";
+import { onMounted, ref } from "vue";
+
+const currentSlide = ref(0);
+
+const slideTo = (val) => {
+  currentSlide.value = val;
+};
+const thumbnail_carousel = ref(null);
+// onMounted(() => {
+//   // thumbnail_carousel.value.data.slideWidth = 500;
+//   thumbnail_carousel.value.data.slideWidth.value = 500;
+//   console.log(thumbnail_carousel.value.data);
+//   console.log(thumbnail_carousel.value.data.slideWidth.value);
+//   // console.log(thumbnail_carousel.value.data.slideWidth);
+// });
+const featureSlider_tabs = [
+  "Customer & Claim Management",
+  "Reporting and Analytics",
+  "Approval Chains",
+  "Claims Customization",
+  "Find The Meaning Of Life",
+];
+const featureSlider_slides = [
+  {
+    heading:
+      "Butfor provides users with various tools to make the claims process more efficient",
+    desc: "From onboarding to claim submission and all the steps in between,  we provide our clients with the instruments they need for their unique claims process. ",
+    img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
+  },
+  {
+    heading:
+      "Butfor provides users with various tools to make the claims process more efficient",
+    desc: "From onboarding to claim submission and all the steps in between,  we provide our clients with the instruments they need for their unique claims process. ",
+    img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
+  },
+  {
+    heading:
+      "Butfor provides users with various tools to make the claims process more efficient",
+    desc: "From onboarding to claim submission and all the steps in between,  we provide our clients with the instruments they need for their unique claims process. ",
+    img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
+  },
+  {
+    heading:
+      "Butfor provides users with various tools to make the claims process more efficient",
+    desc: "From onboarding to claim submission and all the steps in between,  we provide our clients with the instruments they need for their unique claims process. ",
+    img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
+  },
+  {
+    heading:
+      "Butfor provides users with various tools to make the claims process more efficient",
+    desc: "From onboarding to claim submission and all the steps in between,  we provide our clients with the instruments they need for their unique claims process. ",
+    img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
+  },
+];
 </script>
 <style lang="postcss" scoped>
 #hero_section {
@@ -149,6 +254,71 @@ import Footer from "../components/Footer.vue";
   > button {
     @apply w-44 h-11 bg-white rounded-full;
     @apply text-primary  font-semibold font-aneklatin;
+  }
+}
+#slider {
+  @apply py-24;
+  > #heading {
+    @apply mb-16 text-[46px] font-bold text-center;
+  }
+  > #wrapper {
+    > #thumbnails {
+      @apply mb-10;
+      .carousel__viewport {
+        .carousel__track {
+          .carousel__slide {
+            @apply border-b-2 border-[#D9D9D9];
+            > button {
+              @apply flex items-center justify-center;
+              @apply w-full h-10 text-[#4C7281] text-2xl;
+            }
+          }
+          .active_slide {
+            @apply border-b-2 border-[#4C7281];
+            > button {
+              @apply text-[#6D998F]  bg-[#4C728105] font-semibold;
+            }
+          }
+          ..carousel__slide--active {
+          }
+          .carousel__slide--prev {
+          }
+          .carousel__slide--next {
+          }
+        }
+      }
+    }
+    > #gallery {
+      /* @apply px-18; */
+      .carousel__viewport {
+        .carousel__track {
+          .carousel__slide {
+            > div {
+              @apply flex items-center justify-center;
+              @apply w-full rounded-lg;
+              > div {
+                #heading {
+                  @apply mb-14 text-4xl font-bold;
+                }
+                #desc {
+                  @apply text-xl font-aneklatin font-medium text-[#4C7281]; 
+                }
+              }
+              img {
+                @apply w-1/2;
+              }
+            }
+          }
+          .carousel__slide--active {
+          }
+
+          .carousel__slide--prev {
+          }
+          .carousel__slide--next {
+          }
+        }
+      }
+    }
   }
 }
 #features {
