@@ -267,14 +267,14 @@ const featureSlider_slides = [
       .carousel__viewport {
         .carousel__track {
           .carousel__slide {
-            @apply border-b-2 border-[#D9D9D9];
+            @apply border-b-[1px] border-[#D9D9D9];
             > button {
               @apply flex items-center justify-center;
               @apply w-full h-10 text-[#4C7281] text-2xl;
             }
           }
           .active_slide {
-            @apply border-b-2 border-[#4C7281];
+            @apply border-b-2 border-[#6D998F];
             > button {
               @apply text-[#6D998F]  bg-[#4C728105] font-semibold;
             }
@@ -289,23 +289,23 @@ const featureSlider_slides = [
       }
     }
     > #gallery {
-      /* @apply px-18; */
       .carousel__viewport {
         .carousel__track {
           .carousel__slide {
             > div {
-              @apply flex items-center justify-center;
-              @apply w-full rounded-lg;
+              @apply flex items-center justify-between;
+              @apply w-full rounded-lg text-left;
               > div {
+                @apply w-1/2;
                 #heading {
                   @apply mb-14 text-4xl font-bold;
                 }
                 #desc {
-                  @apply text-xl font-aneklatin font-medium text-[#4C7281]; 
+                  @apply text-xl font-aneklatin font-medium text-[#4C7281];
                 }
               }
               img {
-                @apply w-1/2;
+                @apply w-[553px] h-[530px];
               }
             }
           }
