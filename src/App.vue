@@ -9,6 +9,6 @@ import { RouterLink, RouterView } from "vue-router";
 <style>
 #app {
   @apply m-0 p-0;
-  @apply w-[1440px] mx-auto;
+  /* @apply w-[1440px] mx-auto; */
 }
 </style>

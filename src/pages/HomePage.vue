@@ -2,10 +2,6 @@
   <div id="app_wrapper">
     <NavBar />
     <div id="heading">
-      <div id="bg">
-        <img src="@/assets/images/laptop.png" alt="" />
-      </div>
-      <div id="gradient"></div>
       <div id="content">
         <div id="heading">SIMPLIFYING COMPLEX CLAIMS</div>
         <div id="subheading">
@@ -79,6 +75,7 @@
         <button>View All</button>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -88,6 +85,7 @@ import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import FeatureRow from "@/components/FeatureRow.vue";
 import FaqDisclosure from "@/components/FaqDisclosure.vue";
 import NavBar from "@/components/NavBar.vue";
+import Footer from "@/components/Footer.vue";
 const features = [
   {
     heading: "Automate file transfers and retrieval",
@@ -137,17 +135,8 @@ const features = [
 <style lang="postcss" scoped>
 #app_wrapper {
   > #heading {
-    @apply relative w-full h-[690px] pt-56 px-[360px];
-    > #bg {
-      @apply h-96 -z-20 bg-primary absolute top-0 left-0;
-      > img {
-        @apply h-[690px];
-      }
-    }
-    > #gradient {
-      @apply h-full w-full -z-10 absolute top-0 left-0;
-      @apply bg-gradient-to-t from-primary to-primaryDark opacity-60;
-    }
+    @apply w-full h-screen flex items-center justify-center;
+    @apply bg-[url('@/assets/images/hero-bg.png')] bg-no-repeat	bg-cover bg-center;
     > #content {
       @apply w-full h-full;
       @apply flex items-center justify-center flex-col;
@@ -199,7 +188,7 @@ const features = [
     }
   }
   > #features {
-    @apply py-16 flex flex-col pl-18 pr-44;
+    @apply py-16 flex flex-col items-center max-w-[1440px] mx-auto;
     > #header {
       @apply text-black text-center font-extrabold text-[46px] mb-9;
     }
