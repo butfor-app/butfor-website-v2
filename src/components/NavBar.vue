@@ -331,6 +331,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 </script>
 <style lang="postcss" scoped>
 #navbar {
+  @apply sticky top-0 z-50;
   > #navbar_top {
     @apply px-5 h-18 bg-primaryDark;
     @apply flex items-center justify-between;
@@ -363,7 +364,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
     }
   }
   > #navbar_bottom {
-    @apply h-24 px-5;
+    @apply h-24 px-5 bg-white;
     @apply flex items-center justify-between;
     @screen lg {
       @apply px-18;
