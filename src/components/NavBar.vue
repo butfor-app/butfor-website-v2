@@ -355,7 +355,10 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
       }
     }
     > :nth-child(2) {
-      @apply flex items-center gap-x-12;
+      @apply flex items-center;
+      @screen lg {
+        @apply gap-x-12;
+      }
       > button {
         @apply text-white;
         @apply px-4;
