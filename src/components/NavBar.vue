@@ -372,9 +372,9 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
       @apply px-10;
     }
     > #left {
-      @apply w-full flex items-center justify-start gap-x-12;
+      @apply w-full flex items-center justify-between gap-x-12;
       @screen lg {
-        /* @apply w-1/2; */
+        @apply justify-start;
       }
       > #logo {
         @apply h-14;
