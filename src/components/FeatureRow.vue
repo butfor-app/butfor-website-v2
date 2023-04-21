@@ -42,12 +42,18 @@ const image = new URL(`/src/assets/images/${props.icon}.svg`, import.meta.url)
 </script>
 <style lang="postcss" scoped>
 #feature_wrapper {
-  @apply flex justify-between items-center;
-  @apply gap-x-4 my-18;
+  @apply flex flex-col gap-y-4 items-center px-2;
+
+  @screen lg {
+    @apply flex-row justify-between items-center;
+    @apply my-18;
+  }
 
   > #content {
-    @apply flex flex-col w-[687px] my-18;
-
+    @apply flex flex-col max-w-[687px] my-0;
+    @screen lg {
+      @apply my-18;
+    }
     > #heading {
       @apply text-4xl text-left font-bold mb-4;
     }
@@ -58,5 +64,12 @@ const image = new URL(`/src/assets/images/${props.icon}.svg`, import.meta.url)
       @apply w-[100px] h-1 bg-[#1245591A] rounded-full mt-6;
     }
   }
+  > img {
+    @apply  max-h-[350px];
+    /* @apply max-w-[388px]; */
+  }
+}
+#feature_wrapper:nth-child(odd) {
+  @apply flex-col-reverse;
 }
 </style>

@@ -196,12 +196,13 @@ const features = [
     }
   }
   > #features {
-    @apply hidden;
+    /* @apply hidden; */
+    @apply py-16 flex flex-col gap-y-10 items-center;
     @screen lg {
-      @apply py-16 flex flex-col items-center max-w-[1440px] mx-auto;
-      > #header {
-        @apply text-black text-center font-extrabold text-[46px] mb-9;
-      }
+      @apply gap-y-0 max-w-[1440px] mx-auto;
+    }
+    > #header {
+      @apply text-black text-center font-extrabold text-[46px] mb-9;
     }
   }
   > #about {
