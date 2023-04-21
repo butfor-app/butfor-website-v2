@@ -332,8 +332,14 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 <style lang="postcss" scoped>
 #navbar {
   > #navbar_top {
-    @apply px-18 h-18 bg-primaryDark;
+    @apply px-5 h-18 bg-primaryDark;
     @apply flex items-center justify-between;
+    @screen lg {
+      @apply px-18;
+    }
+    @screen sm {
+      @apply px-10;
+    }
     > :nth-child(1) {
       @apply flex items-center;
       > button {
@@ -341,9 +347,10 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
         @apply cursor-pointer;
       }
       > #msg {
-        @apply text-white;
-        @apply px-4;
-        @apply cursor-pointer;
+        @apply hidden;
+        @screen lg {
+          @apply block text-white px-4 cursor-pointer;
+        }
       }
     }
     > :nth-child(2) {
@@ -356,15 +363,30 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
     }
   }
   > #navbar_bottom {
-    @apply h-24 px-18;
+    @apply h-24 px-5;
     @apply flex items-center justify-between;
+    @screen lg {
+      @apply px-18;
+    }
+    @screen sm {
+      @apply px-10;
+    }
     > #left {
-      @apply flex items-center justify-start gap-x-12;
+      @apply w-full flex items-center justify-start gap-x-12;
+      @screen lg {
+        /* @apply w-1/2; */
+      }
       > #logo {
         @apply h-14;
       }
       > #popover_group_wrapper {
-        @apply flex items-center gap-x-12;
+        @apply hidden;
+        @screen md {
+          @apply flex items-center gap-x-12;
+        }
+        @screen lg {
+          @apply flex items-center gap-x-12;
+        }
         > a {
           @apply text-primary font-medium;
         }
@@ -410,8 +432,11 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
       }
     }
     > button {
-      @apply h-10 bg-primary text-white text-sm font-medium px-4 rounded-md;
-      @apply cursor-pointer;
+      @apply hidden;
+      @screen lg {
+        @apply block w-32 h-10 bg-primary text-white text-sm font-medium px-4 rounded-md;
+        @apply cursor-pointer;
+      }
     }
   }
 }

@@ -54,42 +54,45 @@
 <script setup></script>
 <style lang="postcss" scoped>
 #footer {
-  @apply h-[480px] bg-black px-[60px] py-20;
-  @apply text-white flex flex-col items-center justify-between;
-  @apply w-full;
-  > #top {
-    @apply flex items-center gap-x-16 w-full pb-11;
-    @apply border-b-2 border-[#5F5F5F];
-    > #left {
-      @apply w-[460px] flex flex-col items-start justify-start gap-y-6;
+  @apply hidden;
+  @screen lg {
+    @apply h-[480px] bg-black px-[60px] py-20;
+    @apply text-white flex flex-col items-center justify-between;
+    @apply w-full;
+    > #top {
+      @apply flex items-center gap-x-16 w-full pb-11;
+      @apply border-b-2 border-[#5F5F5F];
+      > #left {
+        @apply w-[460px] flex flex-col items-start justify-start gap-y-6;
 
-      > #logo {
-        @apply h-14;
+        > #logo {
+          @apply h-14;
+        }
+        > #desc {
+          @apply font-medium font-aneklatin;
+        }
+        > #social_media {
+          @apply flex items-center gap-x-5;
+          > img {
+            @apply h-6;
+          }
+        }
       }
-      > #desc {
-        @apply font-medium font-aneklatin;
-      }
-      > #social_media {
-        @apply flex items-center gap-x-5;
-        > img {
-          @apply h-6;
+      > #right {
+        @apply h-full flex items-center gap-x-16;
+        > .link_block {
+          @apply h-full flex flex-col items-start justify-start gap-y-6;
+          > a {
+            @apply text-white  font-aneklatin;
+          }
         }
       }
     }
-    > #right {
-      @apply h-full flex items-center gap-x-16;
-      > .link_block {
-        @apply h-full flex flex-col items-start justify-start gap-y-6;
-        > a {
-          @apply text-white  font-aneklatin;
-        }
+    > #bottom {
+      @apply w-full py-9 flex justify-between items-center;
+      > #privacy_terms {
+        @apply flex justify-center items-center gap-x-8;
       }
-    }
-  }
-  > #bottom {
-    @apply w-full py-9 flex justify-between items-center;
-    > #privacy_terms {
-      @apply flex justify-center items-center gap-x-8;
     }
   }
 }

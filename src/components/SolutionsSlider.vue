@@ -1,17 +1,12 @@
 <template>
   <div id="slider_wrapper">
-    <!-- <SolutionsCard />
-    <SolutionsCard />
-    <SolutionsCard />
-    <SolutionsCard /> -->
     <Carousel
       :items-to-show="4"
-      :autoplay="2000"
+      :autoplay="4000"
       :wrap-around="true"
       class="w-[2000px] h-[280px]"
     >
       <slide v-for="logo in 10" :key="logo">
-        <!-- {{ logo }} -->
         <SolutionsCard />
       </slide>
     </Carousel>

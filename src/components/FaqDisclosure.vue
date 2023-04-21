@@ -10,10 +10,7 @@
             <span class="question" :class="open ? 'text-black' : ''">{{
               faq.question
             }}</span>
-            <!-- <ChevronUpIcon
-            :class="open ? 'rotate-180 transform' : ''"
-            class="h-5 w-5 text-purple-500"
-            /> -->
+
             <img v-if="open" src="@/assets/icons/minus.svg" alt="" />
             <img v-else src="@/assets/icons/plus.svg" alt="" />
           </DisclosureButton>
@@ -28,7 +25,6 @@
 
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
-// import { ChevronUpIcon } from "@heroicons/vue/20/solid";
 
 const faqs = [
   {
@@ -52,15 +48,28 @@ const faqs = [
 </script>
 <style lang="postcss" scoped>
 #wrapper {
-  @apply flex flex-col;
-  @apply w-full rounded-2xl bg-white;
+  @apply flex flex-col w-full rounded-2xl bg-white;
+  @apply px-4;
+
+  @screen lg {
+    @apply px-18;
+  }
   > #faq {
-    @apply pl-9 pr-8  mb-6 rounded-3xl;
+    @apply px-4  mb-6 rounded-3xl;
+    @screen lg {
+      @apply px-9;
+    }
     > #disclosure-button {
-      @apply flex justify-between items-center w-full h-20  rounded-lg   focus:outline-none focus-visible:ring focus-visible:ring-opacity-75;
+      @apply flex justify-between items-center w-full h-18 rounded-lg   focus:outline-none focus-visible:ring focus-visible:ring-opacity-75;
       @apply text-white;
+      @screen lg {
+        @apply h-20;
+      }
       .question {
-        @apply text-[28px] font-semibold font-aneklatin;
+        @apply text-xl text-left font-semibold font-aneklatin;
+        @screen lg {
+          @apply text-[28px];
+        }
       }
     }
     #disclosure-panel {

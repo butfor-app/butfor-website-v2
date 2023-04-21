@@ -188,13 +188,19 @@ const features = [
     }
   }
   > #features {
-    @apply py-16 flex flex-col items-center max-w-[1440px] mx-auto;
-    > #header {
-      @apply text-black text-center font-extrabold text-[46px] mb-9;
+    @apply hidden;
+    @screen lg {
+      @apply py-16 flex flex-col items-center max-w-[1440px] mx-auto;
+      > #header {
+        @apply text-black text-center font-extrabold text-[46px] mb-9;
+      }
     }
   }
   > #about {
-    @apply h-[634px] w-full relative pt-56 px-48;
+    @screen lg {
+      @apply h-[634px] pt-56 px-48;
+    }
+    @apply w-full relative p-20 px-2;
     > #bg {
       @apply w-full -z-20 absolute top-0 left-0;
       > img {
@@ -222,7 +228,7 @@ const features = [
       @apply text-center  font-extrabold text-[46px] mb-16;
     }
     > #faq_wrapper {
-      @apply px-18;
+      /* @apply px-18; */
     }
     > #btn {
       @apply w-full flex items-center justify-center mt-9 mb-16;
