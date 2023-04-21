@@ -1,10 +1,13 @@
 <template>
-  <div id="slider_wrapper">
-    <Carousel :items-to-show="4" :autoplay="2000" :wrap-around="true">
-      <slide v-for="(logo, index) in logos" :key="index">
+  <div id="slider">
+    <div id="slider_track">
+      <template v-for="logo in logos">
         <img :src="logo" alt="" />
-      </slide>
-    </Carousel>
+      </template>
+      <template v-for="logo in logos">
+        <img :src="logo" alt="" />
+      </template>
+    </div>
   </div>
 </template>
 <script setup>
@@ -19,17 +22,23 @@ const logos = [
 ];
 </script>
 <style lang="postcss" scoped>
-#slider_wrapper {
-  @apply h-14;
+#slider {
+  @apply mx-10 h-14 relative overflow-hidden;
 
-  > #slider {
-    @apply h-14;
-    /* @apply flex items-center gap-x-18; */
-    /* @apply overflow-x-auto; */
-    /* @apply scrollbar-hide; */
+  #slider_track {
+    @apply h-full w-[calc(383px_*_10)] flex justify-between;
+    animation: scroll 5s linear infinite;
     > img {
-      /* @apply h-14; */
+      @apply w-96 h-full;
     }
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-384px * 5));
   }
 }
 </style>
