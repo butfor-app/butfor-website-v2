@@ -209,6 +209,9 @@ const features = [
       @apply h-[634px] pt-56 px-48;
     }
     @apply w-full relative p-20 px-2;
+    @screen lg {
+      @apply pt-40;
+    }
     > #bg {
       @apply w-full -z-20 absolute top-0 left-0;
       > img {
@@ -226,8 +229,11 @@ const features = [
       }
       > #desc {
         @apply text-white text-xl text-center font-aneklatin;
-        @apply px-2 mt-6 mb-9;
+        @apply px-6 mt-6 mb-9 mx-auto;
         @apply font-medium;
+        @screen lg {
+          @apply w-[1000px];
+        }
       }
     }
   }
