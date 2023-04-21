@@ -135,8 +135,11 @@ const features = [
 <style lang="postcss" scoped>
 #app_wrapper {
   > #heading {
-    @apply w-full h-screen flex items-center justify-center;
+    @apply w-full h-screen flex items-center px-10 justify-center;
     @apply bg-[url('@/assets/images/hero-bg.png')] bg-no-repeat	bg-cover bg-center;
+    @screen md {
+      @apply px-0;
+    }
     > #content {
       @apply w-full h-full;
       @apply flex items-center justify-center flex-col;
@@ -144,13 +147,18 @@ const features = [
         @apply text-[46px] text-center font-extrabold text-white;
       }
       > #subheading {
-        @apply text-white text-center;
+        @apply text-white text-left;
         @apply px-2 mt-6 mb-9;
         @apply font-medium;
+        @screen sm {
+          @apply text-center;
+        }
       }
       > #buttons {
-        @apply flex items-center gap-x-8;
-
+        @apply flex flex-col items-center gap-x-8 gap-y-4;
+        @screen sm {
+          @apply flex-row;
+        }
         > button {
           @apply h-11 w-[168px] font-medium rounded-full;
           @apply font-sourcesanspro cursor-pointer px-6 py-2;
