@@ -11,16 +11,15 @@
 <script></script>
 <style lang="postcss" scoped>
 #solution_card {
-  @apply h-[276px] w-[314px] bg-primary px-7 pt-10 pb-7;
+  @apply h-[276px] w-[314px] bg-primary px-7 pt-10 pb-7 cursor-grab;
   @apply flex flex-col items-center justify-center gap-y-4;
   @apply rounded-2xl;
   @apply shadow-lg text-white font-aneklatin;
-  @screen lg{
+  @screen lg {
     @apply h-[276px] w-[414px];
   }
   > #icon {
     @apply text-primaryLight;
-    /* @apply bg-red-900; */
   }
   > #heading {
     @apply text-[32px] font-bold;
