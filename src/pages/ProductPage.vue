@@ -279,12 +279,6 @@ const featureSlider_slides = [
               @apply text-[#6D998F]  bg-[#4C728105] font-semibold;
             }
           }
-          ..carousel__slide--active {
-          }
-          .carousel__slide--prev {
-          }
-          .carousel__slide--next {
-          }
         }
       }
     }
