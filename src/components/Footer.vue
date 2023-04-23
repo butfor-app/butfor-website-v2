@@ -17,16 +17,19 @@
       </div>
       <div id="links">
         <div class="link_block">
-          <div id="heading">Help</div>
+          <a href="">Help</a>
           <a href="#">Claims 101</a>
           <a href="#">Blogs</a>
           <a href="#">Case Studies</a>
-          <a href="#">Claims Resource Hub</a>
+
+          <a href="#" class="lg:hidden">Claims Hub</a>
+          <a href="#" class="hidden lg:block">Claims Resource Hub</a>
         </div>
         <div class="link_block">
           <a href="#">Jobs</a>
           <a href="#">Webinars</a>
-          <a href="#">Security/Compliance</a>
+          <a href="#" class="lg:hidden">Security/<br />Compliance</a>
+          <a href="#" class="hidden lg:block">Security/Compliance</a>
           <a href="#">Partnerships</a>
           <a href="#">Contact Us</a>
         </div>
@@ -54,7 +57,6 @@
 <script setup></script>
 <style lang="postcss" scoped>
 #footer {
-  /* @apply hidden; */
   @apply bg-black px-4 py-10;
   @apply text-white flex flex-col items-center justify-between;
   @apply w-full;
@@ -64,8 +66,11 @@
   > #top {
     @apply flex flex-col items-start gap-y-10 w-full pb-11;
     @apply border-b-2 border-[#5F5F5F];
-    @screen lg {
-      @apply flex-row items-center gap-x-16;
+    @screen sm {
+      @apply flex-row gap-x-8;
+    }
+    @screen md {
+      @apply gap-x-16;
     }
     > #about {
       @apply flex flex-col items-start justify-start gap-y-6;
@@ -86,22 +91,23 @@
       }
     }
     > #links {
-      @apply h-full w-full flex items-start justify-around flex-wrap gap-y-4;
+      @apply h-full w-full flex items-start justify-around;
       @screen lg {
-        @apply items-center gap-x-16 flex-nowrap;
+        @apply items-start justify-between gap-x-16 flex-nowrap;
       }
       > .link_block {
-        @apply h-full flex flex-col items-start justify-start gap-y-2;
+        @apply flex flex-col items-start justify-start gap-y-2;
         @apply text-white text-sm font-aneklatin;
         @screen lg {
-          @apply gap-y-6 text-base;
+          @apply gap-y-2 text-base;
         }
         > :nth-child(1) {
           @apply font-bold;
         }
         > a {
-          @screen lg {
-            @apply text-base;
+          @apply w-20 bg-[#000000] hover:bg-[#111111];
+          @screen md {
+            @apply w-full p-2 pl-4 rounded-md text-base;
           }
         }
       }
@@ -115,7 +121,10 @@
     > #privacy_terms {
       @apply mt-4 w-full flex justify-between  items-center;
       @screen lg {
-        @apply m-0 gap-x-8;
+        @apply m-0 w-auto justify-normal gap-x-8;
+      }
+      > a {
+        @apply p-2 rounded-md bg-[#000000] hover:bg-[#111111];
       }
     }
   }
