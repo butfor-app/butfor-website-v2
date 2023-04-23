@@ -65,11 +65,14 @@ const image = new URL(`/src/assets/images/${props.icon}.svg`, import.meta.url)
     }
   }
   > img {
-    @apply  max-h-[350px];
+    @apply max-h-[350px];
     /* @apply max-w-[388px]; */
   }
 }
 #feature_wrapper:nth-child(odd) {
   @apply flex-col-reverse;
+  @screen lg {
+    @apply flex-row;
+  }
 }
 </style>
