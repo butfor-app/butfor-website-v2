@@ -1,6 +1,5 @@
 <template>
   <div id="app_wrapper">
-   
     <div id="heading">
       <div id="content">
         <div id="heading">SIMPLIFYING COMPLEX CLAIMS</div>
@@ -68,9 +67,7 @@
     </div>
     <div id="faq">
       <div id="heading">FAQS</div>
-      <div id="faq_wrapper">
-        <FaqDisclosure />
-      </div>
+      <FaqDisclosure />
       <div id="btn">
         <button>View All</button>
       </div>
@@ -238,11 +235,9 @@ const features = [
     }
   }
   > #faq {
+    @apply max-w-[1200px] mx-auto;
     > #heading {
       @apply text-center  font-extrabold text-[46px] mb-16;
-    }
-    > #faq_wrapper {
-      /* @apply px-18; */
     }
     > #btn {
       @apply w-full flex items-center justify-center mt-9 mb-16;

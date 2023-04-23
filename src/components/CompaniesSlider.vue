@@ -11,8 +11,6 @@
   </div>
 </template>
 <script setup>
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
-
 const logos = [
   new URL("@/assets/logos/dxc_logo.svg", import.meta.url).href,
   new URL("@/assets/logos/symbility_logo.svg", import.meta.url).href,
@@ -23,11 +21,11 @@ const logos = [
 </script>
 <style lang="postcss" scoped>
 #slider {
-  @apply mx-10 h-14 relative overflow-hidden;
+  @apply max-w-[1200px]  mx-auto h-14 relative overflow-hidden;
 
   #slider_track {
     @apply h-full w-[calc(383px_*_10)] flex justify-between;
-    animation: scroll 5s linear infinite;
+    animation: scroll 60s linear infinite;
     > img {
       @apply w-96 h-full;
     }
