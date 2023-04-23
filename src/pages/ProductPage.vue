@@ -1,7 +1,6 @@
 <template>
-  <NavBar />
   <div id="hero_section">
-    <img id="bg" src="@/assets/images/productpage_hero.png" alt="" />
+    <!-- <img id="bg" src="@/assets/images/productpage_hero.png" alt="" /> -->
     <div id="bg_gradient"></div>
     <div id="heading">Get to know the ButFor platform</div>
     <div id="sub_heading">
@@ -20,7 +19,6 @@
         v-model="currentSlide"
         ref="thumbnail_carousel"
       >
-        <!-- <template #slides="{ slideWidth }"> -->
         <Slide
           v-for="(tab, index) in featureSlider_tabs"
           :key="index + 1"
@@ -30,7 +28,6 @@
             {{ tab }}
           </button>
         </Slide>
-        <!-- </template> -->
       </Carousel>
       <Carousel
         id="gallery"
@@ -43,7 +40,6 @@
         v-model="currentSlide"
       >
         <Slide v-for="(slide, index) in featureSlider_slides" :key="index + 1">
-          <!-- {{ slide }} -->
           <div>
             <div>
               <div id="heading">
@@ -173,11 +169,8 @@
       </div>
     </div>
   </div>
-  <Footer />
 </template>
 <script setup>
-import NavBar from "../components/NavBar.vue";
-import Footer from "../components/Footer.vue";
 import { Carousel, Pagination, Slide } from "vue3-carousel";
 import { onMounted, ref } from "vue";
 
@@ -236,15 +229,19 @@ const featureSlider_slides = [
 </script>
 <style lang="postcss" scoped>
 #hero_section {
-  @apply flex flex-col items-center;
-  @apply h-[690px] relative;
-  @apply text-center px-72 py-60;
-  > #bg {
+  @apply flex flex-col items-center justify-center;
+  /* @apply h-[calc(100%_-_171px)]; */
+  @apply h-[calc(100vh_-_171px)] text-center;
+  /* @apply py-60; */
+  @apply bg-[url('@/assets/images/productpage_hero.png')] bg-no-repeat	bg-cover  bg-top;
+
+  /* > #bg {
     @apply absolute top-0 left-0 -z-20;
+    @apply w-full;
   }
   > #bg_gradient {
     @apply w-full h-full absolute top-0 left-0 -z-10 bg-gradient-to-b from-[#01161E90] to-[#59839290];
-  }
+  } */
   > #heading {
     @apply mb-10 text-[46px] font-extrabold text-white;
   }
@@ -288,7 +285,7 @@ const featureSlider_slides = [
           .carousel__slide {
             > div {
               @apply flex items-center justify-between;
-              @apply w-full rounded-lg text-left;
+              @apply w-full px-4 rounded-lg text-left;
               > div {
                 @apply w-1/2;
                 #heading {
@@ -299,7 +296,7 @@ const featureSlider_slides = [
                 }
               }
               img {
-                @apply w-[553px] h-[530px];
+                @apply max-h-[530px];
               }
             }
           }

@@ -1,6 +1,6 @@
 <template>
   <div id="app_wrapper">
-    <NavBar />
+   
     <div id="heading">
       <div id="content">
         <div id="heading">SIMPLIFYING COMPLEX CLAIMS</div>
@@ -75,7 +75,6 @@
         <button>View All</button>
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 
