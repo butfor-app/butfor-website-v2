@@ -76,12 +76,22 @@
 </template>
 
 <script setup>
+import { useHead } from "unhead";
 import CompaniesSlider from "@/components/CompaniesSlider.vue";
 import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import FeatureRow from "@/components/FeatureRow.vue";
 import FaqDisclosure from "@/components/FaqDisclosure.vue";
-import NavBar from "@/components/NavBar.vue";
-import Footer from "@/components/Footer.vue";
+useHead({
+  title: "Butfor - Home",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Butfor is a tool that automates business interruption insurance claims. Calculate your losses & build comprehensive reports in a fraction of the time.",
+    },
+  ],
+});
+
 const features = [
   {
     heading: "Automate file transfers and retrieval",

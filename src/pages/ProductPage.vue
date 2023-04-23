@@ -171,8 +171,19 @@
   </div>
 </template>
 <script setup>
+import { useHead } from "@vueuse/head";
 import { Carousel, Pagination, Slide } from "vue3-carousel";
 import { onMounted, ref } from "vue";
+useHead({
+  title: "Butfor - Product",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Butfor is a tool that automates business interruption insurance claims. Calculate your losses & build comprehensive reports in a fraction of the time.",
+    },
+  ],
+});
 
 const currentSlide = ref(0);
 
