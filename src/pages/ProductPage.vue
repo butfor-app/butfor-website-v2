@@ -66,31 +66,46 @@
     </div>
     <div id="wrapper">
       <div id="card">
-        <img src="@/assets/images/feature_2.svg" alt="" />
+        <img
+          class="hidden sm:block"
+          src="@/assets/images/feature_1.svg"
+          alt=""
+        />
         <div id="heading">Serve more <br />customers</div>
         <div id="desc">
           By reducing time spent on manual labor and reducing the corresponding
           fees, users are able to take on more claims at a greater benefit to
           their client.
         </div>
+        <img class="sm:hidden" src="@/assets/images/feature_1.svg" alt="" />
       </div>
       <div id="card">
-        <img src="@/assets/images/feature_1.svg" alt="" />
+        <img
+          class="hidden sm:block"
+          src="@/assets/images/feature_2.svg"
+          alt=""
+        />
         <div id="heading">Reduce email <br />volume by 50%</div>
         <div id="desc">
           Our ERP integration tool minimizes wasteful back and forth with the
           client and lessens the time and effort placed on the client for data
           retrieval.
         </div>
+        <img class="sm:hidden" src="@/assets/images/feature_2.svg" alt="" />
       </div>
       <div id="card">
-        <img src="@/assets/images/feature_1.svg" alt="" />
+        <img
+          class="hidden sm:block"
+          src="@/assets/images/feature_3.svg"
+          alt=""
+        />
         <div id="heading">Get started in <br />an hour</div>
         <div id="desc">
           We provide an centralized system that allows the user to organize and
           manage multiple claims in once place with limited involvement from the
           client.
         </div>
+        <img class="ssm:hidden" src="@/assets/images/feature_3.svg" alt="" />
       </div>
     </div>
   </div>
@@ -156,7 +171,6 @@
     </div>
   </div>
   <div id="trial">
-    <img src="@/assets/images/trial.png" alt="" />
     <div id="wrapper">
       <div id="header">Try Butfor For free</div>
       <div id="desc">
@@ -168,6 +182,7 @@
         <button>Start Trial</button>
       </div>
     </div>
+    <img src="@/assets/images/trial.png" alt="" />
   </div>
 </template>
 <script setup>
@@ -278,7 +293,7 @@ const featureSlider_slides = [
             @apply border-b-[1px] border-[#D9D9D9];
             > button {
               @apply flex items-center justify-center;
-              @apply w-full h-10 text-[#4C7281] text-2xl;
+              @apply w-full text-[#4C7281] text-2xl;
             }
           }
           .active_slide {
@@ -295,19 +310,31 @@ const featureSlider_slides = [
         .carousel__track {
           .carousel__slide {
             > div {
-              @apply flex items-center justify-between;
+              @apply flex flex-col items-center justify-between;
+              @screen md {
+                @apply flex-row;
+              }
               @apply w-full px-4 rounded-lg text-left;
               > div {
-                @apply w-1/2;
+                @apply w-full;
+                @screen md {
+                  @apply w-1/2;
+                }
                 #heading {
-                  @apply mb-14 text-4xl font-bold;
+                  @apply mb-4 text-4xl font-bold;
+                  @screen md {
+                    @apply mb-14;
+                  }
                 }
                 #desc {
                   @apply text-xl font-aneklatin font-medium text-[#4C7281];
                 }
               }
               img {
-                @apply max-h-[530px];
+                @apply max-h-80;
+                @screen md {
+                  @apply max-h-[530px];
+                }
               }
             }
           }
@@ -324,25 +351,49 @@ const featureSlider_slides = [
   }
 }
 #features {
-  @apply px-18 py-10 text-center flex flex-col items-center;
+  @apply px-4 py-10 text-center flex flex-col items-center;
+  @screen sm {
+    @apply px-18;
+  }
   > #heading {
-    @apply mb-9 text-[46px] font-bold;
+    @apply mb-9 text-3xl font-bold;
+    @screen sm {
+      @apply text-5xl;
+    }
   }
   > #desc {
-    @apply mb-16 text-[28px] text-[#6D998F];
+    @apply mb-16 text-lg text-[#6D998F];
+    @screen sm {
+      @apply text-[28px];
+    }
   }
   > #wrapper {
-    @apply w-full flex gap-x-24  justify-center items-center;
+    @apply w-full flex flex-col gap-x-8 justify-center items-start;
+    @screen sm {
+      @apply flex-row;
+    }
+    @screen md {
+      @apply gap-x-24;
+    }
     > #card {
-      @apply w-72 text-center flex flex-col justify-center;
+      @apply text-center flex flex-col justify-center;
+      @screen lg {
+        @apply w-72;
+      }
       img {
         @apply mb-9;
+        @screen sm {
+          @apply mx-0;
+        }
       }
       > #heading {
         @apply mb-4 text-[28px] font-bold;
       }
       > #desc {
-        @apply text-[18px] text-[#6D998F];
+        @apply text-[18px] mb-4 text-[#6D998F];
+        @screen sm {
+          @apply mb-0;
+        }
       }
     }
   }
@@ -369,8 +420,11 @@ const featureSlider_slides = [
     @apply mb-16 text-[28px] text-[#6D998F];
   }
   > #wrapper {
-    @apply w-full flex gap-x-10  justify-center items-center;
+    @apply w-full flex flex-col gap-x-10  justify-center items-center;
 
+    @screen sm {
+      @apply flex-row;
+    }
     .card {
       @apply w-72 text-center flex flex-col justify-center items-center font-aneklatin;
       > img {
@@ -386,12 +440,22 @@ const featureSlider_slides = [
   }
 }
 #trial {
-  @apply h-[520px] px-18 py-32 relative bg-[#EFF3F5];
+  @apply px-4 py-16 bg-[#EFF3F5];
+  @apply flex flex-col-reverse justify-between items-center;
+  @screen md {
+    @apply flex-row px-18 py-32;
+  }
   > img {
-    @apply absolute top-16 right-18;
+    @apply w-full mb-8;
+    @screen md {
+      @apply w-1/2 m-0;
+    }
   }
   > #wrapper {
-    @apply w-1/2;
+    @apply w-full;
+    @screen md {
+      @apply w-1/2;
+    }
     > #header {
       @apply mb-9 text-[46px] font-bold;
     }
@@ -401,12 +465,12 @@ const featureSlider_slides = [
     > #input_wrapper {
       @apply flex justify-start items-center;
       > input {
-        @apply w-[500px] h-14 px-4 rounded-l-xl;
+        @apply w-full h-14 px-4 rounded-l-xl;
         @apply border-y-2 border-l-2 border-[#D9D9D9] text-[#D9D9D9];
         @apply font-medium font-aneklatin;
       }
       > button {
-        @apply w-24 h-14 bg-[#6D998F] rounded-r-xl;
+        @apply w-32 h-14 bg-[#6D998F] rounded-r-xl;
         @apply text-white  font-semibold font-aneklatin;
       }
     }
