@@ -97,7 +97,7 @@
       > #links {
         @apply h-full w-full flex items-start justify-around;
         @screen lg {
-          @apply items-start justify-between gap-x-16 flex-nowrap;
+          @apply items-start justify-between flex-nowrap;
         }
         > .link_block {
           @apply flex flex-col items-start justify-start gap-y-2;
