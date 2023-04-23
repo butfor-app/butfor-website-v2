@@ -467,7 +467,7 @@ const handleLeave = ($event) => {
             > #menu {
               /* @apply absolute top-[60px] left-0 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none; */
               @apply absolute top-[90px] left-0 p-6 bg-white rounded-b-2xl;
-              @apply z-20 flex gap-x-4 flex-wrap;
+              @apply z-20 flex gap-x-4 flex-wrap outline-none;
               > .col {
                 @apply flex flex-col justify-start;
                 > .heading {
