@@ -19,8 +19,16 @@
         <div id="left">
           <img id="logo" src="@/assets/BFlogo.png" alt="logo" />
           <div id="popover_group_wrapper">
-            <Menu as="div" class="relative inline-block text-left">
-              <MenuButton id="menu_button">
+            <Menu
+              as="div"
+              class="relative inline-block text-left"
+              v-slot="{ open }"
+              @mouseleave="handleLeave"
+            >
+              <MenuButton
+                id="menu_button"
+                @mouseover="handleHover($event, open)"
+              >
                 Solutions
                 <img src="@/assets/icons/arrow.svg" alt="" />
               </MenuButton>
@@ -166,8 +174,16 @@
                 </MenuItems>
               </transition>
             </Menu>
-            <Menu as="div" class="relative inline-block text-left">
-              <MenuButton id="menu_button">
+            <Menu
+              as="div"
+              class="relative inline-block text-left"
+              v-slot="{ open }"
+              @mouseleave="handleLeave"
+            >
+              <MenuButton
+                id="menu_button"
+                @mouseover="handleHover($event, open)"
+              >
                 Product
                 <img src="@/assets/icons/arrow.svg" alt="" />
               </MenuButton>
@@ -265,8 +281,16 @@
                 </MenuItems>
               </transition>
             </Menu>
-            <Menu as="div" class="relative inline-block text-left">
-              <MenuButton id="menu_button">
+            <Menu
+              as="div"
+              class="relative inline-block text-left"
+              v-slot="{ open }"
+              @mouseleave="handleLeave"
+            >
+              <MenuButton
+                id="menu_button"
+                @mouseover="handleHover($event, open)"
+              >
                 Resources
                 <img src="@/assets/icons/arrow.svg" alt="" />
               </MenuButton>
@@ -349,6 +373,14 @@
 </template>
 <script setup>
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
+const handleHover = ($event, open) => {
+  if (!open) {
+    $event.target.click();
+  }
+};
+const handleLeave = ($event) => {
+  $event.target.children[0].click();
+};
 </script>
 <style lang="postcss" scoped>
 #navbar {
@@ -402,7 +434,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
         @apply px-10;
       }
       > #left {
-        @apply w-full flex items-center justify-between gap-x-12;
+        @apply w-full h-full flex items-center justify-between gap-x-12;
         @screen lg {
           @apply justify-start;
         }
@@ -410,20 +442,23 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
           @apply h-14;
         }
         > #popover_group_wrapper {
-          @apply hidden;
+          @apply hidden h-full;
           @screen md {
-            @apply flex items-center gap-x-12;
+            @apply flex items-center justify-between;
           }
-          @screen lg {
+          /* @screen lg {
             @apply flex items-center gap-x-12;
-          }
+          } */
           > a {
             @apply text-primary font-medium;
           }
           > div {
+            @apply h-full flex items-center;
             > button {
-              @apply text-primary font-medium;
+              @apply h-2/3 text-primary font-medium  px-4 mr-1;
               @apply cursor-pointer flex items-center gap-x-2;
+              @apply hover:bg-[#f3f3f3] rounded-xl;
+              @apply outline-none border-none;
               > img {
                 @apply h-2 w-4;
               }
@@ -431,7 +466,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
             }
             > #menu {
               /* @apply absolute top-[60px] left-0 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none; */
-              @apply absolute top-[60px] left-0 p-6 bg-white rounded-b-2xl;
+              @apply absolute top-[90px] left-0 p-6 bg-white rounded-b-2xl;
               @apply z-20 flex gap-x-4 flex-wrap;
               > .col {
                 @apply flex flex-col justify-start;
