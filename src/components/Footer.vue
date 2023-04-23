@@ -3,7 +3,7 @@
     <div id="wrapper">
       <div id="top">
         <div id="about">
-          <img id="logo" src="@/assets/BFlogo.png" alt="" />
+          <img id="logo" src="@/assets/BFlogo.svg" alt="" />
           <div id="desc">
             Tueri is a software tool designed to automate the process of filing
             business interruption insurance claims. It uses advanced algorithms

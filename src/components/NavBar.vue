@@ -17,7 +17,7 @@
     <div id="navbar_bottom">
       <div>
         <div id="left">
-          <img id="logo" src="@/assets/BFlogo.png" alt="logo" />
+          <img id="logo" src="@/assets/BFlogo.svg" alt="logo" />
           <div id="popover_group_wrapper">
             <Menu
               as="div"
