@@ -71,7 +71,7 @@
           src="@/assets/images/feature_1.svg"
           alt=""
         />
-        <div id="heading">Serve more <br />customers</div>
+        <div id="heading">Serve more customers</div>
         <div id="desc">
           By reducing time spent on manual labor and reducing the corresponding
           fees, users are able to take on more claims at a greater benefit to
@@ -85,7 +85,7 @@
           src="@/assets/images/feature_2.svg"
           alt=""
         />
-        <div id="heading">Reduce email <br />volume by 50%</div>
+        <div id="heading">Reduce email volume by 50%</div>
         <div id="desc">
           Our ERP integration tool minimizes wasteful back and forth with the
           client and lessens the time and effort placed on the client for data
@@ -99,13 +99,13 @@
           src="@/assets/images/feature_3.svg"
           alt=""
         />
-        <div id="heading">Get started in <br />an hour</div>
+        <div id="heading">Get started in an hour</div>
         <div id="desc">
           We provide an centralized system that allows the user to organize and
           manage multiple claims in once place with limited involvement from the
           client.
         </div>
-        <img class="ssm:hidden" src="@/assets/images/feature_3.svg" alt="" />
+        <img class="sm:hidden" src="@/assets/images/feature_3.svg" alt="" />
       </div>
     </div>
   </div>
@@ -172,17 +172,19 @@
   </div>
   <div id="trial">
     <div id="wrapper">
-      <div id="header">Try Butfor For free</div>
-      <div id="desc">
-        Learn the platform in less than an hour.<br />Become a power user in
-        less than a day.
+      <div id="content_wrapper">
+        <div id="header">Try Butfor For free</div>
+        <div id="desc">
+          Learn the platform in less than an hour.<br />Become a power user in
+          less than a day.
+        </div>
+        <div id="input_wrapper">
+          <input type="text" placeholder="Enter your email" />
+          <button>Start Trial</button>
+        </div>
       </div>
-      <div id="input_wrapper">
-        <input type="text" placeholder="Enter your email" />
-        <button>Start Trial</button>
-      </div>
+      <img src="@/assets/images/trial.png" alt="" />
     </div>
-    <img src="@/assets/images/trial.png" alt="" />
   </div>
 </template>
 <script setup>
@@ -256,18 +258,11 @@ const featureSlider_slides = [
 <style lang="postcss" scoped>
 #hero_section {
   @apply flex flex-col items-center justify-center;
-  /* @apply h-[calc(100%_-_171px)]; */
-  @apply h-[calc(100vh_-_171px)] text-center;
-  /* @apply py-60; */
-  @apply bg-[url('@/assets/images/productpage_hero.png')] bg-no-repeat	bg-cover  bg-top;
-
-  /* > #bg {
-    @apply absolute top-0 left-0 -z-20;
-    @apply w-full;
+  @apply py-4 h-[calc(100vh)] text-center;
+  @screen md {
+    @apply h-[calc(100vh_-_171px)];
   }
-  > #bg_gradient {
-    @apply w-full h-full absolute top-0 left-0 -z-10 bg-gradient-to-b from-[#01161E90] to-[#59839290];
-  } */
+  @apply bg-[url('@/assets/images/productpage_hero.png')] bg-no-repeat	bg-cover  bg-top;
   > #heading {
     @apply mb-10 text-[46px] font-extrabold text-white;
   }
@@ -285,6 +280,7 @@ const featureSlider_slides = [
     @apply mb-16 text-[46px] font-bold text-center;
   }
   > #wrapper {
+    @apply max-w-[1200px] mx-auto;
     > #thumbnails {
       @apply mb-10;
       .carousel__viewport {
@@ -293,7 +289,10 @@ const featureSlider_slides = [
             @apply border-b-[1px] border-[#D9D9D9];
             > button {
               @apply flex items-center justify-center;
-              @apply w-full text-[#4C7281] text-2xl;
+              @apply w-full text-[#4C7281] text-lg px-4;
+              @screen md{
+                @apply text-2xl px-0;
+              }
             }
           }
           .active_slide {
@@ -381,9 +380,9 @@ const featureSlider_slides = [
         @apply w-72;
       }
       img {
-        @apply mb-9;
-        @screen sm {
-          @apply mx-0;
+        @apply mb-4 h-52;
+        @screen md {
+          @apply mb-9 h-64;
         }
       }
       > #heading {
@@ -412,7 +411,10 @@ const featureSlider_slides = [
   }
 }
 #use_cases {
-  @apply flex flex-col items-center p-24;
+  @apply flex flex-col items-center p-6;
+  @screen lg{
+    @apply p-24;
+  }
   > #heading {
     @apply mb-9 text-[46px] font-bold text-center;
   }
@@ -440,38 +442,42 @@ const featureSlider_slides = [
   }
 }
 #trial {
-  @apply px-4 py-16 bg-[#EFF3F5];
-  @apply flex flex-col-reverse justify-between items-center;
-  @screen md {
-    @apply flex-row px-18 py-32;
-  }
-  > img {
-    @apply w-full mb-8;
+  @apply bg-[#EFF3F5];
+  #wrapper {
+    @apply max-w-[1200px] mx-auto;
+    @apply px-4 py-16;
+    @apply flex flex-col-reverse justify-between items-center;
     @screen md {
-      @apply w-1/2 m-0;
+      @apply flex-row px-18 py-32;
     }
-  }
-  > #wrapper {
-    @apply w-full;
-    @screen md {
-      @apply w-1/2;
-    }
-    > #header {
-      @apply mb-9 text-[46px] font-bold;
-    }
-    > #desc {
-      @apply mb-11 text-[28px] text-[#6D998F];
-    }
-    > #input_wrapper {
-      @apply flex justify-start items-center;
-      > input {
-        @apply w-full h-14 px-4 rounded-l-xl;
-        @apply border-y-2 border-l-2 border-[#D9D9D9] text-[#D9D9D9];
-        @apply font-medium font-aneklatin;
+    > img {
+      @apply w-full mb-8;
+      @screen md {
+        @apply w-1/2 m-0;
       }
-      > button {
-        @apply w-32 h-14 bg-[#6D998F] rounded-r-xl;
-        @apply text-white  font-semibold font-aneklatin;
+    }
+    > #content_wrapper {
+      @apply w-full;
+      @screen md {
+        @apply w-1/2;
+      }
+      > #header {
+        @apply mb-9 text-[46px] font-bold;
+      }
+      > #desc {
+        @apply mb-11 text-[28px] text-[#6D998F];
+      }
+      > #input_wrapper {
+        @apply flex justify-start items-center;
+        > input {
+          @apply w-2/3 h-14 px-4 rounded-l-xl;
+          @apply border-y-2 border-l-2 border-[#D9D9D9] text-[#D9D9D9];
+          @apply font-medium font-aneklatin;
+        }
+        > button {
+          @apply w-32 h-14 bg-[#6D998F] rounded-r-xl;
+          @apply text-white  font-semibold font-aneklatin;
+        }
       }
     }
   }
