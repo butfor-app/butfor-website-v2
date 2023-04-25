@@ -17,7 +17,9 @@
     <div id="navbar_bottom">
       <div>
         <div id="left">
-          <img id="logo" src="@/assets/BFlogo.svg" alt="logo" />
+          <RouterLink to="/"
+            ><img id="logo" src="@/assets/BFlogo.svg" alt="logo"
+          /></RouterLink>
           <div id="popover_group_wrapper">
             <Menu
               as="div"
