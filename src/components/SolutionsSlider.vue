@@ -2,10 +2,10 @@
   <div id="slider_wrapper">
     <!-- :autoplay="4000" -->
     <Carousel
-      :items-to-show="4"
+      :items-to-show="2.5"
       :wrap-around="true"
       :snapAlign="'center'"
-      class="w-[2000px] h-[280px]"
+      class="w-[1200px] h-[280px]"
       v-model="currentSlide"
     >
       <slide v-for="slide in 10" :key="slide">
