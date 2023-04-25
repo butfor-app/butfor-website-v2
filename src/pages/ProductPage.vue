@@ -1,6 +1,5 @@
 <template>
   <div id="hero_section">
-    <!-- <img id="bg" src="@/assets/images/productpage_hero.png" alt="" /> -->
     <div id="bg_gradient"></div>
     <div id="heading">Get to know the ButFor platform</div>
     <div id="sub_heading">
@@ -112,9 +111,6 @@
   <div id="possibilities">
     <div id="header">What you can do with ButFor</div>
     <img src="@/assets/images/possibilities.png" alt="" />
-    <!-- <div id="wrapper">
-      <img src="@/assets/images/dotted_circle.png" alt="" id="circle" />
-    </div> -->
   </div>
   <div id="use_cases">
     <div id="heading">Customer stories and use cases</div>
@@ -290,7 +286,7 @@ const featureSlider_slides = [
             > button {
               @apply flex items-center justify-center;
               @apply w-full text-[#4C7281] text-lg px-4;
-              @screen md{
+              @screen md {
                 @apply text-2xl px-0;
               }
             }
@@ -412,7 +408,7 @@ const featureSlider_slides = [
 }
 #use_cases {
   @apply flex flex-col items-center p-6;
-  @screen lg{
+  @screen lg {
     @apply p-24;
   }
   > #heading {
