@@ -43,6 +43,29 @@
       </div>
     </div>
   </div>
+  <div id="reminder">
+    <div id="heading">
+      Want to know when we host our next webinar with an HR leader?
+    </div>
+    <form action="">
+      <input type="text" placeholder="First name" />
+      <input type="text" placeholder="Last name" />
+      <input type="text" placeholder="Email" />
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+  <div id="view_demo">
+    <div id="heading">Want to see ButFor in action?</div>
+    <div id="sub_heading">
+      ButFor automates HR workflows from offers to promotions & transfers - so
+      companies save time, money and talent.
+    </div>
+    <div id="wrapper">
+      <button id="demo_btn">View Demo</button>
+      <button id="team_btn">Speak to Our Team</button>
+      <button id="learn_btn">Learn More</button>
+    </div>
+  </div>
 </template>
 <script setup>
 import { useHead } from "@vueuse/head";
@@ -117,9 +140,9 @@ console.log(groupedEvents.value);
   }
 }
 #event_history {
-  @apply flex flex-col;
+  @apply py-16 flex flex-col;
   > #heading {
-    @apply py-16 text-[46px] font-extrabold text-center;
+    @apply mb-16 text-[46px] font-extrabold text-center;
   }
   > #slider_wrapper {
     @apply flex flex-col items-center gap-x-4;
@@ -143,6 +166,50 @@ console.log(groupedEvents.value);
       > .active {
         @apply w-8 bg-primary text-white;
       }
+    }
+  }
+}
+#reminder {
+  @apply flex flex-col items-center;
+  @apply py-16 bg-[#EFF3F5];
+  > #heading {
+    @apply max-w-4xl mb-16 text-[46px] text-center font-extrabold uppercase;
+  }
+  > form {
+    @apply max-w-lg w-full px-2 flex flex-col gap-y-6;
+    > input[type="text"] {
+      @apply px-6 py-3 border border-[#D9D9D9] focus:border-primary rounded-full outline-none;
+    }
+    > input[type="submit"] {
+      @apply w-36 h-12 rounded-full mx-auto bg-primary font-aneklatin text-white cursor-pointer;
+    }
+  }
+}
+#view_demo {
+  @apply flex flex-col items-center;
+  @apply py-16;
+
+  > #heading {
+    @apply max-w-4xl mb-9 text-[46px] text-center font-extrabold uppercase;
+  }
+  > #sub_heading {
+    @apply max-w-6xl mb-16 text-center text-[28px] text-[#6D998F] uppercase;
+  }
+  > #wrapper {
+    @apply flex flex-col gap-y-6;
+    @apply font-aneklatin font-medium;
+
+    > button {
+      @apply w-48 h-14 rounded-full mx-auto cursor-pointer;
+    }
+    > #demo_btn {
+      @apply bg-[#6D998F] text-white;
+    }
+    > #team_btn {
+      @apply bg-primary text-white;
+    }
+    > #learn_btn {
+      @apply border bg-white border-primaryDark text-primaryDark;
     }
   }
 }
