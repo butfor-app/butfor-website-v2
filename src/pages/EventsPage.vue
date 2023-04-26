@@ -8,6 +8,14 @@
     </div>
     <button>Learn More</button>
   </div>
+  <div id="event_history">
+    <div id="heading">
+      Previous Events & Webinars
+    </div>
+    <div id="slider_wrapper">
+      
+    </div>
+  </div>
 </template>
 <script setup>
 import { useHead } from "@vueuse/head";
