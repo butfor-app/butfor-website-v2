@@ -14,7 +14,7 @@ const router = createRouter({
     {
       path: "/product",
       name: "product",
-      component: ()=>import("@/pages/ProductPage.vue"),
+      component: () => import("@/pages/ProductPage.vue"),
     },
     {
       path: "/contact",
@@ -25,6 +25,11 @@ const router = createRouter({
       path: "/events",
       name: "events",
       component: () => import("@/pages/EventsPage.vue"),
+    },
+    {
+      path: "/thankyou",
+      name: "thankyou",
+      component: () => import("@/pages/ThankyouPage.vue"),
     },
     {
       path: "/:pathMatch(.*)*",
