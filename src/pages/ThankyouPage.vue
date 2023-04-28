@@ -1,5 +1,9 @@
 <template>
-  <div id="hero_section">THANKYOU!</div>
+  <div id="hero_section">
+    <span class="font-semibold">Thank you!</span>
+    The invite will be in your email. Chat soon.
+    <span class="w-full text-right mt-6"> -the ButFor team </span>
+  </div>
 </template>
 <script setup>
 import { useHead } from "@vueuse/head";
@@ -19,12 +23,13 @@ useHead({
   @apply flex flex-col items-center justify-center;
   @apply mx-auto py-20;
   @apply text-5xl font-aneklatin;
+  @apply max-w-5xl;
   /* @apply py-4 h-[calc(100vh)] text-center; */
   @screen md {
     /* @apply h-[calc(100vh_-_171px)]; */
   }
   @screen sm {
-    @apply text-8xl;
+    @apply text-4xl;
   }
 }
 </style>
