@@ -316,7 +316,7 @@
                       <a href="#" class="menu_row">
                         <div class="img">
                           <img
-                            src="@/assets/icons/quick_reference.png"
+                            src="@/assets/icons/quick_reference.svg"
                             alt=""
                           />
                         </div>
