@@ -5,7 +5,7 @@
         <div id="about">
           <img id="logo" src="@/assets/BFlogo.svg" alt="" />
           <div id="desc">
-            Tueri is a software tool designed to automate the process of filing
+            Butfor is a software tool designed to automate the process of filing
             business interruption insurance claims. It uses advanced algorithms
             and machine learning technology to calculate your losses and provide
             comprehensive reports in minutes.
@@ -47,7 +47,7 @@
         </div>
       </div>
       <div id="bottom">
-        <div>©2023 Tueri. All rights reserved</div>
+        <div>©2023 Butfor. All rights reserved</div>
         <div id="privacy_terms">
           <a href="#">Privacy & Policy</a>
           <a href="#">Terms & Condition</a>
