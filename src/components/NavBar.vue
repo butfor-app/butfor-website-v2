@@ -4,9 +4,7 @@
       <div>
         <div>
           <button>New</button>
-          <div id="msg">
-            Automate your California Pay Report with Pequity by March 27 >
-          </div>
+          <div id="msg">Webinar on How to Automate Baselines, June 14</div>
         </div>
         <div>
           <button id="contact">Contact Sales</button>
@@ -56,14 +54,14 @@
                     <div class="content">
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/flood.png" alt="" />
+                          <img src="@/assets/icons/flood.svg" alt="" />
                         </div>
                         <div class="name">Natural Disasters</div>
                       </a>
                       <button class="menu_row">
                         <div class="img">
                           <img
-                            src="@/assets/icons/fire_extinguisher.png"
+                            src="@/assets/icons/fire_extinguisher.svg"
                             alt=""
                           />
                         </div>
@@ -71,19 +69,19 @@
                       </button>
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/construction.png" alt="" />
+                          <img src="@/assets/icons/construction.svg" alt="" />
                         </div>
                         <div class="name">Equipment Breakdown</div>
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/power_off.png" alt="" />
+                          <img src="@/assets/icons/power_off.svg" alt="" />
                         </div>
                         <div class="name">Power Outages</div>
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/foundation.png" alt="" />
+                          <img src="@/assets/icons/foundation.svg" alt="" />
                         </div>
                         <div class="name">Construction or Renovation</div>
                       </a>
@@ -95,14 +93,14 @@
                     <div class="content">
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/apartment.png" alt="" />
+                          <img src="@/assets/icons/apartment.svg" alt="" />
                         </div>
                         <div class="name">Enterprise</div>
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
                           <img
-                            src="@/assets/icons/approval_delegation.png"
+                            src="@/assets/icons/approval_delegation.svg"
                             alt=""
                           />
                         </div>
@@ -110,14 +108,14 @@
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/consultant.png" alt="" />
+                          <img src="@/assets/icons/consultant.svg" alt="" />
                         </div>
                         <div class="name">Claim Consultants</div>
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
                           <img
-                            src="@/assets/icons/real_estate_agent.png"
+                            src="@/assets/icons/real_estate_agent.svg"
                             alt=""
                           />
                         </div>
@@ -131,14 +129,14 @@
                     <div class="content">
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/fact_check.png" alt="" />
+                          <img src="@/assets/icons/fact_check.svg" alt="" />
                         </div>
                         <div class="name">Risk & Compliance</div>
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
                           <img
-                            src="@/assets/icons/quick_reference.png"
+                            src="@/assets/icons/quick_reference.svg"
                             alt=""
                           />
                         </div>
@@ -146,14 +144,14 @@
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/attach_money.png" alt="" />
+                          <img src="@/assets/icons/attach_money.svg" alt="" />
                         </div>
                         <div class="name">Finance</div>
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
                           <img
-                            src="@/assets/icons/account_balance.png"
+                            src="@/assets/icons/account_balance.svg"
                             alt=""
                           />
                         </div>
@@ -161,7 +159,7 @@
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/group.png" alt="" />
+                          <img src="@/assets/icons/group.svg" alt="" />
                         </div>
                         <div class="name">Executive Teams</div>
                       </a>
@@ -206,7 +204,7 @@
                     <div class="heading">OVERVIEW</div>
                     <div class="h-full flex flex-col justify-around">
                       <div class="pb-4">
-                        Get to know the <br />Tueri platform
+                        Get to know the <br />Butfor platform
                       </div>
                       <button
                         class="w-[78px] h-[28px] text-xs bg-[#598392] text-white font-aneklatin rounded-lg"
@@ -529,7 +527,7 @@
                       <div class="heading">OVERVIEW</div>
                       <div class="h-full flex flex-col justify-around">
                         <div class="pb-4">
-                          Get to know the <br />Tueri platform
+                          Get to know the <br />Butfor platform
                         </div>
                         <button
                           class="w-[78px] h-[28px] text-xs bg-[#598392] text-white font-aneklatin rounded-lg"
@@ -701,14 +699,14 @@ import { ref } from "vue";
 
 const mobile_popover_open = ref(false);
 
-const handleHover = ($event, open) => {
-  if (!open) {
-    $event.target.click();
-  }
-};
-const handleLeave = ($event) => {
-  $event.target.children[0].click();
-};
+// const handleHover = ($event, open) => {
+//   if (!open) {
+//     $event.target.click();
+//   }
+// };
+// const handleLeave = ($event) => {
+//   $event.target.children[0].click();
+// };
 </script>
 
 <style lang="postcss" scoped>
@@ -817,6 +815,9 @@ const handleLeave = ($event) => {
                       @apply flex items-center justify-start;
                       > .img {
                         > img {
+                          @apply w-6 h-6;
+                        }
+                        > svg {
                           @apply w-6 h-6;
                         }
                       }
