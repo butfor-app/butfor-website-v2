@@ -1,14 +1,35 @@
 <template>
   <div id="solution_card">
-    <div id="icon">icon</div>
-    <div id="heading">Heading</div>
+    <div id="icon">
+      <img :src="image" alt="" />
+    </div>
+    <div id="heading">{{ name }}</div>
     <div id="desc">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard.
+      {{ desc }}
     </div>
   </div>
 </template>
-<script></script>
+<script setup>
+const props = defineProps({
+  name: {
+    type: String,
+    required: true,
+  },
+  desc: {
+    type: String,
+    required: true,
+  },
+  icon: {
+    type: String,
+    required: true,
+  },
+});
+console.log(props.icon);
+const image = new URL(
+  `/src/assets/icons/${props.icon}-large.svg`,
+  import.meta.url
+).href;
+</script>
 <style lang="postcss" scoped>
 #solution_card {
   @apply h-[276px] w-[314px] bg-primary px-7 pt-10 pb-7 cursor-grab;
@@ -19,7 +40,10 @@
     @apply h-[276px] w-[414px];
   }
   > #icon {
-    @apply text-primaryLight;
+    @apply w-12 h-12;
+    > img {
+      @apply w-full h-full;
+    }
   }
   > #heading {
     @apply text-[32px] font-bold;

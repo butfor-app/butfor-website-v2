@@ -8,15 +8,19 @@
       class="w-[1200px] h-[280px]"
       v-model="currentSlide"
     >
-      <slide v-for="slide in 10" :key="slide">
-        <SolutionsCard />
+      <slide v-for="(solution, index) in solutions" :key="index">
+        <SolutionsCard
+          :name="solution.name"
+          :desc="solution.desc"
+          :icon="solution.icon"
+        />
       </slide>
     </Carousel>
     <div id="pagination">
-      <template v-for="page in 10" :key="logo">
+      <template v-for="(page, index) in solutions" :key="index">
         <div
-          :class="currentSlide + 1 === page ? 'active' : ''"
-          @click="currentSlide = page - 1"
+          :class="currentSlide === index ? 'active' : ''"
+          @click="currentSlide = index"
         ></div>
       </template>
     </div>
@@ -26,6 +30,13 @@
 import { ref } from "vue";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import SolutionsCard from "@/components/SolutionsCard.vue";
+
+const props = defineProps({
+  solutions: {
+    type: Array,
+    required: true,
+  },
+});
 
 const currentSlide = ref(0);
 </script>

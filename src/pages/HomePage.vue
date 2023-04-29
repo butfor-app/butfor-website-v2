@@ -23,17 +23,17 @@
     <div id="heading">OUR SOLUTIONS</div>
     <div class="solution_category">
       <div id="heading">BY COMPANY TYPE</div>
-      <SolutionsSlider />
+      <SolutionsSlider :solutions="solutionsByCompanyType" />
       <button>View All</button>
     </div>
     <div class="solution_category">
       <div id="heading">BY ROLE</div>
-      <SolutionsSlider />
+      <SolutionsSlider :solutions="solutionsByCompanyType" />
       <button>View All</button>
     </div>
     <div class="solution_category">
       <div id="heading">BY CLAIM TYPE</div>
-      <SolutionsSlider />
+      <SolutionsSlider :solutions="solutionsByCompanyType" />
       <button>View All</button>
     </div>
   </div>
@@ -85,7 +85,7 @@ import { useGeneralData } from "@/stores/useGeneralData";
 const generalData = useGeneralData();
 const features = generalData.features;
 const solutionsByCompanyType = generalData.solutionsByCompanyType;
-console.log(solutionsByCompanyType);
+// console.log(solutionsByCompanyType);
 useHead({
   title: "Butfor - Home",
   meta: [
