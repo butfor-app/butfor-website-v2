@@ -24,7 +24,6 @@ const props = defineProps({
     required: true,
   },
 });
-console.log(props.icon);
 const image = new URL(
   `/src/assets/icons/${props.icon}-large.svg`,
   import.meta.url

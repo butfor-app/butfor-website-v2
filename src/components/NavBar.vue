@@ -400,14 +400,14 @@
                       <div class="content">
                         <a href="#" class="menu_row">
                           <div class="img">
-                            <img src="@/assets/icons/flood.png" alt="" />
+                            <img src="@/assets/icons/flood.svg" alt="" />
                           </div>
                           <div class="name">Natural Disasters</div>
                         </a>
                         <button class="menu_row">
                           <div class="img">
                             <img
-                              src="@/assets/icons/fire_extinguisher.png"
+                              src="@/assets/icons/fire_extinguisher.svg"
                               alt=""
                             />
                           </div>
@@ -415,19 +415,19 @@
                         </button>
                         <a href="#" class="menu_row">
                           <div class="img">
-                            <img src="@/assets/icons/construction.png" alt="" />
+                            <img src="@/assets/icons/construction.svg" alt="" />
                           </div>
                           <div class="name">Equipment Breakdown</div>
                         </a>
                         <a href="#" class="menu_row">
                           <div class="img">
-                            <img src="@/assets/icons/power_off.png" alt="" />
+                            <img src="@/assets/icons/power_off.svg" alt="" />
                           </div>
                           <div class="name">Power Outages</div>
                         </a>
                         <a href="#" class="menu_row">
                           <div class="img">
-                            <img src="@/assets/icons/foundation.png" alt="" />
+                            <img src="@/assets/icons/foundation.svg" alt="" />
                           </div>
                           <div class="name">Construction or Renovation</div>
                         </a>
@@ -439,14 +439,14 @@
                       <div class="content">
                         <a href="#" class="menu_row">
                           <div class="img">
-                            <img src="@/assets/icons/apartment.png" alt="" />
+                            <img src="@/assets/icons/apartment.svg" alt="" />
                           </div>
                           <div class="name">Enterprise</div>
                         </a>
                         <a href="#" class="menu_row">
                           <div class="img">
                             <img
-                              src="@/assets/icons/approval_delegation.png"
+                              src="@/assets/icons/approval_delegation.svg"
                               alt=""
                             />
                           </div>
@@ -454,14 +454,14 @@
                         </a>
                         <a href="#" class="menu_row">
                           <div class="img">
-                            <img src="@/assets/icons/consultant.png" alt="" />
+                            <img src="@/assets/icons/consultant.svg" alt="" />
                           </div>
                           <div class="name">Claim Consultants</div>
                         </a>
                         <a href="#" class="menu_row">
                           <div class="img">
                             <img
-                              src="@/assets/icons/real_estate_agent.png"
+                              src="@/assets/icons/real_estate_agent.svg"
                               alt=""
                             />
                           </div>
@@ -475,14 +475,14 @@
                       <div class="content">
                         <a href="#" class="menu_row">
                           <div class="img">
-                            <img src="@/assets/icons/fact_check.png" alt="" />
+                            <img src="@/assets/icons/fact_check.svg" alt="" />
                           </div>
                           <div class="name">Risk & Compliance</div>
                         </a>
                         <a href="#" class="menu_row">
                           <div class="img">
                             <img
-                              src="@/assets/icons/quick_reference.png"
+                              src="@/assets/icons/quick_reference.svg"
                               alt=""
                             />
                           </div>
@@ -490,14 +490,14 @@
                         </a>
                         <a href="#" class="menu_row">
                           <div class="img">
-                            <img src="@/assets/icons/attach_money.png" alt="" />
+                            <img src="@/assets/icons/attach_money.svg" alt="" />
                           </div>
                           <div class="name">Finance</div>
                         </a>
                         <a href="#" class="menu_row">
                           <div class="img">
                             <img
-                              src="@/assets/icons/account_balance.png"
+                              src="@/assets/icons/account_balance.svg"
                               alt=""
                             />
                           </div>
@@ -505,7 +505,7 @@
                         </a>
                         <a href="#" class="menu_row">
                           <div class="img">
-                            <img src="@/assets/icons/group.png" alt="" />
+                            <img src="@/assets/icons/group.svg" alt="" />
                           </div>
                           <div class="name">Executive Teams</div>
                         </a>
@@ -626,7 +626,7 @@
                         <a href="#" class="menu_row">
                           <div class="img">
                             <img
-                              src="@/assets/icons/quick_reference.png"
+                              src="@/assets/icons/quick_reference.svg"
                               alt=""
                             />
                           </div>
@@ -817,9 +817,9 @@ const mobile_popover_open = ref(false);
                         > img {
                           @apply w-6 h-6;
                         }
-                        > svg {
+                        /* > svg {
                           @apply w-6 h-6;
-                        }
+                        } */
                       }
                       > .name {
                         @apply text-sm text-primary font-aneklatin;
