@@ -34,12 +34,12 @@
             <a href="#">Partnerships</a>
             <a href="#">Contact Us</a>
           </div>
-          <div class="link_block">
+          <!-- <div class="link_block">
             <a href="#">Pricing</a>
             <a href="#">Butfor vs Competitor 1</a>
             <a href="#">Butfor vs Competitor 2</a>
             <a href="#">Butfor vs Competitor 3</a>
-          </div>
+          </div> -->
           <div class="link_block">
             <a href="#">View Demo</a>
             <a href="#">Schedule Demo</a>
@@ -95,7 +95,7 @@
         }
       }
       > #links {
-        @apply h-full w-full flex items-start justify-around;
+        @apply h-full w-full flex items-start justify-between;
         @screen lg {
           @apply items-start justify-between flex-nowrap;
         }
