@@ -64,6 +64,7 @@ export const useGeneralData = defineStore("generaldata", {
         type: "claim",
       },
     ],
+
     features: [
       {
         heading: "Automate file transfers and retrieval",

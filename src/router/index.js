@@ -1,6 +1,28 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "../pages/HomePage.vue";
 import ProductPage from "../pages/ProductPage.vue";
+const abcd = "NaturalDisasters";
+const solutionsRoutes = [
+  {
+    path: "/solutions/natural-disasters",
+    name: "thankyou",
+    component: () => import(`@/pages/solutions/${abcd}.vue`),
+  },
+];
+const contactusRoutes = [
+  {
+    path: "/contact",
+    name: "contact",
+    component: () => import("@/pages/ContactPage.vue"),
+  },
+];
+const thankyouRoutes = [
+  {
+    path: "/thankyou",
+    name: "thankyou",
+    component: () => import("@/pages/ThankyouPage.vue"),
+  },
+];
 
 // import.meta.env.BASE_URL
 const router = createRouter({
@@ -17,20 +39,13 @@ const router = createRouter({
       component: () => import("@/pages/ProductPage.vue"),
     },
     {
-      path: "/contact",
-      name: "contact",
-      component: () => import("@/pages/ContactPage.vue"),
-    },
-    {
       path: "/events",
       name: "events",
       component: () => import("@/pages/EventsPage.vue"),
     },
-    {
-      path: "/thankyou",
-      name: "thankyou",
-      component: () => import("@/pages/ThankyouPage.vue"),
-    },
+    ...thankyouRoutes,
+    ...contactusRoutes,
+    ...solutionsRoutes,
     {
       path: "/:pathMatch(.*)*",
       name: "404",

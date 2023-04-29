@@ -115,7 +115,6 @@ useHead({
 </script>
 
 <style lang="postcss" scoped>
-/* #app_wrapper { */
 #hero_section {
   @apply flex flex-col items-center justify-center;
   @apply py-4 h-[calc(100vh)] text-center;
@@ -146,7 +145,6 @@ useHead({
       @apply bg-white text-primary;
     }
   }
-  /* } */
 }
 
 #solutions {
@@ -187,13 +185,11 @@ useHead({
   > #bg {
     @apply w-full -z-20 absolute top-0 left-0;
     > img {
-      /* @apply ; */
     }
   }
   > #gradient {
     @apply h-full w-full -z-10 absolute top-0 left-0;
     @apply bg-primary opacity-70;
-    /* @apply bg-gradient-to-t from-primary to-primaryDark ; */
   }
   > #content {
     > #heading {
