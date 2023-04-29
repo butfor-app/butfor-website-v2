@@ -2,7 +2,11 @@
   <!-- <div id="app_wrapper"> -->
   <div id="hero_section">
     <!-- <div id="content"> -->
-    <div id="heading">SIMPLIFYING COMPLEX CLAIMS</div>
+    <!-- <div id="header_wrapper" ref="headerWrapper"> -->
+    <div id="heading" ref="header">Simplifying Complex Claims</div>
+    <!-- <div id="heading">Assisting by Automating</div>
+      <div id="heading">Eliminating Human Error</div> -->
+    <!-- </div> -->
     <div id="subheading">
       Butfor automates business interruption insurance claims.<br />
       Calculate your losses & build comprehensive reports in a fraction of the
@@ -28,7 +32,7 @@
     </div>
     <div class="solution_category">
       <div id="heading">BY ROLE</div>
-      <SolutionsSlider :solutions="solutionsByCompanyType" />
+      <SolutionsSlider :solutions="generalData.solutionsByRole" />
       <button>View All</button>
     </div>
     <div class="solution_category">
@@ -82,10 +86,33 @@ import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import FeatureRow from "@/components/FeatureRow.vue";
 import FaqDisclosure from "@/components/FaqDisclosure.vue";
 import { useGeneralData } from "@/stores/useGeneralData";
+import { ref, onMounted } from "vue";
 const generalData = useGeneralData();
 const features = generalData.features;
 const solutionsByCompanyType = generalData.solutionsByCompanyType;
-// console.log(solutionsByCompanyType);
+const header = ref(null);
+const headerValues = [
+  "Simplifying Complex Claims",
+  "Assisting by Automating",
+  "Eliminating Human Error",
+];
+onMounted(() => {
+  let index = 0;
+  const heading = header.value;
+  heading.innerHTML = headerValues[index];
+
+  setInterval(() => {
+    heading.classList.remove("animate-fade-in");
+    heading.classList.add("animate-fade-out");
+    setTimeout(() => {
+      heading.innerHTML = headerValues[index];
+      heading.classList.remove("animate-fade-out");
+      heading.classList.add("animate-fade-in");
+      index++;
+      if (index >= headerValues.length) index = 0;
+    }, 1000);
+  }, 4000);
+});
 useHead({
   title: "Butfor - Home",
   meta: [
@@ -107,11 +134,9 @@ useHead({
   @screen md {
     @apply h-[calc(100vh_-_171px)];
   }
-  /* > #content { */
-  /* @apply w-full h-full; */
-  @apply flex items-center justify-center flex-col;
+  @apply flex items-center justify-center flex-col overflow-hidden;
   > #heading {
-    @apply mb-10 text-[46px] font-extrabold text-white;
+    @apply mb-10 text-[46px] font-extrabold text-white uppercase;
   }
   > #subheading {
     @apply mb-9 text-xl font-medium font-aneklatin text-white;

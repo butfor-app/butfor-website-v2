@@ -16,6 +16,33 @@ module.exports = {
         aneklatin: ["AnekLatin"],
         sourcesanspro: ["Source Sans Pro"],
       },
+
+      keyframes: {
+        fadeIn: {
+          "0%": {
+            transform: "translateX(-100vw)",
+            opacity: 0,
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: 100,
+          },
+        },
+        fadeOut: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(50%)",
+            opacity: 0,
+            display: "hidden",
+          },
+        },
+      },
+      animation: {
+        "fade-in": "fadeIn 1s ease-in",
+        "fade-out": "fadeOut 1s ease-out",
+      },
     },
     screens: {
       sm: "640px",
