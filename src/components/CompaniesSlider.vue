@@ -1,12 +1,15 @@
 <template>
-  <div id="slider">
-    <div id="slider_track">
-      <template v-for="logo in logos">
-        <img :src="logo" alt="" />
-      </template>
-      <template v-for="logo in logos">
-        <img :src="logo" alt="" />
-      </template>
+  <div id="clients">
+    <div id="heading">Solving compensation for leading brands</div>
+    <div id="slider">
+      <div id="slider_track">
+        <template v-for="logo in logos">
+          <img :src="logo" alt="" />
+        </template>
+        <template v-for="logo in logos">
+          <img :src="logo" alt="" />
+        </template>
+      </div>
     </div>
   </div>
 </template>
@@ -20,14 +23,21 @@ const logos = [
 ];
 </script>
 <style lang="postcss" scoped>
-#slider {
-  @apply max-w-[1200px]  mx-auto h-14 relative overflow-hidden;
+#clients {
+  @apply h-[260px] py-16;
+  > #heading {
+    @apply text-black text-center font-semibold text-2xl mb-9;
+  }
 
-  #slider_track {
-    @apply h-full w-[calc(383px_*_10)] flex justify-between;
-    animation: scroll 60s linear infinite;
-    > img {
-      @apply w-96 h-full;
+  > #slider {
+    @apply max-w-[1200px]  mx-auto h-14 relative overflow-hidden;
+
+    #slider_track {
+      @apply h-full w-[calc(383px_*_10)] flex justify-between;
+      animation: scroll 60s linear infinite;
+      > img {
+        @apply w-96 h-full;
+      }
     }
   }
 }

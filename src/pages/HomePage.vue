@@ -1,12 +1,6 @@
 <template>
-  <!-- <div id="app_wrapper"> -->
   <div id="hero_section">
-    <!-- <div id="content"> -->
-    <!-- <div id="header_wrapper" ref="headerWrapper"> -->
     <div id="heading" ref="header">Simplifying Complex Claims</div>
-    <!-- <div id="heading">Assisting by Automating</div>
-      <div id="heading">Eliminating Human Error</div> -->
-    <!-- </div> -->
     <div id="subheading">
       Butfor automates business interruption insurance claims.<br />
       Calculate your losses & build comprehensive reports in a fraction of the
@@ -16,13 +10,8 @@
       <button id="productVid">See Product Video</button>
       <button id="demo">Book Demo</button>
     </div>
-    <!-- </div> -->
   </div>
-  <div id="clients">
-    <div id="heading">Solving compensation for leading brands</div>
-
-    <CompaniesSlider />
-  </div>
+  <CompaniesSlider />
   <div id="solutions">
     <div id="heading">OUR SOLUTIONS</div>
     <div class="solution_category">
@@ -159,12 +148,7 @@ useHead({
   }
   /* } */
 }
-#clients {
-  @apply h-[260px] py-16;
-  > #heading {
-    @apply text-black text-center font-semibold text-2xl mb-9;
-  }
-}
+
 #solutions {
   @apply overflow-x-hidden flex flex-col items-center justify-center bg-[#5983921A];
   @apply pt-16;
