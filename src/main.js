@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-// import { createPinia } from "pinia";
+import { createPinia } from "pinia";
 import { createHead } from "@vueuse/head";
 import VueGtag from "vue-gtag";
 
@@ -9,13 +9,13 @@ import router from "./router";
 // import './index.css'
 import "./assets/css/tailwind.css";
 
-// const pinia = createPinia();
+const pinia = createPinia();
 const head = createHead();
 
 const app = createApp(App);
 
 app.use(router);
-// app.use(pinia);
+app.use(pinia);
 app.use(head);
 app.use(
   VueGtag,
