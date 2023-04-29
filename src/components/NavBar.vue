@@ -718,7 +718,8 @@ const mobile_popover_open = ref(false);
   > #navbar_top {
     @apply bg-primaryDark;
     > div {
-      @apply px-5 h-18 mx-auto max-w-[1200px];
+      /* changing height from 75px to 60px */
+      @apply px-5 h-16 mx-auto max-w-[1200px];
       @apply flex items-center justify-between;
       @screen lg {
         @apply px-18;
@@ -740,14 +741,13 @@ const mobile_popover_open = ref(false);
         }
       }
       > :nth-child(2) {
-        @apply flex items-center;
+        @apply h-full flex items-center;
         @screen lg {
           @apply gap-x-12;
         }
         > button {
-          @apply text-white;
-          @apply px-4;
-          @apply cursor-pointer;
+          @apply h-full text-white px-4 cursor-pointer;
+          @apply hover:bg-[#052f3f] transition-all duration-300;
         }
       }
     }
@@ -756,39 +756,33 @@ const mobile_popover_open = ref(false);
     @apply bg-white;
     > div {
       @apply flex items-center justify-between;
-      @apply h-24 px-5 max-w-[1200px] mx-auto;
+      /* changing height from 96px to 80px */
+      @apply h-20 px-5 max-w-[1200px] mx-auto;
       @screen lg {
         @apply px-18;
       }
-      @screen sm {
-        /* @apply px-10; */
-      }
       > #left {
         @apply w-full h-full flex  items-center justify-between;
-        @screen md {
+        @screen lg {
           @apply justify-start gap-x-12;
         }
-        /* @screen lg {
-          @apply justify-between;
-        } */
         > #logo {
           @apply h-14;
         }
         > #mobile_popover_group_wrapper {
           @apply relative flex flex-col items-center justify-between;
-          @screen md {
+          @screen lg {
             @apply hidden;
           }
           > #popover {
             @apply w-screen bg-white;
             @apply z-10 flex flex-col gap-y-0;
-            @apply absolute top-14 -right-5;
+            @apply absolute top-12 -right-5;
             > .popover_item {
               > button {
                 @apply w-full h-16 flex justify-between items-center;
                 @apply px-8 bg-primary text-white;
                 @apply cursor-pointer;
-                /* @apply border border-red-600; */
                 > img {
                   @apply fill-white;
                 }
@@ -833,30 +827,25 @@ const mobile_popover_open = ref(false);
         }
         > #popover_group_wrapper {
           @apply hidden h-full;
-          @screen md {
+          @screen lg {
             @apply flex items-center justify-between;
           }
-          /* @screen lg {
-            @apply flex items-center gap-x-12;
-          } */
           > a {
             @apply text-primary font-medium;
           }
           > div {
             @apply h-full flex items-center;
             > button {
-              @apply h-2/3 text-primary font-medium  px-4 mr-1;
+              @apply h-full text-primary font-medium  px-4 mr-1;
               @apply cursor-pointer flex items-center gap-x-2;
-              @apply hover:bg-[#f3f3f3] rounded-xl;
+              @apply hover:bg-[#f3f3f3];
               @apply outline-none border-none;
               > img {
                 @apply h-2 w-4;
               }
-              /* @apply inline-flex w-full justify-center rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75; */
             }
             > #menu {
-              /* @apply absolute top-[60px] left-0 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none; */
-              @apply absolute top-[90px] left-0 p-6 bg-white rounded-b-2xl;
+              @apply absolute top-[75px] left-0 p-6 bg-white rounded-b-2xl;
               @apply z-20 flex gap-x-4 flex-wrap outline-none;
               > .col {
                 @apply flex flex-col justify-start;
