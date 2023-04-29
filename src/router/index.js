@@ -5,14 +5,39 @@ const abcd = "NaturalDisasters";
 const solutionsRoutes = [
   {
     path: "/solutions/natural-disasters",
-    name: "thankyou",
+    name: "solutions-natural-disasters",
     component: () => import(`@/pages/solutions/${abcd}.vue`),
-  },
+  }
 ];
 const contactusRoutes = [
   {
     path: "/contact",
     name: "contact",
+    component: () => import("@/pages/ContactPage.vue"),
+  },
+  {
+    path: "/contact2",
+    name: "contact2",
+    component: () => import("@/pages/ContactPage.vue"),
+  },
+  {
+    path: "/contact3",
+    name: "contact3",
+    component: () => import("@/pages/ContactPage.vue"),
+  },
+  {
+    path: "/contact4",
+    name: "contact4",
+    component: () => import("@/pages/ContactPage.vue"),
+  },
+  {
+    path: "/contact5",
+    name: "contact5",
+    component: () => import("@/pages/ContactPage.vue"),
+  },
+  {
+    path: "/contact6",
+    name: "contact6",
     component: () => import("@/pages/ContactPage.vue"),
   },
 ];
@@ -21,10 +46,9 @@ const thankyouRoutes = [
     path: "/thankyou",
     name: "thankyou",
     component: () => import("@/pages/ThankyouPage.vue"),
-  },
+  }
 ];
 
-// import.meta.env.BASE_URL
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -43,6 +67,7 @@ const router = createRouter({
       name: "events",
       component: () => import("@/pages/EventsPage.vue"),
     },
+    
     ...thankyouRoutes,
     ...contactusRoutes,
     ...solutionsRoutes,

@@ -7,8 +7,8 @@
       time.
     </div>
     <div id="buttons">
-      <button id="productVid">See Product Video</button>
-      <button id="demo">Book Demo</button>
+      <a href="#" id="productVid">See Product Video</a>
+      <a href="/contact3" id="demo">Book Demo</a>
     </div>
   </div>
   <CompaniesSlider />
@@ -134,9 +134,9 @@ useHead({
     @screen sm {
       @apply flex-row;
     }
-    > button {
+    > a {
       @apply w-44 h-11 bg-white rounded-full;
-      @apply text-primary  font-semibold font-aneklatin;
+      @apply flex justify-center items-center text-primary  font-semibold font-aneklatin;
     }
     > #productVid {
       @apply bg-primary text-white;

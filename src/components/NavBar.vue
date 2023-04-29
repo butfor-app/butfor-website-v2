@@ -7,8 +7,8 @@
           <div id="msg">Webinar on How to Automate Baselines, June 14</div>
         </div>
         <div>
-          <button id="contact">Contact Sales</button>
-          <button id="login">Login</button>
+          <a href="/contact" id="contact">Contact Sales</a>
+          <a href="#" id="login">Login</a>
         </div>
       </div>
     </div>
@@ -679,7 +679,7 @@
             </div>
           </div>
         </div>
-        <button>Book Demo</button>
+        <a href="/contact2">Book Demo</a>
       </div>
     </div>
   </div>
@@ -745,8 +745,8 @@ const mobile_popover_open = ref(false);
         @screen lg {
           @apply gap-x-12;
         }
-        > button {
-          @apply h-full text-white px-4 cursor-pointer;
+        > a {
+          @apply flex items-center justify-center h-full text-white px-4 cursor-pointer;
           @apply hover:bg-[#052f3f] transition-all duration-300;
         }
       }
@@ -875,10 +875,10 @@ const mobile_popover_open = ref(false);
           }
         }
       }
-      > button {
+      > a {
         @apply hidden;
         @screen lg {
-          @apply block w-32 h-10 bg-primary text-white text-sm font-medium px-4 rounded-md;
+          @apply flex items-center justify-center w-32 h-10 bg-primary text-white text-sm font-medium px-4 rounded-md;
           @apply cursor-pointer;
         }
       }

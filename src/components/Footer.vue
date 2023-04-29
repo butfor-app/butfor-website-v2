@@ -32,7 +32,7 @@
             <a href="#" class="lg:hidden">Security/<br />Compliance</a>
             <a href="#" class="hidden lg:block">Security/Compliance</a>
             <a href="#">Partnerships</a>
-            <a href="#">Contact Us</a>
+            <a href="/contact4">Contact Us</a>
           </div>
           <!-- <div class="link_block">
             <a href="#">Pricing</a>
@@ -42,7 +42,7 @@
           </div> -->
           <div class="link_block">
             <a href="#">View Demo</a>
-            <a href="#">Schedule Demo</a>
+            <a href="/contact5">Schedule Demo</a>
           </div>
         </div>
       </div>
