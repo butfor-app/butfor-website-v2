@@ -4,7 +4,7 @@
     <!-- <div id="content"> -->
     <div id="heading">SIMPLIFYING COMPLEX CLAIMS</div>
     <div id="subheading">
-      Tueri automates business interruption insurance claims.<br />
+      Butfor automates business interruption insurance claims.<br />
       Calculate your losses & build comprehensive reports in a fraction of the
       time.
     </div>
@@ -81,6 +81,11 @@ import CompaniesSlider from "@/components/CompaniesSlider.vue";
 import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import FeatureRow from "@/components/FeatureRow.vue";
 import FaqDisclosure from "@/components/FaqDisclosure.vue";
+import { useGeneralData } from "@/stores/useGeneralData";
+const generalData = useGeneralData();
+const features = generalData.features;
+const solutionsByCompanyType = generalData.solutionsByCompanyType;
+console.log(solutionsByCompanyType);
 useHead({
   title: "Butfor - Home",
   meta: [
@@ -91,51 +96,6 @@ useHead({
     },
   ],
 });
-
-const features = [
-  {
-    heading: "Automate file transfers and retrieval",
-    desc: "File acquisition process: It eliminates the amount of work client is required and time client needs to spend pulling data and spend on the case. Making clients time more efficient. Saving client time.",
-    icon: "help-1",
-    rtl: true,
-  },
-  {
-    heading: "Save Time & Effort",
-    desc: "From file transfers to running advanced calculations, our tool automates the most tedious and time consuming aspects of the claims process.",
-    icon: "help-2",
-    rtl: false,
-  },
-  {
-    heading: "Minimize Human Error",
-    desc: "Claims traditionally require manual reviews of thousands of rows of data and a significant number of complex calculations with mistakes being inevitable; we solve for this using machine learning and software automation.",
-    icon: "help-3",
-    rtl: true,
-  },
-  {
-    heading: "Run Multiple Scenarios",
-    desc: "Our tool can find data trends and process various claim scenarios, presenting the best possible outcome in a more efficient manner.",
-    icon: "help-4",
-    rtl: false,
-  },
-  {
-    heading: "Automate Claims Approval Process",
-    desc: "Centralize claim data & build custom approval chains to assist in the submission process.",
-    icon: "help-5",
-    rtl: true,
-  },
-  {
-    heading: "Reducing Discrepancy Between Parties",
-    desc: "Our tool can find data trends and process various claim scenarios, presenting the best possible outcome in a more efficient manner.",
-    icon: "help-6",
-    rtl: false,
-  },
-  {
-    heading: "Security & Centralizing of Data",
-    desc: "Data is secure on our servers, not living on desktops and in insecure places like excel.",
-    icon: "help-7",
-    rtl: true,
-  },
-];
 </script>
 
 <style lang="postcss" scoped>
@@ -163,7 +123,7 @@ const features = [
     }
     > button {
       @apply w-44 h-11 bg-white rounded-full;
-    @apply text-primary  font-semibold font-aneklatin;
+      @apply text-primary  font-semibold font-aneklatin;
     }
     > #productVid {
       @apply bg-primary text-white;
