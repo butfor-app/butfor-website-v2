@@ -18,7 +18,7 @@ module.exports = {
       },
 
       keyframes: {
-        fadeIn: {
+        slideIn: {
           "0%": {
             transform: "translateX(-100vw)",
             opacity: 0,
@@ -28,7 +28,7 @@ module.exports = {
             opacity: 100,
           },
         },
-        fadeOut: {
+        slideOut: {
           "0%": {
             transform: "translateX(0)",
           },
@@ -38,8 +38,22 @@ module.exports = {
             display: "hidden",
           },
         },
+        fadeIn: {
+          "0%": {},
+          "100%": {
+            opacity: 1,
+          },
+        },
+        fadeOut: {
+          "0%": {},
+          "100%": {
+            opacity: 0,
+          },
+        },
       },
       animation: {
+        "slide-in": "slideIn 1s ease-in",
+        "slide-out": "slideOut 1s ease-out",
         "fade-in": "fadeIn 1s ease-in",
         "fade-out": "fadeOut 1s ease-out",
       },

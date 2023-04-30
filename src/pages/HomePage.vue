@@ -1,10 +1,12 @@
 <template>
   <div id="hero_section">
-    <div id="heading" ref="header">Simplifying Complex Claims</div>
+    <div id="heading" ref="headerRef">Simplifying Complex Claims</div>
     <div id="subheading">
-      Butfor automates business interruption insurance claims.<br />
-      Calculate your losses & build comprehensive reports in a fraction of the
-      time.
+      Butfor helps
+      <span ref="headerDescSlotOneRef">consultants</span>
+      create and manage
+      <span ref="headerDescSlotTwoRef">multiple client</span> claims in one
+      place
     </div>
     <div id="buttons">
       <a href="#" id="productVid">See Product Video</a>
@@ -79,7 +81,9 @@ import { ref, onMounted } from "vue";
 const generalData = useGeneralData();
 const features = generalData.features;
 const solutionsByCompanyType = generalData.solutionsByCompanyType;
-const header = ref(null);
+const headerRef = ref(null);
+const headerDescSlotOneRef = ref(null);
+const headerDescSlotTwoRef = ref(null);
 const headerValues = [
   "Simplifying Complex Claims",
   "Assisting by Automating",
@@ -87,20 +91,46 @@ const headerValues = [
 ];
 onMounted(() => {
   let index = 0;
-  const heading = header.value;
+  const heading = headerRef.value;
   heading.innerHTML = headerValues[index];
 
   setInterval(() => {
-    heading.classList.remove("animate-fade-in");
-    heading.classList.add("animate-fade-out");
+    heading.classList.remove("animate-slide-in");
+    heading.classList.add("animate-slide-out");
     setTimeout(() => {
       heading.innerHTML = headerValues[index];
-      heading.classList.remove("animate-fade-out");
-      heading.classList.add("animate-fade-in");
+      heading.classList.remove("animate-slide-out");
+      heading.classList.add("animate-slide-in");
       index++;
       if (index >= headerValues.length) index = 0;
     }, 1000);
-  }, 4000);
+  }, 3500);
+
+  const headerDescSlotOne = headerDescSlotOneRef.value;
+  const headerDescSlotTwo = headerDescSlotTwoRef.value;
+  setInterval(() => {
+    headerDescSlotOne.classList.add("animate-fade-out");
+    headerDescSlotTwo.classList.add("animate-fade-out");
+    setTimeout(() => {
+      headerDescSlotOne.innerHTML =
+        headerDescSlotOne.innerHTML == "consultants"
+          ? "enterprise"
+          : "consultants";
+      headerDescSlotTwo.innerHTML =
+        headerDescSlotTwo.innerHTML == "multiple client"
+          ? "in-house"
+          : "multiple client";
+
+      headerDescSlotOne.classList.remove("animate-fade-out");
+      headerDescSlotTwo.classList.remove("animate-fade-out");
+      headerDescSlotOne.classList.add("animate-fade-in");
+      headerDescSlotTwo.classList.add("animate-fade-in");
+      setTimeout(() => {
+        headerDescSlotOne.classList.remove("animate-fade-in");
+        headerDescSlotTwo.classList.remove("animate-fade-in");
+      }, 1000);
+    }, 1000);
+  }, 5000);
 });
 useHead({
   title: "Butfor - Home",
