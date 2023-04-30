@@ -125,7 +125,7 @@ console.log(groupedEvents.value);
   @apply flex flex-col items-center justify-center;
   @apply py-4 h-[calc(100vh)] text-center;
   @screen md {
-    @apply h-[calc(100vh_-_171px)];
+    @apply h-[calc(100vh_-_144px)];
   }
   @apply bg-[url('@/assets/images/events-hero-bg.png')] bg-no-repeat	bg-cover  bg-top;
   > #heading {

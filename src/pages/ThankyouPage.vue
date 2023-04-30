@@ -26,7 +26,7 @@ useHead({
   @apply max-w-5xl;
   /* @apply py-4 h-[calc(100vh)] text-center; */
   @screen md {
-    /* @apply h-[calc(100vh_-_171px)]; */
+    /* @apply h-[calc(100vh_-_144px)]; */
   }
   @screen sm {
     @apply text-4xl;

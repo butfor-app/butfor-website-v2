@@ -150,7 +150,7 @@ useHead({
   @apply py-4 h-[calc(100vh)] text-center;
   @apply bg-[url('@/assets/images/hero-bg.png')] bg-no-repeat	bg-cover bg-center;
   @screen md {
-    @apply h-[calc(100vh_-_171px)];
+    @apply h-[calc(100vh_-_144px)];
   }
   @apply flex items-center justify-center flex-col overflow-hidden;
   > #heading {
