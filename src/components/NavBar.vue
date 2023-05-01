@@ -198,7 +198,7 @@
               >
                 <MenuItems id="menu" class="w-[656px] h-[238px]">
                   <div
-                    class="absolute left-0 top-[65px] z-0 w-[638px] mx-6 border-b-2 border-gray-200"
+                    class="absolute left-0 top-[65px] z-0 w-[608px] mx-6 border-b-2 border-gray-200"
                   ></div>
                   <div class="col w-[150px]">
                     <div class="heading">OVERVIEW</div>
