@@ -196,11 +196,11 @@
                 leave-from-class="transform scale-100 opacity-100"
                 leave-to-class="transform scale-95 opacity-0"
               >
-                <MenuItems id="menu" class="w-[686px] h-[288px]">
+                <MenuItems id="menu" class="w-[656px] h-[238px]">
                   <div
                     class="absolute left-0 top-[65px] z-0 w-[638px] mx-6 border-b-2 border-gray-200"
                   ></div>
-                  <div class="col w-[200px]">
+                  <div class="col w-[150px]">
                     <div class="heading">OVERVIEW</div>
                     <div class="h-full flex flex-col justify-around">
                       <div class="pb-4">
@@ -216,65 +216,65 @@
                   <div class="col">
                     <div class="heading">PREVIEW</div>
                     <div class="content">
-                      <a href="#" class="menu_row">
+                      <a href="/product/?feature=1" class="menu_row">
                         <div class="img">
                           <img
                             src="@/assets/icons/manage_accounts.png"
                             alt=""
                           />
                         </div>
-                        <div class="name">Natural Disasters</div>
+                        <div class="name">Customer & Claim Management</div>
                       </a>
-                      <a href="#" class="menu_row">
+                      <a href="/product/?feature=2" class="menu_row">
                         <div class="img">
                           <img
                             src="@/assets/icons/bar_chart_4_bars.png"
                             alt=""
                           />
                         </div>
-                        <div class="name">Fire or Explosion</div>
+                        <div class="name">Reporting & Analytics</div>
                       </a>
-                      <a href="#" class="menu_row">
+                      <a href="/product/?feature=3" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/done.png" alt="" />
                         </div>
-                        <div class="name">Equipment Breakdown</div>
+                        <div class="name">Approval Chains</div>
                       </a>
-                      <a href="#" class="menu_row">
+                      <a href="/product/?feature=4" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/edit_document.png" alt="" />
                         </div>
-                        <div class="name">Power Outages</div>
+                        <div class="name">Claims Customization</div>
                       </a>
-                      <button class="more_types">See More Claim Types</button>
+                      <!-- <button class="more_types">See More Claim Types</button> -->
                     </div>
                   </div>
                   <div class="col">
                     <div class="heading" style="visibility: hidden">.</div>
                     <div class="content">
-                      <a href="#" class="menu_row">
+                      <a href="/product/?feature=5" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/magic_button.png" alt="" />
                         </div>
-                        <div class="name">Enterprise</div>
+                        <div class="name">Find the Best Baseline</div>
                       </a>
-                      <a href="#" class="menu_row">
+                      <a href="/product/?feature=6" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/handshake.png" alt="" />
                         </div>
-                        <div class="name">Insurance Companies</div>
+                        <div class="name">Collaboration</div>
                       </a>
-                      <a href="#" class="menu_row">
+                      <a href="/product/?feature=7" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/lock.png" alt="" />
                         </div>
-                        <div class="name">Claim Consultants</div>
+                        <div class="name">Centralized & Secure</div>
                       </a>
-                      <a href="#" class="menu_row">
+                      <a href="/product/?feature=8" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/database.png" alt="" />
                         </div>
-                        <div class="name">Insurance Brokers</div>
+                        <div class="name">Data Standardization</div>
                       </a>
                     </div>
                   </div>

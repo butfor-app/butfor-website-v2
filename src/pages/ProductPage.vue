@@ -7,7 +7,7 @@
     </div>
     <button>Learn More</button>
   </div>
-  <div id="slider">
+  <div id="slider" ref="featuresRef">
     <div id="heading">THE FEATURES YOU NEED</div>
     <div id="wrapper">
       <Carousel
@@ -187,6 +187,7 @@
 import { useHead } from "@vueuse/head";
 import { Carousel, Pagination, Slide } from "vue3-carousel";
 import { onMounted, ref } from "vue";
+import { useRoute } from "vue-router";
 useHead({
   title: "Butfor - Product",
   meta: [
@@ -197,56 +198,88 @@ useHead({
     },
   ],
 });
-
+const featuresRef = ref(null);
 const currentSlide = ref(0);
-
-const slideTo = (val) => {
-  currentSlide.value = val;
-};
 const thumbnail_carousel = ref(null);
-// onMounted(() => {
-//   // thumbnail_carousel.value.data.slideWidth = 500;
-//   thumbnail_carousel.value.data.slideWidth.value = 500;
-//   console.log(thumbnail_carousel.value.data);
-//   console.log(thumbnail_carousel.value.data.slideWidth.value);
-//   // console.log(thumbnail_carousel.value.data.slideWidth);
-// });
+const route = useRoute();
+
+onMounted(() => {
+  console.log(route.query);
+  if ("feature" in route.query) {
+    console.log("scrolling to feature");
+
+    featuresRef.value.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+    // console.log(route.query.feature);
+    // console.log(!isNaN(route.query.feature));
+    if (route.query.feature != "" && !isNaN(route.query.feature)) {
+      if (route.query.feature > featureSlider_slides.length) {
+      } else {
+        console.log("setting current slide");
+        currentSlide.value = parseInt(route.query.feature) - 1;
+      }
+    }
+  }
+});
 const featureSlider_tabs = [
   "Customer & Claim Management",
   "Reporting and Analytics",
   "Approval Chains",
   "Claims Customization",
-  "Find The Meaning Of Life",
+  "Find the Best Baseline",
+  "Collaboration",
+  "Centralized & Secure",
+  "Data Standardization",
 ];
 const featureSlider_slides = [
   {
     heading:
       "Butfor provides users with various tools to make the claims process more efficient",
-    desc: "From onboarding to claim submission and all the steps in between,  we provide our clients with the instruments they need for their unique claims process. ",
+    desc: "From onboarding to claim submission and all the steps in between,  we provide our clients with the instruments they need for their unique claims process. Manage and organize claims in one place.",
     img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
   },
   {
     heading:
-      "Butfor provides users with various tools to make the claims process more efficient",
-    desc: "From onboarding to claim submission and all the steps in between,  we provide our clients with the instruments they need for their unique claims process. ",
+      "Butfor’s machine learning algorithm allows you to run multiple scenarios in seconds",
+    desc: "Conduct a comprehensive exploration of multiple hypotheses to yield the most favorable outcome for your assertion, all while minimizing time expenditure and enhancing result precision.",
     img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
   },
   {
     heading:
-      "Butfor provides users with various tools to make the claims process more efficient",
-    desc: "From onboarding to claim submission and all the steps in between,  we provide our clients with the instruments they need for their unique claims process. ",
+      "Streamlining Claim Approval with Internal Approval Chains and simple client support",
+    desc: "Simplify the cumbersome process of claim approval pre-submission by configuring internal approval chains, enabling seamless transmission of claims to designated approvers at the click of a button.",
     img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
   },
   {
     heading:
-      "Butfor provides users with various tools to make the claims process more efficient",
-    desc: "From onboarding to claim submission and all the steps in between,  we provide our clients with the instruments they need for their unique claims process. ",
+      "Tailoring Claims to Your Specific Needs: Custom Formulas and Analyses.",
+    desc: "Regardless of whether you operate as an insurance firm or a consultancy, customize each claim in accordance with your unique requirements by responding to a sequence of questions that permit bespoke formulas and analyses to supersede our standard protocol",
     img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
   },
   {
     heading:
-      "Butfor provides users with various tools to make the claims process more efficient",
-    desc: "From onboarding to claim submission and all the steps in between,  we provide our clients with the instruments they need for their unique claims process. ",
+      "Optimizing Claim Outcomes through Automated Pre-Loss Determinations and Scenario Analyses.",
+    desc: "Our system automates the process of determining the baseline in each claim and conducts multiple scenarios to yield the optimal outcome, supported by comprehensive data and calculations.",
+    img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
+  },
+  {
+    heading:
+      "Enhancing Collaboration through Streamlined Claim Editing and Analysis",
+    desc: "Facilitating seamless collaboration, our tool enables users to conveniently modify, filter, and arrange claim setups and analyses within the system.",
+    img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
+  },
+  {
+    heading:
+      "butfor provides Secure and Compliant Storage of Claim Data, ensuring client confidentiality.",
+    desc: "Eliminating the need for data rooms or servers, we maintain all claim-related data in ButFor, ensuring a secure and compliant storage solution.",
+    img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
+  },
+  {
+    heading:
+      "Effortless Claim Submission with Standardized Format within butfor and Excel.",
+    desc: "Our tool presents the claim in a standardized format, both within the system and as an Excel file, ensuring a seamless submission.",
     img: new URL("@/assets/images/product_feature.png", import.meta.url).href,
   },
 ];
@@ -316,7 +349,7 @@ const featureSlider_slides = [
                   @apply w-1/2;
                 }
                 #heading {
-                  @apply mb-4 text-4xl font-bold;
+                  @apply mb-4 text-4xl font-bold uppercase;
                   @screen md {
                     @apply mb-14;
                   }
