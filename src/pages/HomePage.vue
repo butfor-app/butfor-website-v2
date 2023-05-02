@@ -7,10 +7,10 @@
         <span ref="headerDescSlotOneRef">consultants</span>
       </div>
       create and manage
-      <div class="w-[126px]">
-        <span ref="headerDescSlotTwoRef">many client</span>
+      <div class="w-[156px]">
+        <span ref="headerDescSlotTwoRef">many client claims</span>
       </div>
-      claims in one place
+      in one place
     </div>
     <div id="buttons">
       <a href="#" id="productVid">See Product Video</a>
@@ -123,7 +123,7 @@ onMounted(() => {
           ? "enterprises"
           : "consultants";
       headerDescSlotTwo.innerHTML =
-        headerDescSlotTwo.innerHTML == "many client" ? "many in-house" : "many client";
+        headerDescSlotTwo.innerHTML == "many client claims" ? "in-house claims" : "many client claims";
 
       headerDescSlotOne.classList.remove("animate-fade-out");
       headerDescSlotTwo.classList.remove("animate-fade-out");
