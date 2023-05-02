@@ -7,8 +7,8 @@
         <span ref="headerDescSlotOneRef">consultants</span>
       </div>
       create and manage
-      <div class="w-18">
-        <span ref="headerDescSlotTwoRef">client</span>
+      <div class="w-[126px]">
+        <span ref="headerDescSlotTwoRef">many client</span>
       </div>
       claims in one place
     </div>
@@ -110,18 +110,20 @@ onMounted(() => {
     }, 1000);
   }, 3500);
 
+
   const headerDescSlotOne = headerDescSlotOneRef.value;
   const headerDescSlotTwo = headerDescSlotTwoRef.value;
+
   setInterval(() => {
     headerDescSlotOne.classList.add("animate-fade-out");
     headerDescSlotTwo.classList.add("animate-fade-out");
     setTimeout(() => {
       headerDescSlotOne.innerHTML =
         headerDescSlotOne.innerHTML == "consultants"
-          ? "enterprise"
+          ? "enterprises"
           : "consultants";
       headerDescSlotTwo.innerHTML =
-        headerDescSlotTwo.innerHTML == "client" ? "in-house" : "client";
+        headerDescSlotTwo.innerHTML == "many client" ? "many in-house" : "many client";
 
       headerDescSlotOne.classList.remove("animate-fade-out");
       headerDescSlotTwo.classList.remove("animate-fade-out");
