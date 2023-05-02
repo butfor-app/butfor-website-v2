@@ -3,10 +3,14 @@
     <div id="heading" ref="headerRef">Simplifying Complex Claims</div>
     <div id="subheading">
       Butfor helps
-      <span ref="headerDescSlotOneRef">consultants</span>
+      <div class="w-[100px]">
+        <span ref="headerDescSlotOneRef">consultants</span>
+      </div>
       create and manage
-      <span ref="headerDescSlotTwoRef">multiple client</span> claims in one
-      place
+      <div class="w-18">
+        <span ref="headerDescSlotTwoRef">client</span>
+      </div>
+      claims in one place
     </div>
     <div id="buttons">
       <a href="#" id="productVid">See Product Video</a>
@@ -117,9 +121,7 @@ onMounted(() => {
           ? "enterprise"
           : "consultants";
       headerDescSlotTwo.innerHTML =
-        headerDescSlotTwo.innerHTML == "multiple client"
-          ? "in-house"
-          : "multiple client";
+        headerDescSlotTwo.innerHTML == "client" ? "in-house" : "client";
 
       headerDescSlotOne.classList.remove("animate-fade-out");
       headerDescSlotTwo.classList.remove("animate-fade-out");
@@ -157,7 +159,7 @@ useHead({
     @apply mb-10 text-[46px] font-extrabold text-white uppercase;
   }
   > #subheading {
-    @apply mb-9 text-xl font-medium font-aneklatin text-white;
+    @apply mb-9 flex flex-wrap justify-center gap-x-1 text-xl font-medium font-aneklatin text-white;
   }
   > #buttons {
     @apply flex flex-col items-center gap-x-8 gap-y-4;
