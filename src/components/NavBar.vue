@@ -52,12 +52,15 @@
                   <div class="col">
                     <div class="heading">BY CLAIM TYPE</div>
                     <div class="content">
-                      <a href="#" class="menu_row">
+                      <RouterLink
+                        to="/solutions/natural-disasters"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/flood.svg" alt="" />
                         </div>
                         <div class="name">Natural Disasters</div>
-                      </a>
+                      </RouterLink>
                       <button class="menu_row">
                         <div class="img">
                           <img
