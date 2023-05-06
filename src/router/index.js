@@ -7,7 +7,10 @@ const solutionsRoutes = [
     path: "/solutions/natural-disasters",
     name: "solutions-natural-disasters",
     component: () => import(`@/pages/solutions/${abcd}.vue`),
-  }
+    props: {
+      routeName: "natural-disasters",
+    },
+  },
 ];
 const contactusRoutes = [
   {
@@ -46,7 +49,7 @@ const thankyouRoutes = [
     path: "/thankyou",
     name: "thankyou",
     component: () => import("@/pages/ThankyouPage.vue"),
-  }
+  },
 ];
 
 const router = createRouter({
@@ -67,7 +70,7 @@ const router = createRouter({
       name: "events",
       component: () => import("@/pages/EventsPage.vue"),
     },
-    
+
     ...thankyouRoutes,
     ...contactusRoutes,
     ...solutionsRoutes,

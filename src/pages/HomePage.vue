@@ -110,7 +110,6 @@ onMounted(() => {
     }, 1000);
   }, 3500);
 
-
   const headerDescSlotOne = headerDescSlotOneRef.value;
   const headerDescSlotTwo = headerDescSlotTwoRef.value;
 
@@ -123,7 +122,9 @@ onMounted(() => {
           ? "enterprises"
           : "consultants";
       headerDescSlotTwo.innerHTML =
-        headerDescSlotTwo.innerHTML == "many client claims" ? "in-house claims" : "many client claims";
+        headerDescSlotTwo.innerHTML == "many client claims"
+          ? "in-house claims"
+          : "many client claims";
 
       headerDescSlotOne.classList.remove("animate-fade-out");
       headerDescSlotTwo.classList.remove("animate-fade-out");

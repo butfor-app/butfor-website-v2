@@ -8,7 +8,7 @@ export const useGeneralData = defineStore("generaldata", {
   // other options...
 
   state: () => ({
-    solutions: [
+    solutionCards: [
       {
         name: "Insurance Companies",
         desc: "We help insurance companies manage and validate all of their claim filings across multiple accounts.",
@@ -64,8 +64,32 @@ export const useGeneralData = defineStore("generaldata", {
         type: "claim",
       },
     ],
-
-    features: [
+    solutionPages: [
+      {
+        routeName: "natural-disasters",
+        title: "Natural Disasters",
+        desc: "Don't have anything to write here",
+        bg: "/src/assets/images/solutions/natural-disasters-hero-bg.png",
+        features: [
+          {
+            heading: "Loss of Income & Revenue",
+            desc: "Natural disasters can cause physical damage, disrupt supply chains, and displace employees, all of which can lead to a loss of income for businesses due to reduced sales, increased costs, and decreased productivity, potentially resulting in temporary or permanent closures.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Property  Damage & Extra Expenses",
+            desc: "Natural disasters can lead to significant increases in expenses for businesses due to repairs, replacement of damaged equipment and inventory, hiring additional staff, and implementing disaster recovery and business continuity plans, all of which can put a strain on the financial resources of affected businesses.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "Make-Up Sales and Restoration",
+            desc: "The damage period does not end until business reach pre-loss income levels. This period between the date a business resumes “normal” operations and ending when the business reaches pre-loss income levels is referred to as the “Ramp-Up” period. Reasons for this include: loss of customers, a need to recreate infrastructure  to generate sales, and incurring costs at pre-loss levels without an immediate increase in revenue:",
+            img: "feature-3.png",
+          },
+        ],
+      },
+    ],
+    feature: [
       {
         heading: "Automate file transfers and retrieval",
         desc: "File acquisition process: It eliminates the amount of work client is required and time client needs to spend pulling data and spend on the case. Making clients time more efficient. Saving client time.",
@@ -112,13 +136,13 @@ export const useGeneralData = defineStore("generaldata", {
   }),
   getters: {
     solutionsByCompanyType: (state) => {
-      return state.solutions.filter((item) => item.type === "company");
+      return state.solutionCards.filter((item) => item.type === "company");
     },
     solutionsByRole: (state) => {
-      return state.solutions.filter((item) => item.type === "role");
+      return state.solutionCards.filter((item) => item.type === "role");
     },
     solutionsByClaimType: (state) => {
-      return state.solutions.filter((item) => item.type === "claim");
+      return state.solutionCards.filter((item) => item.type === "claim");
     },
   },
   actions: {},
