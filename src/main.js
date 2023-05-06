@@ -26,15 +26,15 @@ app.use(
       id: "G-WW9RL8K8L7",
     },
     onReady () {
-        console.log('ready');
+        // console.log('ready');
       },
       onBeforeTrack () {
         // before!
-        console.log('before');
+        // console.log('before');
       },
       onAfterTrack () {
         // after!
-        console.log('after');
+        // console.log('after');
       }
   },
   router,

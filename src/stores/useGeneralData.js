@@ -59,7 +59,49 @@ export const useGeneralData = defineStore("generaldata", {
       },
       {
         name: "Natural Disasters",
-        desc: "Don't have anything to write here",
+        desc: "Natural disasters such as hurricanes, earthquakes, floods, and wildfires can cause widespread damage and disruption to businesses, resulting in significant financial losses",
+        icon: "",
+        type: "claim",
+      },
+      {
+        name: "Fire/explosion",
+        desc: "Fires can cause severe damage to infrastructure and inventory, disrupt operations, and pose safety risks to employees and customers, leading to significant financial losses for affected businesses.",
+        icon: "",
+        type: "claim",
+      },
+      {
+        name: "Equipment breakdown",
+        desc: "Equipment breakdowns can cause unplanned downtime, interrupt operations, and result in costly repairs or replacement, leading to significant financial losses for businesses that rely heavily on machinery and equipment.",
+        icon: "",
+        type: "claim",
+      },
+      {
+        name: "Cyber-attacks",
+        desc: "Cyber attacks can cause data breaches, system failures, and business interruption, leading to significant financial losses, reputational damage, and regulatory fines for affected businesses.",
+        icon: "",
+        type: "claim",
+      },
+      {
+        name: "Power outages",
+        desc: "Power outages can disrupt operations, damage electrical equipment, and result in data loss or corruption, leading to significant financial losses for businesses that rely heavily on electricity.",
+        icon: "",
+        type: "claim",
+      },
+      {
+        name: "City shutdowns",
+        desc: "City shutdowns, such as those caused by public health emergencies or civil unrest, can lead to business interruption, supply chain disruptions, and financial losses for affected businesses.",
+        icon: "",
+        type: "claim",
+      },
+      {
+        name: "Pandemic",
+        desc: "Pandemics can cause widespread illness, social distancing measures, and labor disruptions, leading to significant financial losses and operational challenges for businesses of all sizes and industries",
+        icon: "",
+        type: "claim",
+      },
+      {
+        name: "Construction/renovation",
+        desc: "Faulty construction can cause property damage, safety hazards, and business interruption, resulting in significant financial losses and reputational damage for property owners and tenants.",
         icon: "",
         type: "claim",
       },
@@ -68,8 +110,32 @@ export const useGeneralData = defineStore("generaldata", {
       {
         routeName: "natural-disasters",
         title: "Natural Disasters",
-        desc: "Don't have anything to write here",
+        desc: "Natural disasters can cause business interruption by damaging physical property, disrupting supply chains, and causing employee displacement. This can lead to temporary or permanent closures and loss of revenue for affected businesses.",
         bg: "/src/assets/images/solutions/natural-disasters-hero-bg.png",
+        type: "claim",
+        features: [
+          {
+            heading: "Loss of Income & Revenue",
+            desc: "Natural disasters can cause physical damage, disrupt supply chains, and displace employees, all of which can lead to a loss of income for businesses due to reduced sales, increased costs, and decreased productivity, potentially resulting in temporary or permanent closures.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Property  Damage & Extra Expenses",
+            desc: "Natural disasters can lead to significant increases in expenses for businesses due to repairs, replacement of damaged equipment and inventory, hiring additional staff, and implementing disaster recovery and business continuity plans, all of which can put a strain on the financial resources of affected businesses.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "Make-Up Sales and Restoration",
+            desc: "The damage period does not end until business reach pre-loss income levels. This period between the date a business resumes “normal” operations and ending when the business reaches pre-loss income levels is referred to as the “Ramp-Up” period. Reasons for this include: loss of customers, a need to recreate infrastructure  to generate sales, and incurring costs at pre-loss levels without an immediate increase in revenue:",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "fire-or-explosion",
+        title: "Fire or explosion",
+        desc: "Fire and explosions are commonplace in many  manufacturing and industrial industries. The resulting closures, loss of inventory, and damage to reputation can lead to significant financial losses for affected businesses.",
+        bg: "/src/assets/images/solutions/fire-hero-bg.png",
         features: [
           {
             heading: "Loss of Income & Revenue",
@@ -145,5 +211,9 @@ export const useGeneralData = defineStore("generaldata", {
       return state.solutionCards.filter((item) => item.type === "claim");
     },
   },
-  actions: {},
+  actions: {
+    getSolutionPageData: function (routeName) {
+      return this.solutionPages.find((item) => item.routeName === routeName);
+    },
+  },
 });

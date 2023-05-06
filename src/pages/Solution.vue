@@ -6,7 +6,6 @@
   />
   <CompaniesSlider />
   <div id="features">
-    <!-- <div id="header">BUTFOR HELPS YOU</div> -->
     <SolutionFeatures
       v-for="(feature, index) in solution_data.features"
       :heading="feature.heading"
@@ -25,23 +24,41 @@
   <ContactForm />
 </template>
 <script setup>
-import CompaniesSlider from "../../components/CompaniesSlider.vue";
-import HeroSection from "../../components/HeroSection.vue";
+import CompaniesSlider from "../components/CompaniesSlider.vue";
+import HeroSection from "../components/HeroSection.vue";
 import SolutionFeatures from "@/components/SolutionFeatures.vue";
-import ContactForm from "../../components/ContactForm.vue";
+import ContactForm from "../components/ContactForm.vue";
 import { useHead } from "@vueuse/head";
-import { ref, onMounted } from "vue";
 import { useGeneralData } from "@/stores/useGeneralData";
-const props = defineProps({
-  routeName: String,
-});
+import { defineProps, ref, watch, toRef } from "vue";
+import { onBeforeRouteLeave, onBeforeRouteUpdate } from "vue-router";
+import { useRoute } from "vue-router";
+const route = useRoute();
+console.log(route.params);
+// const props = defineProps({
+//   routeName: String,
+// });
+// const routeName = toRef(props, "routeName");
+// const routeName = (props.routeName);
+const routeName = ref(route.params.id);
+// console.log(routeName);
 const generalData = useGeneralData();
-const solution_data = generalData.solutionPages.find(
-  (solution) => solution.routeName === props.routeName
+const solution_data = ref(generalData.getSolutionPageData(routeName.value));
+watch(
+  () => routeName.value,
+  (newVal, oldVal) => {
+    console.log("routeName changed", newVal, oldVal);
+    solution_data.value = generalData.getSolutionPageData(newVal);
+  }
 );
 // console.log(solution_data);
-
-// console.log(props.routeName);
+onBeforeRouteUpdate((to, from, routeName) => {
+  // solution_data.value = generalData.getSolutionPageData(to.params.id);
+  // console.log(to.params.id);
+  routeName.value = to.params.id;
+  console.log("onBeforeRouteUpdate", routeName.value);
+  // next();
+});
 useHead({
   title: "Butfor - Solutions",
   meta: [

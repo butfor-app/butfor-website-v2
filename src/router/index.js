@@ -1,16 +1,22 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "../pages/HomePage.vue";
-import ProductPage from "../pages/ProductPage.vue";
-const abcd = "NaturalDisasters";
 const solutionsRoutes = [
   {
     path: "/solutions/natural-disasters",
-    name: "solutions-natural-disasters",
-    component: () => import(`@/pages/solutions/${abcd}.vue`),
-    props: {
-      routeName: "natural-disasters",
-    },
+    name: "solutions",
+    component: () => import("@/pages/solutions/natural-disasters.vue"),
+    // props: {
+    //   routeName: "natural-disasters",
+    // },
   },
+  // {
+  //   path: "/solutions/fire-or-explosion",
+  //   name: "solutions-fire-or-explosion",
+  //   component: () => import("@/pages/Solution.vue"),
+  //   props: {
+  //     routeName: "fire-or-explosion",
+  //   },
+  // },
 ];
 const contactusRoutes = [
   {

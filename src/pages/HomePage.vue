@@ -32,7 +32,7 @@
     </div>
     <div class="solution_category">
       <div id="heading">BY CLAIM TYPE</div>
-      <SolutionsSlider :solutions="solutionsByCompanyType" />
+      <SolutionsSlider :solutions="generalData.solutionsByClaimType" />
       <button>View All</button>
     </div>
   </div>

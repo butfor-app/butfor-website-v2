@@ -23,12 +23,12 @@
               as="div"
               class="relative inline-block text-left"
               v-slot="{ open }"
-              @mouseleave="handleLeave"
-            >
+              >
+              <!-- @mouseleave="handleLeave" -->
               <MenuButton
                 id="menu_button"
-                @mouseover="handleHover($event, open)"
-              >
+                >
+                <!-- @mouseover="handleHover($event, open)" -->
                 Solutions
                 <img src="@/assets/icons/arrow.svg" alt="" />
               </MenuButton>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="name">Natural Disasters</div>
                       </RouterLink>
-                      <button class="menu_row">
+                      <RouterLink to="/solutions/fire-or-explosion" class="menu_row">
                         <div class="img">
                           <img
                             src="@/assets/icons/fire_extinguisher.svg"
@@ -69,7 +69,7 @@
                           />
                         </div>
                         <div class="name">Fire or Explosion</div>
-                      </button>
+                      </RouterLink>
                       <a href="#" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/construction.svg" alt="" />
@@ -181,12 +181,12 @@
               as="div"
               class="relative inline-block text-left"
               v-slot="{ open }"
-              @mouseleave="handleLeave"
-            >
+              >
+              <!-- @mouseleave="handleLeave" -->
               <MenuButton
                 id="menu_button"
-                @mouseover="handleHover($event, open)"
-              >
+                >
+                <!-- @mouseover="handleHover($event, open)" -->
                 Product
                 <img src="@/assets/icons/arrow.svg" alt="" />
               </MenuButton>
@@ -288,12 +288,12 @@
               as="div"
               class="relative inline-block text-left"
               v-slot="{ open }"
-              @mouseleave="handleLeave"
-            >
+              >
+              <!-- @mouseleave="handleLeave" -->
               <MenuButton
                 id="menu_button"
-                @mouseover="handleHover($event, open)"
-              >
+                >
+                <!-- @mouseover="handleHover($event, open)" -->
                 Resources
                 <img src="@/assets/icons/arrow.svg" alt="" />
               </MenuButton>
