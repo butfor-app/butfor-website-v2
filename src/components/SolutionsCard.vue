@@ -31,12 +31,12 @@ const image = new URL(
 </script>
 <style lang="postcss" scoped>
 #solution_card {
-  @apply h-[276px] w-[314px] bg-primary px-7 pt-10 pb-7 cursor-grab;
+  @apply h-[300px] w-[314px] bg-primary px-7 pt-10 pb-7 cursor-grab;
   @apply flex flex-col items-center justify-center gap-y-4;
   @apply rounded-2xl;
   @apply shadow-lg text-white font-aneklatin;
   @screen lg {
-    @apply h-[276px] w-[414px];
+    @apply h-[276px] w-[354px];
   }
   > #icon {
     @apply w-12 h-12;
