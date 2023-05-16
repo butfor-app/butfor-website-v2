@@ -20,7 +20,7 @@ module.exports = {
       keyframes: {
         slideIn: {
           "0%": {
-            transform: "translateX(-100vw)",
+            transform: "translateX(-30vw)",
             opacity: 0,
           },
           "100%": {
