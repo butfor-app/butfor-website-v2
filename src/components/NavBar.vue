@@ -23,11 +23,9 @@
               as="div"
               class="relative inline-block text-left"
               v-slot="{ open }"
-              >
+            >
               <!-- @mouseleave="handleLeave" -->
-              <MenuButton
-                id="menu_button"
-                >
+              <MenuButton id="menu_button">
                 <!-- @mouseover="handleHover($event, open)" -->
                 Solutions
                 <img src="@/assets/icons/arrow.svg" alt="" />
@@ -43,7 +41,7 @@
               >
                 <MenuItems
                   id="menu"
-                  class="w-[640px] h-[401px] relative"
+                  class="w-[660px] h-[401px] max-h-[calc(100vh_-_140px)] overflow-y-auto relative"
                   style="padding-bottom: 0"
                 >
                   <div
@@ -61,7 +59,10 @@
                         </div>
                         <div class="name">Natural Disasters</div>
                       </RouterLink>
-                      <RouterLink to="/solutions/fire-or-explosion" class="menu_row">
+                      <RouterLink
+                        to="/solutions/fire-or-explosion"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img
                             src="@/assets/icons/fire_extinguisher.svg"
@@ -88,7 +89,25 @@
                         </div>
                         <div class="name">Construction or Renovation</div>
                       </a>
-                      <button class="more_types">See More Claim Types</button>
+                      <a href="#" class="menu_row">
+                        <div class="img">
+                          <img src="@/assets/icons/foundation.svg" alt="" />
+                        </div>
+                        <div class="name">Cyber Attacks</div>
+                      </a>
+                      <a href="#" class="menu_row">
+                        <div class="img">
+                          <img src="@/assets/icons/foundation.svg" alt="" />
+                        </div>
+                        <div class="name">City Shutdowns</div>
+                      </a>
+                      <a href="#" class="menu_row">
+                        <div class="img">
+                          <img src="@/assets/icons/foundation.svg" alt="" />
+                        </div>
+                        <div class="name">Pandemics</div>
+                      </a>
+                      <!-- <button class="more_types">See More Claim Types</button> -->
                     </div>
                   </div>
                   <div class="col">
@@ -111,12 +130,6 @@
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/consultant.svg" alt="" />
-                        </div>
-                        <div class="name">Claim Consultants</div>
-                      </a>
-                      <a href="#" class="menu_row">
-                        <div class="img">
                           <img
                             src="@/assets/icons/real_estate_agent.svg"
                             alt=""
@@ -124,7 +137,19 @@
                         </div>
                         <div class="name">Insurance Brokers</div>
                       </a>
-                      <button class="more_types">See More Claim Types</button>
+                      <a href="#" class="menu_row">
+                        <div class="img">
+                          <img src="@/assets/icons/consultant.svg" alt="" />
+                        </div>
+                        <div class="name">Consulting Firms</div>
+                      </a>
+                      <a href="#" class="menu_row">
+                        <div class="img">
+                          <img src="@/assets/icons/consultant.svg" alt="" />
+                        </div>
+                        <div class="name">Law Firms</div>
+                      </a>
+                      <!-- <button class="more_types">See More Claim Types</button> -->
                     </div>
                   </div>
                   <div class="col">
@@ -143,13 +168,13 @@
                             alt=""
                           />
                         </div>
-                        <div class="name">Claims</div>
+                        <div class="name">Claims Managers</div>
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/attach_money.svg" alt="" />
                         </div>
-                        <div class="name">Finance</div>
+                        <div class="name">Finance Analysts</div>
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
@@ -158,7 +183,7 @@
                             alt=""
                           />
                         </div>
-                        <div class="name">Forensic Accounting</div>
+                        <div class="name">Forensic Accountants</div>
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
@@ -181,11 +206,9 @@
               as="div"
               class="relative inline-block text-left"
               v-slot="{ open }"
-              >
+            >
               <!-- @mouseleave="handleLeave" -->
-              <MenuButton
-                id="menu_button"
-                >
+              <MenuButton id="menu_button">
                 <!-- @mouseover="handleHover($event, open)" -->
                 Product
                 <img src="@/assets/icons/arrow.svg" alt="" />
@@ -288,11 +311,9 @@
               as="div"
               class="relative inline-block text-left"
               v-slot="{ open }"
-              >
+            >
               <!-- @mouseleave="handleLeave" -->
-              <MenuButton
-                id="menu_button"
-                >
+              <MenuButton id="menu_button">
                 <!-- @mouseover="handleHover($event, open)" -->
                 Resources
                 <img src="@/assets/icons/arrow.svg" alt="" />
@@ -856,7 +877,7 @@ const mobile_popover_open = ref(false);
                   @apply pb-8 text-lg font-medium text-primary;
                 }
                 > .content {
-                  @apply flex flex-col justify-center items-start gap-y-3;
+                  @apply flex flex-col justify-center items-start gap-y-2;
                   > .menu_row {
                     @apply flex items-center gap-x-2;
                     > .img {
