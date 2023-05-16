@@ -1,6 +1,6 @@
 <template>
   <div id="clients">
-    <div id="heading">Solving compensation for leading brands</div>
+    <div id="heading">Solving business interruption claims for leading companies</div>
     <div id="slider">
       <div id="slider_track">
         <template v-for="logo in logos">
