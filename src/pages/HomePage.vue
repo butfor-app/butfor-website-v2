@@ -39,7 +39,7 @@
   <div id="features">
     <div id="header">BUTFOR HELPS YOU</div>
     <FeatureRow
-      v-for="feature in features"
+      v-for="feature in generalData.features"
       :heading="feature.heading"
       :desc="feature.desc"
       :icon="feature.icon"
@@ -83,7 +83,7 @@ import FaqDisclosure from "@/components/FaqDisclosure.vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import { ref, onMounted } from "vue";
 const generalData = useGeneralData();
-const features = generalData.features;
+// const features = generalData.features;
 const solutionsByCompanyType = generalData.solutionsByCompanyType;
 const headerRef = ref(null);
 const headerDescSlotOneRef = ref(null);

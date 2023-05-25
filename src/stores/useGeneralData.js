@@ -155,7 +155,7 @@ export const useGeneralData = defineStore("generaldata", {
         ],
       },
     ],
-    feature: [
+    features: [
       {
         heading: "Automate file transfers and retrieval",
         desc: "File acquisition process: It eliminates the amount of work client is required and time client needs to spend pulling data and spend on the case. Making clients time more efficient. Saving client time.",
