@@ -91,19 +91,19 @@
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/foundation.svg" alt="" />
+                          <img src="@/assets/icons/cyberattacks.svg" alt="" />
                         </div>
                         <div class="name">Cyber Attacks</div>
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/foundation.svg" alt="" />
+                          <img src="@/assets/icons/city_shutdown.svg" alt="" />
                         </div>
                         <div class="name">City Shutdowns</div>
                       </a>
                       <a href="#" class="menu_row">
                         <div class="img">
-                          <img src="@/assets/icons/foundation.svg" alt="" />
+                          <img src="@/assets/icons/pandemics.svg" alt="" />
                         </div>
                         <div class="name">Pandemics</div>
                       </a>
@@ -455,7 +455,28 @@
                           </div>
                           <div class="name">Construction or Renovation</div>
                         </a>
-                        <button class="more_types">See More Claim Types</button>
+                        <a href="#" class="menu_row">
+                          <div class="img">
+                            <img src="@/assets/icons/cyberattacks.svg" alt="" />
+                          </div>
+                          <div class="name">Cyber Attacks</div>
+                        </a>
+                        <a href="#" class="menu_row">
+                          <div class="img">
+                            <img
+                              src="@/assets/icons/city_shutdown.svg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="name">City Shutdowns</div>
+                        </a>
+                        <a href="#" class="menu_row">
+                          <div class="img">
+                            <img src="@/assets/icons/pandemics.svg" alt="" />
+                          </div>
+                          <div class="name">Pandemics</div>
+                        </a>
+                        <!-- <button class="more_types">See More Claim Types</button> -->
                       </div>
                     </div>
                     <div class="col">
@@ -491,7 +512,7 @@
                           </div>
                           <div class="name">Insurance Brokers</div>
                         </a>
-                        <button class="more_types">See More Claim Types</button>
+                        <!-- <button class="more_types">See More Claim Types</button> -->
                       </div>
                     </div>
                     <div class="col">
