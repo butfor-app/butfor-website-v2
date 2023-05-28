@@ -64,7 +64,7 @@ useHead({
 </script>
 <style lang="postcss" scoped>
 #features {
-  @apply py-16 flex flex-col gap-y-10 items-center;
+  @apply overflow-x-hidden py-16 flex flex-col gap-y-10 items-center;
   @screen lg {
     @apply gap-y-0 max-w-[1440px] mx-auto;
   }
