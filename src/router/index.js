@@ -1,10 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "../pages/HomePage.vue";
 const solutionsRoutes = [
+  // {
+  //   path: "/solutions/natural-disasters",
+  //   name: "solutions",
+  //   component: () => import("@/pages/solutions/natural-disasters.vue"),
+  //   // props: {
+  //   //   routeName: "natural-disasters",
+  //   // },
+  // },
   {
-    path: "/solutions/natural-disasters",
+    path: "/solutions/:solutionKey",
     name: "solutions",
-    component: () => import("@/pages/solutions/natural-disasters.vue"),
+    component: () => import("@/pages/solutions/index.vue"),
     // props: {
     //   routeName: "natural-disasters",
     // },

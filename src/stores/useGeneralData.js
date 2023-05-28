@@ -136,6 +136,31 @@ export const useGeneralData = defineStore("generaldata", {
         title: "Fire or explosion",
         desc: "Fire and explosions are commonplace in many  manufacturing and industrial industries. The resulting closures, loss of inventory, and damage to reputation can lead to significant financial losses for affected businesses.",
         bg: "/src/assets/images/solutions/fire-hero-bg.png",
+        type: "claim",
+        features: [
+          {
+            heading: "Loss of Income & Revenue",
+            desc: "Natural disasters can cause physical damage, disrupt supply chains, and displace employees, all of which can lead to a loss of income for businesses due to reduced sales, increased costs, and decreased productivity, potentially resulting in temporary or permanent closures.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Property  Damage & Extra Expenses",
+            desc: "Natural disasters can lead to significant increases in expenses for businesses due to repairs, replacement of damaged equipment and inventory, hiring additional staff, and implementing disaster recovery and business continuity plans, all of which can put a strain on the financial resources of affected businesses.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "Make-Up Sales and Restoration",
+            desc: "The damage period does not end until business reach pre-loss income levels. This period between the date a business resumes “normal” operations and ending when the business reaches pre-loss income levels is referred to as the “Ramp-Up” period. Reasons for this include: loss of customers, a need to recreate infrastructure  to generate sales, and incurring costs at pre-loss levels without an immediate increase in revenue:",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "equipment-breakdown",
+        title: "Equipment Breakdown",
+        desc: "Equipment and Machinery are vital parts to many businesses and breakdowns are bound to happen. Halting production, delaying orders, and the resulting loss of revenue and decreased productivity are all recoverable assets.",
+        bg: "/src/assets/images/solutions/equiptment-hero-bg.png",
+        type: "claim",
         features: [
           {
             heading: "Loss of Income & Revenue",

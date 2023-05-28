@@ -71,12 +71,12 @@
                         </div>
                         <div class="name">Fire or Explosion</div>
                       </RouterLink>
-                      <a href="#" class="menu_row">
+                      <RouterLink to="equipment-breakdown" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/construction.svg" alt="" />
                         </div>
                         <div class="name">Equipment Breakdown</div>
-                      </a>
+                      </RouterLink>
                       <a href="#" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/power_off.svg" alt="" />

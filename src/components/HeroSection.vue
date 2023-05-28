@@ -1,5 +1,5 @@
 <template>
-  <div id="hero_section" ref="heroSec" :style="hero_bg_style">
+  <div id="hero_section" :style="hero_bg_style">
     <div id="heading">{{ name }}</div>
     <div id="sub_heading">
       {{ desc }}
@@ -8,7 +8,7 @@
   </div>
 </template>
 <script setup>
-import { defineProps, ref } from "vue";
+import { defineProps, ref, watch } from "vue";
 const props = defineProps({
   name: {
     type: String,
@@ -25,9 +25,19 @@ const props = defineProps({
   },
 });
 
-const heroSec = ref(null);
-const hero_bg_url = new URL(props.bg, import.meta.url).href;
-const hero_bg_style = "background-image: url('" + hero_bg_url + "');";
+const hero_bg_url = ref(new URL(props.bg, import.meta.url).href);
+const hero_bg_style = ref(
+  "background-image: url('" + hero_bg_url.value + "');"
+);
+
+watch(
+  () => props.bg,
+  () => {
+    console.log("bg changed");
+    hero_bg_url.value = new URL(props.bg, import.meta.url).href;
+    hero_bg_style.value = "background-image: url('" + hero_bg_url.value + "');";
+  }
+);
 </script>
 <style lang="postcss" scoped>
 #hero_section {
