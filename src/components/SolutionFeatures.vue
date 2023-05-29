@@ -61,7 +61,7 @@ const image = new URL(
       @apply my-18;
     }
     > #heading {
-      @apply text-4xl text-left font-bold mb-4;
+      @apply text-4xl text-left font-bold mb-4 uppercase;
     }
     > #desc {
       @apply text-xl font-medium font-aneklatin text-left text-primary;

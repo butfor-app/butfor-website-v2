@@ -47,7 +47,7 @@ watch(
   }
   @apply bg-no-repeat	bg-cover  bg-top;
   > #heading {
-    @apply mb-10 text-[46px] font-extrabold text-white;
+    @apply mb-10 text-[46px] font-extrabold text-white uppercase;
   }
   > #sub_heading {
     @apply mb-9 max-w-[70%] text-xl font-medium font-aneklatin text-white;
