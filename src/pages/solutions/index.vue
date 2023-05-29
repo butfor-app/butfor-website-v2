@@ -14,10 +14,10 @@
       :rtl="index == 1"
     />
   </div>
-  <div class="text-4xl font-extrabold mx-auto max-w-max mb-10">
+  <div class="text-center text-4xl font-extrabold mx-auto max-w-max mb-10">
     See what else Butfor can do
   </div>
-  <SolutionsSlider class="mb-10" :solutions="solution_cards_data" />
+  <SolutionsSlider class="mb-10 overflow-x-hidden" :solutions="solution_cards_data" />
   <GetStarted />
   <ContactForm />
 </template>
