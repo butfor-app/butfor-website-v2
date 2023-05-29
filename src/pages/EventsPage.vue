@@ -66,12 +66,14 @@
       <button id="learn_btn">Learn More</button>
     </div>
   </div>
+  <ContactForm />
 </template>
 <script setup>
 import { useHead } from "@vueuse/head";
 import { computed, ref } from "vue";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import EventCard from "@/components/EventCard.vue";
+import ContactForm from "@/components/ContactForm.vue";
 useHead({
   title: "Butfor - Events & Webinars",
   meta: [

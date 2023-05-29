@@ -403,12 +403,12 @@
                         </div>
                         <div class="name">Claims Resource Hub</div>
                       </a>
-                      <a href="#" class="menu_row">
+                      <RouterLink to="/events" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/live_tv.png" alt="" />
                         </div>
                         <div class="name">Webinars</div>
-                      </a>
+                      </RouterLink>
                       <a href="#" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/call.png" alt="" />
