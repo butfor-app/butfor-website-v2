@@ -430,6 +430,7 @@
           </div>
           <div id="mobile_popover_group_wrapper">
             <button
+              aria-label="open menu"
               v-if="mobile_popover_open === false"
               @click="mobile_popover_open = true"
             >
@@ -543,50 +544,50 @@
                       <div class="heading">BY COMPANY TYPE</div>
                       <div class="content">
                         <RouterLink to="/solutions/enterprise" class="menu_row">
-                        <div class="img">
-                          <img src="@/assets/icons/apartment.svg" alt="" />
-                        </div>
-                        <div class="name">Enterprise</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/insurance-companies"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img
-                            src="@/assets/icons/approval_delegation.svg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="name">Insurance Companies</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/insurance-brokers"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img
-                            src="@/assets/icons/real_estate_agent.svg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="name">Insurance Brokers</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/consulting-firms"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img src="@/assets/icons/consultant.svg" alt="" />
-                        </div>
-                        <div class="name">Consulting Firms</div>
-                      </RouterLink>
-                      <RouterLink to="/solutions/law-firms" class="menu_row">
-                        <div class="img">
-                          <img src="@/assets/icons/consultant.svg" alt="" />
-                        </div>
-                        <div class="name">Law Firms</div>
-                      </RouterLink>
+                          <div class="img">
+                            <img src="@/assets/icons/apartment.svg" alt="" />
+                          </div>
+                          <div class="name">Enterprise</div>
+                        </RouterLink>
+                        <RouterLink
+                          to="/solutions/insurance-companies"
+                          class="menu_row"
+                        >
+                          <div class="img">
+                            <img
+                              src="@/assets/icons/approval_delegation.svg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="name">Insurance Companies</div>
+                        </RouterLink>
+                        <RouterLink
+                          to="/solutions/insurance-brokers"
+                          class="menu_row"
+                        >
+                          <div class="img">
+                            <img
+                              src="@/assets/icons/real_estate_agent.svg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="name">Insurance Brokers</div>
+                        </RouterLink>
+                        <RouterLink
+                          to="/solutions/consulting-firms"
+                          class="menu_row"
+                        >
+                          <div class="img">
+                            <img src="@/assets/icons/consultant.svg" alt="" />
+                          </div>
+                          <div class="name">Consulting Firms</div>
+                        </RouterLink>
+                        <RouterLink to="/solutions/law-firms" class="menu_row">
+                          <div class="img">
+                            <img src="@/assets/icons/consultant.svg" alt="" />
+                          </div>
+                          <div class="name">Law Firms</div>
+                        </RouterLink>
                         <!-- <button class="more_types">See More Claim Types</button> -->
                       </div>
                     </div>
@@ -594,56 +595,56 @@
                       <div class="heading">BY ROLE</div>
                       <div class="content">
                         <RouterLink
-                        to="/solutions/risk-compliance"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img src="@/assets/icons/fact_check.svg" alt="" />
-                        </div>
-                        <div class="name">Risk & Compliance</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/claim-managers"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img
-                            src="@/assets/icons/quick_reference.svg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="name">Claims Managers</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/finance-analysts"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img src="@/assets/icons/attach_money.svg" alt="" />
-                        </div>
-                        <div class="name">Finance Analysts</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/forensic-accountants"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img
-                            src="@/assets/icons/account_balance.svg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="name">Forensic Accountants</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/executive-teams"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img src="@/assets/icons/group.svg" alt="" />
-                        </div>
-                        <div class="name">Executive Teams</div>
-                      </RouterLink>
+                          to="/solutions/risk-compliance"
+                          class="menu_row"
+                        >
+                          <div class="img">
+                            <img src="@/assets/icons/fact_check.svg" alt="" />
+                          </div>
+                          <div class="name">Risk & Compliance</div>
+                        </RouterLink>
+                        <RouterLink
+                          to="/solutions/claim-managers"
+                          class="menu_row"
+                        >
+                          <div class="img">
+                            <img
+                              src="@/assets/icons/quick_reference.svg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="name">Claims Managers</div>
+                        </RouterLink>
+                        <RouterLink
+                          to="/solutions/finance-analysts"
+                          class="menu_row"
+                        >
+                          <div class="img">
+                            <img src="@/assets/icons/attach_money.svg" alt="" />
+                          </div>
+                          <div class="name">Finance Analysts</div>
+                        </RouterLink>
+                        <RouterLink
+                          to="/solutions/forensic-accountants"
+                          class="menu_row"
+                        >
+                          <div class="img">
+                            <img
+                              src="@/assets/icons/account_balance.svg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="name">Forensic Accountants</div>
+                        </RouterLink>
+                        <RouterLink
+                          to="/solutions/executive-teams"
+                          class="menu_row"
+                        >
+                          <div class="img">
+                            <img src="@/assets/icons/group.svg" alt="" />
+                          </div>
+                          <div class="name">Executive Teams</div>
+                        </RouterLink>
                       </div>
                     </div>
                   </DisclosurePanel>
