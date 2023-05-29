@@ -2,9 +2,9 @@
   <div id="wrapper">
     <template v-for="faq in faqs">
       <Disclosure v-slot="{ open }">
-        <div id="faq" :class="open ? 'bg-[#59839205]' : 'bg-[#598392]'">
+        <div class="faq" :class="open ? 'bg-[#59839205]' : 'bg-[#598392]'">
           <DisclosureButton
-            id="disclosure-button"
+            class="disclosure-button"
             :class="open ? 'border-b-2' : ''"
           >
             <span class="question" :class="open ? 'text-black' : ''">{{
@@ -54,12 +54,12 @@ const faqs = [
   @screen lg {
     @apply px-18;
   }
-  > #faq {
+  > .faq {
     @apply px-4  mb-6 rounded-3xl;
     @screen lg {
       @apply px-9;
     }
-    > #disclosure-button {
+    > .disclosure-button {
       @apply flex justify-between items-center w-full h-18 rounded-lg   focus:outline-none focus-visible:ring focus-visible:ring-opacity-75;
       @apply text-white;
       @screen lg {
