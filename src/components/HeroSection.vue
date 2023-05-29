@@ -25,17 +25,16 @@ const props = defineProps({
   },
 });
 
-const hero_bg_url = ref(new URL(props.bg, import.meta.url).href);
-const hero_bg_style = ref(
-  "background-image: url('" + hero_bg_url.value + "');"
-);
+// const hero_bg_url = ref(new URL(props.bg, import.meta.url).href);
+// console.log(hero_bg_url.value);
+const hero_bg_style = ref("background-image: url('" + props.bg + "');");
 
 watch(
   () => props.bg,
   () => {
     console.log("bg changed");
-    hero_bg_url.value = new URL(props.bg, import.meta.url).href;
-    hero_bg_style.value = "background-image: url('" + hero_bg_url.value + "');";
+    // hero_bg_url.value = new URL(props.bg, import.meta.url).href;
+    hero_bg_style.value = "background-image: url('" + props.bg + "');";
   }
 );
 </script>
