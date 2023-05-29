@@ -71,55 +71,73 @@
                         </div>
                         <div class="name">Fire or Explosion</div>
                       </RouterLink>
-                      <RouterLink to="/solutions/equipment-breakdown" class="menu_row">
+                      <RouterLink
+                        to="/solutions/equipment-breakdown"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/construction.svg" alt="" />
                         </div>
                         <div class="name">Equipment Breakdown</div>
                       </RouterLink>
-                      <RouterLink to="/solutions/power-outages" class="menu_row">
+                      <RouterLink
+                        to="/solutions/power-outages"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/power_off.svg" alt="" />
                         </div>
                         <div class="name">Power Outages</div>
                       </RouterLink>
-                      <a href="#" class="menu_row">
+                      <RouterLink
+                        to="/solutions/faulty-construction"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/foundation.svg" alt="" />
                         </div>
                         <div class="name">Construction or Renovation</div>
-                      </a>
-                      <a href="#" class="menu_row">
+                      </RouterLink>
+                      <RouterLink
+                        to="/solutions/cyber-attacks"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/cyberattacks.svg" alt="" />
                         </div>
                         <div class="name">Cyber Attacks</div>
-                      </a>
-                      <a href="#" class="menu_row">
+                      </RouterLink>
+                      <RouterLink
+                        to="/solutions/city-shutdowns"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/city_shutdown.svg" alt="" />
                         </div>
                         <div class="name">City Shutdowns</div>
-                      </a>
-                      <a href="#" class="menu_row">
+                      </RouterLink>
+                      <RouterLink to="/solutions/pandemics" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/pandemics.svg" alt="" />
                         </div>
                         <div class="name">Pandemics</div>
-                      </a>
+                      </RouterLink>
                       <!-- <button class="more_types">See More Claim Types</button> -->
                     </div>
                   </div>
                   <div class="col">
                     <div class="heading">BY COMPANY TYPE</div>
                     <div class="content">
-                      <a href="#" class="menu_row">
+                      <RouterLink to="/solutions/enterprise" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/apartment.svg" alt="" />
                         </div>
                         <div class="name">Enterprise</div>
-                      </a>
-                      <a href="#" class="menu_row">
+                      </RouterLink>
+                      <RouterLink
+                        to="/solutions/insurance-companies"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img
                             src="@/assets/icons/approval_delegation.svg"
@@ -127,8 +145,11 @@
                           />
                         </div>
                         <div class="name">Insurance Companies</div>
-                      </a>
-                      <a href="#" class="menu_row">
+                      </RouterLink>
+                      <RouterLink
+                        to="/solutions/insurance-brokers"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img
                             src="@/assets/icons/real_estate_agent.svg"
@@ -136,32 +157,41 @@
                           />
                         </div>
                         <div class="name">Insurance Brokers</div>
-                      </a>
-                      <a href="#" class="menu_row">
+                      </RouterLink>
+                      <RouterLink
+                        to="/solutions/consulting-firms"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/consultant.svg" alt="" />
                         </div>
                         <div class="name">Consulting Firms</div>
-                      </a>
-                      <a href="#" class="menu_row">
+                      </RouterLink>
+                      <RouterLink to="/solutions/law-firms" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/consultant.svg" alt="" />
                         </div>
                         <div class="name">Law Firms</div>
-                      </a>
+                      </RouterLink>
                       <!-- <button class="more_types">See More Claim Types</button> -->
                     </div>
                   </div>
                   <div class="col">
                     <div class="heading">BY ROLE</div>
                     <div class="content">
-                      <a href="#" class="menu_row">
+                      <RouterLink
+                        to="/solutions/risk-compliance"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/fact_check.svg" alt="" />
                         </div>
                         <div class="name">Risk & Compliance</div>
-                      </a>
-                      <a href="#" class="menu_row">
+                      </RouterLink>
+                      <RouterLink
+                        to="/solutions/claim-managers"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img
                             src="@/assets/icons/quick_reference.svg"
@@ -169,14 +199,20 @@
                           />
                         </div>
                         <div class="name">Claims Managers</div>
-                      </a>
-                      <a href="#" class="menu_row">
+                      </RouterLink>
+                      <RouterLink
+                        to="/solutions/finance-analysts"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/attach_money.svg" alt="" />
                         </div>
                         <div class="name">Finance Analysts</div>
-                      </a>
-                      <a href="#" class="menu_row">
+                      </RouterLink>
+                      <RouterLink
+                        to="/solutions/forensic-accountants"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img
                             src="@/assets/icons/account_balance.svg"
@@ -184,13 +220,16 @@
                           />
                         </div>
                         <div class="name">Forensic Accountants</div>
-                      </a>
-                      <a href="#" class="menu_row">
+                      </RouterLink>
+                      <RouterLink
+                        to="/solutions/executive-teams"
+                        class="menu_row"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/group.svg" alt="" />
                         </div>
                         <div class="name">Executive Teams</div>
-                      </a>
+                      </RouterLink>
                     </div>
                   </div>
                   <button

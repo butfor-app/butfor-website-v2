@@ -107,6 +107,7 @@ export const useGeneralData = defineStore("generaldata", {
       },
     ],
     solutionPages: [
+      //by claim type
       {
         routeName: "natural-disasters",
         title: "Natural Disasters",
@@ -295,6 +296,248 @@ export const useGeneralData = defineStore("generaldata", {
           {
             heading: "Make-Up Sales and Restoration",
             desc: "The damage period does not end until business reach pre-loss income levels. This period between the date a business resumes “normal” operations and ending when the business reaches pre-loss income levels is referred to as the “Ramp-Up” period. Reasons for this include: loss of customers, a need to recreate infrastructure  to generate sales, and incurring costs at pre-loss levels without an immediate increase in revenue.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      // By company type
+      {
+        routeName: "enterprise",
+        title: "Enterprise",
+        desc: "Enterprises can use our software to automate and streamline insurance processes, such as claims processing, By using analytics and machine learning algorithms, our software can help businesses make more informed decisions and optimize their insurance claims and associated costs.",
+        bg: "/src/assets/images/solutions/enterprise-hero-bg.png",
+        type: "company",
+        features: [
+          {
+            heading: "manage claims in-house",
+            desc: "Whether your claim is large or small, ButFor’s software is equipped to handle any size business interruption. Whether you employ analysts or have solely outsourced in the past, look at ButFor as an extension to your team or as a new claims unit entirely.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "optimize claim amount & time spent",
+            desc: "Our tool runs virtually limitless scenarios with the click of a button and offers suggestions on what the best outcomes will be for your company. Help with choosing pre-loss baselines, automatically updating financial information straight from your ERP, and visualizing adjustments with supporting documentation are just a few of the differentiating features that set us apart from conventional Excel-based and manual calculations.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "substantially decrease claim prep cost",
+            desc: "Billable hours are a thing of the past with ButFor. Our industry-changing software automates the most tedious and time consuming tasks internally and your outsourced consultants, saving you thousands (if not hundreds of thousands) of dollars. Whether it’s by paying on a claim-by-claim basis or decreasing your claim preparation insurance coverage, our solution offers flexible pricing options tailored for enterprise clients.. Learn more about our pricing options for the enterprise here.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "insurance-companies",
+        title: "insurance companies",
+        desc: "Improve claims processing efficiency and accuracy, reduce work load, and enhance customer satisfaction. By leveraging advanced technologies such as AI and machine learning,our software can help make data-driven decisions, reduce operational costs, and provide faster and more personalized services to your customers.",
+        bg: "/src/assets/images/solutions/insurance-companies-hero-bg.png",
+        type: "company",
+        features: [
+          {
+            heading: "ERROR REDUCTION",
+            desc: "ButFor was built on the premise of making claim prep as efficient as possible, which includes the removal of manual calculation checks & approximations. We are making the process quantitative rather than qualitative with formulas built into the entire process, allowing you to run as many analyses as you’d like in an instant.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "time savings + instant results",
+            desc: "ButFor's capability to automate the process of constructing a business interruption claim, incorporating defensible calculations, empowers your team to effortlessly handle the most laborious tasks. With the ability to run multiple pre-loss baselines, analyze post-loss adjustments, and swiftly make informed decisions, valuable time is saved, enabling efficient progress within a fraction of the usual timeframe.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "approval chains & claim management",
+            desc: "Our platform provides insurance companies and analysts with the capability to handle multiple claims simultaneously, while also offering an integrated approval chain system for the claims process. This system enables seamless assignment of appropriate staff members to submit, modify, or edit claims automatically, ensuring smooth workflow management.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "insurance-brokers",
+        title: "insurance brokers",
+        desc: "Streamline claims processing, automate routine tasks, and gain deeper insights into your clients' risk profiles, thus providing more personalized and efficient service, while also reducing costs and increasing revenue opportunities. By leveraging the advanced analytics and data-driven insights, brokers can optimize their operations, improve customer satisfaction, and gain a competitive advantage in the marketplace.",
+        bg: "/src/assets/images/solutions/brokers-hero-bg.png",
+        type: "company",
+        features: [
+          {
+            heading: "reduce premiums for clients",
+            desc: "Our software reduces both claim preparation time and associated expenses, leading to reduced coverage costs for your clients. This cost-saving advantage is particularly significant for clients who do not have these specific provisions included in their policy, offering them reassurance that claims can be efficiently managed at a lower overall cost.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Ensure your clients are covered",
+            desc: "It is estimated only 30-40% of small business owners carry business interruption insurance. Our goal is to increase that number of all businesses at a lower premium cost. Although these claims are rare and unexpected, ensure that your clients are fully covered without the stress of higher costs.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "Add butfor as a third party vendor",
+            desc: "Consider ButFor as a third-party vendor for all business interruption claims. Knowing that our claims will be completed in a timely manner will give your clients confidence their coverage is sufficient and there will be little to no out-of-pocket costs.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "consulting-firms",
+        title: "Consulting firms",
+        desc: "Conduct investigations and analyze financial data related to insurance claims. By leveraging the advanced analytics and data-driven insights provided by our tools, forensic accountants can help optimize their claims processes and reduce fees for their clients.",
+        bg: "/src/assets/images/solutions/consulting-hero-bg.png",
+        type: "company",
+        features: [
+          {
+            heading: "ERROR REDUCTION",
+            desc: "ButFor was built on the premise of making claim prep as efficient as possible, which includes the removal of manual calculation checks & approximations. We are making the process quantitative rather than qualitative with formulas built into the entire process, allowing you to run as many analyses as you’d like in an instant.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "time savings + instant results",
+            desc: "ButFor's capability to automate the process of constructing a business interruption claim, incorporating defensible calculations, empowers your team to effortlessly handle the most laborious tasks. With the ability to run multiple pre-loss baselines, analyze post-loss adjustments, and swiftly make informed decisions, valuable time is saved, enabling efficient progress within a fraction of the usual timeframe.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "approval chains & claim management",
+            desc: "Our platform provides your firm and analysts with the capability to handle multiple claims simultaneously, while also offering an integrated approval chain system for the claims process. This system enables seamless assignment of appropriate staff members to submit, modify, or edit claims automatically, ensuring smooth workflow management.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "law-firms",
+        title: "Law firms",
+        desc: "Allow our software to efficiently manage and process claims for your clients, streamlining the litigation process and reducing costs. The software's analytics and automation features can help insurance lawyers make better use of their time and resources, ultimately leading to more efficient and cost-effective legal representation.",
+        bg: "/src/assets/images/solutions/insurance-hero-bg.png",
+        type: "company",
+        features: [
+          {
+            heading: "Reduce your firm’s third-party costs",
+            desc: "Mitigate costly claim preparation expenses associated with engaging external vendors. Our commitment is to effectively reduce claim costs, enabling all involved parties to fulfill their responsibilities in managing insurance and litigation matters efficiently.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Have confidence in your defense",
+            desc: "Our software transforms the claims process from a qualitative to a quantitative approach, strengthening the factual basis and enhancing defensibility. By significantly reducing human error and minimizing missteps, you can have confidence in presenting a robust defense during trial. This transition to a more data-driven and precise methodology reinforces the reliability of your case, bolstering your position in legal proceedings.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "Add butfor as a third party vendor",
+            desc: "Consider ButFor as a third-party vendor for insurance and litigation matters. Knowing that our claims will be completed in a timely manner will give your clients confidence their case is in good hands and there will be little to no out-of-pocket costs.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      //By role type
+      {
+        routeName: "risk-compliance",
+        title: "risk & compliance",
+        desc: "Identify potential risks, assess impact, and develop effective risk mitigation strategies, leveraging advanced analytics, data visualization, and machine learning capabilities to enhance the accuracy and speed of your analyses. By integrating our tools into their workflows, risk analysts can improve their ability to manage risks, reduce losses, and create more value for their organizations.",
+        bg: "/src/assets/images/solutions/risk-hero-bg.png",
+        type: "role",
+        features: [
+          {
+            heading: "Automated claims analysis",
+            desc: "Our software offers a streamlined solution to simplify the claims process for you and your team, significantly reducing the time allocated to manual calculations and retrieving data. By automating these tasks, you can allocate more time to your routine day-to-day activities and allocate fewer resources towards unexpected claims, ensuring smoother operations and enhanced productivity.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Decrease Claim Costs",
+            desc: "Establish and manage claims without the necessity of additional resources. By reducing reliance on outsourced work, our solution minimizes the expenditure of time, finances, and dependency, allowing you to take full control of internal claims management. This enables cost savings, heightened operational efficiency, and enhanced oversight over the claims process.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "Contribute to Risk Assessments",
+            desc: "Perform comprehensive risk assessments pertaining to business interruptions, facilitating the identification of potential risks, vulnerabilities, and mitigation strategies that could impact the claims handling process. By conducting these assessments, valuable insights are gained, enabling proactive risk management and informed decision-making to optimize the efficiency and effectiveness of claims handling operations.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "claim-managers",
+        title: "claim managers",
+        desc: "Automate claims processing, streamline workflows, and enhance the accuracy and speed of operations, leveraging our  machine learning, natural language processing, and robotic process automation to improve decision-making, reduce fraud, and improve customer experience. By integrating our tools, claims managers can improve efficiency, reduce costs, and create a more seamless and responsive claims handling process for their customers.",
+        bg: "/src/assets/images/solutions/claims-hero-bg.png",
+        type: "role",
+        features: [
+          {
+            heading: "Decrease claim costs",
+            desc: "Establish and manage claims without the necessity of additional resources. By reducing reliance on outsourced work, our solution minimizes the expenditure of time, finances, and dependency, allowing you to take full control of internal claims management. This enables cost savings, heightened operational efficiency, and enhanced oversight over the claims process.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Automated claims analysis",
+            desc: "Our software offers a streamlined solution to simplify the claims process for you and your team, significantly reducing the time allocated to manual calculations and retrieving data. By automating these tasks, you can allocate more time to your routine day-to-day activities and allocate fewer resources towards unexpected claims, ensuring smoother operations and enhanced productivity.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "data driven decision making",
+            desc: "Leverage data straight from ERP systems regarding claim assessment, coverage determination, and settlement negotiation. Our software enables claims managers to analyze and interpret complex data, enhancing decision-making and optimizing claim outcomes.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "finance-analysts",
+        title: "Finance Analysts",
+        desc: "Analyze financial data related to claims, identify patterns and trends, and develop insights that can inform pricing, underwriting, and risk management decisions, leveraging advanced analytics, data visualization, and machine learning capabilities to optimize analyses and predictions. By integrating our software, finance analysts can improve their ability to manage risk, enhance profitability, and create more value for their organizations.",
+        bg: "/src/assets/images/solutions/finance-hero-bg.png",
+        type: "role",
+        features: [
+          {
+            heading: "Quantitative claims preparation",
+            desc: "Assess the monetary implications of disruptions, including revenue loss, additional expenses, and potential recovery values. Our software provides sophisticated modeling and machine learning tools to quantify the financial consequences accurately, aiding in strategic decision-making and reporting.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Financial Reporting",
+            desc: "Generate accurate and timely reports related to business interruptions. ButFor streamlines data collection, automates calculations, and enables efficient reporting of financial impacts to all relevant parties. This enhances transparency and facilitates effective communication of financial information throughout the organization.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "Streamlined analyses",
+            desc: "Conduct numerous analyses utilizing integrated financial data sourced from the ERP system. Perform multiple scenario assessments, thoroughly evaluating the impact of claims and their correlation to the financial health of the organization. By leveraging these analytical capabilities, finance professionals can gain comprehensive insights into the financial ramifications of claims, facilitating strategic decision-making and ensuring the financial well-being of the company.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "forensic-accountants",
+        title: "Forensic accountants",
+        desc: "Analyze claims data, identify fraud, and provide expert testimony, leveraging our tools to detect anomalies, patterns, and trends that may indicate BI loss. By integrating these software tools, forensic accountants can improve their ability to investigate claims, reduce losses, and protect their organizations against financial loss.",
+        bg: "/src/assets/images/solutions/forensic-hero-bg.png",
+        type: "role",
+        features: [
+          {
+            heading: "reduce time gathering data",
+            desc: "Our ERP integration tool effectively addresses the challenge of awaiting data from clients, alleviating this pain point significantly. Once integrated, the need for back-and-forth communication diminishes, eliminating the necessity for additional data requests and monthly reminders. As a result, the time spent on the claim process is notably reduced, enabling a more streamlined and efficient workflow.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "analyze trends and spot outliers",
+            desc: "Streamline your data analysis process with our tool's ability to identify outliers and detect trends within your data. This feature enables you to pinpoint critical areas for analysis, ensuring a focused approach that yields optimal results. By running alternate scenarios more efficiently and validating assumptions, you can make informed decisions and gain deeper insights into your data, enhancing the overall accuracy and effectiveness of your analyses.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "confidence in your results",
+            desc: "Whether acting as claim representatives for insurance purposes or serving as expert witnesses in litigation, rest assured that your results are supported by AI and machine learning software. By eliminating all potential human errors and logic flaws, our software ensures the utmost accuracy and reliability of your findings. This empowers you in negotiations, depositions, and other legal proceedings, bolstering your confidence and strengthening your position with a robust and defensible analytical foundation.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "executive-teams",
+        title: "Executive teams",
+        desc: "Executive teams can  gain visibility into their organization's claims data, identify emerging risks, and make data-driven decisions, leveraging our tools to monitor performance, optimize processes, and reduce costs. By integrating these software tools into their workflows, executive teams can improve their ability to manage risk, enhance profitability, and drive business growth, while ensuring that their organizations are well-positioned to respond to changing market conditions and customer needs.",
+        bg: "/src/assets/images/solutions/executive-teams-hero-bg.png",
+        type: "role",
+        features: [
+          {
+            heading: "Assess overall loss",
+            desc: "Business interruption claims can pose significant challenges and impose stress on business operations and financial stability. Our tool alleviates this burden by providing a simplified and intuitive representation of the cause-and-effect relationships involved. With our software, you can effortlessly comprehend the impact of business interruptions without the need to navigate through intricate accounting reports.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "be more involved in the claims process",
+            desc: "By offering a user-friendly interface and visualized insights, our tool enhances clarity and facilitates informed decision-making. As a result, you can stay closely aligned with your team throughout the complex process of handling business interruption claims.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "be apart of the decision making process",
+            desc: "Make more informed business-related decisions at every stage, leveraging the comprehensive understanding and actionable insights provided by our tool. By promoting collaboration and empowering you with valuable information, our software enhances your ability to navigate the intricacies of business interruption claims and make strategic decisions that drive favorable outcomes.",
             img: "feature-3.png",
           },
         ],
