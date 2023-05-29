@@ -1,31 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "../pages/HomePage.vue";
-const solutionsRoutes = [
-  // {
-  //   path: "/solutions/natural-disasters",
-  //   name: "solutions",
-  //   component: () => import("@/pages/solutions/natural-disasters.vue"),
-  //   // props: {
-  //   //   routeName: "natural-disasters",
-  //   // },
-  // },
-  {
-    path: "/solutions/:solutionKey",
-    name: "solutions",
-    component: () => import("@/pages/solutions/index.vue"),
-    // props: {
-    //   routeName: "natural-disasters",
-    // },
-  },
-  // {
-  //   path: "/solutions/fire-or-explosion",
-  //   name: "solutions-fire-or-explosion",
-  //   component: () => import("@/pages/Solution.vue"),
-  //   props: {
-  //     routeName: "fire-or-explosion",
-  //   },
-  // },
-];
 const contactusRoutes = [
   {
     path: "/contact",
@@ -80,6 +54,11 @@ const router = createRouter({
       component: () => import("@/pages/ProductPage.vue"),
     },
     {
+      path: "/solutions/:solutionKey",
+      name: "solutions",
+      component: () => import("@/pages/solutions/index.vue"),
+    },
+    {
       path: "/events",
       name: "events",
       component: () => import("@/pages/EventsPage.vue"),
@@ -87,7 +66,6 @@ const router = createRouter({
 
     ...thankyouRoutes,
     ...contactusRoutes,
-    ...solutionsRoutes,
     {
       path: "/:pathMatch(.*)*",
       name: "404",
