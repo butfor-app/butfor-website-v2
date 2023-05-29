@@ -179,6 +179,126 @@ export const useGeneralData = defineStore("generaldata", {
           },
         ],
       },
+      {
+        routeName: "power-outages",
+        title: "Power Outages",
+        desc: "Power outages can cause business interruption by halting production, disabling equipment and technology, and disrupting communication and data systems. Whether a few hours or a few days, any small disruption can have a large monetary effect.",
+        bg: "/src/assets/images/solutions/power-hero-bg.png",
+        type: "claim",
+        features: [
+          {
+            heading: "Loss of Income & Revenue",
+            desc: "Power outages can halt production, disrupt supply chains, and displace employees, all of which can lead to a loss of income for businesses due to reduced sales, increased costs, and decreased productivity, potentially resulting in temporary or permanent closures.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Property  Damage & Extra Expenses",
+            desc: "Power outages can lead to significant increases in expenses for businesses due to repairs, replacement of damaged equipment and inventory, hiring additional staff, and implementing disaster recovery and business continuity plans, all of which can put a strain on the financial resources of affected businesses.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "Make-Up Sales and Restoration",
+            desc: "The damage period does not end until business reach pre-loss income levels. This period between the date a business resumes “normal” operations and ending when the business reaches pre-loss income levels is referred to as the “Ramp-Up” period. Reasons for this include: loss of customers, a need to recreate infrastructure  to generate sales, and incurring costs at pre-loss levels without an immediate increase in revenue.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "faulty-construction",
+        title: "FAULTY Construction",
+        desc: "Broken pipes, sprinkler systems, structural damage, or electrical malfunctioning are all causes of business interruption for companies that rely on rental and operational units. While such incidents may occur unexpectedly, it is important for businesses to safeguard their operations against potential financial liabilities.",
+        bg: "/src/assets/images/solutions/faulty-hero-bg.png",
+        type: "claim",
+        features: [
+          {
+            heading: "Loss of Income & Revenue",
+            desc: "Faulty construction is usually caused by physical damage and it can disrupt supply chains and displace employees, all of which can lead to a loss of income for businesses due to reduced sales, increased costs, and decreased productivity, potentially resulting in temporary or permanent closures.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Property  Damage & Extra Expenses",
+            desc: "Construction & ensuing renovations can lead to significant increases in expenses for businesses due to repairs, replacement of damaged equipment and inventory, hiring additional staff, and implementing disaster recovery and business continuity plans, all of which can put a strain on the financial resources of affected businesses.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "Make-Up Sales and Restoration",
+            desc: "The damage period does not end until business reach pre-loss income levels. This period between the date a business resumes “normal” operations and ending when the business reaches pre-loss income levels is referred to as the “Ramp-Up” period. Reasons for this include: loss of customers, a need to recreate infrastructure  to generate sales, and incurring costs at pre-loss levels without an immediate increase in revenue.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "cyber-attacks",
+        title: "cyber attacks",
+        desc: "Cyber attacks can disrupt critical systems and applications, stealing sensitive data, and compromising business operations, leading to downtime, lost productivity, and financial losses. With the increasing frequency and complexity of cyber attacks, organizations need to implement a comprehensive incident response plan to mitigate the impact of cyber incidents and ensure business continuity.",
+        bg: "/src/assets/images/solutions/cyber-hero-bg.png",
+        type: "claim",
+        features: [
+          {
+            heading: "Loss of Income & Revenue",
+            desc: "Cyber attacks can disrupt critical systems & in turn disrupt supply chains, and displace employees, all of which can lead to a loss of income for businesses due to reduced sales, increased costs, and decreased productivity, potentially resulting in temporary or permanent closures.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Property  Damage & Extra Expenses",
+            desc: "Cyber attacks can lead to significant increases in expenses for businesses due to rectifying and restoring business-critical systems, hiring additional staff, and implementing disaster recovery and business continuity plans, all of which can put a strain on the financial resources of affected businesses.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "Make-Up Sales and Restoration",
+            desc: "The damage period does not end until business reach pre-loss income levels. This period between the date a business resumes “normal” operations and ending when the business reaches pre-loss income levels is referred to as the “Ramp-Up” period. Reasons for this include: loss of customers, a need to recreate infrastructure  to generate sales, and incurring costs at pre-loss levels without an immediate increase in revenue.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "city-shutdowns",
+        title: "city shutdowns",
+        desc: "City shutdowns, such as those caused by civil unrest, protests, or security threats, can disrupt transportation, supply chains, and operations, leading to business interruption, lost revenue, and increased costs. To mitigate the impact of city shutdowns, organizations can develop contingency plans, establish alternative supply routes and transportation modes, leverage technology and remote work arrangements, and maintain open communication with employees, customers, and stakeholders.",
+        bg: "/src/assets/images/solutions/city-hero-bg.png",
+        type: "claim",
+        features: [
+          {
+            heading: "Loss of Income & Revenue",
+            desc: "City shutdowns directly disrupt supply chains and displace employees, all of which can lead to a loss of income for businesses due to reduced sales, increased costs, and decreased productivity, potentially resulting in temporary or permanent closures.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Ceased operations & Extra Expenses",
+            desc: "City shutdowns can lead to significant increases in expenses for businesses due to operations, supply chain & inventory disruption, hiring additional staff, and implementing disaster recovery and business continuity plans, all of which can put a strain on the financial resources of affected businesses.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "Make-Up Sales and Restoration",
+            desc: "The damage period does not end until business reach pre-loss income levels. This period between the date a business resumes “normal” operations and ending when the business reaches pre-loss income levels is referred to as the “Ramp-Up” period. Reasons for this include: loss of customers, a need to recreate infrastructure  to generate sales, and incurring costs at pre-loss levels without an immediate increase in revenue.",
+            img: "feature-3.png",
+          },
+        ],
+      },
+      {
+        routeName: "pandemics",
+        title: "Pandemics",
+        desc: "Pandemics have a great effect on operations, which can be recovered under the proper policy through a business interruption claim. Although we hope to never experience another in our lifetime, ensure your business is prepared for whatever emergencies the world may throw your way.",
+        bg: "/src/assets/images/solutions/city-hero-bg.png",
+        type: "claim",
+        features: [
+          {
+            heading: "Loss of Income & Revenue",
+            desc: "Pandemics can cause major operational disruptions, including supply chains and displace employees, all of which can lead to a loss of income for businesses due to reduced sales, increased costs, and decreased productivity, potentially resulting in temporary or permanent closures.",
+            img: "feature-1.png",
+          },
+          {
+            heading: "Operational shutdown & Production halts",
+            desc: "Pandemics can lead to significant increases in expenses for businesses due to operations and inventory, displacement, hiring additional staff, and implementing disaster recovery and business continuity plans, all of which can put a strain on the financial resources of affected businesses.",
+            img: "feature-2.png",
+          },
+          {
+            heading: "Make-Up Sales and Restoration",
+            desc: "The damage period does not end until business reach pre-loss income levels. This period between the date a business resumes “normal” operations and ending when the business reaches pre-loss income levels is referred to as the “Ramp-Up” period. Reasons for this include: loss of customers, a need to recreate infrastructure  to generate sales, and incurring costs at pre-loss levels without an immediate increase in revenue.",
+            img: "feature-3.png",
+          },
+        ],
+      },
     ],
     features: [
       {
