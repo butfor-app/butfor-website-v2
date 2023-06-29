@@ -7,8 +7,11 @@
           <div id="msg">Webinar on How to Automate Baselines, June 14</div>
         </div>
         <div>
-          <a href="/contact" id="contact">Contact Sales</a>
-          <a href="#" id="login">Login</a>
+          <!-- <a href="/contact" id="contact">Contact Sales</a> -->
+          <RouterLink to="/contact" id="contact">Contact Sales</RouterLink>
+
+          <!-- <a href="#" id="login">Login</a> -->
+          <RouterLink to="/login" id="login">Login</RouterLink>
         </div>
       </div>
     </div>
@@ -832,6 +835,7 @@ import {
 import arrow from "@/components/icons/arrow.vue";
 import { vOnClickOutside } from "@vueuse/components";
 import { ref } from "vue";
+import { RouterLink } from "vue-router";
 
 const mobile_popover_open = ref(false);
 
@@ -877,13 +881,15 @@ const mobile_popover_open = ref(false);
         }
       }
       > :nth-child(2) {
-        @apply h-full flex items-center;
+        @apply h-9 flex items-center;
         @screen lg {
           @apply gap-x-12;
         }
         > a {
-          @apply flex items-center justify-center h-full text-white px-4 cursor-pointer;
-          @apply hover:bg-[#052f3f] transition-all duration-300;
+          @apply flex items-center justify-center;
+          @apply h-full px-3 min-w-[90px]  cursor-pointer;
+          @apply bg-white text-primaryDark rounded-2xl;
+          @apply hover:bg-gray-300 transition-all duration-300;
         }
       }
     }
