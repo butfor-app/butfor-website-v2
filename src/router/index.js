@@ -63,7 +63,11 @@ const router = createRouter({
       name: "events",
       component: () => import("@/pages/EventsPage.vue"),
     },
-
+    {
+      path: "/api",
+      name: "api",
+      component: () => import("@/pages/ApiPage.vue"),
+    },
     ...thankyouRoutes,
     ...contactusRoutes,
     {
