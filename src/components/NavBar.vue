@@ -861,11 +861,11 @@ const mobile_popover_open = ref(false);
       /* changing height from 75px to 60px */
       @apply px-5 h-16 mx-auto max-w-[1200px];
       @apply flex items-center justify-between;
-      @screen lg {
-        @apply px-18;
-      }
       @screen sm {
         @apply px-10;
+      }
+      @screen lg {
+        @apply px-18;
       }
       > :nth-child(1) {
         @apply flex items-center;
