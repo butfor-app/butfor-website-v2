@@ -63,10 +63,13 @@
   @apply text-white flex flex-col items-center justify-between;
   @apply w-full;
   @screen lg {
-    @apply min-h-[480px] px-[60px] py-20;
+    @apply min-h-[480px] px-0 py-20;
   }
   #wrapper {
-    @apply max-w-[1200px];
+    @apply max-w-[1200px] w-full;
+    @screen lg{
+      @apply px-18;
+    }
     > #top {
       @apply flex flex-col items-start gap-y-10 w-full pb-11;
       @apply border-b-2 border-[#5F5F5F];
