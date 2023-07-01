@@ -881,7 +881,7 @@ const mobile_popover_open = ref(false);
         }
       }
       > :nth-child(2) {
-        @apply h-9 flex items-center;
+        @apply h-9 flex items-center gap-x-2;
         @screen lg {
           @apply gap-x-12;
         }
