@@ -28,7 +28,8 @@
           </div>
           <div class="link_block">
             <a href="#">Jobs</a>
-            <a href="#">Webinars</a>
+            <!-- <a href="#">Webinars</a> -->
+            <RouterLink to="/events">Webinars</RouterLink>
             <a href="#" class="lg:hidden">Security/<br />Compliance</a>
             <a href="#" class="hidden lg:block">Security/Compliance</a>
             <a href="#">Partnerships</a>
@@ -67,7 +68,7 @@
   }
   #wrapper {
     @apply max-w-[1200px] w-full;
-    @screen lg{
+    @screen lg {
       @apply px-18;
     }
     > #top {
