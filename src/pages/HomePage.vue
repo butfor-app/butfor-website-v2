@@ -246,7 +246,7 @@ useHead({
 #faq {
   @apply max-w-[1200px] mx-auto;
   > #heading {
-    @apply text-center  font-extrabold text-[46px] mb-16;
+    @apply text-center  font-extrabold text-[46px] mt-12 mb-16;
   }
   > #btn {
     @apply w-full flex items-center justify-center mt-9 mb-16;
