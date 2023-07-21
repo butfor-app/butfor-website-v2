@@ -54,13 +54,16 @@
     <div id="content">
       <div id="heading">ABOUT BUTFOR</div>
       <div id="desc">
-        Our founder has worked in the world of BI claims for his entire career
-        and has spent numerous long nights and countless hours organizing,
-        reviewing, and calculating data, fixing mistakes and thinking through
-        different scenarios. He felt like there had to be a more efficient way
-        to do this. With recent innovations in technology, there was an
-        opportunity to integrate computer learning into a previously manual
-        process. We were able to marry the two worlds with Butfor
+        The revolutionary software tool that optimizes the process of filing
+        business interruption insurance claims. Our software eliminates the need
+        for manual calculations using Excel spreadsheets or expensive
+        consultants to evaluate losses. With ButFor, you can efficiently
+        calculate your business interruption losses and obtain detailed and
+        precise reports within minutes. Our software guarantees timely and
+        accurate claims processing, enabling you to focus on your core business
+        operations. Experience the benefits of ButFor today and discover how it
+        can enhance your productivity, save you money, and minimize
+        complications.
       </div>
     </div>
   </div>
