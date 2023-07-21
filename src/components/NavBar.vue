@@ -883,7 +883,7 @@ const mobile_popover_open = ref(false);
       > :nth-child(2) {
         @apply h-9 flex items-center gap-x-2;
         @screen lg {
-          @apply gap-x-12;
+          @apply gap-x-4;
         }
         > a {
           @apply flex items-center justify-center;
