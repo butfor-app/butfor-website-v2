@@ -67,14 +67,13 @@
       </div>
     </div>
   </div>
-  <div id="faq">
+  <div id="faq" ref="faqRef">
     <div id="heading">FAQS</div>
     <FaqDisclosure />
     <div id="btn">
       <button>View All</button>
     </div>
   </div>
-  <!-- </div> -->
 </template>
 
 <script setup>
@@ -85,7 +84,10 @@ import FeatureRow from "@/components/FeatureRow.vue";
 import FaqDisclosure from "@/components/FaqDisclosure.vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import { ref, onMounted } from "vue";
+import { useRoute, onBeforeRouteUpdate } from "vue-router";
 const generalData = useGeneralData();
+const route = useRoute();
+const faqRef = ref(null);
 // const features = generalData.features;
 const solutionsByCompanyType = generalData.solutionsByCompanyType;
 const headerRef = ref(null);
@@ -96,7 +98,25 @@ const headerValues = [
   "Assisting by Automating",
   "Eliminating Human Error",
 ];
+onBeforeRouteUpdate((to, from, next) => {
+  if ("faq" in to.query) {
+    console.log("faq");
+    faqRef.value.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+  next();
+});
 onMounted(() => {
+  if ("faq" in route.query) {
+    console.log("faq");
+    faqRef.value.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
   let index = 0;
   const heading = headerRef.value;
   heading.innerHTML = headerValues[index];

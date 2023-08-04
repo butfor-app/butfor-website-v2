@@ -18,7 +18,7 @@
         </div>
         <div id="links">
           <div class="link_block">
-            <a href="">Help</a>
+            <RouterLink to="/?faq=true">FAQs</RouterLink>
             <a href="#">Claims 101</a>
             <a href="#">Blogs</a>
             <a href="#">Case Studies</a>

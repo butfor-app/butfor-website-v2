@@ -373,12 +373,12 @@
                   <div class="col">
                     <!-- <div class="heading">BY CLAIM TYPE</div> -->
                     <div class="content">
-                      <a href="#" class="menu_row">
+                      <RouterLink to="/?faq=true" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/help.png" alt="" />
                         </div>
-                        <div class="name">Help</div>
-                      </a>
+                        <div class="name">FAQs</div>
+                      </RouterLink>
                       <a href="#" class="menu_row">
                         <div class="img">
                           <img
@@ -760,7 +760,7 @@
                           <div class="img">
                             <img src="@/assets/icons/help.png" alt="" />
                           </div>
-                          <div class="name">Help</div>
+                          <div class="name">FAQs</div>
                         </a>
                         <a href="#" class="menu_row">
                           <div class="img">
