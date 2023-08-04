@@ -268,11 +268,12 @@
                       <div class="pb-4">
                         Get to know the <br />Butfor platform
                       </div>
-                      <button
-                        class="w-[78px] h-[28px] text-xs bg-[#598392] text-white font-aneklatin rounded-lg"
+                      <RouterLink
+                        to="/product/?feature="
+                        class="w-[78px] h-[28px] flex items-center justify-center text-xs bg-[#598392] text-white font-aneklatin rounded-lg"
                       >
                         Learn More
-                      </button>
+                      </RouterLink>
                     </div>
                   </div>
                   <div class="col">
