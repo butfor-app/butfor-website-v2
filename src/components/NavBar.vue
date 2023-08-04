@@ -44,7 +44,7 @@
               >
                 <MenuItems
                   id="menu"
-                  class="w-[660px] h-[401px] max-h-[calc(100vh_-_140px)] overflow-y-auto relative"
+                  class="w-[660px] h-[350px] max-h-[calc(100vh_-_140px)] overflow-y-auto relative"
                   style="padding-bottom: 0"
                 >
                   <div
@@ -235,12 +235,6 @@
                       </RouterLink>
                     </div>
                   </div>
-                  <button
-                    id="row"
-                    class="w-full border-t-2 border-gray-200 text-[#598392]"
-                  >
-                    See All Solutions
-                  </button>
                 </MenuItems>
               </transition>
             </Menu>
