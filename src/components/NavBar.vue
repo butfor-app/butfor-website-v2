@@ -136,7 +136,11 @@
                   <div class="col">
                     <div class="heading">PREVIEW</div>
                     <div class="content">
-                      <RouterLink to="/product/?feature=1" class="menu_row">
+                      <RouterLink
+                        to="/product/?feature=1"
+                        class="menu_row"
+                        @click="close"
+                      >
                         <div class="img">
                           <img
                             src="@/assets/icons/manage_accounts.png"
@@ -145,7 +149,11 @@
                         </div>
                         <div class="name">Customer & Claim Management</div>
                       </RouterLink>
-                      <RouterLink to="/product/?feature=2" class="menu_row">
+                      <RouterLink
+                        to="/product/?feature=2"
+                        class="menu_row"
+                        @click="close"
+                      >
                         <div class="img">
                           <img
                             src="@/assets/icons/bar_chart_4_bars.png"
@@ -154,13 +162,21 @@
                         </div>
                         <div class="name">Reporting & Analytics</div>
                       </RouterLink>
-                      <RouterLink to="/product/?feature=3" class="menu_row">
+                      <RouterLink
+                        to="/product/?feature=3"
+                        class="menu_row"
+                        @click="close"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/done.png" alt="" />
                         </div>
                         <div class="name">Approval Chains</div>
                       </RouterLink>
-                      <RouterLink to="/product/?feature=4" class="menu_row">
+                      <RouterLink
+                        to="/product/?feature=4"
+                        class="menu_row"
+                        @click="close"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/edit_document.png" alt="" />
                         </div>
@@ -171,25 +187,41 @@
                   <div class="col">
                     <div class="heading" style="visibility: hidden">.</div>
                     <div class="content">
-                      <RouterLink to="/product/?feature=5" class="menu_row">
+                      <RouterLink
+                        to="/product/?feature=5"
+                        class="menu_row"
+                        @click="close"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/magic_button.png" alt="" />
                         </div>
                         <div class="name">Find the Best Baseline</div>
                       </RouterLink>
-                      <RouterLink to="/product/?feature=6" class="menu_row">
+                      <RouterLink
+                        to="/product/?feature=6"
+                        class="menu_row"
+                        @click="close"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/handshake.png" alt="" />
                         </div>
                         <div class="name">Collaboration</div>
                       </RouterLink>
-                      <RouterLink to="/product/?feature=7" class="menu_row">
+                      <RouterLink
+                        to="/product/?feature=7"
+                        class="menu_row"
+                        @click="close"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/lock.png" alt="" />
                         </div>
                         <div class="name">Centralized & Secure</div>
                       </RouterLink>
-                      <RouterLink to="/product/?feature=8" class="menu_row">
+                      <RouterLink
+                        to="/product/?feature=8"
+                        class="menu_row"
+                        @click="close"
+                      >
                         <div class="img">
                           <img src="@/assets/icons/database.png" alt="" />
                         </div>
