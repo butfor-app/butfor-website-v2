@@ -22,7 +22,7 @@
             <Menu
               as="div"
               class="relative inline-block text-left"
-              v-slot="{ open }"
+              v-slot="{ open, close }"
             >
               <MenuButton id="menu_button">
                 Solutions
