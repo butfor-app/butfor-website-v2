@@ -23,7 +23,7 @@
           :key="index + 1"
           :class="[currentSlide === index ? 'active_slide' : '']"
         >
-          <button @click="currentSlide = index">
+          <button class="py-1 md:py-2" @click="currentSlide = index">
             {{ tab }}
           </button>
         </Slide>
