@@ -504,7 +504,6 @@ import { ref, watch } from "vue";
 import { RouterLink, useRoute } from "vue-router";
 import { useGeneralData } from "@/stores/useGeneralData";
 const generalData = useGeneralData();
-generalData.getSolutionPageLinksByType();
 const mobile_popover_open = ref(false);
 const route = useRoute();
 watch(
