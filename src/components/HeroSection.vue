@@ -4,7 +4,7 @@
     <div id="sub_heading">
       {{ desc }}
     </div>
-    <button>Learn More</button>
+    <button @click="$emit('learn_more')">Learn More</button>
   </div>
 </template>
 <script setup>

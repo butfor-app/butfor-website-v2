@@ -1,5 +1,5 @@
 <template>
-  <div id="contact">
+  <div id="contact_form">
     <div id="wrapper">
       <div id="heading">LET'S GO</div>
       <form @submit="" action="">
@@ -18,7 +18,7 @@
 </template>
 <script setup></script>
 <style lang="postcss" scoped>
-#contact {
+#contact_form {
   @apply py-24;
   @apply flex justify-center;
   @apply bg-[url('@/assets/images/contact-hero-bg.png')] bg-no-repeat	bg-cover bg-center;

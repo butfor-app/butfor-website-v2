@@ -3,6 +3,7 @@
     :name="solution_data.title"
     :desc="solution_data.desc"
     :bg="solution_data.bg"
+    @learn_more="scrollToContactForm"
   />
   <CompaniesSlider />
   <div id="features">
@@ -17,7 +18,10 @@
   <div class="text-center text-4xl font-extrabold mx-auto max-w-max mb-10">
     See what else Butfor can do
   </div>
-  <SolutionsSlider class="mb-10 overflow-x-hidden" :solutions="solution_cards_data" />
+  <SolutionsSlider
+    class="mb-10 overflow-x-hidden"
+    :solutions="solution_cards_data"
+  />
   <GetStarted />
   <ContactForm />
 </template>
@@ -76,6 +80,11 @@ watch(
     }
   }
 );
+const scrollToContactForm = () => {
+  document
+    .querySelector("#contact_form")
+    .scrollIntoView({ behavior: "smooth", block: "start" });
+};
 useHead({
   title: `${import.meta.env.VITE_META_TITLE} Solutions`,
   meta: [
