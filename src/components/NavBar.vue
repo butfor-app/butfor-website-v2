@@ -7,10 +7,7 @@
           <div id="msg">Webinar on How to Automate Baselines, June 14</div>
         </div>
         <div>
-          <!-- <a href="/contact" id="contact">Contact Sales</a> -->
           <RouterLink to="/contact" id="contact">Contact Sales</RouterLink>
-
-          <!-- <a href="#" id="login">Login</a> -->
           <RouterLink to="/login" id="login">Login</RouterLink>
         </div>
       </div>
@@ -27,9 +24,7 @@
               class="relative inline-block text-left"
               v-slot="{ open }"
             >
-              <!-- @mouseleave="handleLeave" -->
               <MenuButton id="menu_button">
-                <!-- @mouseover="handleHover($event, open)" -->
                 Solutions
                 <img src="@/assets/icons/arrow.svg" alt="" />
               </MenuButton>
@@ -54,184 +49,47 @@
                     <div class="heading">BY CLAIM TYPE</div>
                     <div class="content">
                       <RouterLink
-                        to="/solutions/natural-disasters"
+                        v-for="solution in solutionLinks.claim"
+                        :to="solution.link"
                         class="menu_row"
+                        @click="close"
                       >
                         <div class="img">
-                          <img src="@/assets/icons/flood.svg" alt="" />
+                          <img :src="solution.icon" alt="" />
                         </div>
-                        <div class="name">Natural Disasters</div>
+                        <div class="name">{{ solution.name }}</div>
                       </RouterLink>
-                      <RouterLink
-                        to="/solutions/fire-or-explosion"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img
-                            src="@/assets/icons/fire_extinguisher.svg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="name">Fire or Explosion</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/equipment-breakdown"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img src="@/assets/icons/construction.svg" alt="" />
-                        </div>
-                        <div class="name">Equipment Breakdown</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/power-outages"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img src="@/assets/icons/power_off.svg" alt="" />
-                        </div>
-                        <div class="name">Power Outages</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/faulty-construction"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img src="@/assets/icons/foundation.svg" alt="" />
-                        </div>
-                        <div class="name">Construction or Renovation</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/cyber-attacks"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img src="@/assets/icons/cyberattacks.svg" alt="" />
-                        </div>
-                        <div class="name">Cyber Attacks</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/city-shutdowns"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img src="@/assets/icons/city_shutdown.svg" alt="" />
-                        </div>
-                        <div class="name">City Shutdowns</div>
-                      </RouterLink>
-                      <RouterLink to="/solutions/pandemics" class="menu_row">
-                        <div class="img">
-                          <img src="@/assets/icons/pandemics.svg" alt="" />
-                        </div>
-                        <div class="name">Pandemics</div>
-                      </RouterLink>
-                      <!-- <button class="more_types">See More Claim Types</button> -->
                     </div>
                   </div>
                   <div class="col">
                     <div class="heading">BY COMPANY TYPE</div>
                     <div class="content">
-                      <RouterLink to="/solutions/enterprise" class="menu_row">
-                        <div class="img">
-                          <img src="@/assets/icons/apartment.svg" alt="" />
-                        </div>
-                        <div class="name">Enterprise</div>
-                      </RouterLink>
                       <RouterLink
-                        to="/solutions/insurance-companies"
+                        v-for="solution in solutionLinks.company"
+                        :to="solution.link"
                         class="menu_row"
+                        @click="close"
                       >
                         <div class="img">
-                          <img
-                            src="@/assets/icons/approval_delegation.svg"
-                            alt=""
-                          />
+                          <img :src="solution.icon" alt="" />
                         </div>
-                        <div class="name">Insurance Companies</div>
+                        <div class="name">{{ solution.name }}</div>
                       </RouterLink>
-                      <RouterLink
-                        to="/solutions/insurance-brokers"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img
-                            src="@/assets/icons/real_estate_agent.svg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="name">Insurance Brokers</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/consulting-firms"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img src="@/assets/icons/consultant.svg" alt="" />
-                        </div>
-                        <div class="name">Consulting Firms</div>
-                      </RouterLink>
-                      <RouterLink to="/solutions/law-firms" class="menu_row">
-                        <div class="img">
-                          <img src="@/assets/icons/consultant.svg" alt="" />
-                        </div>
-                        <div class="name">Law Firms</div>
-                      </RouterLink>
-                      <!-- <button class="more_types">See More Claim Types</button> -->
                     </div>
                   </div>
                   <div class="col">
                     <div class="heading">BY ROLE</div>
                     <div class="content">
                       <RouterLink
-                        to="/solutions/risk-compliance"
+                        v-for="solution in solutionLinks.role"
+                        :to="solution.link"
                         class="menu_row"
+                        @click="close"
                       >
                         <div class="img">
-                          <img src="@/assets/icons/fact_check.svg" alt="" />
+                          <img :src="solution.icon" alt="" />
                         </div>
-                        <div class="name">Risk & Compliance</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/claim-managers"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img
-                            src="@/assets/icons/quick_reference.svg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="name">Claims Managers</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/finance-analysts"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img src="@/assets/icons/attach_money.svg" alt="" />
-                        </div>
-                        <div class="name">Finance Analysts</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/forensic-accountants"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img
-                            src="@/assets/icons/account_balance.svg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="name">Forensic Accountants</div>
-                      </RouterLink>
-                      <RouterLink
-                        to="/solutions/executive-teams"
-                        class="menu_row"
-                      >
-                        <div class="img">
-                          <img src="@/assets/icons/group.svg" alt="" />
-                        </div>
-                        <div class="name">Executive Teams</div>
+                        <div class="name">{{ solution.name }}</div>
                       </RouterLink>
                     </div>
                   </div>
@@ -241,11 +99,9 @@
             <Menu
               as="div"
               class="relative inline-block text-left"
-              v-slot="{ open }"
+              v-slot="{ open, close }"
             >
-              <!-- @mouseleave="handleLeave" -->
               <MenuButton id="menu_button">
-                <!-- @mouseover="handleHover($event, open)" -->
                 Product
                 <img src="@/assets/icons/arrow.svg" alt="" />
               </MenuButton>
@@ -262,7 +118,7 @@
                   <div
                     class="absolute left-0 top-[65px] z-0 w-[608px] mx-6 border-b-2 border-gray-200"
                   ></div>
-                  <div class="col w-[150px]">
+                  <MenuItem as="div" class="col w-[150px]">
                     <div class="heading">OVERVIEW</div>
                     <div class="h-full flex flex-col justify-around">
                       <div class="pb-4">
@@ -271,15 +127,16 @@
                       <RouterLink
                         to="/product/?feature="
                         class="w-[78px] h-[28px] flex items-center justify-center text-xs bg-[#598392] text-white font-aneklatin rounded-lg"
+                        @click="close"
                       >
                         Learn More
                       </RouterLink>
                     </div>
-                  </div>
+                  </MenuItem>
                   <div class="col">
                     <div class="heading">PREVIEW</div>
                     <div class="content">
-                      <a href="/product/?feature=1" class="menu_row">
+                      <RouterLink to="/product/?feature=1" class="menu_row">
                         <div class="img">
                           <img
                             src="@/assets/icons/manage_accounts.png"
@@ -287,8 +144,8 @@
                           />
                         </div>
                         <div class="name">Customer & Claim Management</div>
-                      </a>
-                      <a href="/product/?feature=2" class="menu_row">
+                      </RouterLink>
+                      <RouterLink to="/product/?feature=2" class="menu_row">
                         <div class="img">
                           <img
                             src="@/assets/icons/bar_chart_4_bars.png"
@@ -296,49 +153,48 @@
                           />
                         </div>
                         <div class="name">Reporting & Analytics</div>
-                      </a>
-                      <a href="/product/?feature=3" class="menu_row">
+                      </RouterLink>
+                      <RouterLink to="/product/?feature=3" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/done.png" alt="" />
                         </div>
                         <div class="name">Approval Chains</div>
-                      </a>
-                      <a href="/product/?feature=4" class="menu_row">
+                      </RouterLink>
+                      <RouterLink to="/product/?feature=4" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/edit_document.png" alt="" />
                         </div>
                         <div class="name">Claims Customization</div>
-                      </a>
-                      <!-- <button class="more_types">See More Claim Types</button> -->
+                      </RouterLink>
                     </div>
                   </div>
                   <div class="col">
                     <div class="heading" style="visibility: hidden">.</div>
                     <div class="content">
-                      <a href="/product/?feature=5" class="menu_row">
+                      <RouterLink to="/product/?feature=5" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/magic_button.png" alt="" />
                         </div>
                         <div class="name">Find the Best Baseline</div>
-                      </a>
-                      <a href="/product/?feature=6" class="menu_row">
+                      </RouterLink>
+                      <RouterLink to="/product/?feature=6" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/handshake.png" alt="" />
                         </div>
                         <div class="name">Collaboration</div>
-                      </a>
-                      <a href="/product/?feature=7" class="menu_row">
+                      </RouterLink>
+                      <RouterLink to="/product/?feature=7" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/lock.png" alt="" />
                         </div>
                         <div class="name">Centralized & Secure</div>
-                      </a>
-                      <a href="/product/?feature=8" class="menu_row">
+                      </RouterLink>
+                      <RouterLink to="/product/?feature=8" class="menu_row">
                         <div class="img">
                           <img src="@/assets/icons/database.png" alt="" />
                         </div>
                         <div class="name">Data Standardization</div>
-                      </a>
+                      </RouterLink>
                     </div>
                   </div>
                 </MenuItems>
@@ -347,11 +203,9 @@
             <Menu
               as="div"
               class="relative inline-block text-left"
-              v-slot="{ open }"
+              v-slot="{ open, close }"
             >
-              <!-- @mouseleave="handleLeave" -->
               <MenuButton id="menu_button">
-                <!-- @mouseover="handleHover($event, open)" -->
                 Resources
                 <img src="@/assets/icons/arrow.svg" alt="" />
               </MenuButton>
@@ -366,59 +220,18 @@
               >
                 <MenuItems id="menu" class="w-[216px]">
                   <div class="col">
-                    <!-- <div class="heading">BY CLAIM TYPE</div> -->
                     <div class="content">
-                      <RouterLink to="/?faq=true" class="menu_row">
+                      <RouterLink
+                        v-for="resource in resourcesLinks"
+                        :to="resource.link"
+                        class="menu_row"
+                        @click="close"
+                      >
                         <div class="img">
-                          <img src="@/assets/icons/help.png" alt="" />
+                          <img :src="resource.icon" alt="" />
                         </div>
-                        <div class="name">FAQs</div>
+                        <div class="name">{{ resource.name }}</div>
                       </RouterLink>
-                      <a href="#" class="menu_row">
-                        <div class="img">
-                          <img
-                            src="@/assets/icons/quick_reference.svg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="name">Claims 101</div>
-                      </a>
-                      <a href="#" class="menu_row">
-                        <div class="img">
-                          <img src="@/assets/icons/edit_note.png" alt="" />
-                        </div>
-                        <div class="name">Blogs</div>
-                      </a>
-                      <a href="#" class="menu_row">
-                        <div class="img">
-                          <img src="@/assets/icons/menu_book.png" alt="" />
-                        </div>
-                        <div class="name">Case Studies</div>
-                      </a>
-                      <a href="#" class="menu_row">
-                        <div class="img">
-                          <img src="@/assets/icons/hub.png" alt="" />
-                        </div>
-                        <div class="name">Claims Resource Hub</div>
-                      </a>
-                      <RouterLink to="/events" class="menu_row">
-                        <div class="img">
-                          <img src="@/assets/icons/live_tv.png" alt="" />
-                        </div>
-                        <div class="name">Webinars</div>
-                      </RouterLink>
-                      <a href="#" class="menu_row">
-                        <div class="img">
-                          <img src="@/assets/icons/call.png" alt="" />
-                        </div>
-                        <div class="name">Contact Us</div>
-                      </a>
-                      <a href="#" class="menu_row">
-                        <div class="img">
-                          <img src="@/assets/icons/handshake.png" alt="" />
-                        </div>
-                        <div class="name">Partnership</div>
-                      </a>
                     </div>
                   </div>
                 </MenuItems>
@@ -461,187 +274,44 @@
                       <div class="heading">BY CLAIM TYPE</div>
                       <div class="content">
                         <RouterLink
-                          to="/solutions/natural-disasters"
+                          v-for="solution in solutionLinks.claim"
+                          :to="solution.link"
                           class="menu_row"
                         >
                           <div class="img">
-                            <img src="@/assets/icons/flood.svg" alt="" />
+                            <img :src="solution.icon" alt="" />
                           </div>
-                          <div class="name">Natural Disasters</div>
+                          <div class="name">{{ solution.name }}</div>
                         </RouterLink>
-                        <RouterLink
-                          to="/solutions/fire-or-explosion"
-                          class="menu_row"
-                        >
-                          <div class="img">
-                            <img
-                              src="@/assets/icons/fire_extinguisher.svg"
-                              alt=""
-                            />
-                          </div>
-                          <div class="name">Fire or Explosion</div>
-                        </RouterLink>
-                        <RouterLink
-                          to="/solutions/equipment-breakdown"
-                          class="menu_row"
-                        >
-                          <div class="img">
-                            <img src="@/assets/icons/construction.svg" alt="" />
-                          </div>
-                          <div class="name">Equipment Breakdown</div>
-                        </RouterLink>
-                        <RouterLink
-                          to="/solutions/power-outages"
-                          class="menu_row"
-                        >
-                          <div class="img">
-                            <img src="@/assets/icons/power_off.svg" alt="" />
-                          </div>
-                          <div class="name">Power Outages</div>
-                        </RouterLink>
-                        <RouterLink
-                          to="/solutions/faulty-construction"
-                          class="menu_row"
-                        >
-                          <div class="img">
-                            <img src="@/assets/icons/foundation.svg" alt="" />
-                          </div>
-                          <div class="name">Construction or Renovation</div>
-                        </RouterLink>
-                        <RouterLink
-                          to="/solutions/cyber-attacks"
-                          class="menu_row"
-                        >
-                          <div class="img">
-                            <img src="@/assets/icons/cyberattacks.svg" alt="" />
-                          </div>
-                          <div class="name">Cyber Attacks</div>
-                        </RouterLink>
-                        <RouterLink
-                          to="/solutions/city-shutdowns"
-                          class="menu_row"
-                        >
-                          <div class="img">
-                            <img
-                              src="@/assets/icons/city_shutdown.svg"
-                              alt=""
-                            />
-                          </div>
-                          <div class="name">City Shutdowns</div>
-                        </RouterLink>
-                        <RouterLink to="/solutions/pandemics" class="menu_row">
-                          <div class="img">
-                            <img src="@/assets/icons/pandemics.svg" alt="" />
-                          </div>
-                          <div class="name">Pandemics</div>
-                        </RouterLink>
-                        <!-- <button class="more_types">See More Claim Types</button> -->
                       </div>
                     </div>
                     <div class="col">
                       <div class="heading">BY COMPANY TYPE</div>
                       <div class="content">
-                        <RouterLink to="/solutions/enterprise" class="menu_row">
-                          <div class="img">
-                            <img src="@/assets/icons/apartment.svg" alt="" />
-                          </div>
-                          <div class="name">Enterprise</div>
-                        </RouterLink>
                         <RouterLink
-                          to="/solutions/insurance-companies"
+                          v-for="solution in solutionLinks.company"
+                          :to="solution.link"
                           class="menu_row"
                         >
                           <div class="img">
-                            <img
-                              src="@/assets/icons/approval_delegation.svg"
-                              alt=""
-                            />
+                            <img :src="solution.icon" alt="" />
                           </div>
-                          <div class="name">Insurance Companies</div>
+                          <div class="name">{{ solution.name }}</div>
                         </RouterLink>
-                        <RouterLink
-                          to="/solutions/insurance-brokers"
-                          class="menu_row"
-                        >
-                          <div class="img">
-                            <img
-                              src="@/assets/icons/real_estate_agent.svg"
-                              alt=""
-                            />
-                          </div>
-                          <div class="name">Insurance Brokers</div>
-                        </RouterLink>
-                        <RouterLink
-                          to="/solutions/consulting-firms"
-                          class="menu_row"
-                        >
-                          <div class="img">
-                            <img src="@/assets/icons/consultant.svg" alt="" />
-                          </div>
-                          <div class="name">Consulting Firms</div>
-                        </RouterLink>
-                        <RouterLink to="/solutions/law-firms" class="menu_row">
-                          <div class="img">
-                            <img src="@/assets/icons/consultant.svg" alt="" />
-                          </div>
-                          <div class="name">Law Firms</div>
-                        </RouterLink>
-                        <!-- <button class="more_types">See More Claim Types</button> -->
                       </div>
                     </div>
                     <div class="col">
                       <div class="heading">BY ROLE</div>
                       <div class="content">
                         <RouterLink
-                          to="/solutions/risk-compliance"
+                          v-for="solution in solutionLinks.role"
+                          :to="solution.link"
                           class="menu_row"
                         >
                           <div class="img">
-                            <img src="@/assets/icons/fact_check.svg" alt="" />
+                            <img :src="solution.icon" alt="" />
                           </div>
-                          <div class="name">Risk & Compliance</div>
-                        </RouterLink>
-                        <RouterLink
-                          to="/solutions/claim-managers"
-                          class="menu_row"
-                        >
-                          <div class="img">
-                            <img
-                              src="@/assets/icons/quick_reference.svg"
-                              alt=""
-                            />
-                          </div>
-                          <div class="name">Claims Managers</div>
-                        </RouterLink>
-                        <RouterLink
-                          to="/solutions/finance-analysts"
-                          class="menu_row"
-                        >
-                          <div class="img">
-                            <img src="@/assets/icons/attach_money.svg" alt="" />
-                          </div>
-                          <div class="name">Finance Analysts</div>
-                        </RouterLink>
-                        <RouterLink
-                          to="/solutions/forensic-accountants"
-                          class="menu_row"
-                        >
-                          <div class="img">
-                            <img
-                              src="@/assets/icons/account_balance.svg"
-                              alt=""
-                            />
-                          </div>
-                          <div class="name">Forensic Accountants</div>
-                        </RouterLink>
-                        <RouterLink
-                          to="/solutions/executive-teams"
-                          class="menu_row"
-                        >
-                          <div class="img">
-                            <img src="@/assets/icons/group.svg" alt="" />
-                          </div>
-                          <div class="name">Executive Teams</div>
+                          <div class="name">{{ solution.name }}</div>
                         </RouterLink>
                       </div>
                     </div>
@@ -826,14 +496,25 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
+  MenuItem,
 } from "@headlessui/vue";
 import arrow from "@/components/icons/arrow.vue";
 import { vOnClickOutside } from "@vueuse/components";
-import { ref } from "vue";
-import { RouterLink } from "vue-router";
-
+import { ref, watch } from "vue";
+import { RouterLink, useRoute } from "vue-router";
+import { useGeneralData } from "@/stores/useGeneralData";
+const generalData = useGeneralData();
+generalData.getSolutionPageLinksByType();
 const mobile_popover_open = ref(false);
-
+const route = useRoute();
+watch(
+  () => route.path,
+  (oldValue, newValue) => {
+    console.log("Route changed", newValue);
+    mobile_popover_open.value = false;
+    // const
+  }
+);
 // const handleHover = ($event, open) => {
 //   if (!open) {
 //     $event.target.click();
@@ -842,6 +523,155 @@ const mobile_popover_open = ref(false);
 // const handleLeave = ($event) => {
 //   $event.target.children[0].click();
 // };
+const resourcesLinks = [
+  {
+    name: "FAQs",
+    link: "/?faq=true",
+    icon: new URL("/src/assets/icons/help.png", import.meta.url).href,
+  },
+  {
+    name: "Claims 101",
+    link: "/",
+    icon: new URL("/src/assets/icons/quick_reference.svg", import.meta.url)
+      .href,
+  },
+  {
+    name: "Blogs",
+    link: "/",
+    icon: new URL("/src/assets/icons/edit_note.png", import.meta.url).href,
+  },
+  {
+    name: "Case Studies",
+    link: "/",
+    icon: new URL("/src/assets/icons/menu_book.png", import.meta.url).href,
+  },
+  {
+    name: "Claims Resource Hub",
+    link: "/",
+    icon: new URL("/src/assets/icons/hub.png", import.meta.url).href,
+  },
+  {
+    name: "Webinars",
+    link: "/events",
+    icon: new URL("/src/assets/icons/live_tv.png", import.meta.url).href,
+  },
+  {
+    name: "Contact Us",
+    link: "/",
+    icon: new URL("/src/assets/icons/call.png", import.meta.url).href,
+  },
+  {
+    name: "Partnership",
+    link: "/",
+    icon: new URL("/src/assets/icons/handshake.png", import.meta.url).href,
+  },
+];
+const solutionLinks = {
+  claim: [
+    {
+      name: "Natural Disasters",
+      link: "/solutions/natural-disasters",
+      icon: new URL("/src/assets/icons/flood.svg", import.meta.url).href,
+    },
+    {
+      name: "Fire or Explosion",
+      link: "/solutions/fire-or-explosion",
+      icon: new URL("/src/assets/icons/fire_extinguisher.svg", import.meta.url)
+        .href,
+    },
+    {
+      name: "Equipment Breakdown",
+      link: "/solutions/equipment-breakdown",
+      icon: new URL("/src/assets/icons/construction.svg", import.meta.url).href,
+    },
+    {
+      name: "Power Outages",
+      link: "/solutions/power-outages",
+      icon: new URL("/src/assets/icons/power_off.svg", import.meta.url).href,
+    },
+    {
+      name: "Construction or Renovation",
+      link: "/solutions/faulty-construction",
+      icon: new URL("/src/assets/icons/foundation.svg", import.meta.url).href,
+    },
+    {
+      name: "Cyber Attacks",
+      link: "/solutions/cyber-attacks",
+      icon: new URL("/src/assets/icons/cyberattacks.svg", import.meta.url).href,
+    },
+    {
+      name: "City Shutdowns",
+      link: "/solutions/city-shutdowns",
+      icon: new URL("/src/assets/icons/city_shutdown.svg", import.meta.url)
+        .href,
+    },
+    {
+      name: "Pandemics",
+      link: "/solutions/pandemics",
+      icon: new URL("/src/assets/icons/pandemics.svg", import.meta.url).href,
+    },
+  ],
+  company: [
+    {
+      name: "Enterprise",
+      link: "/solutions/enterprise",
+      icon: new URL("/src/assets/icons/apartment.svg", import.meta.url).href,
+    },
+    {
+      name: "Insurance Companies",
+      link: "/solutions/insurance-companies",
+      icon: new URL(
+        "/src/assets/icons/approval_delegation.svg",
+        import.meta.url
+      ).href,
+    },
+    {
+      name: "Insurance Brokers",
+      link: "/solutions/insurance-brokers",
+      icon: new URL("/src/assets/icons/real_estate_agent.svg", import.meta.url)
+        .href,
+    },
+    {
+      name: "Consulting Firms",
+      link: "/solutions/consulting-firms",
+      icon: new URL("/src/assets/icons/consultant.svg", import.meta.url).href,
+    },
+    {
+      name: "Law Firms",
+      link: "/solutions/law-firms",
+      icon: new URL("/src/assets/icons/consultant.svg", import.meta.url).href,
+    },
+  ],
+  role: [
+    {
+      name: "Risk & Compliance",
+      link: "/solutions/risk-compliance",
+      icon: new URL("/src/assets/icons/fact_check.svg", import.meta.url).href,
+    },
+    {
+      name: "Claims Managers",
+      link: "/solutions/claim-managers",
+      icon: new URL("/src/assets/icons/quick_reference.svg", import.meta.url)
+        .href,
+    },
+    {
+      name: "Finance Analysts",
+      link: "/solutions/finance-analysts",
+      icon: new URL("/src/assets/icons/attach_money.svg", import.meta.url).href,
+    },
+    {
+      name: "Forensic Accountants",
+      link: "/solutions/forensic-accountants",
+      icon: new URL("/src/assets/icons/account_balance.svg", import.meta.url)
+        .href,
+    },
+    {
+      name: "Executive Teams",
+      link: "/solutions/executive-teams",
+      icon: new URL("/src/assets/icons/group.svg", import.meta.url).href,
+    },
+  ],
+};
 </script>
 
 <style lang="postcss" scoped>
