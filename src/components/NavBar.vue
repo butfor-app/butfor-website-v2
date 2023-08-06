@@ -567,8 +567,8 @@ const resourcesLinks = [
       .href,
   },
   {
-    name: "Blogs",
-    link: "/",
+    name: "Articles",
+    link: "/articles",
     icon: new URL("/src/assets/icons/edit_note.png", import.meta.url).href,
   },
   {
@@ -756,6 +756,9 @@ const solutionLinks = {
       @apply flex items-center justify-between;
       /* changing height from 96px to 80px */
       @apply h-20 px-5 max-w-[1200px] mx-auto;
+      @screen sm {
+        @apply px-10;
+      }
       @screen lg {
         @apply px-18;
       }

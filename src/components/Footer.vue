@@ -20,7 +20,7 @@
           <div class="link_block">
             <RouterLink to="/?faq=true">FAQs</RouterLink>
             <a href="#">Claims 101</a>
-            <a href="#">Blogs</a>
+            <RouterLink to="/articles">Articles</RouterLink>
             <a href="#">Case Studies</a>
 
             <a href="#" class="lg:hidden">Claims Hub</a>
