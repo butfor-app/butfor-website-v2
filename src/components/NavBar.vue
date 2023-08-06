@@ -269,7 +269,7 @@
                 </MenuItems>
               </transition>
             </Menu>
-            <a href="#">Integrations</a>
+            <RouterLink to="/integrations">Integrations</RouterLink>
           </div>
           <div id="mobile_popover_group_wrapper">
             <button

@@ -4,7 +4,7 @@
     <div id="sub_heading">
       {{ desc }}
     </div>
-    <button @click="$emit('learn_more')">Learn More</button>
+    <button @click="scrollToContactForm">Learn More</button>
   </div>
 </template>
 <script setup>
@@ -28,7 +28,11 @@ const props = defineProps({
 // const hero_bg_url = ref(new URL(props.bg, import.meta.url).href);
 // console.log(hero_bg_url.value);
 const hero_bg_style = ref("background-image: url('" + props.bg + "');");
-
+const scrollToContactForm = () => {
+  const contact_form = document.querySelector("#contact_form");
+  if (contact_form)
+    contact_form.scrollIntoView({ behavior: "smooth", block: "start" });
+};
 watch(
   () => props.bg,
   () => {
@@ -50,7 +54,7 @@ watch(
     @apply mb-10 text-[46px] font-extrabold text-white uppercase;
   }
   > #sub_heading {
-    @apply mb-9 max-w-[70%] text-xl font-medium font-aneklatin text-white;
+    @apply mb-9 md:max-w-[590px] text-xl font-medium font-aneklatin text-white;
   }
   > button {
     @apply w-44 h-11 bg-white rounded-full;

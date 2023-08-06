@@ -3,7 +3,6 @@
     :name="solution_data.title"
     :desc="solution_data.desc"
     :bg="solution_data.bg"
-    @learn_more="scrollToContactForm"
   />
   <CompaniesSlider />
   <div id="features">
@@ -80,11 +79,7 @@ watch(
     }
   }
 );
-const scrollToContactForm = () => {
-  document
-    .querySelector("#contact_form")
-    .scrollIntoView({ behavior: "smooth", block: "start" });
-};
+
 useHead({
   title: `${import.meta.env.VITE_META_TITLE} Solutions`,
   meta: [
