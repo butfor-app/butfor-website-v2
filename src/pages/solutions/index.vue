@@ -22,7 +22,7 @@
     :solutions="solution_cards_data"
   />
   <GetStarted />
-  <ContactForm />
+  <HubspotForm :formId="solution_data.hubspot_form_id" />
 </template>
 <script setup>
 import CompaniesSlider from "@/components/CompaniesSlider.vue";
@@ -30,7 +30,7 @@ import HeroSection from "@/components/HeroSection.vue";
 import SolutionFeatures from "@/components/SolutionFeatures.vue";
 import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import GetStarted from "@/components/GetStarted.vue";
-import ContactForm from "@/components/ContactForm.vue";
+import HubspotForm from "@/components/HubspotForm.vue";
 import { useHead } from "@vueuse/head";
 import { useGeneralData } from "@/stores/useGeneralData";
 import { defineProps, ref, watch, toRef, onMounted } from "vue";

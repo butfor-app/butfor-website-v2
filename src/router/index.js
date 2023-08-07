@@ -69,6 +69,11 @@ const router = createRouter({
       component: () => import("@/pages/IntegrationsPage.vue"),
     },
     {
+      path: "/hubspot",
+      name: "hubspot",
+      component: () => import("@/pages/HubspotPage.vue"),
+    },
+    {
       path: "/events",
       name: "events",
       component: () => import("@/pages/EventsPage.vue"),

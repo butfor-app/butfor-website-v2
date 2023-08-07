@@ -117,6 +117,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "claim",
+        hubspot_form_id: "83efaaa1-4ea3-4a48-b759-c2f345c5a1e3",
         features: [
           {
             heading: "Loss of Income & Revenue",
@@ -144,6 +145,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "claim",
+        hubspot_form_id: "3a05470c-a725-465f-8d47-737f1a841504",
         features: [
           {
             heading: "Loss of Income & Revenue",
@@ -171,6 +173,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "claim",
+        hubspot_form_id: "0b3cea9a-c06f-43ba-8fb7-c5b94a6bb7f3",
         features: [
           {
             heading: "Loss of Income & Revenue",
@@ -198,6 +201,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "claim",
+        hubspot_form_id: "09d5a574-e92d-4d37-8ef2-82334b6e5dd5",
         features: [
           {
             heading: "Loss of Income & Revenue",
@@ -225,6 +229,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "claim",
+        hubspot_form_id: "1588984d-7eec-4d96-b966-2ee70a48fae1",
         features: [
           {
             heading: "Loss of Income & Revenue",
@@ -252,6 +257,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "claim",
+        hubspot_form_id: "d63f9ec2-b081-4914-94f5-5f28d7f7bac7",
         features: [
           {
             heading: "Loss of Income & Revenue",
@@ -279,6 +285,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "claim",
+        hubspot_form_id: "f8073077-c91d-4516-a2ab-6ebcd2068461",
         features: [
           {
             heading: "Loss of Income & Revenue",
@@ -306,6 +313,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "claim",
+        hubspot_form_id: "728467d7-908e-447e-bca7-33d08af82b5e",
         features: [
           {
             heading: "Loss of Income & Revenue",
@@ -334,6 +342,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "company",
+        hubspot_form_id: "6114c0b8-ac35-43c7-bd6e-864e5f09c3ea",
         features: [
           {
             heading: "manage claims in-house",
@@ -361,6 +370,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "company",
+        hubspot_form_id: "9a6b2149-b3a1-44fd-8997-fc18b5c92692",
         features: [
           {
             heading: "ERROR REDUCTION",
@@ -388,6 +398,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "company",
+        hubspot_form_id: "41ee5de6-75b4-4f11-848e-4cae6ce61329",
         features: [
           {
             heading: "reduce premiums for clients",
@@ -415,6 +426,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "company",
+        hubspot_form_id: "d77fddf7-b7f0-439e-8d70-09f29a842cdd",
         features: [
           {
             heading: "ERROR REDUCTION",
@@ -442,6 +454,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "company",
+        hubspot_form_id: "c3b30e79-7e11-4d87-b711-41c426181e03",
         features: [
           {
             heading: "Reduce your firm’s third-party costs",
@@ -470,6 +483,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "role",
+        hubspot_form_id: "2735b308-0b67-4a72-8517-6c286d3c8a3d",
         features: [
           {
             heading: "Automated claims analysis",
@@ -497,6 +511,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "role",
+        hubspot_form_id: "016d2e61-9261-4bbe-885e-b3a67317d440",
         features: [
           {
             heading: "Decrease claim costs",
@@ -524,6 +539,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "role",
+        hubspot_form_id: "5291e0cb-7381-43da-8832-a6671e9e6f4b",
         features: [
           {
             heading: "Quantitative claims preparation",
@@ -551,6 +567,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "role",
+        hubspot_form_id: "35e79602-9dc4-4677-a26f-3a4bc8576505",
         features: [
           {
             heading: "reduce time gathering data",
@@ -578,6 +595,7 @@ export const useGeneralData = defineStore("generaldata", {
           import.meta.url
         ).href,
         type: "role",
+        hubspot_form_id: "ee5f94d8-adfb-4840-b787-7a36a9c3bf82",
         features: [
           {
             heading: "Assess overall loss",
