@@ -13,7 +13,7 @@
     <div id="slider_wrapper">
       <Carousel
         :items-to-show="1"
-        :wrap-around="true"
+        :wrap-around="groupedEvents.length > 4"
         :snapAlign="'center'"
         class="w-screen max-w-[1200px] h-auto"
         v-model="currentSlide"
@@ -23,12 +23,12 @@
             id="slide_wrapper"
             class="h-full flex flex-wrap items-start justify-around xl:justify-between gap-y-6"
           >
-            <EventCard
+            <WebinarCard
               class="w-[49%]"
               v-for="slide in slideGroup"
-              :name="slide.name"
+              :title="slide.title"
               :desc="slide.desc"
-              :link="slide.link"
+              :slug="slide.slug"
             />
           </div>
         </slide>
@@ -71,9 +71,11 @@
 <script setup>
 import { useHead } from "@vueuse/head";
 import { computed, ref } from "vue";
+import { useGeneralData } from "@/stores/useGeneralData";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
-import EventCard from "@/components/EventCard.vue";
+import WebinarCard from "@/components/WebinarCard.vue";
 import ContactForm from "@/components/ContactForm.vue";
+const { webinars } = useGeneralData();
 useHead({
   title: "Butfor - Events & Webinars",
   meta: [
@@ -86,37 +88,10 @@ useHead({
 });
 const currentSlide = ref(0);
 
-const events = ref([
-  {
-    name: "Event 1",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam. Sed euismod, nisl quis lacinia aliquet, nisl nisl ultrices nisl, quis lacinia.",
-    link: "#",
-  },
-  {
-    name: "Event 2",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam. Sed euismod, nisl quis lacinia aliquet, nisl nisl ultrices nisl, quis lacinia.",
-    link: "#",
-  },
-  {
-    name: "Event 3",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam. Sed euismod, nisl quis lacinia aliquet, nisl nisl ultrices nisl, quis lacinia.",
-    link: "#",
-  },
-  {
-    name: "Event 4",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam. Sed euismod, nisl quis lacinia aliquet, nisl nisl ultrices nisl, quis lacinia.",
-    link: "#",
-  },
-  {
-    name: "Event 5",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam. Sed euismod, nisl quis lacinia aliquet, nisl nisl ultrices nisl, quis lacinia.",
-    link: "#",
-  },
-]);
 const groupedEvents = computed(() => {
   const grouped = [];
-  for (let i = 0; i < events.value.length; i += 4) {
-    grouped.push(events.value.slice(i, i + 4));
+  for (let i = 0; i < webinars.length; i += 4) {
+    grouped.push(webinars.slice(i, i + 4));
   }
   return grouped;
 });
@@ -129,7 +104,7 @@ console.log(groupedEvents.value);
   @screen md {
     @apply h-[calc(100vh_-_144px)];
   }
-  @apply bg-[url('@/assets/images/events-hero-bg.png')] bg-no-repeat	bg-cover  bg-top;
+  @apply bg-[url('@/assets/images/webinars-hero-bg.png')] bg-no-repeat	bg-cover  bg-top;
   > #heading {
     @apply mb-10 text-[46px] font-extrabold text-white;
   }

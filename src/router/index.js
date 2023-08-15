@@ -74,9 +74,14 @@ const router = createRouter({
       component: () => import("@/pages/HubspotPage.vue"),
     },
     {
-      path: "/events",
-      name: "events",
-      component: () => import("@/pages/EventsPage.vue"),
+      path: "/webinars",
+      name: "webinars",
+      component: () => import("@/pages/WebinarsPage.vue"),
+    },
+    {
+      path: "/webinars/:webinar_id",
+      name: "webinarInfo",
+      component: () => import("@/pages/WebinarInfoPage.vue"),
     },
     {
       path: "/api",

@@ -3,7 +3,7 @@
     <img src="@/assets/images/event_1.png" alt="" />
     <div id="name">{{ name }}</div>
     <div id="desc">{{ desc }}</div>
-    <a :href="link"></a>
+    <a :href="link" class="border border-primaryLight px-3 py-2 hover:bg-primaryLight hover:text-white">Watch Now</a>
   </div>
 </template>
 <script setup>

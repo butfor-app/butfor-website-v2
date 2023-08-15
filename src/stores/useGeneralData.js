@@ -659,6 +659,26 @@ export const useGeneralData = defineStore("generaldata", {
         rtl: true,
       },
     ],
+    webinars: [
+      {
+        slug: "how-to-prepare-for-a-business-interruption-claim",
+        title: "How to Prepare for a Business Interruption Claim",
+        desc: "Learn how to prepare for a business interruption claim and how to use ButFor to streamline the process.",
+        start_time: "Monday, September 21st at 4:30PM PT / 7:30PM ET",
+        already_happened: true,
+        youtube_link: "https://www.youtube.com/embed/qL9p4xWqLaA",
+        cover_image: "https://placehold.co/300x180",
+      },
+      {
+        slug: "test-webinar",
+        title: "Test webinar",
+        desc: "Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text Dummy_text",
+        start_time: "2022-06-24T17:00:00.000Z",
+        already_happened: true,
+        youtube_link: "https://www.youtube.com/embed/_XspQUK22-U",
+        cover_image: "https://placehold.co/300x180",
+      },
+    ],
   }),
   getters: {
     solutionsByCompanyType: (state) => {

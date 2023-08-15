@@ -583,7 +583,7 @@ const resourcesLinks = [
   },
   {
     name: "Webinars",
-    link: "/events",
+    link: "/webinars",
     icon: new URL("/src/assets/icons/live_tv.png", import.meta.url).href,
   },
   {

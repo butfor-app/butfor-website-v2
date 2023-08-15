@@ -29,7 +29,7 @@
           <div class="link_block">
             <a href="#">Jobs</a>
             <!-- <a href="#">Webinars</a> -->
-            <RouterLink to="/events">Webinars</RouterLink>
+            <RouterLink to="/webinars">Webinars</RouterLink>
             <a href="#" class="lg:hidden">Security/<br />Compliance</a>
             <a href="#" class="hidden lg:block">Security/Compliance</a>
             <a href="#">Partnerships</a>
