@@ -515,7 +515,7 @@
             </div>
           </div>
         </div>
-        <a href="/contact2">Book Demo</a>
+        <RouterLink to="/book_demo">Book Demo</RouterLink>
       </div>
     </div>
   </div>

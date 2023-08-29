@@ -14,7 +14,7 @@
     </div>
     <div id="buttons">
       <a href="#" id="productVid">See Product Video</a>
-      <a href="/contact3" id="demo">Book Demo</a>
+      <RouterLink to="/book_demo" id="demo">Book Demo</RouterLink>
     </div>
   </div>
   <CompaniesSlider />

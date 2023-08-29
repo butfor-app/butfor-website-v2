@@ -2,34 +2,43 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "../pages/HomePage.vue";
 const contactusRoutes = [
   {
+    path: "/book_demo",
+    name: "book_demo",
+    component: () => import("@/pages/HubspotPage.vue"),
+    props: {
+      title: "Book Demo",
+      formId: "862017ff-a811-4986-96c8-38133bb2a8a1",
+    },
+  },
+  {
     path: "/contact",
     name: "contact",
-    component: () => import("@/pages/ContactPage.vue"),
+    component: () => import("@/pages/HubspotPage.vue"),
   },
   {
     path: "/contact2",
     name: "contact2",
-    component: () => import("@/pages/ContactPage.vue"),
+    component: () => import("@/pages/HubspotPage.vue"),
   },
   {
     path: "/contact3",
     name: "contact3",
-    component: () => import("@/pages/ContactPage.vue"),
+    component: () => import("@/pages/HubspotPage.vue"),
   },
   {
     path: "/contact4",
     name: "contact4",
-    component: () => import("@/pages/ContactPage.vue"),
+    component: () => import("@/pages/HubspotPage.vue"),
   },
   {
     path: "/contact5",
     name: "contact5",
-    component: () => import("@/pages/ContactPage.vue"),
+    component: () => import("@/pages/HubspotPage.vue"),
   },
   {
     path: "/contact6",
     name: "contact6",
-    component: () => import("@/pages/ContactPage.vue"),
+    component: () => import("@/pages/HubspotPage.vue"),
   },
 ];
 const thankyouRoutes = [
