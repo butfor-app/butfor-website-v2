@@ -4,7 +4,7 @@
     class="py-16 bg-[url('@/assets/images/contact-hero-bg.png')] bg-no-repeat bg-cover bg-center"
   >
     <div
-      class="max-w-2xl w-4/5 md:w-1/2 mx-auto px-12 py-12 bg-white rounded-2xl"
+      class="max-w-2xl w-[90%] md:w-1/2 mx-auto px-2 md:px-12 py-12 bg-white rounded-2xl"
     >
       <div class="mb-12 text-[46px] text-primary font-extrabold text-center">
         {{ title }}
