@@ -1,5 +1,6 @@
 <template>
   <div
+    id="contact_form"
     class="py-16 bg-[url('@/assets/images/contact-hero-bg.png')] bg-no-repeat bg-cover bg-center"
   >
     <div
