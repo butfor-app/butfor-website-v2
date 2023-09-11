@@ -1,5 +1,5 @@
 <template>
-  <div id="clients">
+  <div id="clients" class="hidden">
     <div id="heading">Solving business interruption claims for leading companies</div>
     <div id="slider">
       <div id="slider_track">
