@@ -1,26 +1,34 @@
 <template>
   <div class="text-center text-5xl font-semibold py-12 mb-8">Articles</div>
   <div class="mx-auto max-w-[1200px] md:px-18 sm:px-4 px-2">
+    <div
+      class="w-full py-10 flex flex-col items-center"
+      v-if="articles.length == 0"
+    >
+      <!-- Loading... -->
+      <Spinner />
+    </div>
     <div class="py-10 flex flex-wrap justify-center gap-x-4 gap-y-6">
-      <EventCard
+      <ArticleCard
         class="w-[calc(50%-16px)] shadow-lg"
         v-for="article in articles"
         :image="getImage(article.featuredImage)"
         :name="article.name"
-        :desc="article.postBody"
+        :desc="getDesc(article.postBody)"
         :link="article.link"
       />
     </div>
   </div>
 </template>
 <script setup>
-import EventCard from "@/components/EventCard.vue";
+import Spinner from "@/components/General/Spinner.vue";
+import ArticleCard from "@/components/ArticleCard.vue";
 import { useHubspot } from "@/composables/useHubspot";
 import { ref } from "vue";
 const articles = ref([]);
 const resp = await useHubspot().getBlogsPostsByTag("articles");
-console.log(resp);
-console.log(resp.results);
+// console.log(resp);
+// console.log(resp.results);
 articles.value = resp.results;
 
 const getImage = (img) => {
@@ -28,6 +36,10 @@ const getImage = (img) => {
     return img;
   }
   return new URL("@/assets/images/event_1.png", import.meta.url).href;
+};
+const getDesc = (desc) => {
+  const newDesc = desc.replace(/<[^>]*>?/gm, "");
+  return newDesc;
 };
 // const articles = ref([
 //   {
