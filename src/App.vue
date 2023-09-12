@@ -1,8 +1,10 @@
 <template>
   <NavBar />
   <!-- <div id="master_wrapper"> -->
-    <div id="scroll_anchor"></div>
-  <RouterView />
+  <div id="scroll_anchor"></div>
+  <Suspense>
+    <RouterView />
+  </Suspense>
   <!-- </div> -->
   <Footer />
 </template>

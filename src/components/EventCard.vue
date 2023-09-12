@@ -1,13 +1,21 @@
 <template>
   <div id="event_cart">
-    <img src="@/assets/images/event_1.png" alt="" />
+    <img :src="image" alt="" />
     <div id="name">{{ name }}</div>
     <div id="desc">{{ desc }}</div>
-    <a :href="link" class="border border-primaryLight px-3 py-2 hover:bg-primaryLight hover:text-white">Watch Now</a>
+    <a
+      :href="link"
+      class="border border-primaryLight px-3 py-2 hover:bg-primaryLight hover:text-white"
+      >Watch Now</a
+    >
   </div>
 </template>
 <script setup>
 const props = defineProps({
+  image: {
+    type: String,
+    default: new URL("@/assets/images/event_1.png", import.meta.url).href,
+  },
   name: {
     type: String,
     required: true,
@@ -18,7 +26,7 @@ const props = defineProps({
   },
   link: {
     type: String,
-    required: true,
+    default: "#",
   },
 });
 </script>
