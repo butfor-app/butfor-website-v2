@@ -75,7 +75,12 @@ const router = createRouter({
     {
       path: "/articles",
       name: "articles",
-      component: () => import("@/pages/ArticlesPage.vue"),
+      component: () => import("@/pages/Articles/ArticlesPage.vue"),
+    },
+    {
+      path: "/article/:article_id",
+      name: "article",
+      component: () => import("@/pages/Articles/ArticlePage.vue"),
     },
     {
       path: "/integrations/",
