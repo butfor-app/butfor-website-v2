@@ -12,10 +12,8 @@
       <ArticleCard
         class=""
         v-for="article in articles"
-        :image="getImage(article.featuredImage)"
-        :name="article.name"
-        :desc="getDesc(article.postBody)"
-        :link="`/article/${article.id}`"
+        :id="article.id"
+        :values="article.values"
       />
     </div>
   </div>
@@ -27,15 +25,10 @@ import { getArticles } from "@/composables/useHubspot";
 import { ref } from "vue";
 const articles = ref([]);
 getArticles().then((resp) => {
+  // console.log(resp);
   articles.value = resp.results;
 });
 
-const getImage = (img) => {
-  if (img) {
-    return img;
-  }
-  return new URL("@/assets/images/event_1.png", import.meta.url).href;
-};
 const getDesc = (desc) => {
   const newDesc = desc.replace(/<[^>]*>?/gm, "");
   return newDesc;
