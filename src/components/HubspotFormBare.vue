@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-white rounded-2xl">
+  <div class="w-full rounded-2xl">
     <div id="hubspotForm"></div>
   </div>
 </template>

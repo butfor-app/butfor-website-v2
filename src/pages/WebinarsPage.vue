@@ -47,12 +47,9 @@
     <div id="heading">
       Want to know when we host our next webinar with an HR leader?
     </div>
-    <form action="">
-      <input type="text" placeholder="First name" />
-      <input type="text" placeholder="Last name" />
-      <input type="text" placeholder="Email" />
-      <input type="submit" value="Submit" />
-    </form>
+    <div class="max-w-lg w-full px-2">
+      <HubspotFormBare formId="b20e853b-b330-4419-b345-060788b0c267" />
+    </div>
   </div>
   <div id="view_demo">
     <div id="heading">Want to see ButFor in action?</div>
@@ -75,6 +72,7 @@ import { useGeneralData } from "@/stores/useGeneralData";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import WebinarCard from "@/components/WebinarCard.vue";
 import ContactForm from "@/components/ContactForm.vue";
+import HubspotFormBare from "@/components/HubspotFormBare.vue";
 const { webinars } = useGeneralData();
 useHead({
   title: "Butfor - Events & Webinars",
@@ -151,15 +149,6 @@ console.log(groupedEvents.value);
   @apply py-16 bg-[#EFF3F5];
   > #heading {
     @apply max-w-4xl mb-16 text-[46px] text-center font-extrabold uppercase;
-  }
-  > form {
-    @apply max-w-lg w-full px-2 flex flex-col gap-y-6;
-    > input[type="text"] {
-      @apply px-6 py-3 border border-[#D9D9D9] focus:border-primary rounded-full outline-none;
-    }
-    > input[type="submit"] {
-      @apply w-36 h-12 rounded-full mx-auto bg-primary font-aneklatin text-white cursor-pointer;
-    }
   }
 }
 #view_demo {
