@@ -26,9 +26,9 @@
             <WebinarCard
               class="w-[49%]"
               v-for="slide in slideGroup"
-              :title="slide.title"
-              :desc="slide.desc"
-              :slug="slide.slug"
+              :key="slide.id"
+              :id="slide.id"
+              :values="slide.values"
             />
           </div>
         </slide>
@@ -73,7 +73,8 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import WebinarCard from "@/components/WebinarCard.vue";
 import ContactForm from "@/components/ContactForm.vue";
 import HubspotFormBare from "@/components/HubspotFormBare.vue";
-const { webinars } = useGeneralData();
+import { getWebinars } from "@/composables/useHubspot";
+
 useHead({
   title: "Butfor - Events & Webinars",
   meta: [
@@ -84,12 +85,23 @@ useHead({
     },
   ],
 });
+
+const webinars = ref([]);
+// const resp = await getWebinars();
+// webinars.value = resp.results;
+// console.log(webinars.value);
+
+getWebinars().then((resp) => {
+  webinars.value = resp.results;
+  console.log(webinars.value);
+});
+
 const currentSlide = ref(0);
 
 const groupedEvents = computed(() => {
   const grouped = [];
-  for (let i = 0; i < webinars.length; i += 4) {
-    grouped.push(webinars.slice(i, i + 4));
+  for (let i = 0; i < webinars.value.length; i += 4) {
+    grouped.push(webinars.value.slice(i, i + 4));
   }
   return grouped;
 });

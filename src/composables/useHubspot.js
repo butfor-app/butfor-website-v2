@@ -12,6 +12,14 @@ async function getArticle(id) {
   const res = await getTableRowById("articles", id);
   return res;
 }
+async function getWebinars() {
+  const res = await getTableRows("webinars");
+  return res;
+}
+async function getWebinar(id) {
+  const res = await getTableRowById("webinars", id);
+  return res;
+}
 async function getTableRowById(tableName, id) {
   const res = await fetch(
     `https://butfor.co/hubspot-proxy/cms/v3/hubdb/tables/${tableName}/rows/${id}`,
@@ -26,7 +34,7 @@ async function getTableRowById(tableName, id) {
 }
 async function getTableRows(tableName) {
   const res = await fetch(
-    `https://butfor.co/hubspot-proxy/cms/v3/hubdb/tables/articles/rows`,
+    `https://butfor.co/hubspot-proxy/cms/v3/hubdb/tables/${tableName}/rows`,
     {
       headers: {
         authorization: `Bearer ${hubspotToken}`,
@@ -36,4 +44,4 @@ async function getTableRows(tableName) {
   const rows = await res.json();
   return rows;
 }
-export { useHubspot, getArticles, getArticle };
+export { useHubspot, getArticles, getArticle, getWebinars, getWebinar };

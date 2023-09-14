@@ -1,32 +1,35 @@
 <template>
-  <RouterLink :to="'/webinars/' + slug" id="event_cart">
-    <img src="@/assets/images/event_1.png" alt="" />
-    <div id="title">{{ title }}</div>
-    <div id="desc">{{ trimDesc(desc) }}</div>
-    <a
-      :href="'/webinars/' + slug"
+  <div id="event_cart">
+    <img class="h-48 w-96" :src="getImage()" alt="" />
+    <div id="title">{{ values.title }}</div>
+    <div id="desc">{{ trimDesc(values.desc) }}</div>
+    <RouterLink
+      :to="'/webinars/' + id"
       class="border border-primaryLight px-3 py-2 hover:bg-primaryLight hover:text-white"
-      >Register</a
     >
-  </RouterLink>
+      Register
+    </RouterLink>
+  </div>
 </template>
 <script setup>
 const props = defineProps({
-  title: {
+  id: {
     type: String,
     required: true,
   },
-  desc: {
-    type: String,
-    required: true,
-  },
-  slug: {
-    type: String,
+  values: {
+    type: Object,
     required: true,
   },
 });
 const trimDesc = (desc) => {
   return desc.length > 70 ? desc.slice(0, 70) + "..." : desc;
+};
+const getImage = () => {
+  if (props.values.image) {
+    return props.values.image.url;
+  }
+  return new URL("@/assets/images/event_1.png", import.meta.url).href;
 };
 // const generatePermaLink = (title) => {
 //   return title
