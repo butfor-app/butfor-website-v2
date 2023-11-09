@@ -10,24 +10,51 @@
   <div id="slider" ref="featuresRef">
     <div id="heading">THE FEATURES YOU NEED</div>
     <div id="wrapper">
-      <Carousel
-        id="thumbnails"
-        :snapAlign="'center'"
-        :items-to-show="3"
-        :wrap-around="false"
-        v-model="currentSlide"
-        ref="thumbnail_carousel"
-      >
-        <Slide
-          v-for="(tab, index) in featureSlider_tabs"
-          :key="index + 1"
-          :class="[currentSlide === index ? 'active_slide' : '']"
-        >
-          <button class="py-1 md:py-2" @click="currentSlide = index">
-            {{ tab }}
-          </button>
-        </Slide>
-      </Carousel>
+      <!-- Top tabs -->
+      <div class="flex items-center justify-between md:mb-10">
+        <button @click="goToPreviousSlide" class="text-primaryLight px-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            class="rotate-180"
+          >
+            <path
+              fill="currentColor"
+              d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+            />
+          </svg>
+        </button>
+        <div id="thumbnails" class="w-[80%]">
+          <Carousel
+            :snapAlign="'center'"
+            :items-to-show="screenSmallerThanMd ? 1 : 3"
+            :wrap-around="false"
+            v-model="currentSlide"
+            ref="thumbnail_carousel"
+          >
+            <Slide
+              v-for="(tab, index) in featureSlider_tabs"
+              :key="index + 1"
+              :class="[currentSlide === index ? 'active_slide' : '']"
+            >
+              <button class="py-1 md:py-2" @click="currentSlide = index">
+                {{ tab }}
+              </button>
+            </Slide>
+          </Carousel>
+        </div>
+        <button @click="goToNextSlide" class="text-primaryLight px-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path
+              fill="currentColor"
+              d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Actual Slides -->
       <Carousel
         id="gallery"
         :transition="300"
@@ -202,7 +229,7 @@ const featuresRef = ref(null);
 const currentSlide = ref(0);
 const thumbnail_carousel = ref(null);
 const route = useRoute();
-
+const screenSmallerThanMd = window.matchMedia("(max-width: 768px)").matches;
 onMounted(() => {
   console.log(route.query);
   if ("feature" in route.query) {
@@ -223,6 +250,16 @@ onMounted(() => {
     }
   }
 });
+const goToNextSlide = () => {
+  if (currentSlide.value < featureSlider_slides.length - 1) {
+    currentSlide.value += 1;
+  }
+};
+const goToPreviousSlide = () => {
+  if (currentSlide.value > 0) {
+    currentSlide.value -= 1;
+  }
+};
 const featureSlider_tabs = [
   "Customer & Claim Management",
   "Reporting and Analytics",
@@ -310,29 +347,32 @@ const featureSlider_slides = [
   }
   > #wrapper {
     @apply max-w-[1200px] mx-auto;
-    > #thumbnails {
-      @apply mb-10;
-      .carousel__viewport {
-        .carousel__track {
-          .carousel__slide {
-            @apply border-b-[1px] border-[#D9D9D9];
-            > button {
-              @apply flex items-center justify-center;
-              @apply w-full text-[#4C7281] text-lg px-4;
-              @screen md {
-                @apply text-2xl px-0;
+    > div {
+      > #thumbnails {
+        /* @apply mb-10; */
+        .carousel__viewport {
+          .carousel__track {
+            .carousel__slide {
+              @apply border-b-[1px] border-[#D9D9D9];
+              > button {
+                @apply flex items-center justify-center;
+                @apply w-full text-[#4C7281] text-lg px-4;
+                @screen md {
+                  @apply text-2xl px-0;
+                }
               }
             }
-          }
-          .active_slide {
-            @apply border-b-2 border-[#6D998F];
-            > button {
-              @apply text-[#6D998F]  bg-[#4C728105] font-semibold;
+            .active_slide {
+              @apply border-b-2 border-[#6D998F] bg-[#4C728105] rounded-t-xl;
+              > button {
+                @apply text-[#6D998F]   font-semibold;
+              }
             }
           }
         }
       }
     }
+
     > #gallery {
       .carousel__viewport {
         .carousel__track {
@@ -349,7 +389,7 @@ const featureSlider_slides = [
                   @apply w-1/2;
                 }
                 #heading {
-                  @apply mb-4 text-4xl font-bold uppercase;
+                  @apply mb-4 text-2xl md:text-4xl font-bold uppercase;
                   @screen md {
                     @apply mb-14;
                   }
