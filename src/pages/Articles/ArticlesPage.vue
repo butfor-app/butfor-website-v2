@@ -13,20 +13,23 @@
         class=""
         v-for="article in articles"
         :id="article.id"
-        :values="article.values"
+        :values="article.attributes"
       />
     </div>
   </div>
 </template>
 <script setup>
+import { ref } from "vue";
 import Spinner from "@/components/General/Spinner.vue";
 import ArticleCard from "@/components/Articles/ArticleCard.vue";
-import { getArticles } from "@/composables/useHubspot";
-import { ref } from "vue";
+import useStrapi from "@/composables/useStrapi";
+
+const { getArticles } = useStrapi();
+
 const articles = ref([]);
 getArticles().then((resp) => {
-  // console.log(resp);
-  articles.value = resp.results;
+  console.log(resp);
+  articles.value = resp;
 });
 
 const getDesc = (desc) => {

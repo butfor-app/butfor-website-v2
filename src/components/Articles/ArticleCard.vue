@@ -6,7 +6,7 @@
     <div class="p-6">
       <div class="text-[28px] font-semibold mb-4">{{ values.title }}</div>
       <div class="text-lg text-gray-500 font-medium mb-6 font-aneklatin;">
-        {{ values.body }}
+        {{ values.description }}
       </div>
       <RouterLink
         :to="`/article/${id}`"
@@ -20,7 +20,7 @@
 <script setup>
 const props = defineProps({
   id: {
-    type: String,
+    type: Number,
     required: true,
   },
   values: {
@@ -30,7 +30,7 @@ const props = defineProps({
 });
 // console.log(props);
 const getImage = () => {
-  if (props.values.image) {
+  if (props.values?.image) {
     return props.values.image.url;
   }
   return new URL("@/assets/images/event_1.png", import.meta.url).href;
