@@ -24,7 +24,18 @@ function useStrapi() {
     const article = data.data;
     return article;
   }
-  return { getArticles, getArticle };
+
+  async function getWebinars() {
+    const resp = await fetch(STRAPI_BASE_URL + "/webinars", {
+      headers: {
+        Authorization: `Bearer ${STRAPI_TOKEN}`,
+      },
+    });
+    const data = await resp.json();
+    const webinars = data.data;
+    return webinars;
+  }
+  return { getArticles, getArticle, getWebinars };
 }
 
 export default useStrapi;

@@ -2,7 +2,7 @@
   <div id="event_cart">
     <img class="h-48 w-96" :src="getImage()" alt="" />
     <div id="title">{{ values.title }}</div>
-    <div id="desc">{{ trimDesc(values.desc) }}</div>
+    <div id="desc">{{ trimDesc(values.description) }}</div>
     <RouterLink
       :to="'/webinars/' + id"
       class="border border-primaryLight px-3 py-2 hover:bg-primaryLight hover:text-white"
@@ -14,7 +14,7 @@
 <script setup>
 const props = defineProps({
   id: {
-    type: String,
+    type: Number,
     required: true,
   },
   values: {

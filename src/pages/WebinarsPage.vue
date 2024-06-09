@@ -28,7 +28,7 @@
               v-for="slide in slideGroup"
               :key="slide.id"
               :id="slide.id"
-              :values="slide.values"
+              :values="slide.attributes"
             />
           </div>
         </slide>
@@ -73,7 +73,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import WebinarCard from "@/components/WebinarCard.vue";
 import ContactForm from "@/components/ContactForm.vue";
 import HubspotFormBare from "@/components/HubspotFormBare.vue";
-import { getWebinars } from "@/composables/useHubspot";
+import useStrapi from "@/composables/useStrapi";
 
 useHead({
   title: "Butfor - Events & Webinars",
@@ -86,13 +86,15 @@ useHead({
   ],
 });
 
+const { getWebinars } = useStrapi();
+
 const webinars = ref([]);
 // const resp = await getWebinars();
 // webinars.value = resp.results;
 // console.log(webinars.value);
 
 getWebinars().then((resp) => {
-  webinars.value = resp.results;
+  webinars.value = resp;
   console.log(webinars.value);
 });
 
