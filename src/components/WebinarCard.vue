@@ -12,6 +12,9 @@
   </div>
 </template>
 <script setup>
+import useStrapi from "@/composables/useStrapi";
+const { getImageUrl } = useStrapi();
+
 const props = defineProps({
   id: {
     type: Number,
@@ -23,11 +26,11 @@ const props = defineProps({
   },
 });
 const trimDesc = (desc) => {
-  return desc.length > 70 ? desc.slice(0, 70) + "..." : desc;
+  return desc.length > 40 ? desc.slice(0, 40) + "..." : desc;
 };
 const getImage = () => {
-  if (props.values.image) {
-    return props.values.image.url;
+  if (props.values.thumbnail.data) {
+    return getImageUrl(props.values.thumbnail.data.attributes.url);
   }
   return new URL("@/assets/images/event_1.png", import.meta.url).href;
 };

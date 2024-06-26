@@ -103,6 +103,11 @@ const router = createRouter({
       component: () => import("@/pages/WebinarInfoPage.vue"),
     },
     {
+      path: "/case-studies",
+      name: "casestudies",
+      component: () => import("@/pages/CaseStudiesPage.vue"),
+    },
+    {
       path: "/api",
       name: "api",
       component: () => import("@/pages/ApiPage.vue"),

@@ -9,7 +9,6 @@ import {
   MenuItem,
 } from "@headlessui/vue";
 import { vOnClickOutside } from "@vueuse/components";
-import { defineEmits, defineProps, ref } from "vue";
 import arrow from "@/components/icons/arrow.vue";
 
 const props = defineProps({

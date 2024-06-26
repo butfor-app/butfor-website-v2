@@ -6,7 +6,7 @@
     <div class="p-6">
       <div class="text-[28px] font-semibold mb-4">{{ values.title }}</div>
       <div class="text-lg text-gray-500 font-medium mb-6 font-aneklatin;">
-        {{ values.description }}
+        {{ trimDesc(values.description) }}
       </div>
       <RouterLink
         :to="`/article/${id}`"
@@ -18,6 +18,9 @@
   </div>
 </template>
 <script setup>
+import useStrapi from "@/composables/useStrapi";
+const { getImageUrl } = useStrapi();
+
 const props = defineProps({
   id: {
     type: Number,
@@ -27,11 +30,16 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  thumbnail: {
+    default: new URL("@/assets/images/event_1.png", import.meta.url).href,
+  },
 });
-// console.log(props);
+const trimDesc = (desc) => {
+  return desc.length > 40 ? desc.slice(0, 40) + "..." : desc;
+};
 const getImage = () => {
-  if (props.values?.image) {
-    return props.values.image.url;
+  if (props.values.thumbnail.data) {
+    return getImageUrl(props.values.thumbnail.data.attributes.url);
   }
   return new URL("@/assets/images/event_1.png", import.meta.url).href;
 };

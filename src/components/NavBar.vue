@@ -353,7 +353,7 @@ const resourcesLinks = [
   },
   {
     name: "Case Studies",
-    link: "/",
+    link: "/case-studies",
     icon: new URL("/src/assets/icons/menu_book.png", import.meta.url).href,
   },
   {
