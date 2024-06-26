@@ -21,10 +21,10 @@
         <slide v-for="(slideGroup, index) in groupedEvents" :key="index">
           <div
             id="slide_wrapper"
-            class="h-full flex flex-wrap items-start justify-around xl:justify-between gap-y-6"
+            class="h-full flex xl:flex-wrap xl:flex-row flex-col flex-nowrap items-start justify-around xl:justify-between gap-y-6"
           >
             <WebinarCard
-              class="w-[49%]"
+              class="w-full xl:w-[49%]"
               v-for="slide in slideGroup"
               :key="slide.id"
               :id="slide.id"
