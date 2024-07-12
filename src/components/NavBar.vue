@@ -4,7 +4,7 @@
       <div>
         <div>
           <button>New</button>
-          <div id="msg">Webinar on How to Automate Baselines, June 14</div>
+          <div id="msg">Webinar on How to Automate Baselines, Aug 14</div>
         </div>
         <div>
           <RouterLink to="/contact" id="contact">Contact Sales</RouterLink>
