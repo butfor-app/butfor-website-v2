@@ -12,9 +12,9 @@ module.exports = {
         18: "75px",
       },
       fontFamily: {
-        poppins: ["Poppins"],
-        aneklatin: ["AnekLatin"],
-        sourcesanspro: ["Source Sans Pro"],
+        poppins: ["Poppins", "sans-serif"],
+        aneklatin: ["AnekLatin", "sans-serif"],
+        sourcesanspro: ["Source Sans Pro", "sans-serif"],
       },
 
       keyframes: {
