@@ -1,0 +1,25 @@
+name: Auto deploy
+
+on: push
+
+jobs:
+  pull-and-deploy-job:
+    name: Pull from github and deploy
+    runs-on: ["self-hosted", "linux", "x64"]
+    steps:
+      - name: pull-latest-code
+        run: |
+          cd ~/git_repo/fiver-fimkla-tueri/
+          git pull
+
+      - name: install-packages
+        run: |
+          yarn install
+
+      - name: build
+        run: |
+          yarn build
+
+      - name: copy-build-to-public_html directory
+        run: |
+          cp -a ~/git_repo/fiver-fimkla-tueri/dist/. ~/public_html
