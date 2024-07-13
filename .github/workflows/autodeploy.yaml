@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: pull-latest-code
         run: |
-          cd ~/git_repo/fiver-fimkla-tueri/
+          cd /home/butfor/git_repo/fiver-fimkla-tueri/
           git pull
 
       - name: install-packages
@@ -22,4 +22,4 @@ jobs:
 
       - name: copy-build-to-public_html directory
         run: |
-          cp -a ~/git_repo/fiver-fimkla-tueri/dist/. ~/public_html
+          cp -a /home/butfor/git_repo/fiver-fimkla-tueri/dist/. /home/butfor/public_html
