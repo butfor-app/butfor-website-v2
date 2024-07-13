@@ -14,10 +14,12 @@ jobs:
 
       - name: install-packages
         run: |
+          cd /home/butfor/git_repo/fiver-fimkla-tueri/
           yarn install
 
       - name: build
         run: |
+          cd /home/butfor/git_repo/fiver-fimkla-tueri/
           yarn build
 
       - name: copy-build-to-public_html directory
