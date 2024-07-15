@@ -63,7 +63,29 @@ function useStrapi() {
     const webinar = data.data;
     return webinar;
   }
-  return { getImageUrl, getArticles, getArticle, getWebinars, getWebinar };
+
+  async function getClaims101() {
+    const resp = await fetch(
+      STRAPI_API_BASE_URL + "/claims-101?populate[0]=thumbnail",
+      {
+        headers: {
+          ...STRAPI_HEADERS,
+        },
+      }
+    );
+    const data = await resp.json();
+    console.log(data);
+    const claim101 = data.data;
+    return claim101;
+  }
+  return {
+    getImageUrl,
+    getArticles,
+    getArticle,
+    getWebinars,
+    getWebinar,
+    getClaims101,
+  };
 }
 
 export default useStrapi;
