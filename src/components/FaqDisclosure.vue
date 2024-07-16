@@ -10,7 +10,7 @@
           :class="open ? 'shadow-gray-600' : 'shadow-gray-300'"
         >
           <DisclosureButton
-            class="flex h-18 w-full items-center justify-between rounded-3xl px-4 text-white focus:outline-none focus-visible:ring focus-visible:ring-opacity-75 lg:h-20 lg:px-9"
+            class="flex py-5 w-full items-center justify-between rounded-3xl px-4 text-white focus:outline-none focus-visible:ring focus-visible:ring-opacity-75 lg:px-9"
             :class="
               open ? 'rounded-b-none border-b-2 bg-[#59839205]' : 'bg-[#598392]'
             "
