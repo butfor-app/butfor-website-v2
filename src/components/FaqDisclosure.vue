@@ -1,20 +1,34 @@
 <template>
-  <div id="wrapper">
+  <div
+    id="faqs"
+    class="flex w-full flex-col gap-6 rounded-2xl bg-white px-4 pb-10 lg:px-18"
+  >
     <template v-for="faq in faqs">
       <Disclosure v-slot="{ open }">
-        <div class="faq" :class="open ? 'bg-[#59839205]' : 'bg-[#598392]'">
+        <div
+          class="rounded-3xl shadow-lg"
+          :class="open ? 'shadow-gray-600' : 'shadow-gray-300'"
+        >
           <DisclosureButton
-            class="disclosure-button"
-            :class="open ? 'border-b-2' : ''"
+            class="flex h-18 w-full items-center justify-between rounded-3xl px-4 text-white focus:outline-none focus-visible:ring focus-visible:ring-opacity-75 lg:h-20 lg:px-9"
+            :class="
+              open ? 'rounded-b-none border-b-2 bg-[#59839205]' : 'bg-[#598392]'
+            "
           >
-            <span class="question" :class="open ? 'text-black' : ''">{{
-              faq.question
-            }}</span>
+            <span
+              class="text-left font-aneklatin text-xl font-semibold lg:text-[28px]"
+              :class="open ? 'text-black' : ''"
+            >
+              {{ faq.question }}
+            </span>
 
             <img v-if="open" src="@/assets/icons/minus.svg" alt="" />
             <img v-else src="@/assets/icons/plus.svg" alt="" />
           </DisclosureButton>
-          <DisclosurePanel id="disclosure-panel">
+          <DisclosurePanel
+            id="disclosure-panel"
+            class="rounded-b-3xl px-4 py-6 text-sm text-[#598392] shadow-sm shadow-gray-200 lg:px-9"
+          >
             {{ faq.answer }}
           </DisclosurePanel>
         </div>
@@ -84,35 +98,4 @@ const faqs = [
   },
 ];
 </script>
-<style lang="postcss" scoped>
-#wrapper {
-  @apply flex flex-col w-full rounded-2xl bg-white;
-  @apply px-4;
-
-  @screen lg {
-    @apply px-18;
-  }
-  > .faq {
-    @apply px-4  mb-6 rounded-3xl;
-    @screen lg {
-      @apply px-9;
-    }
-    > .disclosure-button {
-      @apply flex justify-between items-center w-full h-18 rounded-lg   focus:outline-none focus-visible:ring focus-visible:ring-opacity-75;
-      @apply text-white;
-      @screen lg {
-        @apply h-20;
-      }
-      .question {
-        @apply text-xl text-left font-semibold font-aneklatin;
-        @screen lg {
-          @apply text-[28px];
-        }
-      }
-    }
-    #disclosure-panel {
-      @apply text-[#598392] text-sm py-6;
-    }
-  }
-}
-</style>
+<style lang="postcss" scoped></style>
