@@ -23,17 +23,14 @@
     <div class="solution_category">
       <div id="heading">BY COMPANY TYPE</div>
       <SolutionsSlider :solutions="solutionsByCompanyType" />
-      <button>View All</button>
     </div>
     <div class="solution_category">
       <div id="heading">BY ROLE</div>
       <SolutionsSlider :solutions="generalData.solutionsByRole" />
-      <button>View All</button>
     </div>
     <div class="solution_category">
       <div id="heading">BY CLAIM TYPE</div>
       <SolutionsSlider :solutions="generalData.solutionsByClaimType" />
-      <button>View All</button>
     </div>
   </div>
   <div id="features">
@@ -70,9 +67,6 @@
   <div id="faq" ref="faqRef">
     <div id="heading">FAQS</div>
     <FaqDisclosure />
-    <div id="btn">
-      <button>View All</button>
-    </div>
   </div>
 </template>
 
