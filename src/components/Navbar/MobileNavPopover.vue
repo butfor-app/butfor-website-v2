@@ -224,7 +224,7 @@ const close = () => {
     @apply w-full;
     > button {
       @apply w-full h-16 flex justify-between items-center;
-      @apply px-8 bg-primary text-white;
+      @apply px-8 bg-primary shadow-lg shadow-black text-white;
       @apply cursor-pointer;
       > img {
         @apply fill-white;

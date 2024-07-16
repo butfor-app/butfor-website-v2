@@ -7,7 +7,9 @@
           <div id="msg">Webinar on How to Automate Baselines, Aug 14</div>
         </div>
         <div>
-          <RouterLink to="/contact" id="contact">Contact Sales</RouterLink>
+          <RouterLink to="/contact" id="contact" class="!hidden lg:flex">
+            Contact Sales
+          </RouterLink>
           <RouterLink to="/login" id="login">Login</RouterLink>
         </div>
       </div>
