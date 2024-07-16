@@ -578,7 +578,7 @@ const solutionLinks = {
               }
             }
             > #menu {
-              @apply absolute top-[75px] left-0 p-6 bg-white rounded-b-2xl;
+              @apply shadow-sm shadow-gray-300 absolute top-[75px] left-0 p-6 bg-white rounded-b-2xl;
               @apply z-20 flex gap-x-4 flex-wrap outline-none;
               > .col {
                 @apply flex flex-col justify-start;
