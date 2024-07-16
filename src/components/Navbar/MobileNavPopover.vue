@@ -1,27 +1,3 @@
-<script setup>
-import {
-  Menu,
-  MenuButton,
-  MenuItems,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  MenuItem,
-} from "@headlessui/vue";
-import { vOnClickOutside } from "@vueuse/components";
-import arrow from "@/components/icons/arrow.vue";
-
-const props = defineProps({
-  open: Boolean,
-  solutionLinks: Object,
-  resourcesLinks: Object,
-});
-const $emit = defineEmits(["close"]);
-const close = () => {
-  $emit("close");
-};
-</script>
-
 <template>
   <div id="popover" v-if="open" v-on-click-outside="close">
     <div class="popover_item">
@@ -101,60 +77,83 @@ const close = () => {
           <div class="col">
             <div class="heading">PREVIEW</div>
             <div class="content">
-              <a href="#" class="menu_row">
+              <RouterLink to="/product/?feature=1" class="menu_row">
                 <div class="img">
                   <img src="@/assets/icons/manage_accounts.png" alt="" />
                 </div>
-                <div class="name">Natural Disasters</div>
-              </a>
-              <a href="#" class="menu_row">
+                <div class="name">Customer & Claim Management</div>
+              </RouterLink>
+              <RouterLink
+                to="/product/?feature=2"
+                class="menu_row"
+                @click="close"
+              >
                 <div class="img">
                   <img src="@/assets/icons/bar_chart_4_bars.png" alt="" />
                 </div>
-                <div class="name">Fire or Explosion</div>
-              </a>
-              <a href="#" class="menu_row">
+                <div class="name">Reporting & Analytics</div>
+              </RouterLink>
+              <RouterLink
+                to="/product/?feature=3"
+                class="menu_row"
+                @click="close"
+              >
                 <div class="img">
                   <img src="@/assets/icons/done.png" alt="" />
                 </div>
-                <div class="name">Equipment Breakdown</div>
-              </a>
-              <a href="#" class="menu_row">
+                <div class="name">Approval Chains</div>
+              </RouterLink>
+              <RouterLink
+                to="/product/?feature=4"
+                class="menu_row"
+                @click="close"
+              >
                 <div class="img">
                   <img src="@/assets/icons/edit_document.png" alt="" />
                 </div>
-                <div class="name">Power Outages</div>
-              </a>
-              <button class="more_types">See More Claim Types</button>
-            </div>
-          </div>
-          <div class="col">
-            <div class="heading" style="visibility: hidden">.</div>
-            <div class="content">
-              <a href="#" class="menu_row">
+                <div class="name">Claims Customization</div>
+              </RouterLink>
+
+              <RouterLink
+                to="/product/?feature=5"
+                class="menu_row"
+                @click="close"
+              >
                 <div class="img">
                   <img src="@/assets/icons/magic_button.png" alt="" />
                 </div>
-                <div class="name">Enterprise</div>
-              </a>
-              <a href="#" class="menu_row">
+                <div class="name">Find the Best Baseline</div>
+              </RouterLink>
+              <RouterLink
+                to="/product/?feature=6"
+                class="menu_row"
+                @click="close"
+              >
                 <div class="img">
                   <img src="@/assets/icons/handshake.png" alt="" />
                 </div>
-                <div class="name">Insurance Companies</div>
-              </a>
-              <a href="#" class="menu_row">
+                <div class="name">Collaboration</div>
+              </RouterLink>
+              <RouterLink
+                to="/product/?feature=7"
+                class="menu_row"
+                @click="close"
+              >
                 <div class="img">
                   <img src="@/assets/icons/lock.png" alt="" />
                 </div>
-                <div class="name">Claim Consultants</div>
-              </a>
-              <a href="#" class="menu_row">
+                <div class="name">Centralized & Secure</div>
+              </RouterLink>
+              <RouterLink
+                to="/product/?feature=8"
+                class="menu_row"
+                @click="close"
+              >
                 <div class="img">
                   <img src="@/assets/icons/database.png" alt="" />
                 </div>
-                <div class="name">Insurance Brokers</div>
-              </a>
+                <div class="name">Data Standardization</div>
+              </RouterLink>
             </div>
           </div>
         </DisclosurePanel>
@@ -169,64 +168,53 @@ const close = () => {
         <DisclosurePanel>
           <div class="col">
             <div class="content">
-              <a href="#" class="menu_row">
+              <RouterLink
+                v-for="resourcesLink in resourcesLinks"
+                :to="resourcesLink.link"
+                class="menu_row"
+              >
                 <div class="img">
-                  <img src="@/assets/icons/help.png" alt="" />
+                  <img :src="resourcesLink.icon" alt="" />
                 </div>
-                <div class="name">FAQs</div>
-              </a>
-              <a href="#" class="menu_row">
-                <div class="img">
-                  <img src="@/assets/icons/quick_reference.svg" alt="" />
-                </div>
-                <div class="name">Claims 101</div>
-              </a>
-              <a href="#" class="menu_row">
-                <div class="img">
-                  <img src="@/assets/icons/edit_note.png" alt="" />
-                </div>
-                <div class="name">Blogs</div>
-              </a>
-              <a href="#" class="menu_row">
-                <div class="img">
-                  <img src="@/assets/icons/menu_book.png" alt="" />
-                </div>
-                <div class="name">Case Studies</div>
-              </a>
-              <a href="#" class="menu_row">
-                <div class="img">
-                  <img src="@/assets/icons/hub.png" alt="" />
-                </div>
-                <div class="name">Claims Resource Hub</div>
-              </a>
-              <a href="#" class="menu_row">
-                <div class="img">
-                  <img src="@/assets/icons/live_tv.png" alt="" />
-                </div>
-                <div class="name">Webinars</div>
-              </a>
-              <a href="#" class="menu_row">
-                <div class="img">
-                  <img src="@/assets/icons/call.png" alt="" />
-                </div>
-                <div class="name">Contact Us</div>
-              </a>
-              <a href="#" class="menu_row">
-                <div class="img">
-                  <img src="@/assets/icons/handshake.png" alt="" />
-                </div>
-                <div class="name">Partnership</div>
-              </a>
+                <div class="name">{{ resourcesLink.name }}</div>
+              </RouterLink>
             </div>
           </div>
         </DisclosurePanel>
       </Disclosure>
     </div>
     <div class="popover_item">
-      <button>Integrations</button>
+      <button>
+        <RouterLink to="/integrations"> Integrations </RouterLink>
+      </button>
     </div>
   </div>
 </template>
+<script setup>
+import {
+  Menu,
+  MenuButton,
+  MenuItems,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  MenuItem,
+} from "@headlessui/vue";
+import { vOnClickOutside } from "@vueuse/components";
+import arrow from "@/components/icons/arrow.vue";
+import { RouterLink } from "vue-router";
+
+const props = defineProps({
+  open: Boolean,
+  solutionLinks: Object,
+  resourcesLinks: Object,
+});
+const $emit = defineEmits(["close"]);
+const close = () => {
+  $emit("close");
+};
+</script>
+
 <style lang="postcss" scoped>
 #popover {
   @apply w-screen bg-white !p-0;
@@ -261,14 +249,12 @@ const close = () => {
             @apply px-4 py-1;
           }
           > .menu_row {
-            @apply flex items-center justify-start;
+            @apply flex gap-1 items-center justify-start;
             > .img {
+              @apply w-6 h-6;
               > img {
-                @apply w-6 h-6;
+                @apply w-full h-full;
               }
-              /* > svg {
-                          @apply w-6 h-6;
-                        } */
             }
             > .name {
               @apply text-sm text-primary font-aneklatin;

@@ -356,11 +356,11 @@ const resourcesLinks = [
     link: "/case-studies",
     icon: new URL("/src/assets/icons/menu_book.png", import.meta.url).href,
   },
-  {
-    name: "Claims Resource Hub",
-    link: "/",
-    icon: new URL("/src/assets/icons/hub.png", import.meta.url).href,
-  },
+  // {
+  //   name: "Claims Resource Hub",
+  //   link: "/",
+  //   icon: new URL("/src/assets/icons/hub.png", import.meta.url).href,
+  // },
   {
     name: "Webinars",
     link: "/webinars",
@@ -371,11 +371,11 @@ const resourcesLinks = [
     link: "/",
     icon: new URL("/src/assets/icons/call.png", import.meta.url).href,
   },
-  {
-    name: "Partnership",
-    link: "/",
-    icon: new URL("/src/assets/icons/handshake.png", import.meta.url).href,
-  },
+  // {
+  //   name: "Partnership",
+  //   link: "/",
+  //   icon: new URL("/src/assets/icons/handshake.png", import.meta.url).href,
+  // },
 ];
 const solutionLinks = {
   claim: [
