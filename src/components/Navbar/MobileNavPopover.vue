@@ -65,10 +65,10 @@
         <DisclosurePanel>
           <div class="col w-[200px]">
             <div class="heading">OVERVIEW</div>
-            <div class="h-full flex flex-col justify-around">
+            <div class="flex h-full flex-col justify-around">
               <div class="pb-4">Get to know the <br />Butfor platform</div>
               <button
-                class="w-[78px] h-[28px] text-xs bg-[#598392] text-white font-aneklatin rounded-lg"
+                class="h-[28px] w-[78px] rounded-lg bg-[#598392] font-aneklatin text-xs text-white"
               >
                 Learn More
               </button>
@@ -219,12 +219,12 @@ const close = () => {
 #popover {
   @apply w-screen bg-white !p-0;
   @apply z-10 flex flex-col gap-y-0;
-  @apply absolute top-18 right-0;
+  @apply absolute right-0 top-18;
   > .popover_item {
     @apply w-full;
     > button {
-      @apply w-full h-16 flex justify-between items-center;
-      @apply px-8 bg-primary shadow-lg shadow-black text-white;
+      @apply flex h-16 w-full items-center justify-between;
+      @apply bg-primary px-8 text-white;
       @apply cursor-pointer;
       > img {
         @apply fill-white;
@@ -233,31 +233,31 @@ const close = () => {
     > div {
       @apply border border-blue-600;
       @apply p-2 px-8;
-      @apply flex flex-wrap gap-y-2 justify-between;
+      @apply flex flex-wrap justify-between gap-y-2;
 
       > .col {
         @apply flex flex-col;
         @apply w-40;
         > .heading {
-          @apply text-base text-primaryDark font-medium;
+          @apply text-base font-medium text-primaryDark;
           @apply mb-2;
         }
         > .content {
           @apply flex flex-col gap-y-2;
           > .more_types {
-            @apply text-sm font-aneklatin font-medium bg-primary text-white rounded-xl;
+            @apply rounded-xl bg-primary font-aneklatin text-sm font-medium text-white;
             @apply px-4 py-1;
           }
           > .menu_row {
-            @apply flex gap-1 items-center justify-start;
+            @apply flex items-center justify-start gap-1;
             > .img {
-              @apply w-6 h-6;
+              @apply h-6 w-6;
               > img {
-                @apply w-full h-full;
+                @apply h-full w-full;
               }
             }
             > .name {
-              @apply text-sm text-primary font-aneklatin;
+              @apply font-aneklatin text-sm text-primary;
             }
           }
         }
