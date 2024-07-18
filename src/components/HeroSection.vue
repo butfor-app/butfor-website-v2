@@ -1,10 +1,11 @@
 <template>
   <div id="hero_section" :style="hero_bg_style">
-    <div id="heading">{{ name }}</div>
-    <div id="sub_heading">
+    <div id="heading" class="z-20">{{ name }}</div>
+    <div id="sub_heading" class="z-20">
       {{ desc }}
     </div>
-    <button @click="scrollToContactForm">Learn More</button>
+    <button @click="scrollToContactForm" class="z-20">Learn More</button>
+    <slot />
   </div>
 </template>
 <script setup>
@@ -39,26 +40,26 @@ watch(
     console.log("bg changed");
     // hero_bg_url.value = new URL(props.bg, import.meta.url).href;
     hero_bg_style.value = "background-image: url('" + props.bg + "');";
-  }
+  },
 );
 </script>
 <style lang="postcss" scoped>
 #hero_section {
-  @apply flex flex-col items-center justify-center;
-  @apply py-4 h-[calc(100vh)] text-center;
+  @apply relative flex flex-col items-center justify-center;
+  @apply h-[calc(100vh)] py-4 text-center;
   @screen md {
     @apply h-[calc(100vh_-_144px)];
   }
-  @apply bg-no-repeat	bg-cover  bg-top;
+  @apply bg-cover bg-top bg-no-repeat;
   > #heading {
-    @apply mb-10 text-[46px] font-extrabold text-white uppercase;
+    @apply mb-10 text-[46px] font-extrabold uppercase text-white;
   }
   > #sub_heading {
-    @apply mb-9 md:max-w-[590px] text-xl font-medium font-aneklatin text-white;
+    @apply mb-9 font-aneklatin text-xl font-medium text-white md:max-w-[590px];
   }
   > button {
-    @apply w-44 h-11 bg-white rounded-full;
-    @apply text-primary  font-semibold font-aneklatin;
+    @apply h-11 w-44 rounded-full bg-white;
+    @apply font-aneklatin font-semibold text-primary;
   }
 }
 </style>
