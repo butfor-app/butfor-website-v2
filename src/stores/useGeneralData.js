@@ -14,96 +14,112 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "We help insurance companies manage and validate all of their claim filings across multiple accounts.",
         icon: "approval_delegation",
         type: "company",
+        routeName: "insurance-companies",
       },
       {
         name: "Claim Consultants",
         desc: "We help third party consultants automate the claims process for each individual client in a centralized system.",
         icon: "consultant",
         type: "company",
+        routeName: "claim-managers",
       },
       {
         name: "Insurance Brokerages",
         desc: "Providing brokers confidence in claims management software for their clients.",
         icon: "real_estate_agent",
         type: "company",
+        routeName: "insurance-brokers",
       },
       {
         name: "Risk & Compliance",
         desc: "BUTFOR gives RM the tools necessary to work on complex claims internally.",
         icon: "fact_check",
         type: "role",
+        routeName: "risk-compliance",
       },
       {
         name: "Claims",
         desc: "We help claims managers be more efficient in handling multiple claims",
         icon: "quick_reference",
         type: "role",
+        routeName: "claim-managers",
       },
       {
         name: "Finance",
         desc: "Finance professionals use our tool to efficiently process claims, decreasing time spent across the board.",
         icon: "attach_money",
         type: "role",
+        routeName: "finance-analysts",
       },
       {
         name: "Forensic Accounting",
         desc: "Our software spots trends in data and makes analysis both less complex and manual.",
         icon: "account_balance",
         type: "role",
+        routeName: "forensic-accountants",
       },
       {
         name: "Executive Leadership",
         desc: "Help recoup losses and balance financial sheets more quickly.",
         icon: "group",
         type: "role",
+        routeName: "executive-teams",
       },
       {
         name: "Natural Disasters",
         desc: "Natural disasters such as hurricanes, earthquakes, floods, and wildfires can cause widespread damage and disruption to businesses, resulting in significant financial losses",
         icon: "flood",
         type: "claim",
+        routeName: "natural-disasters",
       },
       {
         name: "Fire/explosion",
         desc: "Fires can cause severe damage to infrastructure and inventory, disrupt operations, and pose safety risks to employees and customers, leading to significant financial losses for affected businesses.",
         icon: "fire_extinguisher",
         type: "claim",
+        routeName: "fire-or-explosion",
       },
       {
         name: "Equipment breakdown",
         desc: "Equipment breakdowns can cause unplanned downtime, interrupt operations, and result in costly repairs or replacement, leading to significant financial losses for businesses that rely heavily on machinery and equipment.",
         icon: "construction",
         type: "claim",
+        routeName: "equipment-breakdown",
       },
       {
         name: "Cyber-attacks",
         desc: "Cyber attacks can cause data breaches, system failures, and business interruption, leading to significant financial losses, reputational damage, and regulatory fines for affected businesses.",
         icon: "cyberattacks",
         type: "claim",
+        routeName: "cyber-attacks",
       },
       {
         name: "Power outages",
         desc: "Power outages can disrupt operations, damage electrical equipment, and result in data loss or corruption, leading to significant financial losses for businesses that rely heavily on electricity.",
         icon: "power_off",
         type: "claim",
+        routeName: "power-outages",
       },
       {
         name: "City shutdowns",
         desc: "City shutdowns, such as those caused by public health emergencies or civil unrest, can lead to business interruption, supply chain disruptions, and financial losses for affected businesses.",
         icon: "city_shutdown",
         type: "claim",
+        routeName: "city-shutdowns",
       },
       {
         name: "Pandemic",
         desc: "Pandemics can cause widespread illness, social distancing measures, and labor disruptions, leading to significant financial losses and operational challenges for businesses of all sizes and industries",
         icon: "pandemics",
         type: "claim",
+        routeName: "pandemics",
       },
       {
         name: "Construction/renovation",
         desc: "Faulty construction can cause property damage, safety hazards, and business interruption, resulting in significant financial losses and reputational damage for property owners and tenants.",
         icon: "foundation",
         type: "claim",
+        routeName: "faulty-construction",
       },
     ],
     solutionPages: [
@@ -114,7 +130,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Natural disasters can cause business interruption by damaging physical property, disrupting supply chains, and causing employee displacement. This can lead to temporary or permanent closures and loss of revenue for affected businesses.",
         bg: new URL(
           "/src/assets/images/solutions/natural-disasters-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "claim",
         hubspot_form_id: "83efaaa1-4ea3-4a48-b759-c2f345c5a1e3",
@@ -142,7 +158,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Fire and explosions are commonplace in many  manufacturing and industrial industries. The resulting closures, loss of inventory, and damage to reputation can lead to significant financial losses for affected businesses.",
         bg: new URL(
           "/src/assets/images/solutions/fire-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "claim",
         hubspot_form_id: "3a05470c-a725-465f-8d47-737f1a841504",
@@ -170,7 +186,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Equipment and Machinery are vital parts to many businesses and breakdowns are bound to happen. Halting production, delaying orders, and the resulting loss of revenue and decreased productivity are all recoverable assets.",
         bg: new URL(
           "/src/assets/images/solutions/equiptment-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "claim",
         hubspot_form_id: "0b3cea9a-c06f-43ba-8fb7-c5b94a6bb7f3",
@@ -198,7 +214,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Power outages can cause business interruption by halting production, disabling equipment and technology, and disrupting communication and data systems. Whether a few hours or a few days, any small disruption can have a large monetary effect.",
         bg: new URL(
           "/src/assets/images/solutions/power-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "claim",
         hubspot_form_id: "09d5a574-e92d-4d37-8ef2-82334b6e5dd5",
@@ -226,7 +242,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Broken pipes, sprinkler systems, structural damage, or electrical malfunctioning are all causes of business interruption for companies that rely on rental and operational units. While such incidents may occur unexpectedly, it is important for businesses to safeguard their operations against potential financial liabilities.",
         bg: new URL(
           "/src/assets/images/solutions/faulty-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "claim",
         hubspot_form_id: "1588984d-7eec-4d96-b966-2ee70a48fae1",
@@ -254,7 +270,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Cyber attacks can disrupt critical systems and applications, stealing sensitive data, and compromising business operations, leading to downtime, lost productivity, and financial losses. With the increasing frequency and complexity of cyber attacks, organizations need to implement a comprehensive incident response plan to mitigate the impact of cyber incidents and ensure business continuity.",
         bg: new URL(
           "/src/assets/images/solutions/cyber-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "claim",
         hubspot_form_id: "d63f9ec2-b081-4914-94f5-5f28d7f7bac7",
@@ -282,7 +298,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "City shutdowns, such as those caused by civil unrest, protests, or security threats, can disrupt transportation, supply chains, and operations, leading to business interruption, lost revenue, and increased costs. To mitigate the impact of city shutdowns, organizations can develop contingency plans, establish alternative supply routes and transportation modes, leverage technology and remote work arrangements, and maintain open communication with employees, customers, and stakeholders.",
         bg: new URL(
           "/src/assets/images/solutions/city-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "claim",
         hubspot_form_id: "f8073077-c91d-4516-a2ab-6ebcd2068461",
@@ -310,7 +326,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Pandemics have a great effect on operations, which can be recovered under the proper policy through a business interruption claim. Although we hope to never experience another in our lifetime, ensure your business is prepared for whatever emergencies the world may throw your way.",
         bg: new URL(
           "/src/assets/images/solutions/city-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "claim",
         hubspot_form_id: "728467d7-908e-447e-bca7-33d08af82b5e",
@@ -339,7 +355,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Enterprises can use our software to automate and streamline insurance processes, such as claims processing, By using analytics and machine learning algorithms, our software can help businesses make more informed decisions and optimize their insurance claims and associated costs.",
         bg: new URL(
           "/src/assets/images/solutions/enterprise-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "company",
         hubspot_form_id: "6114c0b8-ac35-43c7-bd6e-864e5f09c3ea",
@@ -367,7 +383,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Improve claims processing efficiency and accuracy, reduce work load, and enhance customer satisfaction. By leveraging advanced technologies such as AI and machine learning,our software can help make data-driven decisions, reduce operational costs, and provide faster and more personalized services to your customers.",
         bg: new URL(
           "/src/assets/images/solutions/insurance-companies-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "company",
         hubspot_form_id: "9a6b2149-b3a1-44fd-8997-fc18b5c92692",
@@ -395,7 +411,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Streamline claims processing, automate routine tasks, and gain deeper insights into your clients' risk profiles, thus providing more personalized and efficient service, while also reducing costs and increasing revenue opportunities. By leveraging the advanced analytics and data-driven insights, brokers can optimize their operations, improve customer satisfaction, and gain a competitive advantage in the marketplace.",
         bg: new URL(
           "/src/assets/images/solutions/brokers-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "company",
         hubspot_form_id: "41ee5de6-75b4-4f11-848e-4cae6ce61329",
@@ -423,7 +439,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Conduct investigations and analyze financial data related to insurance claims. By leveraging the advanced analytics and data-driven insights provided by our tools, forensic accountants can help optimize their claims processes and reduce fees for their clients.",
         bg: new URL(
           "/src/assets/images/solutions/consulting-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "company",
         hubspot_form_id: "d77fddf7-b7f0-439e-8d70-09f29a842cdd",
@@ -451,7 +467,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Allow our software to efficiently manage and process claims for your clients, streamlining the litigation process and reducing costs. The software's analytics and automation features can help insurance lawyers make better use of their time and resources, ultimately leading to more efficient and cost-effective legal representation.",
         bg: new URL(
           "/src/assets/images/solutions/brokers-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "company",
         hubspot_form_id: "c3b30e79-7e11-4d87-b711-41c426181e03",
@@ -480,7 +496,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Identify potential risks, assess impact, and develop effective risk mitigation strategies, leveraging advanced analytics, data visualization, and machine learning capabilities to enhance the accuracy and speed of your analyses. By integrating our tools into their workflows, risk analysts can improve their ability to manage risks, reduce losses, and create more value for their organizations.",
         bg: new URL(
           "/src/assets/images/solutions/risk-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "role",
         hubspot_form_id: "2735b308-0b67-4a72-8517-6c286d3c8a3d",
@@ -508,7 +524,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Automate claims processing, streamline workflows, and enhance the accuracy and speed of operations, leveraging our  machine learning, natural language processing, and robotic process automation to improve decision-making, reduce fraud, and improve customer experience. By integrating our tools, claims managers can improve efficiency, reduce costs, and create a more seamless and responsive claims handling process for their customers.",
         bg: new URL(
           "/src/assets/images/solutions/claims-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "role",
         hubspot_form_id: "016d2e61-9261-4bbe-885e-b3a67317d440",
@@ -536,7 +552,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Analyze financial data related to claims, identify patterns and trends, and develop insights that can inform pricing, underwriting, and risk management decisions, leveraging advanced analytics, data visualization, and machine learning capabilities to optimize analyses and predictions. By integrating our software, finance analysts can improve their ability to manage risk, enhance profitability, and create more value for their organizations.",
         bg: new URL(
           "/src/assets/images/solutions/finance-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "role",
         hubspot_form_id: "5291e0cb-7381-43da-8832-a6671e9e6f4b",
@@ -564,7 +580,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Analyze claims data, identify fraud, and provide expert testimony, leveraging our tools to detect anomalies, patterns, and trends that may indicate BI loss. By integrating these software tools, forensic accountants can improve their ability to investigate claims, reduce losses, and protect their organizations against financial loss.",
         bg: new URL(
           "/src/assets/images/solutions/forensic-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "role",
         hubspot_form_id: "35e79602-9dc4-4677-a26f-3a4bc8576505",
@@ -592,7 +608,7 @@ export const useGeneralData = defineStore("generaldata", {
         desc: "Executive teams can  gain visibility into their organization's claims data, identify emerging risks, and make data-driven decisions, leveraging our tools to monitor performance, optimize processes, and reduce costs. By integrating these software tools into their workflows, executive teams can improve their ability to manage risk, enhance profitability, and drive business growth, while ensuring that their organizations are well-positioned to respond to changing market conditions and customer needs.",
         bg: new URL(
           "/src/assets/images/solutions/executive-teams-hero-bg.png",
-          import.meta.url
+          import.meta.url,
         ).href,
         type: "role",
         hubspot_form_id: "ee5f94d8-adfb-4840-b787-7a36a9c3bf82",

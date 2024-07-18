@@ -14,6 +14,7 @@
             :name="solution.name"
             :desc="solution.desc"
             :icon="solution.icon"
+            :routeSlug="solution.routeName"
           />
         </slide>
       </Carousel>
@@ -34,6 +35,7 @@
           :name="solution.name"
           :desc="solution.desc"
           :icon="solution.icon"
+          :routeSlug="solution.routeName"
         />
       </div>
     </div>
@@ -56,7 +58,7 @@ const props = defineProps({
     required: true,
   },
 });
-
+console.log(props.solutions);
 const currentSlide = ref(0);
 const viewAll = ref(false);
 </script>
