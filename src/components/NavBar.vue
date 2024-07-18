@@ -41,11 +41,11 @@
               >
                 <MenuItems
                   id="menu"
-                  class="w-[660px] h-[350px] max-h-[calc(100vh_-_140px)] overflow-y-auto relative"
+                  class="relative h-[350px] max-h-[calc(100vh_-_140px)] w-[660px] overflow-y-auto"
                   style="padding-bottom: 0"
                 >
                   <div
-                    class="absolute left-0 top-[65px] z-0 w-[591px] mx-6 border-b-2 border-gray-200"
+                    class="absolute left-0 top-[65px] z-0 mx-6 w-[591px] border-b-2 border-gray-200"
                   ></div>
                   <div class="col">
                     <div class="heading">BY CLAIM TYPE</div>
@@ -116,19 +116,19 @@
                 leave-from-class="transform scale-100 opacity-100"
                 leave-to-class="transform scale-95 opacity-0"
               >
-                <MenuItems id="menu" class="w-[656px] h-[238px]">
+                <MenuItems id="menu" class="h-[238px] w-[656px]">
                   <div
-                    class="absolute left-0 top-[65px] z-0 w-[608px] mx-6 border-b-2 border-gray-200"
+                    class="absolute left-0 top-[65px] z-0 mx-6 w-[608px] border-b-2 border-gray-200"
                   ></div>
                   <MenuItem as="div" class="col w-[150px]">
                     <div class="heading">OVERVIEW</div>
-                    <div class="h-full flex flex-col justify-around">
+                    <div class="flex h-full flex-col justify-around">
                       <div class="pb-4">
                         Get to know the <br />Butfor platform
                       </div>
                       <RouterLink
                         to="/product/?feature="
-                        class="w-[78px] h-[28px] flex items-center justify-center text-xs bg-[#598392] text-white font-aneklatin rounded-lg"
+                        class="flex h-[28px] w-[78px] items-center justify-center rounded-lg bg-[#598392] font-aneklatin text-xs text-white"
                         @click="close"
                       >
                         Learn More
@@ -271,7 +271,11 @@
                 </MenuItems>
               </transition>
             </Menu>
-            <RouterLink to="/integrations">Integrations</RouterLink>
+            <RouterLink
+              to="/integrations"
+              class="mr-1 flex h-full cursor-pointer items-center gap-x-2 border-none px-4 font-medium text-primary outline-none hover:bg-[#f3f3f3]"
+              >Integrations</RouterLink
+            >
           </div>
           <div id="mobile_popover_group_wrapper">
             <button
@@ -326,7 +330,7 @@ watch(
     console.log("Route changed", newValue);
     mobile_popover_open.value = false;
     // const
-  }
+  },
 );
 // const handleHover = ($event, open) => {
 //   if (!open) {
@@ -435,7 +439,7 @@ const solutionLinks = {
       link: "/solutions/insurance-companies",
       icon: new URL(
         "/src/assets/icons/approval_delegation.svg",
-        import.meta.url
+        import.meta.url,
       ).href,
     },
     {
@@ -497,7 +501,7 @@ const solutionLinks = {
     @apply bg-primaryDark;
     > div {
       /* changing height from 75px to 60px */
-      @apply px-5 h-16 mx-auto max-w-[1200px];
+      @apply mx-auto h-16 max-w-[1200px] px-5;
       @apply flex items-center justify-between;
       @screen sm {
         @apply px-10;
@@ -508,26 +512,26 @@ const solutionLinks = {
       > :nth-child(1) {
         @apply flex items-center;
         > button {
-          @apply h-8 bg-white text-black px-4 rounded-2xl;
+          @apply h-8 rounded-2xl bg-white px-4 text-black;
           @apply cursor-pointer;
         }
         > #msg {
           @apply hidden;
           @screen lg {
-            @apply block text-white px-4 cursor-pointer;
+            @apply block cursor-pointer px-4 text-white;
           }
         }
       }
       > :nth-child(2) {
-        @apply h-9 flex items-center gap-x-2;
+        @apply flex h-9 items-center gap-x-2;
         @screen lg {
           @apply gap-x-4;
         }
         > a {
           @apply flex items-center justify-center;
-          @apply h-full px-3 min-w-[90px]  cursor-pointer;
-          @apply bg-white text-primaryDark rounded-2xl;
-          @apply hover:bg-gray-300 transition-all duration-300;
+          @apply h-full min-w-[90px] cursor-pointer px-3;
+          @apply rounded-2xl bg-white text-primaryDark;
+          @apply transition-all duration-300 hover:bg-gray-300;
         }
       }
     }
@@ -537,7 +541,7 @@ const solutionLinks = {
     > div {
       @apply flex items-center justify-between;
       /* changing height from 96px to 80px */
-      @apply h-20 px-5 max-w-[1200px] mx-auto;
+      @apply mx-auto h-20 max-w-[1200px] px-5;
       @screen sm {
         @apply px-10;
       }
@@ -545,7 +549,7 @@ const solutionLinks = {
         @apply px-18;
       }
       > #left {
-        @apply w-full h-full flex  items-center justify-between;
+        @apply flex h-full w-full items-center justify-between;
         @screen lg {
           @apply justify-start gap-x-12;
         }
@@ -564,29 +568,29 @@ const solutionLinks = {
             @apply flex items-center justify-between;
           }
           > a {
-            @apply text-primary font-medium;
+            @apply font-medium text-primary;
           }
           > div {
-            @apply h-full flex items-center;
+            @apply flex h-full items-center;
             > button {
-              @apply h-full text-primary font-medium  px-4 mr-1;
-              @apply cursor-pointer flex items-center gap-x-2;
+              @apply mr-1 h-full px-4 font-medium text-primary;
+              @apply flex cursor-pointer items-center gap-x-2;
               @apply hover:bg-[#f3f3f3];
-              @apply outline-none border-none;
+              @apply border-none outline-none;
               > img {
                 @apply h-2 w-4;
               }
             }
             > #menu {
-              @apply shadow-sm shadow-gray-300 absolute top-[75px] left-0 p-6 bg-white rounded-b-2xl;
-              @apply z-20 flex gap-x-4 flex-wrap outline-none;
+              @apply absolute left-0 top-[75px] rounded-b-2xl bg-white p-6 shadow-sm shadow-gray-300;
+              @apply z-20 flex flex-wrap gap-x-4 outline-none;
               > .col {
                 @apply flex flex-col justify-start;
                 > .heading {
                   @apply pb-8 text-lg font-medium text-primary;
                 }
                 > .content {
-                  @apply flex flex-col justify-center items-start gap-y-2;
+                  @apply flex flex-col items-start justify-center gap-y-2;
                   > .menu_row {
                     @apply flex items-center gap-x-2;
                     > .img {
@@ -596,11 +600,11 @@ const solutionLinks = {
                       }
                     }
                     > .name {
-                      @apply font-medium font-aneklatin text-[#598392];
+                      @apply font-aneklatin font-medium text-[#598392];
                     }
                   }
                   > .more_types {
-                    @apply w-[127px] h-[28px] flex items-center justify-center bg-[#598392] text-white text-xs font-aneklatin font-medium  rounded-md;
+                    @apply flex h-[28px] w-[127px] items-center justify-center rounded-md bg-[#598392] font-aneklatin text-xs font-medium text-white;
                   }
                 }
               }
@@ -611,7 +615,7 @@ const solutionLinks = {
       > a {
         @apply hidden;
         @screen lg {
-          @apply flex items-center justify-center w-32 h-10 bg-primary text-white text-sm font-medium px-4 rounded-md;
+          @apply flex h-10 w-32 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-white;
           @apply cursor-pointer;
         }
       }
