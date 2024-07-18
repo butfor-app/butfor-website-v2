@@ -1,7 +1,25 @@
 <template>
   <div id="hero_section" :style="hero_bg_style">
-    <div id="heading" class="z-20">{{ name }}</div>
-    <div id="sub_heading" class="z-20">
+    <div
+      id="heading"
+      class="z-20"
+      :class="
+        addTextShadow
+          ? 'shadow-black [text-shadow:_5px_5px_15px_var(--tw-shadow-color)]'
+          : ''
+      "
+    >
+      {{ name }}
+    </div>
+    <div
+      id="sub_heading"
+      class="z-20"
+      :class="
+        addTextShadow
+          ? 'shadow-black [text-shadow:_5px_5px_15px_var(--tw-shadow-color)]'
+          : ''
+      "
+    >
       {{ desc }}
     </div>
     <button @click="scrollToContactForm" class="z-20">Learn More</button>
@@ -19,10 +37,13 @@ const props = defineProps({
     type: String,
     required: true,
   },
-
   bg: {
     type: String,
     required: true,
+  },
+  addTextShadow: {
+    type: Boolean,
+    default: false,
   },
 });
 

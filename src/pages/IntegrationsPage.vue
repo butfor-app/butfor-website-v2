@@ -3,6 +3,7 @@
     name="butfor works where you do"
     desc="Integrate with your existing tools to sync compensation information and workflows. Changes made in one place seamlessly appear in all."
     :bg="integrations_bg_new"
+    :addTextShadow="true"
   >
     <div
       class="absolute bottom-1/2 left-1/2 right-1/2 top-1/2 z-10 h-full w-full max-w-6xl -translate-x-1/2 -translate-y-1/2 py-10"
