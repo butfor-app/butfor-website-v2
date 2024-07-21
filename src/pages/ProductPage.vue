@@ -12,7 +12,7 @@
     <div id="wrapper">
       <!-- Top tabs -->
       <div class="flex items-center justify-between md:mb-10">
-        <button @click="goToPreviousSlide" class="text-primaryLight px-2">
+        <button @click="goToPreviousSlide" class="px-2 text-primaryLight">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -44,7 +44,7 @@
             </Slide>
           </Carousel>
         </div>
-        <button @click="goToNextSlide" class="text-primaryLight px-2">
+        <button @click="goToNextSlide" class="px-2 text-primaryLight">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path
               fill="currentColor"
@@ -141,10 +141,9 @@
   </div>
   <div id="use_cases">
     <div id="heading">Customer stories and use cases</div>
-    <div id="desc">
-      Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry.<br />
-      Lorem Ipsum has been the industry's standard dummy.
+    <div id="desc" class="text-center">
+      See how Butfor has saved clients on average <br />
+      over hundreds of thousands of dollars on their claims
     </div>
     <div id="wrapper">
       <div class="card">
@@ -193,28 +192,17 @@
       </div>
     </div>
   </div>
-  <div id="trial">
-    <div id="wrapper">
-      <div id="content_wrapper">
-        <div id="header">Try Butfor For free</div>
-        <div id="desc">
-          Learn the platform in less than an hour.<br />Become a power user in
-          less than a day.
-        </div>
-        <div id="input_wrapper">
-          <input type="text" placeholder="Enter your email" />
-          <button>Start Trial</button>
-        </div>
-      </div>
-      <img src="@/assets/images/trial.png" alt="" />
-    </div>
-  </div>
+  <!-- <HubspotFormBare formId="b20e853b-b330-4419-b345-060788b0c267" /> -->
+  <HubspotForm formId="83efaaa1-4ea3-4a48-b759-c2f345c5a1e3" />
 </template>
 <script setup>
 import { useHead } from "@vueuse/head";
 import { Carousel, Pagination, Slide } from "vue3-carousel";
 import { onMounted, ref } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, onBeforeRouteUpdate } from "vue-router";
+import HubspotForm from "@/components/HubspotForm.vue";
+import HubspotFormBare from "@/components/HubspotFormBare.vue";
+
 useHead({
   title: "Butfor - Product",
   meta: [
@@ -233,23 +221,58 @@ const screenSmallerThanMd = window.matchMedia("(max-width: 768px)").matches;
 onMounted(() => {
   console.log(route.query);
   if ("feature" in route.query) {
-    console.log("scrolling to feature");
+    // console.log("scrolling to feature");
 
     featuresRef.value.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
-    // console.log(route.query.feature);
-    // console.log(!isNaN(route.query.feature));
     if (route.query.feature != "" && !isNaN(route.query.feature)) {
       if (route.query.feature > featureSlider_slides.length) {
       } else {
-        console.log("setting current slide");
+        // console.log("setting current slide");
         currentSlide.value = parseInt(route.query.feature) - 1;
       }
     }
   }
 });
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight ||
+        document.documentElement.clientHeight) /* or $(window).height() */ &&
+    rect.right <=
+      (window.innerWidth ||
+        document.documentElement.clientWidth) /* or $(window).width() */
+  );
+}
+onBeforeRouteUpdate((to, from) => {
+  // routeName.value = to.params.solutionKey;
+  if ("feature" in route.query) {
+    // console.log("scrolling to feature");
+
+    if (isElementInViewport(featuresRef.value)) {
+      console.log("Already in viewport");
+    } else {
+      featuresRef.value.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    if (route.query.feature != "" && !isNaN(route.query.feature)) {
+      if (route.query.feature > featureSlider_slides.length) {
+      } else {
+        // console.log("setting current slide");
+        currentSlide.value = parseInt(route.query.feature) - 1;
+      }
+    }
+  }
+});
+
 const goToNextSlide = () => {
   if (currentSlide.value < featureSlider_slides.length - 1) {
     currentSlide.value += 1;
@@ -324,29 +347,29 @@ const featureSlider_slides = [
 <style lang="postcss" scoped>
 #hero_section {
   @apply flex flex-col items-center justify-center;
-  @apply py-4 h-[calc(100vh)] text-center;
+  @apply h-[calc(100vh)] py-4 text-center;
   @screen md {
     @apply h-[calc(100vh_-_144px)];
   }
-  @apply bg-[url('@/assets/images/productpage_hero.png')] bg-no-repeat	bg-cover  bg-top;
+  @apply bg-[url('@/assets/images/productpage_hero.png')] bg-cover bg-top bg-no-repeat;
   > #heading {
     @apply mb-10 text-[46px] font-extrabold text-white;
   }
   > #sub_heading {
-    @apply mb-9 text-xl font-medium font-aneklatin text-white;
+    @apply mb-9 font-aneklatin text-xl font-medium text-white;
   }
   > button {
-    @apply w-44 h-11 bg-white rounded-full;
-    @apply text-primary  font-semibold font-aneklatin;
+    @apply h-11 w-44 rounded-full bg-white;
+    @apply font-aneklatin font-semibold text-primary;
   }
 }
 #slider {
   @apply py-24;
   > #heading {
-    @apply mb-16 text-[46px] font-bold text-center;
+    @apply mb-16 text-center text-[46px] font-bold;
   }
   > #wrapper {
-    @apply max-w-[1200px] mx-auto;
+    @apply mx-auto max-w-[1200px];
     > div {
       > #thumbnails {
         /* @apply mb-10; */
@@ -356,16 +379,16 @@ const featureSlider_slides = [
               @apply border-b-[1px] border-[#D9D9D9];
               > button {
                 @apply flex items-center justify-center;
-                @apply w-full text-[#4C7281] text-lg px-4;
+                @apply w-full px-4 text-lg text-[#4C7281];
                 @screen md {
-                  @apply text-2xl px-0;
+                  @apply px-0 text-2xl;
                 }
               }
             }
             .active_slide {
-              @apply border-b-2 border-[#6D998F] bg-[#4C728105] rounded-t-xl;
+              @apply rounded-t-xl border-b-2 border-[#6D998F] bg-[#4C728105];
               > button {
-                @apply text-[#6D998F]   font-semibold;
+                @apply font-semibold text-[#6D998F];
               }
             }
           }
@@ -382,20 +405,20 @@ const featureSlider_slides = [
               @screen md {
                 @apply flex-row;
               }
-              @apply w-full px-4 rounded-lg text-left;
+              @apply w-full rounded-lg px-4 text-left;
               > div {
                 @apply w-full;
                 @screen md {
                   @apply w-1/2;
                 }
                 #heading {
-                  @apply mb-4 text-2xl md:text-4xl font-bold uppercase;
+                  @apply mb-4 text-2xl font-bold uppercase md:text-4xl;
                   @screen md {
                     @apply mb-14;
                   }
                 }
                 #desc {
-                  @apply text-xl font-aneklatin font-medium text-[#4C7281];
+                  @apply font-aneklatin text-xl font-medium text-[#4C7281];
                 }
               }
               img {
@@ -419,7 +442,7 @@ const featureSlider_slides = [
   }
 }
 #features {
-  @apply px-4 py-10 text-center flex flex-col items-center;
+  @apply flex flex-col items-center px-4 py-10 text-center;
   @screen sm {
     @apply px-18;
   }
@@ -436,7 +459,7 @@ const featureSlider_slides = [
     }
   }
   > #wrapper {
-    @apply w-full flex flex-col gap-x-8 justify-center items-start;
+    @apply flex w-full flex-col items-start justify-center gap-x-8;
     @screen sm {
       @apply flex-row;
     }
@@ -444,7 +467,7 @@ const featureSlider_slides = [
       @apply gap-x-24;
     }
     > #card {
-      @apply text-center flex flex-col justify-center;
+      @apply flex flex-col justify-center text-center;
       @screen lg {
         @apply w-72;
       }
@@ -458,7 +481,7 @@ const featureSlider_slides = [
         @apply mb-4 text-[28px] font-bold;
       }
       > #desc {
-        @apply text-[18px] mb-4 text-[#6D998F];
+        @apply mb-4 text-[18px] text-[#6D998F];
         @screen sm {
           @apply mb-0;
         }
@@ -467,7 +490,7 @@ const featureSlider_slides = [
   }
 }
 #possibilities {
-  @apply p-10 flex flex-col justify-center items-center;
+  @apply flex flex-col items-center justify-center p-10;
 
   /* #wrapper {
     @apply w-[882px] h-[882px] relative;
@@ -476,7 +499,7 @@ const featureSlider_slides = [
     }
   } */
   #header {
-    @apply text-[46px] mb-10 pb-10 font-bold text-center;
+    @apply mb-10 pb-10 text-center text-[46px] font-bold;
   }
 }
 #use_cases {
@@ -485,24 +508,24 @@ const featureSlider_slides = [
     @apply p-24;
   }
   > #heading {
-    @apply mb-9 text-[46px] font-bold text-center;
+    @apply mb-9 text-center text-[46px] font-bold;
   }
   > #desc {
     @apply mb-16 text-[28px] text-[#6D998F];
   }
   > #wrapper {
-    @apply w-full flex flex-col gap-x-10  justify-center items-center;
+    @apply flex w-full flex-col items-center justify-center gap-x-10;
 
     @screen sm {
       @apply flex-row;
     }
     .card {
-      @apply w-72 text-center flex flex-col justify-center items-center font-aneklatin;
+      @apply flex w-72 flex-col items-center justify-center text-center font-aneklatin;
       > img {
-        @apply w-full mb-6;
+        @apply mb-6 w-full;
       }
       > #header {
-        @apply mb-4 text-[28px]  font-semibold;
+        @apply mb-4 text-[28px] font-semibold;
       }
       > #desc {
         @apply text-xl text-[#00000080];
@@ -513,16 +536,16 @@ const featureSlider_slides = [
 #trial {
   @apply bg-[#EFF3F5];
   #wrapper {
-    @apply max-w-[1200px] mx-auto;
+    @apply mx-auto max-w-[1200px];
     @apply px-4 py-16;
-    @apply flex flex-col-reverse justify-between items-center;
+    @apply flex flex-col-reverse items-center justify-between;
     @screen md {
       @apply flex-row px-18 py-32;
     }
     > img {
-      @apply w-full mb-8;
+      @apply mb-8 w-full;
       @screen md {
-        @apply w-1/2 m-0;
+        @apply m-0 w-1/2;
       }
     }
     > #content_wrapper {
@@ -537,15 +560,15 @@ const featureSlider_slides = [
         @apply mb-11 text-[28px] text-[#6D998F];
       }
       > #input_wrapper {
-        @apply flex justify-start items-center;
+        @apply flex items-center justify-start;
         > input {
-          @apply w-2/3 h-14 px-4 rounded-l-xl;
+          @apply h-14 w-2/3 rounded-l-xl px-4;
           @apply border-y-2 border-l-2 border-[#D9D9D9] text-[#D9D9D9];
-          @apply font-medium font-aneklatin;
+          @apply font-aneklatin font-medium;
         }
         > button {
-          @apply w-32 h-14 bg-[#6D998F] rounded-r-xl;
-          @apply text-white  font-semibold font-aneklatin;
+          @apply h-14 w-32 rounded-r-xl bg-[#6D998F];
+          @apply font-aneklatin font-semibold text-white;
         }
       }
     }

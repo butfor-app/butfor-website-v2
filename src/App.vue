@@ -19,13 +19,17 @@ const navRef = ref(null);
 watch(
   () => route.query,
   (query) => {
+    console.log(route.path.includes("/product"));
     // console.log("Scrolling to top");
-    const navbarRef = document.querySelector("#scroll_anchor");
-    navbarRef.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
-  }
+    if (route.path.includes("/product")) {
+    } else {
+      const navbarRef = document.querySelector("#scroll_anchor");
+      navbarRef.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  },
 );
 </script>
 
