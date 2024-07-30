@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-4">
+  <div class="flex flex-col items-center gap-4">
     <div v-if="!viewAll" id="slider_wrapper">
       <!-- :autoplay="4000" -->
       <Carousel

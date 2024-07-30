@@ -112,6 +112,16 @@ const router = createRouter({
       name: "api",
       component: () => import("@/pages/ApiPage.vue"),
     },
+    {
+      path: "/subscription",
+      name: "subscription",
+      component: () => import("@/pages/SubscriptionPage.vue"),
+    },
+    {
+      path: "/policy-analyzer",
+      name: "policy-analyzer",
+      component: () => import("@/pages/PolicyAnalyzerPage.vue"),
+    },
     ...thankyouRoutes,
     ...contactusRoutes,
     {
