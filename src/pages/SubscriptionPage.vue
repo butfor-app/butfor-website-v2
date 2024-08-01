@@ -150,7 +150,7 @@
     <GetStarted />
   </section>
   <section class="mx-auto max-w-7xl py-10">
-    <h2 class="py-4">See what else Butfor can do</h2>
+    <h2 class="py-4 !text-center">See what else Butfor can do</h2>
     <SolutionsSlider
       class="mb-10 overflow-x-hidden"
       :solutions="solution_cards_data"
