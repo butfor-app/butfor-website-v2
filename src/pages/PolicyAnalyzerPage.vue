@@ -236,7 +236,9 @@
       </div>
     </div>
   </section>
-  <GetStarted />
+  <section class="mx-auto max-w-7xl">
+    <GetStarted />
+  </section>
   <section class="mx-auto max-w-7xl py-10">
     <h2 class="py-4">See what else Butfor can do</h2>
     <SolutionsSlider

@@ -113,6 +113,11 @@ const router = createRouter({
       component: () => import("@/pages/ApiPage.vue"),
     },
     {
+      path: "/terms-and-conditions",
+      name: "TermsAndConditionsPage",
+      component: () => import("@/pages/TermsAndConditionsPage.vue"),
+    },
+    {
       path: "/subscription",
       name: "subscription",
       component: () => import("@/pages/SubscriptionPage.vue"),
@@ -121,6 +126,11 @@ const router = createRouter({
       path: "/policy-analyzer",
       name: "policy-analyzer",
       component: () => import("@/pages/PolicyAnalyzerPage.vue"),
+    },
+    {
+      path: "/cost-saving-estimator",
+      name: "cost-estimator",
+      component: () => import("@/pages/CostEstimatorPage.vue"),
     },
     ...thankyouRoutes,
     ...contactusRoutes,
