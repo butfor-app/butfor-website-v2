@@ -122,12 +122,14 @@
               name="policy_file"
               id="policy_file"
               required
+              :disabled="has_no_file"
             />
           </div>
           <div class="font-bold">OR</div>
           <div class="flex items-center gap-6">
-            <input type="checkbox" class="!h-6 !w-6" />
+            <input v-model="has_no_file" type="checkbox" class="!h-6 !w-6" />
             <textarea
+              v-model="policy_data.policy_details"
               type="textarea"
               class="min-h-24"
               placeholder="click here to enter policy details manually(copy/paste)Please check box to the left for this option"
@@ -286,6 +288,8 @@ const generalData = useGeneralData();
 const solution_cards_data = ref({});
 solution_cards_data.value = generalData.solutionsByClaimType;
 
+const has_no_file = ref(false);
+
 const policy_data = {
   name: "",
   email: "",
@@ -293,6 +297,7 @@ const policy_data = {
   company_name: "",
   company_website: "",
   policy_file: "",
+  policy_details: "",
 };
 
 const handleSubmit = async () => {
@@ -304,13 +309,17 @@ const handleSubmit = async () => {
   formData.append("company_name", policy_data.company_name);
   formData.append("company_website", policy_data.company_website);
   formData.append("policy_file", policy_data.policy_file);
+  formData.append("policy_details", policy_data.policy_details);
+
+  if (has_no_file.value == true) {
+    formData.delete("policy_file");
+  }
 
   const resp = await fetch("http://localhost:3001/policy-analyzer", {
     method: "POST",
     body: formData,
   });
   console.log(resp);
-
 };
 </script>
 <style lang="postcss" scoped>

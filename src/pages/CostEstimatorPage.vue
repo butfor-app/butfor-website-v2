@@ -9,22 +9,122 @@
           <br />
           <span class="text-[46px] leading-[1]"> estimator </span>
         </h1>
-        <form @submit.prevent="" class="flex flex-col gap-4 px-2 py-10">
-          <input type="text" name="fullname" placeholder="Full Name" />
-          <input type="text" name="email" placeholder="Email" />
-          <input type="text" name="phone" placeholder="Phone (Optional)" />
+        <form
+          @submit.prevent="handleSubmit"
+          class="flex flex-col gap-4 px-2 py-10"
+        >
           <input
+            v-model="estimator_data.name"
+            type="text"
+            name="fullname"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            v-model="estimator_data.email"
+            type="text"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            v-model="estimator_data.phone"
+            type="text"
+            name="phone"
+            placeholder="Phone (Optional)"
+          />
+          <input
+            v-model="estimator_data.company_location"
             type="text"
             name="compnayname"
             placeholder="Company Location (City, State)"
+            required
           />
-          <input
-            type="text"
-            name="compnaywebsite"
-            placeholder="Do you have Business Interruption Coverage?"
-          />
-          <input type="text" name="compnaywebsite" placeholder="Company Size" />
-          <input type="text" name="compnaywebsite" placeholder="Company Type" />
+          <select
+            v-model="estimator_data.interruption_coverage"
+            name="interruption_coverage"
+            id="interruption_coverage"
+            required
+          >
+            <option value="" selected disabled>
+              Do you have Business Interruption Coverage?
+            </option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+
+          <select
+            v-model="estimator_data.company_size"
+            name="company_size"
+            id="company_size"
+            required
+          >
+            <option value="" selected disabled>Company Size</option>
+            <option value="1-99">1-99</option>
+            <option value="100-999">100-999</option>
+            <option value="1000-9999">1000-9999</option>
+            <option value="10k+">10k+</option>
+          </select>
+
+          <select
+            v-model="estimator_data.company_type"
+            name="company_type"
+            id="company_type"
+            required
+          >
+            <option value="" selected disabled>Company Type</option>
+            <optgroup label="Manufacturing ">
+              <option value="durable goods manufacturing">
+                Durable goods manufacturing
+              </option>
+              <option value="non-durable goods manufacturing">
+                Non-Durable goods manufacturing
+              </option>
+            </optgroup>
+            <option value="Wholesale Trade">Wholesale Trade</option>
+            <option value="Retail Trade">Retail Trade</option>
+            <option value="Transportation & Warehousing">
+              Transportation & Warehousing
+            </option>
+            <option value="Information Technology & Communication">
+              Information Technology & Communication
+            </option>
+            <option value="Finance & Insurance">Finance & Insurance</option>
+            <option value="Real Estate & Rental & Leasing">
+              Real Estate & Rental & Leasing
+            </option>
+            <optgroup label="Services ">
+              <option value="legal services">Legal services</option>
+              <option value="accounting services">Accounting services</option>
+              <option value="engineering services">Engineering services</option>
+            </optgroup>
+            <option value="Management of Companies & Enterprises">
+              Management of Companies & Enterprises
+            </option>
+            <option
+              value="Administrative & Support & Waste Management & Remediation Services"
+            >
+              Administrative & Support & Waste Management & Remediation Services
+            </option>
+            <option value="Educational Services">Educational Services</option>
+            <optgroup label="Healthcare & Social Assistance">
+              <option value="hospitals">Hospitals</option>
+              <option value="clinics">Clinics</option>
+              <option value="social services">Social services</option>
+            </optgroup>
+
+            <optgroup label="Accommodation & Food Service ">
+              <option value="hotels">Hotels</option>
+              <option value="restaurants">Restaurants</option>
+            </optgroup>
+            <option value="Arts, Entertainment & Recreation">
+              Arts, Entertainment & Recreation
+            </option>
+            <option value="Other Services (Not Elsewhere Classified)">
+              Other Services (Not Elsewhere Classified)
+            </option>
+          </select>
+
           <input
             type="text"
             name="compnaywebsite"
@@ -166,6 +266,39 @@ const generalData = useGeneralData();
 
 const solution_cards_data = ref({});
 solution_cards_data.value = generalData.solutionsByClaimType;
+
+const estimator_data = {
+  name: "",
+  email: "",
+  phone: "",
+  company_location: "",
+  interruption_coverage: "",
+  company_size: "",
+  company_type: "",
+  annual_revenue: "",
+};
+
+const handleSubmit = async () => {
+  const formData = new FormData();
+
+  formData.append("name", estimator_data.name);
+  formData.append("email", estimator_data.email);
+  formData.append("phone", estimator_data.phone);
+  formData.append("company_location", estimator_data.company_location);
+  formData.append(
+    "interruption_coverage",
+    estimator_data.interruption_coverage,
+  );
+  formData.append("company_size", estimator_data.company_size);
+  formData.append("company_type", estimator_data.company_type);
+  formData.append("annual_revenue", estimator_data.annual_revenue);
+
+  const resp = await fetch("http://localhost:3001/cost-estimator", {
+    method: "POST",
+    body: formData,
+  });
+  console.log(resp);
+};
 </script>
 <style lang="postcss" scoped>
 h2 {
@@ -173,6 +306,7 @@ h2 {
 }
 input,
 textarea,
+select,
 button[type="submit"] {
   @apply w-full px-4 py-3;
   @apply rounded-2xl font-medium;
