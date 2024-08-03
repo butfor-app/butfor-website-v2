@@ -9,19 +9,19 @@ jobs:
     steps:
       - name: pull-latest-code
         run: |
-          cd /home/butfor/git_repo/fiver-fimkla-tueri/
+          cd ~/git_repo/fiver-fimkla-tueri/
           git pull
 
       - name: install-packages
         run: |
-          cd /home/butfor/git_repo/fiver-fimkla-tueri/
+          cd ~/git_repo/fiver-fimkla-tueri/
           yarn install
 
       - name: build
         run: |
-          cd /home/butfor/git_repo/fiver-fimkla-tueri/
+          cd ~/git_repo/fiver-fimkla-tueri/
           yarn build
 
       - name: copy-build-to-public_html directory
         run: |
-          cp -a /home/butfor/git_repo/fiver-fimkla-tueri/dist/. /home/butfor/public_html
+          cp -a ~/git_repo/fiver-fimkla-tueri/dist/. ~/public_html
