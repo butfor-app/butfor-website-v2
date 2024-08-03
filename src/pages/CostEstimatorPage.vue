@@ -293,7 +293,7 @@ const handleSubmit = async () => {
   formData.append("company_type", estimator_data.company_type);
   formData.append("annual_revenue", estimator_data.annual_revenue);
 
-  const resp = await fetch("http://localhost:3001/cost-estimator", {
+  const resp = await fetch("https://butfor.co/api/cost-estimator", {
     method: "POST",
     body: formData,
   });

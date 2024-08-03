@@ -315,7 +315,7 @@ const handleSubmit = async () => {
     formData.delete("policy_file");
   }
 
-  const resp = await fetch("http://localhost:3001/policy-analyzer", {
+  const resp = await fetch("https://butfor.co/api/policy-analyzer", {
     method: "POST",
     body: formData,
   });
