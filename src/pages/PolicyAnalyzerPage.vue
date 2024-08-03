@@ -34,16 +34,36 @@
           <br />
           <span class="text-[46px] leading-[1]"> Policy Analysis </span>
         </h1>
-        <form @submit.prevent="" class="flex flex-col gap-4 px-2 py-10">
-          <input type="text" name="fullname" placeholder="Full Name" />
-          <input type="text" name="email" placeholder="Email" />
-          <input type="text" name="phone" placeholder="Phone (Optional)" />
+        <form
+          @submit.prevent="handleSubmit"
+          class="flex flex-col gap-4 px-2 py-10"
+        >
           <input
+            v-model="policy_data.name"
+            type="text"
+            name="fullname"
+            placeholder="Full Name"
+          />
+          <input
+            v-model="policy_data.email"
+            type="text"
+            name="email"
+            placeholder="Email"
+          />
+          <input
+            v-model="policy_data.phone"
+            type="text"
+            name="phone"
+            placeholder="Phone (Optional)"
+          />
+          <input
+            v-model="policy_data.company_name"
             type="text"
             name="compnayname"
             placeholder="Company Name (Optional)"
           />
           <input
+            v-model="policy_data.company_website"
             type="text"
             name="compnaywebsite"
             placeholder="Company Website (Optional)"
@@ -96,7 +116,13 @@
                 </div>
               </div>
             </div>
-            <input type="file" />
+            <input
+              @change="(e) => (policy_data.policy_file = e.target.files[0])"
+              type="file"
+              name="policy_file"
+              id="policy_file"
+              required
+            />
           </div>
           <div class="font-bold">OR</div>
           <div class="flex items-center gap-6">
@@ -259,6 +285,33 @@ const generalData = useGeneralData();
 
 const solution_cards_data = ref({});
 solution_cards_data.value = generalData.solutionsByClaimType;
+
+const policy_data = {
+  name: "",
+  email: "",
+  phone: "",
+  company_name: "",
+  company_website: "",
+  policy_file: "",
+};
+
+const handleSubmit = async () => {
+  const formData = new FormData();
+
+  formData.append("name", policy_data.name);
+  formData.append("email", policy_data.email);
+  formData.append("phone", policy_data.phone);
+  formData.append("company_name", policy_data.company_name);
+  formData.append("company_website", policy_data.company_website);
+  formData.append("policy_file", policy_data.policy_file);
+
+  const resp = await fetch("http://localhost:3001/policy-analyzer", {
+    method: "POST",
+    body: formData,
+  });
+  console.log(resp);
+
+};
 </script>
 <style lang="postcss" scoped>
 h2 {
