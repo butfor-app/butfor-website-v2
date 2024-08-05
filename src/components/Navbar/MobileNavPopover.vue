@@ -218,7 +218,7 @@ const close = () => {
 <style lang="postcss" scoped>
 #popover {
   @apply w-screen bg-white !p-0;
-  @apply z-10 flex flex-col gap-y-0;
+  @apply z-30 flex flex-col gap-y-0;
   @apply absolute right-0 top-18;
   > .popover_item {
     @apply w-full;
