@@ -104,7 +104,7 @@
               v-slot="{ open, close }"
             >
               <MenuButton id="menu_button">
-                Product
+                Products
                 <img src="@/assets/icons/arrow.svg" alt="" />
               </MenuButton>
 
@@ -121,13 +121,13 @@
                     class="absolute left-0 top-[65px] z-0 mx-6 w-[608px] border-b-2 border-gray-200"
                   ></div>
                   <MenuItem as="div" class="col w-[150px]">
-                    <div class="heading">OVERVIEW</div>
+                    <div class="heading uppercase">Subscription</div>
                     <div class="flex h-full flex-col justify-around">
                       <div class="pb-4">
-                        Get to know the <br />Butfor platform
+                        Most affordable claim prep coverage in the world
                       </div>
                       <RouterLink
-                        to="/product/?feature="
+                        to="/subscription"
                         class="flex h-[28px] w-[78px] items-center justify-center rounded-lg bg-[#598392] font-aneklatin text-xs text-white"
                         @click="close"
                       >
@@ -351,6 +351,11 @@ const resourcesLinks = [
     link: "/claims-101",
     icon: new URL("/src/assets/icons/quick_reference.svg", import.meta.url)
       .href,
+  },
+  {
+    name: "Policy Analyzer",
+    link: "/policy-analyzer",
+    icon: new URL("/src/assets/icons/fact_check.svg", import.meta.url).href,
   },
   {
     name: "Articles",

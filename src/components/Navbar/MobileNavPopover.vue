@@ -59,7 +59,7 @@
     <div class="popover_item">
       <Disclosure v-slot="{ open }">
         <DisclosureButton>
-          Product
+          Products
           <arrow :class="{ 'rotate-90': open, 'rotate-90': !open }"> </arrow>
         </DisclosureButton>
         <DisclosurePanel>
