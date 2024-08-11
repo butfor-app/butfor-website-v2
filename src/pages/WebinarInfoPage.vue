@@ -1,7 +1,7 @@
 <template>
   <template v-if="!webinar_id || webinar == null">
     <div
-      class="text-center py-20 font-medium text-xl flex items-center flex-col gap-4"
+      class="flex flex-col items-center gap-4 py-20 text-center text-xl font-medium"
     >
       <div>
         Webinar does not exist. <br />
@@ -9,27 +9,27 @@
       </div>
       <RouterLink
         to="/webinars"
-        class="text-sm px-2 w-full max-w-xs py-1 bg-primary text-white rounded"
+        class="w-full max-w-xs rounded bg-primary px-2 py-1 text-sm text-white"
         >Go back to webinars</RouterLink
       >
     </div>
   </template>
   <template v-else>
     <div
-      class="w-full py-10 flex flex-col items-center"
+      class="flex w-full flex-col items-center py-10"
       v-if="Object.keys(webinar).length == 0"
     >
       <!-- Loading... -->
       <Spinner />
     </div>
     <div v-else class="bg-primary px-4">
-      <div class="max-w-[1050px] mx-auto py-10 text-white">
+      <div class="mx-auto max-w-[1050px] py-10 text-white">
         <div class="flex">
-          <div class="w-[60%] pr-10 flex flex-col gap-y-8">
+          <div class="flex w-[60%] flex-col gap-y-8 pr-10">
             <div class="flex items-center gap-x-2">
               <img src="@/assets/icons/webinar.svg" width="30" alt="" /> Webinar
             </div>
-            <div class="text-5xl font-semibold font-aneklatin">
+            <div class="font-aneklatin text-5xl font-semibold">
               {{ webinar.attributes.title }}
             </div>
             <div class="flex items-center gap-x-2">
@@ -39,9 +39,9 @@
             <div class="text-xl">{{ webinar.attributes.description }}</div>
           </div>
           <div
-            class="w-[40%] flex flex-col gap-y-4 bg-white rounded-lg px-4 py-8"
+            class="flex w-[40%] flex-col gap-y-4 rounded-lg bg-white px-4 py-8"
           >
-            <div class="text-3xl text-center text-black font-semibold">
+            <div class="text-center text-3xl font-semibold text-black">
               Register Now!
             </div>
             <img
@@ -49,7 +49,13 @@
               :src="getImage()"
               alt=""
             />
-            <HubspotFormBare :formId="webinar?.form_id" />
+            <HubspotFormBare
+              :formId="
+                webinar.attributes.hubspot_form_id
+                  ? webinar.attributes.hubspot_form_id
+                  : '83efaaa1-4ea3-4a48-b759-c2f345c5a1e3'
+              "
+            />
           </div>
         </div>
       </div>
@@ -94,7 +100,7 @@ const getTime = (time) => {
       month: "short",
       year: "numeric",
     },
-    { hour12: true }
+    { hour12: true },
   );
 };
 </script>
