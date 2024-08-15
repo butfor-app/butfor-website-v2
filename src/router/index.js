@@ -113,6 +113,11 @@ const router = createRouter({
       component: () => import("@/pages/TermsAndConditionsPage.vue"),
     },
     {
+      path: "/privacy-policy",
+      name: "PrivacyPolicyPage",
+      component: () => import("@/pages/PrivacyPolicyPage.vue"),
+    },
+    {
       path: "/subscription",
       name: "subscription",
       component: () => import("@/pages/SubscriptionPage.vue"),
