@@ -10,6 +10,7 @@
           <span class="text-[46px] leading-[1]"> estimator </span>
         </h1>
         <form
+          v-if="!formSubmitted"
           @submit.prevent="handleSubmit"
           class="flex flex-col gap-4 px-2 py-10"
         >
@@ -140,6 +141,9 @@
             Estimate Savings
           </button>
         </form>
+        <div v-else class="py-10 text-center">
+          Thank you. Your results will be emailed to you
+        </div>
       </div>
       <div class="flex w-full flex-col justify-center lg:w-1/2">
         <h3 class="mb-10 font-aneklatin text-2xl font-semibold">
@@ -264,6 +268,7 @@ import { useGeneralData } from "@/stores/useGeneralData";
 import HubspotForm from "@/components/HubspotForm.vue";
 
 const generalData = useGeneralData();
+const formSubmitted = ref(false);
 
 const solution_cards_data = ref({});
 solution_cards_data.value = generalData.solutionsByClaimType;
@@ -299,6 +304,7 @@ const handleSubmit = async () => {
     body: formData,
   });
   console.log(resp);
+  formSubmitted.value = true;
 };
 </script>
 <style lang="postcss" scoped>

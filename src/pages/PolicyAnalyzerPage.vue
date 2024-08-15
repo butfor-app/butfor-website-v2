@@ -35,6 +35,7 @@
           <span class="text-[46px] leading-[1]"> Policy Analysis </span>
         </h1>
         <form
+          v-if="!formSubmitted"
           @submit.prevent="handleSubmit"
           class="flex flex-col gap-4 px-2 py-10"
         >
@@ -141,6 +142,9 @@
             placeholder="Submit"
           />
         </form>
+        <div v-else class="py-10 text-center">
+          Thank you. Your results will be emailed to you
+        </div>
       </div>
     </div>
   </section>
@@ -284,6 +288,7 @@ import { useGeneralData } from "@/stores/useGeneralData";
 import HubspotForm from "@/components/HubspotForm.vue";
 
 const generalData = useGeneralData();
+const formSubmitted = ref(false);
 
 const solution_cards_data = ref({});
 solution_cards_data.value = generalData.solutionsByClaimType;
@@ -320,6 +325,7 @@ const handleSubmit = async () => {
     body: formData,
   });
   console.log(resp);
+  formSubmitted.value = true;
 };
 </script>
 <style lang="postcss" scoped>
