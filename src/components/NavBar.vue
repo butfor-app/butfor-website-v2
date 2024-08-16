@@ -4,13 +4,13 @@
       <div>
         <div>
           <button>New</button>
-          <div id="msg">Webinar on How to Automate Baselines, Aug 14</div>
+          <div id="msg"><a href="https://butfor.co/webinars/4">CrowdStrike & Business Interruption Webinar</a>, Aug 28</div>
         </div>
         <div>
           <RouterLink to="/contact" id="contact" class="!hidden lg:flex">
             Contact Sales
           </RouterLink>
-          <RouterLink to="/login" id="login">Login</RouterLink>
+          <!--- <RouterLink to="/login" id="login">Login</RouterLink> --->
         </div>
       </div>
     </div>
@@ -131,12 +131,12 @@
                         class="flex h-[28px] w-[78px] items-center justify-center rounded-lg bg-[#598392] font-aneklatin text-xs text-white"
                         @click="close"
                       >
-                        Learn More
+                        Subscription Details
                       </RouterLink>
                     </div>
                   </MenuItem>
                   <div class="col">
-                    <div class="heading">PREVIEW</div>
+                    <div class="heading"></div>
                     <div class="content">
                       <RouterLink
                         to="/product/?feature=1"
