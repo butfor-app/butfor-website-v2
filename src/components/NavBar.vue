@@ -10,7 +10,7 @@
           <RouterLink to="/contact" id="contact" class="!hidden lg:flex">
             Contact Sales
           </RouterLink>
-          <!--- <RouterLink to="/login" id="login">Login</RouterLink> --->
+          <RouterLink to="/book_demo">Contact Sales</RouterLink>
         </div>
       </div>
     </div>
