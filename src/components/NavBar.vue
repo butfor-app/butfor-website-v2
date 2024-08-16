@@ -4,7 +4,7 @@
       <div>
         <div>
           <button>New</button>
-          <div id="msg"><a href="https://butfor.co/webinars/4">CrowdStrike & Business Interruption Webinar</a>, Aug 28</div>
+          <div id="msg"><a href="https://butfor.co/webinars/4">CrowdStrike &amp; Business Interruption Webinar</a>, Aug 28</div>
         </div>
         <div>
           <RouterLink to="/contact" id="contact" class="!hidden lg:flex">
@@ -149,7 +149,7 @@
                             alt=""
                           />
                         </div>
-                        <div class="name">Customer & Claim Management</div>
+                        <div class="name">Customer &amp; Claim Management</div>
                       </RouterLink>
                       <RouterLink
                         to="/product/?feature=2"
@@ -162,7 +162,7 @@
                             alt=""
                           />
                         </div>
-                        <div class="name">Reporting & Analytics</div>
+                        <div class="name">Reporting &amp; Analytics</div>
                       </RouterLink>
                       <RouterLink
                         to="/product/?feature=3"
@@ -217,7 +217,7 @@
                         <div class="img">
                           <img src="@/assets/icons/lock.png" alt="" />
                         </div>
-                        <div class="name">Centralized & Secure</div>
+                        <div class="name">Centralized &amp; Secure</div>
                       </RouterLink>
                       <RouterLink
                         to="/product/?feature=8"
