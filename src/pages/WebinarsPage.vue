@@ -54,8 +54,7 @@
   <div id="view_demo">
     <div id="heading">Want to see ButFor in action?</div>
     <div id="sub_heading">
-      ButFor automates HR workflows from offers to promotions & transfers - so
-      companies save time, money and talent.
+      ButFor automates business interruption claim preparation.
     </div>
     <div id="wrapper">
       <button id="demo_btn">View Demo</button>
