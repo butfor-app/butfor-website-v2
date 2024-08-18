@@ -3,8 +3,7 @@
     <div id="bg_gradient"></div>
     <div id="heading">Events & Webinars</div>
     <div id="sub_heading">
-      Join us as we hosts the industry's most prominent HR and Talent
-      leaders.Want to be hosted by ButFor? We'd love to hear from you.
+      Join us as we hosts the industry's most prominent insurtech, risk & disaster recovery leaders. Want to be hosted by ButFor? We'd love to hear from you.
     </div>
     <button>Learn More</button>
   </div>
@@ -45,7 +44,7 @@
   </div>
   <div id="reminder">
     <div id="heading">
-      Want to know when we host our next webinar with an HR leader?
+      Want to know when we host our next webinar with a risk, claims & insurtech leader?
     </div>
     <div class="max-w-lg w-full px-2">
       <HubspotFormBare formId="b20e853b-b330-4419-b345-060788b0c267" />
@@ -57,9 +56,9 @@
       ButFor automates business interruption claim preparation.
     </div>
     <div id="wrapper">
-      <button id="demo_btn">View Demo</button>
-      <button id="team_btn">Speak to Our Team</button>
-      <button id="learn_btn">Learn More</button>
+      <button id="demo_btn"><a href="https://www.butfor.co/book_demo">View Demo</a></button>
+      <button id="team_btn"><a href="https://www.butfor.co/book_demo">Speak to Our Team</a></button>
+      <button id="learn_btn"><a href="https://www.butfor.co/book_demo">Learn More</a></button>
     </div>
   </div>
   <ContactForm />
