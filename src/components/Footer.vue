@@ -19,9 +19,9 @@
         <div id="links">
           <div class="link_block">
             <RouterLink to="/?faq=true">FAQs</RouterLink>
-            <a href="#">Claims 101</a>
+            <a href="https://butfor.co/claims-101">Claims 101</a>
             <RouterLink to="/articles">Articles</RouterLink>
-            <a href="#">Case Studies</a>
+            <a href="https://butfor.co/case-studies">Case Studies</a>
 
             <a href="#" class="lg:hidden">Claims Hub</a>
             <a href="#" class="hidden lg:block">Claims Resource Hub</a>
@@ -48,10 +48,10 @@
         </div>
       </div>
       <div id="bottom">
-        <div>©2023 Butfor. All rights reserved</div>
+        <div>©2024 Butfor. All rights reserved</div>
         <div id="privacy_terms">
-          <a href="#">Privacy & Policy</a>
-          <a href="#">Terms & Condition</a>
+          <a href="https://butfor.co/privacy-policy">Privacy Policy</a>
+          <a href="https://butfor.co/terms-and-conditions">Terms & Conditions</a>
         </div>
       </div>
     </div>
