@@ -40,7 +40,13 @@
           <div class="text-center text-3xl font-semibold text-black">
             Register Now!
           </div>
-          <img src="https://placehold.co/470x280" alt="" />
+          <img
+            :src="
+              'https://butfor.co/strapi/' +
+              claim101.thumbnail.data.attributes.url
+            "
+            alt=""
+          />
           <HubspotFormBare :formId="claim101.hubspot_form_id" />
         </div>
         <div
@@ -82,7 +88,7 @@ const claim101 = ref({
 getClaims101().then((data) => {
   claim101.value = data.attributes;
   loading.value = false;
-  console.log(claim101.value.hubspot_form_id);
+  console.log(claim101.value);
 });
 
 const getTime = (time) => {
