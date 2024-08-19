@@ -1,9 +1,9 @@
 <template>
   <div class="relative">
-    <div class="absolute top-0 -z-10 bg-primary w-full h-1/2"></div>
-    <div class="max-w-[1050px] mx-auto py-18 text-white">
-      <div class="flex lg:px-0 px-5 gap-y-6 flex-col lg:flex-row">
-        <div class="lg:w-[60%] lg:pr-10 flex flex-col gap-y-8">
+    <div class="absolute top-0 -z-10 h-1/2 w-full bg-primary"></div>
+    <div class="mx-auto max-w-[1050px] py-18 text-white">
+      <div class="flex flex-col gap-y-6 px-5 lg:flex-row lg:px-0">
+        <div class="flex flex-col gap-y-8 lg:w-[60%] lg:pr-10">
           <div class="flex items-center gap-x-2">
             <img src="@/assets/icons/webinar.svg" width="30" alt="" /> Claims
             101
@@ -13,10 +13,10 @@
             :class="loading ? 'animate-pulse' : ''"
           >
             <img src="@/assets/icons/clock.svg" width="30" alt="" />
-            {{ getTime(claim101.start_time) }}
+            {{ getTime(claim101.start_time) }} - {{ claim101.timezone }}
           </div>
           <div
-            class="text-5xl font-semibold font-aneklatin"
+            class="font-aneklatin text-5xl font-semibold"
             :class="loading ? 'animate-pulse' : ''"
           >
             {{ claim101.title }}
@@ -25,21 +25,32 @@
             {{ claim101.description }}
           </div>
           <div class="box">
-            <div class="text-2xl font-bold mb-4">Lesson Content</div>
-            <div class="text-sm" :class="loading ? 'animate-pulse' : ''"
-v-html="claim101.lesson_content"
->
-            </div>
+            <div class="mb-4 text-2xl font-bold">Lesson Content</div>
+            <div
+              class="text-sm"
+              :class="loading ? 'animate-pulse' : ''"
+              v-html="claim101.lesson_content"
+            ></div>
           </div>
         </div>
         <div
-          class="lg:w-[40%] flex flex-col gap-y-4 bg-white rounded-lg px-4 py-8 shadow-lg"
+          v-if="!loading"
+          class="flex flex-col gap-y-4 rounded-lg bg-white px-4 py-8 shadow-lg lg:w-[40%]"
         >
-          <div class="text-3xl text-center text-black font-semibold">
+          <div class="text-center text-3xl font-semibold text-black">
             Register Now!
           </div>
           <img src="https://placehold.co/470x280" alt="" />
-          <HubspotFormBare :formId="claim101.hubspot_form_id"/>
+          <HubspotFormBare :formId="claim101.hubspot_form_id" />
+        </div>
+        <div
+          v-else
+          class="flex flex-col gap-y-4 rounded-lg bg-white px-4 py-8 shadow-lg lg:w-[40%]"
+        >
+          <div class="text-center text-3xl font-semibold text-black">
+            Register Now!
+          </div>
+          <div class="h-[231px] w-full animate-pulse bg-gray-200"></div>
         </div>
       </div>
     </div>
@@ -71,6 +82,7 @@ const claim101 = ref({
 getClaims101().then((data) => {
   claim101.value = data.attributes;
   loading.value = false;
+  console.log(claim101.value.hubspot_form_id);
 });
 
 const getTime = (time) => {
@@ -85,14 +97,14 @@ const getTime = (time) => {
       month: "short",
       year: "numeric",
     },
-    { hour12: true }
+    { hour12: true },
   );
 };
 </script>
 
 <style lang="postcss" scoped>
 .box {
-  @apply py-6 px-8;
+  @apply px-8 py-6;
   @apply text-black;
   @apply rounded-lg bg-white shadow-lg;
 }
