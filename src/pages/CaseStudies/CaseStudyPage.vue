@@ -42,9 +42,7 @@
             />
           </div>
         </div>
-        <div class="py-6">
-          {{ caseStudy.attributes.body }}
-        </div>
+        <div class="py-6" v-html="caseStudy.attributes.body"></div>
       </div>
     </template>
   </div>
