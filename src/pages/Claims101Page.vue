@@ -38,7 +38,7 @@
             Register Now!
           </div>
           <img src="https://placehold.co/470x280" alt="" />
-          <HubspotFormBare />
+          <HubspotFormBare :formId="claim101.hubspot_form_id"/>
         </div>
       </div>
     </div>
