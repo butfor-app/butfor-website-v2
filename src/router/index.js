@@ -105,7 +105,12 @@ const router = createRouter({
     {
       path: "/case-studies",
       name: "casestudies",
-      component: () => import("@/pages/CaseStudiesPage.vue"),
+      component: () => import("@/pages/CaseStudies/CaseStudiesPage.vue"),
+    },
+    {
+      path: "/case-studies/:caseStudyId",
+      name: "casestudy",
+      component: () => import("@/pages/CaseStudies/CaseStudyPage.vue"),
     },
     {
       path: "/terms-and-conditions",

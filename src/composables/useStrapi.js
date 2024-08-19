@@ -19,7 +19,7 @@ function useStrapi() {
         headers: {
           ...STRAPI_HEADERS,
         },
-      }
+      },
     );
     const data = await resp.json();
     const articles = data.data;
@@ -43,7 +43,7 @@ function useStrapi() {
         headers: {
           ...STRAPI_HEADERS,
         },
-      }
+      },
     );
     const data = await resp.json();
     const webinars = data.data;
@@ -57,7 +57,7 @@ function useStrapi() {
         headers: {
           ...STRAPI_HEADERS,
         },
-      }
+      },
     );
     const data = await resp.json();
     const webinar = data.data;
@@ -71,12 +71,42 @@ function useStrapi() {
         headers: {
           ...STRAPI_HEADERS,
         },
-      }
+      },
     );
     const data = await resp.json();
     console.log(data);
     const claim101 = data.data;
     return claim101;
+  }
+
+  async function getCaseStudies() {
+    const resp = await fetch(
+      STRAPI_API_BASE_URL + "/case-studies?populate[0]=thumbnail",
+      {
+        headers: {
+          ...STRAPI_HEADERS,
+        },
+      },
+    );
+    const data = await resp.json();
+    const caseStudies = data.data;
+    return caseStudies;
+  }
+  async function getCaseStudy(caseStudyId) {
+    const resp = await fetch(
+      STRAPI_API_BASE_URL +
+        "/case-studies/" +
+        caseStudyId +
+        "?populate[0]=thumbnail",
+      {
+        headers: {
+          ...STRAPI_HEADERS,
+        },
+      },
+    );
+    const data = await resp.json();
+    const caseStudy = data.data;
+    return caseStudy;
   }
   return {
     getImageUrl,
@@ -85,6 +115,8 @@ function useStrapi() {
     getWebinars,
     getWebinar,
     getClaims101,
+    getCaseStudies,
+    getCaseStudy,
   };
 }
 
