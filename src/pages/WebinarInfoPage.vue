@@ -34,7 +34,8 @@
             </div>
             <div class="flex items-center gap-x-2">
               <img src="@/assets/icons/clock.svg" width="30" alt="" />
-              {{ getTime(webinar.attributes.start_time) }}
+              {{ getTime(webinar.attributes.start_time) }} -
+              {{ webinar.attributes.timezone }}
             </div>
             <div class="text-xl">{{ webinar.attributes.description }}</div>
           </div>
