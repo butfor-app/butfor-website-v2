@@ -4,7 +4,11 @@
       <div>
         <div>
           <button>New</button>
-          <div id="msg"><a href="https://butfor.co/webinars/4">CrowdStrike &amp; Business Interruption Webinar</a>, Aug 28</div>
+          <div id="msg">
+            <a href="https://butfor.co/webinars/4"
+              >CrowdStrike &amp; Business Interruption Webinar</a
+            >, Aug 28
+          </div>
         </div>
         <div>
           <RouterLink to="/contact" id="contact" class="!hidden lg:flex">
@@ -128,7 +132,7 @@
                       </div>
                       <RouterLink
                         to="/subscription"
-                        class="flex h-[28px] w-[78px] items-center justify-center rounded-lg bg-[#598392] font-aneklatin text-xs text-white"
+                        class="flex w-fit items-center justify-center rounded-lg bg-[#598392] px-3 py-1 font-aneklatin text-xs text-white"
                         @click="close"
                       >
                         Subscription Details
@@ -136,7 +140,7 @@
                     </div>
                   </MenuItem>
                   <div class="col">
-                    <div class="heading"></div>
+                    <div class="heading" style="visibility: hidden">.</div>
                     <div class="content">
                       <RouterLink
                         to="/product/?feature=1"
