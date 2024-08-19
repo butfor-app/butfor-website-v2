@@ -26,8 +26,9 @@
           </div>
           <div class="box">
             <div class="text-2xl font-bold mb-4">Lesson Content</div>
-            <div class="text-sm" :class="loading ? 'animate-pulse' : ''">
-              {{ claim101.lesson_content }}
+            <div class="text-sm" :class="loading ? 'animate-pulse' : ''"
+v-html="claim101.lesson_content"
+>
             </div>
           </div>
         </div>
