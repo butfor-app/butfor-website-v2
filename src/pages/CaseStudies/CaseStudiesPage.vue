@@ -28,11 +28,11 @@
           />
         </div>
         <div class="p-6">
-          <div class="mb-4 text-[28px] font-semibold">
+          <div class="mb-4 text-[28px] font-semibold leading-[1.2]">
             {{ caseStudy.attributes.title }}
           </div>
           <div class="font-aneklatin; mb-6 text-lg font-medium text-gray-500">
-            {{ caseStudy.attributes.description }}
+            {{ trimDesc(caseStudy.attributes.description) }}
           </div>
           <RouterLink
             :to="`/case-studies/${caseStudy.id}`"
@@ -61,6 +61,9 @@ getCaseStudies().then((resp) => {
 const getDesc = (desc) => {
   const newDesc = desc.replace(/<[^>]*>?/gm, "");
   return newDesc;
+};
+const trimDesc = (desc, length = 100) => {
+  return desc.length > length ? desc.slice(0, length) + "..." : desc;
 };
 </script>
 <style lang="postcss" scoped></style>
