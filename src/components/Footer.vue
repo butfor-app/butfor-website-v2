@@ -12,8 +12,8 @@
           </div>
           <div id="social_media">
            <!--- <a href="https://www.linkedin.com/company/butfor"><img src="@/assets/icons/youtube.png" alt="" /></a> -->
-            <a href="ttps://www.linkedin.com/company/butfor"><img src="@/assets/icons/twiter.png" alt="" /></a>
-            <a href="ttps://www.linkedin.com/company/butfor"><img src="@/assets/icons/facebook.png" alt="" /></a>
+            <a href="https://www.linkedin.com/company/butfor"><img src="@/assets/icons/twiter.png" alt="" /></a>
+            <a href="https://www.linkedin.com/company/butfor"><img src="@/assets/icons/facebook.png" alt="" /></a>
           </div>
         </div>
         <div id="links">
