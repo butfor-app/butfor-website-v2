@@ -5,9 +5,8 @@
         <div>
           <button>Live</button>
           <div id="msg">
-            <a href="https://butfor.co/webinars/4"
-              >CrowdStrike &amp; Business Interruption Fireside</a
-            > - Aug 29th, 3pm EST
+            <a href="https://butfor.co/webinars/5"
+              >CrowdStrike &amp; Business Interruption Fireside - Aug 29th, 3pm EST</a>
           </div>
         </div>
         <div>
