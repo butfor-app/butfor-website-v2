@@ -11,9 +11,9 @@
             comprehensive reports in minutes.
           </div>
           <div id="social_media">
-            <a href="#"><img src="@/assets/icons/facebook.png" alt="" /></a>
-            <a href="#"><img src="@/assets/icons/twiter.png" alt="" /></a>
-            <a href="#"><img src="@/assets/icons/instagram.png" alt="" /></a>
+            <a href="https://www.linkedin.com/company/butfor"><img src="@/assets/icons/youtube.png" alt="" /></a>
+            <a href="ttps://www.linkedin.com/company/butfor"><img src="@/assets/icons/twiter.png" alt="" /></a>
+            <a href="ttps://www.linkedin.com/company/butfor"><img src="@/assets/icons/linkedin.png" alt="" /></a>
           </div>
         </div>
         <div id="links">
@@ -23,26 +23,26 @@
             <RouterLink to="/articles">Articles</RouterLink>
             <a href="https://butfor.co/case-studies">Case Studies</a>
 
-            <a href="#" class="lg:hidden">Claims Hub</a>
-            <a href="#" class="hidden lg:block">Claims Resource Hub</a>
+            <a href="https://www.butfor.co/policy-analyzer">Policy Analyzer</a>
+            <a href="https://www.butfor.co/subscription">Claim Preparation Subscription</a>
           </div>
           <div class="link_block">
-            <a href="#">Jobs</a>
+            <a href="/contact4">Jobs</a>
             <!-- <a href="#">Webinars</a> -->
             <RouterLink to="/webinars">Webinars</RouterLink>
-            <a href="#" class="lg:hidden">Security/<br />Compliance</a>
+            <a href="https://butfor.co/privacy-policy" class="lg:hidden">Security/<br />Compliance</a>
             <a href="#" class="hidden lg:block">Security/Compliance</a>
-            <a href="#">Partnerships</a>
+            <a href="/contact4">Partnerships</a>
             <a href="/contact4">Contact Us</a>
           </div>
-          <!-- <div class="link_block">
-            <a href="#">Pricing</a>
-            <a href="#">Butfor vs Competitor 1</a>
-            <a href="#">Butfor vs Competitor 2</a>
-            <a href="#">Butfor vs Competitor 3</a>
-          </div> -->
           <div class="link_block">
-            <a href="#">View Demo</a>
+            <a href="https://www.butfor.co/pricing">Pricing</a>
+            <a href="#">Butfor vs Consultants</a>
+            <a href="#">Butfor vs Excel</a>
+            <a href="#">Butfor vs Internal Claims Management</a>
+          </div>
+          <div class="link_block">
+            <a href="/contact5">View Demo</a>
             <a href="/contact5">Schedule Demo</a>
           </div>
         </div>

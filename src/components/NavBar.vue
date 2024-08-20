@@ -3,11 +3,11 @@
     <div id="navbar_top">
       <div>
         <div>
-          <button>New</button>
+          <button>Live</button>
           <div id="msg">
             <a href="https://butfor.co/webinars/4"
-              >CrowdStrike &amp; Business Interruption Webinar</a
-            >, Aug 28
+              >CrowdStrike &amp; Business Interruption Fireside</a
+            > - Aug 29th, 3pm EST
           </div>
         </div>
         <div>

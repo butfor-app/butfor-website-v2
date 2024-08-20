@@ -1,7 +1,7 @@
 <template>
   <HeroSection
-    name="butfor works where you do"
-    desc="Integrate with your existing tools to sync compensation information and workflows. Changes made in one place seamlessly appear in all."
+    name="ButFor works where you do"
+    desc="Integrate with your existing tools to sync financial information such as profit/loss statements, production schedules, expenses & other crucial documents. Changes made in one place seamlessly appear in all."
     :bg="integrations_bg_new"
     :addTextShadow="true"
   >
