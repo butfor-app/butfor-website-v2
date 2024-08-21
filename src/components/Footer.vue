@@ -12,7 +12,7 @@
           </div>
           <div id="social_media">
             <a href="https://www.linkedin.com/company/butfor"><img src="@/assets/icons/linkedin.png" alt="" /></a>
-            <a href="https://www.linkedin.com/company/butfor"><img src="@/assets/icons/twiter.png" alt="" /></a>
+            <a href="https://www.twitter.com/butforco"><img src="@/assets/icons/twiter.png" alt="" /></a>
             <a href="https://www.linkedin.com/company/butfor"><img src="@/assets/icons/youtube.png" alt="" /></a>
           </div>
         </div>
@@ -24,14 +24,14 @@
             <a href="https://butfor.co/case-studies">Case Studies</a>
 
             <a href="https://www.butfor.co/policy-analyzer">Policy Analyzer</a>
-            <a href="https://www.butfor.co/subscription">Claim Preparation Subscription</a>
+            <a href="https://www.butfor.co/subscription">Claim Prep Subscription</a>
           </div>
           <div class="link_block">
             <a href="/contact4">Jobs</a>
             <!-- <a href="#">Webinars</a> -->
             <RouterLink to="/webinars">Webinars</RouterLink>
             <a href="https://butfor.co/privacy-policy" class="lg:hidden">Security/<br />Compliance</a>
-            <a href="#" class="hidden lg:block">Security/Compliance</a>
+            <a href="https://butfor.co/privacy-policy" class="hidden lg:block">Security/Compliance</a>
             <a href="/contact4">Partnerships</a>
             <a href="/contact4">Contact Us</a>
           </div>
@@ -39,7 +39,7 @@
             <a href="https://www.butfor.co/pricing">Pricing</a>
             <a href="#">Butfor vs Consultants</a>
             <a href="#">Butfor vs Excel</a>
-            <a href="#">Butfor vs Internal Claims Management</a>
+            <a href="#">Butfor vs Internal Org Claim Prep</a>
           </div>
           <div class="link_block">
             <a href="/contact5">View Demo</a>
