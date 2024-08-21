@@ -83,7 +83,7 @@
   </div>
   <div id="features">
     <div id="heading">
-       We have a 100% retention rate for<br> repeat claim preparation
+       We have a 100% retention rate for<br> repeat client claim preparation
       
     </div>
     <div id="desc">
