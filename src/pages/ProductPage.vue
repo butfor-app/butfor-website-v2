@@ -83,11 +83,11 @@
   </div>
   <div id="features">
     <div id="heading">
-      Over 80% of midsize businesses that start<br />with BUTFOR stick around
-      for 4 or more years
+       We have a 100% retention rate for repeat claim preparation<br>
+      with organizations that have filed multiple business interruption claims
     </div>
     <div id="desc">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+       Ipsum is simply dummy text of the printing and typesetting industry.
       <br />Lorem Ipsum has been the industry's standard dummy.
     </div>
     <div id="wrapper">
