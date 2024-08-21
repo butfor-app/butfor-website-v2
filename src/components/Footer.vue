@@ -8,7 +8,8 @@
             Butfor is a software tool designed to automate the process of filing
             business interruption insurance claims. It uses advanced algorithms
             and machine learning technology to calculate your losses and provide
-            comprehensive reports in minutes.
+            comprehensive reports in minutes. Use our claim tool or purchase 
+            subscription coverage for claim prep at a fraction of the cost today.
           </div>
           <div id="social_media">
             <a href="https://www.linkedin.com/company/butfor"><img src="@/assets/icons/linkedin.png" alt="" /></a>
