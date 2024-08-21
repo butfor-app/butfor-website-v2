@@ -83,8 +83,8 @@
   </div>
   <div id="features">
     <div id="heading">
-       We have a 100% retention rate for repeat claim preparation<br>
-      with organizations that have filed multiple business interruption claims
+       We have a 100% retention rate for<br> repeat claim preparation
+      
     </div>
     <div id="desc">
        Ipsum is simply dummy text of the printing and typesetting industry.
