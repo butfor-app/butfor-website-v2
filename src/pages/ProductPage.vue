@@ -84,7 +84,7 @@
   <div id="features">
     <div id="heading">
        We have a 100% retention rate for<br> repeat client claim preparation
-      <br>
+      <br><br>
     </div>
     <!--- <div id="desc">
        Ipsum is simply dummy text of the printing and typesetting industry.
