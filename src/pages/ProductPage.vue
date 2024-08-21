@@ -86,10 +86,10 @@
        We have a 100% retention rate for<br> repeat client claim preparation
       
     </div>
-    <div id="desc">
+    <!--- <div id="desc">
        Ipsum is simply dummy text of the printing and typesetting industry.
       <br />Lorem Ipsum has been the industry's standard dummy.
-    </div>
+    </div> ------->
     <div id="wrapper">
       <div id="card">
         <img
