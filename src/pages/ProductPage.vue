@@ -153,7 +153,7 @@
         </div>
         <div id="desc">
           <i>“Grateful for your <b>swift, high-quality work</b> on the claim filing.
-           <br>Your teamwork &amp; positive attitude made a real impact. Great working with you!”</i>
+           <br>Your teamwork &amp; positive attitude made a real impact.<br>Great working with you!”</i>
            <br>Richard S.
         </div>
       </div>
