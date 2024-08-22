@@ -154,7 +154,7 @@
         <div id="desc">
           “Grateful for your swift, high-quality work on the insurer claim filing.
            Your teamwork and positive attitude made a real impact. Great working with you!”
-           <br>Richard S. <br>- Litigation Attorney
+           <br>Richard S.
         </div>
       </div>
       <div class="card">
@@ -174,7 +174,7 @@
         <div id="desc">
           ”Successfully resolved our insurance claim, recovering 50% more than estimated plus full fees.
            Exceptional service and professionalism—would happily work with them again and highly recommend to others.”
-           <br>Denny U.<br>- Manufacturing
+           <br>Denny U.
         </div>
       </div>
       <div class="card">
