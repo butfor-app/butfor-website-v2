@@ -149,12 +149,12 @@
       <div class="card">
         <img src="@/assets/images/usecase_placeholder.png" alt="" />
         <div id="header">
-          Lorem Ipsum is simply dummy text of the printing industry.
+          Litigation Attorney Praises Work on Successful Claim Resolution
         </div>
         <div id="desc">
           “Grateful for your swift, high-quality work on the insurer claim filing.
            Your teamwork and positive attitude made a real impact. Great working with you!”
-           <br>Richard S. - Litigation Attorney
+           <br>Richard S. <br>- Litigation Attorney
         </div>
       </div>
       <div class="card">
@@ -169,12 +169,12 @@
       <div class="card">
         <img src="@/assets/images/usecase_placeholder.png" alt="" />
         <div id="header">
-          Lorem Ipsum is simply dummy text of the printing industry.
+          Manufacturing VP of Finance Applauds Claim Recovery 50% Above Expectations
         </div>
         <div id="desc">
           ”Successfully resolved our insurance claim, recovering 50% more than estimated plus full fees.
            Exceptional service and professionalism—would happily work with them again and highly recommend to others.”
-           <br>Denny U. - Manufacturing
+           <br>Denny U.<br>- Manufacturing
         </div>
       </div>
       <div class="card">
