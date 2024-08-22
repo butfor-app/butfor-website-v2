@@ -182,11 +182,11 @@
       <div class="card">
         <img src="@/assets/images/usecase_placeholder.png" alt="" />
         <div id="header">
-          ButFor Delivers Speed & Accuracy in Global Manufacturing Claim Prep
+          ButFor Delivers Speed & Accuracy in Multi-National Manufacturing Claim Prep
         </div>
         <div id="desc">
           We reduced manual labor by over 800 hours &amp; saved hundreds of thousands of dollars using ButFor
-            for a multi-national manufacturing company facing a fire. Despite the rapid turnaround,
+            for a global manufacturing company facing a fire. Despite the rapid turnaround,
              our analysis closely matched the insurers, demonstrating ButFor's accuracy.
         </div>
       </div>
