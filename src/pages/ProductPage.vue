@@ -186,8 +186,8 @@
         </div>
         <div id="desc">
           We reduced manual labor by over 800 hours &amp; saved hundreds of thousands of dollars using ButFor
-            for a multi-national manufacturing company facing a catastrophic fire. Despite the rapid turnaround,
-             our analysis closely matched the insurers, demonstrating the platform's accuracy &amp; reliability.
+            for a multi-national manufacturing company facing a fire. Despite the rapid turnaround,
+             our analysis closely matched the insurers, demonstrating ButFor's accuracy.
         </div>
       </div>
     </div>
