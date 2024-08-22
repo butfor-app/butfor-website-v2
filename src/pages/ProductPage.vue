@@ -142,8 +142,8 @@
   <div id="use_cases">
     <div id="heading">Customer stories and use cases</div>
     <div id="desc" class="text-center">
-      See how Butfor has saved clients on average <br />
-      over hundreds of thousands of dollars on their claims
+      See how ButFor has saved clients on average <br />
+      hundreds of thousands of dollars on their claims
     </div>
     <div id="wrapper">
       <div class="card">
@@ -152,9 +152,18 @@
           Lorem Ipsum is simply dummy text of the printing industry.
         </div>
         <div id="desc">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since 1500s.
+          “Grateful for your swift, high-quality work on the insurer claim filing.
+           Your teamwork and positive attitude made a real impact. Great working with you!”
+           <br>Richard S. - Litigation Attorney
+        </div>
+      </div>
+      <div class="card">
+        <img src="@/assets/images/usecase_placeholder.png" alt="" />
+        <div id="header">
+          ***case study overview***
+        </div>
+        <div id="desc">
+          ***insert case study here****
         </div>
       </div>
       <div class="card">
@@ -163,31 +172,18 @@
           Lorem Ipsum is simply dummy text of the printing industry.
         </div>
         <div id="desc">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since 1500s.
+          ”Successfully resolved our insurance claim, recovering 50% more than estimated plus full fees.
+           Exceptional service and professionalism—would happily work with them again and highly recommend to others.”
+           <br>Denny U. - Manufacturing
         </div>
       </div>
       <div class="card">
         <img src="@/assets/images/usecase_placeholder.png" alt="" />
         <div id="header">
-          Lorem Ipsum is simply dummy text of the printing industry.
+          ***case study overview***
         </div>
         <div id="desc">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since 1500s.
-        </div>
-      </div>
-      <div class="card">
-        <img src="@/assets/images/usecase_placeholder.png" alt="" />
-        <div id="header">
-          Lorem Ipsum is simply dummy text of the printing industry.
-        </div>
-        <div id="desc">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since 1500s.
+          ***insert case study here****
         </div>
       </div>
     </div>
