@@ -186,7 +186,7 @@
         </div>
         <div id="desc">
           ButFor reduced labor by over 800 hours &amp; saved hundreds of thousands of dollars
-            for a manufacturing company facing a fire. Our analysis closely matched the insurers,
+            for a manufacturer facing a fire. Our analysis closely matched the insurers,
              demonstrating our accuracy despite rapid turnaround.
         </div>
       </div>
