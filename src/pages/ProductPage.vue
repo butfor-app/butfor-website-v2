@@ -152,8 +152,8 @@
           Litigation Attorney Praises Work on Successful Claim Resolution
         </div>
         <div id="desc">
-          “Grateful for your swift, high-quality work on the insurer claim filing.
-           Your teamwork and positive attitude made a real impact. Great working with you!”
+          <i>“Grateful for your <b>swift, high-quality work</b> on the insurer claim filing.
+           Your teamwork &amp; positive attitude made a real impact. Great working with you!”</i>
            <br>Richard S.
         </div>
       </div>
@@ -172,8 +172,8 @@
           Manufacturing VP of Finance Applauds Claim Recovery 50% Above Expectations
         </div>
         <div id="desc">
-          ”Successfully resolved our insurance claim, recovering 50% more than estimated plus full fees.
-           Exceptional service and professionalism—would happily work with them again and highly recommend to others.”
+         <i>”Successfully resolved our insurance claim, <b>recovering 50% more than estimated.</b>
+           Exceptional service &amp; professionalism—would happily work with them again &amp; highly recommend to others.”</i>
            <br>Denny U.
         </div>
       </div>
