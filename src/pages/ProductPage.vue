@@ -160,10 +160,12 @@
       <div class="card">
         <img src="@/assets/images/usecase_placeholder.png" alt="" />
         <div id="header">
-          ***case study overview***
+          ButFor Drives Significant Financial Recovery for Resource-Constrained Non-Profit
         </div>
         <div id="desc">
-          ***insert case study here****
+          A non-profit organization had over $500,000 in property damage from a fire. Limited
+           financial resources &amp; inadequate insurance coverage hindered the organization's
+            ability to navigate the complex claims process.
         </div>
       </div>
       <div class="card">
@@ -180,10 +182,22 @@
       <div class="card">
         <img src="@/assets/images/usecase_placeholder.png" alt="" />
         <div id="header">
-          ***case study overview***
+          ButFor Delivers Speed & Accuracy in Global Manufacturing Claim Prep
         </div>
         <div id="desc">
-          ***insert case study here****
+          A multi-national manufacturing company faced a catastrophic fire. The company
+            accelerated claim processing by 99%, reduced manual labor by over 800 hours and saved
+             hundreds of thousands of dollars using ButFor. Despite the rapid turnaround,
+              ButFor's analysis closely matched the final claim amount, demonstrating the platform's
+               accuracy &amp; reliability.
+
+
+
+
+
+
+
+
         </div>
       </div>
     </div>
