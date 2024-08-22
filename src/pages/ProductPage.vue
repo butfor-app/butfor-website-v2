@@ -152,7 +152,7 @@
           Litigation Attorney Praises Work on Successful Claim Resolution
         </div>
         <div id="desc">
-          <i>“Grateful for your <b>swift, high-quality work</b> on the insurer claim filing.
+          <i>“Grateful for your <b>swift, high-quality work</b> on the claim filing.
            <br>Your teamwork &amp; positive attitude made a real impact. Great working with you!”</i>
            <br>Richard S.
         </div>
