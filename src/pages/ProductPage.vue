@@ -185,7 +185,7 @@
           ButFor Delivers Speed & Accuracy in International Manufacturing Claim Prep
         </div>
         <div id="desc">
-          We reduced labor by over 800 hours &amp; saved hundreds of thousands of dollars using ButFor
+          ButFor reduced labor by over 800 hours &amp; saved hundreds of thousands of dollars
             for a manufacturing company facing a fire. Despite the rapid turnaround,
              our analysis closely matched the insurers, demonstrating ButFor's accuracy.
         </div>
