@@ -169,7 +169,7 @@
       <div class="card">
         <img src="@/assets/images/usecase_placeholder.png" alt="" />
         <div id="header">
-          Manufacturing VP of Finance Applauds Claim Recovery 50% Above Expectations
+          Manufacturing Finance VP Applauds Claim Recovery 50% Above Expectations
         </div>
         <div id="desc">
          <i>”Successfully resolved our insurance claim, <b>recovering 50% more than estimated.</b>
