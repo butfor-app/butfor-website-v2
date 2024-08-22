@@ -173,7 +173,7 @@
         </div>
         <div id="desc">
          <i>”Successfully resolved our insurance claim, <b>recovering 50% more than estimated.</b>
-           Exceptional service &amp; professionalism—would happily work with them again &amp; highly recommend to others.”</i>
+           Exceptional service—would happily work with them again &amp; highly recommend to others.”</i>
            <br>Denny U.
         </div>
       </div>
