@@ -185,19 +185,9 @@
           ButFor Delivers Speed & Accuracy in Global Manufacturing Claim Prep
         </div>
         <div id="desc">
-          A multi-national manufacturing company faced a catastrophic fire. The company
-            accelerated claim processing by 99%, reduced manual labor by over 800 hours and saved
-             hundreds of thousands of dollars using ButFor. Despite the rapid turnaround,
-              ButFor's analysis closely matched the final claim amount, demonstrating the platform's
-               accuracy &amp; reliability.
-
-
-
-
-
-
-
-
+          We reduced manual labor by over 800 hours &amp; saved hundreds of thousands of dollars using ButFor
+            for a multi-national manufacturing company facing a catastrophic fire. Despite the rapid turnaround,
+             our analysis closely matched the insurers, demonstrating the platform's accuracy &amp; reliability.
         </div>
       </div>
     </div>
