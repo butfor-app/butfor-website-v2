@@ -4,10 +4,7 @@
       <div>
         <div class="flex items-center">
           <div id="msg" class="block cursor-pointer px-4 text-white">
-            <a
-              href="https://butfor.co/webinars/5"
-              class="flex items-center gap-2"
-            >
+            <RouterLink to="/webinars/5" class="flex items-center gap-2">
               <button
                 class="h-8 cursor-pointer rounded-2xl bg-white px-4 text-black"
               >
@@ -17,7 +14,7 @@
                 CrowdStrike &amp; Business Interruption Fireside - Aug 29th, 3pm
                 EST
               </p>
-            </a>
+            </RouterLink>
           </div>
         </div>
         <div>
