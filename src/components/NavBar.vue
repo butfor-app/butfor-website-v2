@@ -2,11 +2,22 @@
   <div id="navbar">
     <div id="navbar_top">
       <div>
-        <div>
-          <button>Live</button>
-          <div id="msg">
-            <a href="https://butfor.co/webinars/5"
-              >CrowdStrike &amp; Business Interruption Fireside - Aug 29th, 3pm EST</a>
+        <div class="flex items-center">
+          <div id="msg" class="block cursor-pointer px-4 text-white">
+            <a
+              href="https://butfor.co/webinars/5"
+              class="flex items-center gap-2"
+            >
+              <button
+                class="h-8 cursor-pointer rounded-2xl bg-white px-4 text-black"
+              >
+                Live
+              </button>
+              <p class="hidden lg:inline">
+                CrowdStrike &amp; Business Interruption Fireside - Aug 29th, 3pm
+                EST
+              </p>
+            </a>
           </div>
         </div>
         <div>
@@ -308,19 +319,8 @@
   </div>
 </template>
 <script setup>
-import {
-  Menu,
-  MenuButton,
-  MenuItems,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  MenuItem,
-} from "@headlessui/vue";
+import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 import MobileNavPopover from "@/components/Navbar/MobileNavPopover.vue";
-
-import arrow from "@/components/icons/arrow.vue";
-import { vOnClickOutside } from "@vueuse/components";
 import { ref, watch } from "vue";
 import { RouterLink, useRoute } from "vue-router";
 import { useGeneralData } from "@/stores/useGeneralData";
@@ -516,19 +516,6 @@ const solutionLinks = {
       }
       @screen lg {
         @apply px-18;
-      }
-      > :nth-child(1) {
-        @apply flex items-center;
-        > button {
-          @apply h-8 rounded-2xl bg-white px-4 text-black;
-          @apply cursor-pointer;
-        }
-        > #msg {
-          @apply hidden;
-          @screen lg {
-            @apply block cursor-pointer px-4 text-white;
-          }
-        }
       }
       > :nth-child(2) {
         @apply flex h-9 items-center gap-x-2;
