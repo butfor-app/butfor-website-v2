@@ -24,8 +24,8 @@
     </div>
     <div v-else class="bg-primary px-4">
       <div class="mx-auto max-w-[1050px] py-10 text-white">
-        <div class="flex">
-          <div class="flex w-[60%] flex-col gap-y-8 pr-10">
+        <div class="flex flex-col gap-y-10 lg:flex-row">
+          <div class="flex flex-col gap-y-8 pr-10 lg:w-[60%]">
             <div class="flex items-center gap-x-2">
               <img src="@/assets/icons/webinar.svg" width="30" alt="" /> Webinar
             </div>
@@ -40,7 +40,7 @@
             <div class="text-xl">{{ webinar.attributes.description }}</div>
           </div>
           <div
-            class="flex w-[40%] flex-col gap-y-4 rounded-lg bg-white px-4 py-8"
+            class="flex flex-col gap-y-4 rounded-lg bg-white px-4 py-8 lg:w-[40%]"
           >
             <div class="text-center text-3xl font-semibold text-black">
               Register Now!
