@@ -83,13 +83,13 @@
   </div>
   <div id="features">
     <div id="heading">
-      Over 80% of midsize businesses that start<br />with BUTFOR stick around
-      for 4 or more years
+       We have a 100% retention rate for<br> repeat client claim preparation
+      <br><br>
     </div>
-    <div id="desc">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    <!--- <div id="desc">
+       Ipsum is simply dummy text of the printing and typesetting industry.
       <br />Lorem Ipsum has been the industry's standard dummy.
-    </div>
+    </div> ------->
     <div id="wrapper">
       <div id="card">
         <img
@@ -142,52 +142,52 @@
   <div id="use_cases">
     <div id="heading">Customer stories and use cases</div>
     <div id="desc" class="text-center">
-      See how Butfor has saved clients on average <br />
-      over hundreds of thousands of dollars on their claims
+      See how ButFor has saved clients on average <br />
+      hundreds of thousands of dollars on their claims
     </div>
     <div id="wrapper">
       <div class="card">
         <img src="@/assets/images/usecase_placeholder.png" alt="" />
         <div id="header">
-          Lorem Ipsum is simply dummy text of the printing industry.
+          Litigation Attorney Praises Work on Successful Claim Resolution
         </div>
         <div id="desc">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since 1500s.
+          <i>“Grateful for your <b>swift, high-quality work</b> on the claim filing.
+           <br>Your teamwork, quick turnaround &amp; positive attitude made a real impact.<br>Great working with you!”</i>
+           <br>Richard S.
         </div>
       </div>
       <div class="card">
         <img src="@/assets/images/usecase_placeholder.png" alt="" />
         <div id="header">
-          Lorem Ipsum is simply dummy text of the printing industry.
+          ButFor Drives Significant Financial Recovery for Resource-Constrained Non-Profit
         </div>
         <div id="desc">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since 1500s.
+          A non-profit organization had over $500,000 in property damage from a fire. Limited
+           financial resources &amp; inadequate insurance coverage hindered the organization's
+            ability to navigate the complex claims process.
         </div>
       </div>
       <div class="card">
         <img src="@/assets/images/usecase_placeholder.png" alt="" />
         <div id="header">
-          Lorem Ipsum is simply dummy text of the printing industry.
+          Manufacturing Finance VP Applauds Claim Recovery 50% Above Expectations
         </div>
         <div id="desc">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since 1500s.
+         <i>”Successfully resolved our insurance claim, <b>recovering 50% more than estimated.</b>
+           Exceptional service—would happily work with them again &amp; highly recommend to others.”</i>
+           <br>Denny U.
         </div>
       </div>
       <div class="card">
         <img src="@/assets/images/usecase_placeholder.png" alt="" />
         <div id="header">
-          Lorem Ipsum is simply dummy text of the printing industry.
+          ButFor Delivers Speed & Accuracy in International Manufacturing Claim
         </div>
         <div id="desc">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since 1500s.
+          ButFor reduced labor by over 800 hours &amp; saved hundreds of thousands of dollars
+            for a manufacturer facing a fire. Our analysis closely matched the insurers,
+             demonstrating accuracy despite rapid turnaround.
         </div>
       </div>
     </div>

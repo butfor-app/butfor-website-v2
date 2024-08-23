@@ -13,7 +13,7 @@
       in one place
     </div>
     <div id="buttons">
-      <a href="#" id="productVid">See Product Video</a>
+    <!--- <a href="#" id="productVid">See Product Video</a> --->
       <RouterLink to="/book_demo" id="demo">Book Demo</RouterLink>
     </div>
   </div>
