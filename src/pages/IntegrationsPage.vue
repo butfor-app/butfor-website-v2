@@ -84,12 +84,11 @@
       </div>
     </div>
   </HeroSection>
-  <ContactForm />
+  <HubspotForm formId="d19ca6cc-dff1-4df2-b035-22fbbe6154e0" />
 </template>
 <script setup>
 import HeroSection from "@/components/HeroSection.vue";
-import ContactForm from "@/components/ContactForm.vue";
-import integrations_bg from "@/assets/images/integrations_bg.png";
+import HubspotForm from "@/components/HubspotForm.vue";
 import integrations_bg_new from "@/assets/images/integrations_bg_new.png";
 </script>
 <style lang="postcss" scoped>
