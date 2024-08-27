@@ -352,7 +352,7 @@ export const useGeneralData = defineStore("generaldata", {
       {
         routeName: "enterprise",
         title: "Enterprise",
-        desc: "Enterprises can use our software to automate and streamline insurance processes, such as claims processing, By using analytics and machine learning algorithms, our software can help businesses make more informed decisions and optimize their insurance claims and associated costs.",
+        desc: "Enterprises can use our software to automate and streamline insurance claim preparation internally. By using analytics and machine learning algorithms, our software can help businesses make more informed decisions and optimize their insurance claims and associated costs without a need for external consultants.",
         bg: new URL(
           "/src/assets/images/solutions/enterprise-hero-bg.png",
           import.meta.url,
