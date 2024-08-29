@@ -10,6 +10,13 @@ export const useGeneralData = defineStore("generaldata", {
   state: () => ({
     solutionCards: [
       {
+        name: "Enterprise",
+        desc: "Enterprises can use ButFor to prepare business interruption insurance claims internally.",
+        icon: "group",
+        type: "company",
+        routeName: "enterprise",
+      },
+      {
         name: "Insurance Companies",
         desc: "We help insurance companies manage and validate all of their claim filings across multiple accounts.",
         icon: "approval_delegation",
@@ -29,6 +36,13 @@ export const useGeneralData = defineStore("generaldata", {
         icon: "real_estate_agent",
         type: "company",
         routeName: "insurance-brokers",
+      },
+      {
+        name: "Law Firms",
+        desc: "ButFor efficiently manages and processes claims for your clients, streamlining the litigation process and reducing costs.",
+        icon: "account_balance",
+        type: "company",
+        routeName: "law-firms",
       },
       {
         name: "Risk & Compliance",
