@@ -113,6 +113,16 @@ const router = createRouter({
       component: () => import("@/pages/CaseStudies/CaseStudyPage.vue"),
     },
     {
+      path: "/fireside-chat/:fireSideChat_id",
+      name: "fireSideChat",
+      component: () => import("@/pages/FireSideChats/FireSideChat.vue"),
+    },
+    {
+      path: "/fireside-chats",
+      name: "fireSideChats",
+      component: () => import("@/pages/FireSideChats/FireSideChats.vue"),
+    },
+    {
       path: "/terms-and-conditions",
       name: "TermsAndConditionsPage",
       component: () => import("@/pages/TermsAndConditionsPage.vue"),

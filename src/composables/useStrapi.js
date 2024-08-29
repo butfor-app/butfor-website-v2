@@ -108,6 +108,36 @@ function useStrapi() {
     const caseStudy = data.data;
     return caseStudy;
   }
+
+  async function getFireSideChats() {
+    const resp = await fetch(
+      STRAPI_API_BASE_URL + "/fireside-chats?populate[0]=thumbnail",
+      {
+        headers: {
+          ...STRAPI_HEADERS,
+        },
+      },
+    );
+    const data = await resp.json();
+    const fireSideChats = data.data;
+    return fireSideChats;
+  }
+  async function getFireSideChat(fireSideChatId) {
+    const resp = await fetch(
+      STRAPI_API_BASE_URL +
+        "/fireside-chats/" +
+        fireSideChatId +
+        "?populate[0]=thumbnail",
+      {
+        headers: {
+          ...STRAPI_HEADERS,
+        },
+      },
+    );
+    const data = await resp.json();
+    const fireSideChat = data.data;
+    return fireSideChat;
+  }
   return {
     getImageUrl,
     getArticles,
@@ -117,6 +147,8 @@ function useStrapi() {
     getClaims101,
     getCaseStudies,
     getCaseStudy,
+    getFireSideChats,
+    getFireSideChat,
   };
 }
 

@@ -11,7 +11,8 @@
                 Live
               </button>
               <p class="hidden lg:inline">
-                CrowdStrike &amp; Business Interruption Fireside - Sept 12th, 3pm EST
+                CrowdStrike &amp; Business Interruption Fireside - Sept 12th,
+                3pm EST
               </p>
             </RouterLink>
           </div>
@@ -375,6 +376,11 @@ const resourcesLinks = [
     name: "Webinars",
     link: "/webinars",
     icon: new URL("/src/assets/icons/live_tv.png", import.meta.url).href,
+  },
+  {
+    name: "FireSide Chats",
+    link: "/fireside-chats",
+    icon: new URL("/src/assets/icons/fire.png", import.meta.url).href,
   },
   {
     name: "Contact Us",
