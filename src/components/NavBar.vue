@@ -3,12 +3,13 @@
     <div id="navbar_top">
       <div>
         <div class="flex items-center">
-          <div id="msg" class="block cursor-pointer px-4 text-white">
+          <div id="msg" class="block cursor-pointer text-white lg:px-4">
             <RouterLink to="/webinars/5" class="flex items-center gap-2">
               <button
                 class="h-8 cursor-pointer rounded-2xl bg-white px-4 text-black"
               >
-                Live
+                <span class="hidden lg:block"> Live </span>
+                <span class="block lg:hidden"> Upcoming Webinars </span>
               </button>
               <p class="hidden lg:inline">
                 CrowdStrike &amp; Business Interruption Fireside - Sept 12th,
