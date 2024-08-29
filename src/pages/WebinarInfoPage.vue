@@ -37,7 +37,7 @@
               {{ getTime(webinar.attributes.start_time) }} -
               {{ webinar.attributes.timezone }}
             </div>
-            <div class="text-xl">{{ webinar.attributes.body }}</div>
+            <div class="text-xl" v-html="webinar.attributes.body"></div>
           </div>
           <div
             class="flex flex-col gap-y-4 rounded-lg bg-white px-4 py-8 lg:w-[40%]"
