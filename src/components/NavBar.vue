@@ -504,9 +504,8 @@ const solutionLinks = {
 <style lang="postcss" scoped>
 #navbar {
   @apply top-0 z-50;
-  @screen md {
-    @apply sticky;
-  }
+  @apply sticky;
+
   > #navbar_top {
     @apply bg-primaryDark;
     > div {
