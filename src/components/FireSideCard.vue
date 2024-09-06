@@ -1,6 +1,6 @@
 <template>
   <div id="event_cart">
-    <img class="h-48 w-96" :src="getImage()" alt="" />
+    <img class="h-48 w-96 object-contain" :src="getImage()" alt="" />
     <div id="title">{{ values.title }}</div>
     <div id="desc">{{ trimDesc(values.description) }}</div>
     <RouterLink
