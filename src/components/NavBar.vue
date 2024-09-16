@@ -12,7 +12,7 @@
                 <span class="block lg:hidden"> Upcoming Webinars </span>
               </button>
               <p class="hidden lg:inline">
-                CrowdStrike &amp; Business Interruption Fireside - Sept 12th,
+                CrowdStrike TEST!!! &amp; Business Interruption Fireside - Sept 12th,
                 3pm EST
               </p>
             </RouterLink>
