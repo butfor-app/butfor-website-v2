@@ -9,15 +9,15 @@ jobs:
     steps:
       - name: pull-latest-code
         run: |
-          cd ~/butfor-www/
+          cd /home/butfor/butfor-www/
           git pull
 
       - name: install-packages
         run: |
-          cd ~/butfor-www/
+          cd /home/butfor/butfor-www/
           yarn install
 
       - name: build
         run: |
-          cd ~/butfor-www/
+          cd /home/butfor/butfor-www/
           yarn build
