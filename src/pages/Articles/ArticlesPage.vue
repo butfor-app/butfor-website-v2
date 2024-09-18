@@ -1,14 +1,16 @@
 <template>
-  <div class="text-center text-5xl font-semibold py-12 mb-8">Articles</div>
-  <div class="mx-auto max-w-[1200px] md:px-18 sm:px-4 px-2">
+  <div class="mb-8 px-4 py-12 text-center text-5xl font-semibold">Articles</div>
+  <div class="mx-auto max-w-[1200px] px-2 sm:px-4 md:px-18">
     <div
-      class="w-full py-10 flex flex-col items-center"
+      class="flex w-full flex-col items-center py-10"
       v-if="articles.length == 0"
     >
       <!-- Loading... -->
       <Spinner />
     </div>
-    <div class="py-10 flex flex-wrap justify-center gap-x-4 gap-y-12">
+    <div
+      class="flex flex-col flex-wrap justify-center gap-x-4 gap-y-12 py-10 lg:flex-row"
+    >
       <ArticleCard
         class=""
         v-for="article in articles"
