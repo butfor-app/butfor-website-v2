@@ -230,11 +230,11 @@
             industry-specific expertise for complex loss scenarios.
           </li>
         </ul>
-        <button
+       <a href="@/assets/images/analyzer.pdf" target="_blank"><button
           class="mx-auto mt-6 block !w-fit rounded-xl bg-[#124559] px-6 py-2 text-white"
         >
           View Example Results
-        </button>
+        </button></a>
       </div>
       <div class="w-full lg:w-1/2">
         <div class="mb-4 font-semibold">
