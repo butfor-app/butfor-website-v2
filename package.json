@@ -16,6 +16,7 @@
     "postcss": "^8.4.39",
     "vue": "^3.4.31",
     "vue-gtag": "^2.0.1",
+    "vue-meta": "^2.4.0",
     "vue-router": "^4.4.0",
     "vue3-carousel": "^0.3.3"
   },
