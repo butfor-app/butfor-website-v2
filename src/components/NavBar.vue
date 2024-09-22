@@ -3,17 +3,15 @@
     <div id="navbar_top">
       <div>
         <div class="flex items-center">
-          <div id="msg" class="block cursor-pointer text-white lg:px-4">
+          <div id="msg" class="block cursor-pointer px-4 text-white">
             <RouterLink to="/webinars/5" class="flex items-center gap-2">
               <button
                 class="h-8 cursor-pointer rounded-2xl bg-white px-4 text-black"
               >
-                <span class="hidden lg:block"> Live </span>
-                <span class="block lg:hidden"> Upcoming Webinars </span>
+                Live
               </button>
               <p class="hidden lg:inline">
-                CrowdStrike &amp; Business Interruption Fireside - Sept 12th,
-                3pm EST
+                CrowdStrike &amp; Business Interruption Fireside - Sept 26th, 3pm EST
               </p>
             </RouterLink>
           </div>
@@ -379,11 +377,6 @@ const resourcesLinks = [
     icon: new URL("/src/assets/icons/live_tv.png", import.meta.url).href,
   },
   {
-    name: "FireSide Chats",
-    link: "/fireside-chats",
-    icon: new URL("/src/assets/icons/fire.png", import.meta.url).href,
-  },
-  {
     name: "Contact Us",
     link: "/",
     icon: new URL("/src/assets/icons/call.png", import.meta.url).href,
@@ -505,8 +498,9 @@ const solutionLinks = {
 <style lang="postcss" scoped>
 #navbar {
   @apply top-0 z-50;
-  @apply sticky;
-
+  @screen md {
+    @apply sticky;
+  }
   > #navbar_top {
     @apply bg-primaryDark;
     > div {
