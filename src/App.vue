@@ -42,7 +42,7 @@ useHead({
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'description', content: description },
-    { name: 'keywords', content:   
+    { name: 'keywords', content:  
  'business interruption insurance, butfor, butfor.co, business interruption claim preparation, claim automation, business interruption' },
     { property: 'og:title', content: 'Simplify Complex Business Interruption Claims with ButFor' },
     { property: 'og:description', content: 'ButFor streamlines complex and catastrophic business interruption insurance claim preparation. Get expert guidance and maximize your recovery. Visit butfor.co' },
