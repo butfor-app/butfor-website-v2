@@ -51,7 +51,7 @@ useHead({
     { property: 'twitter:title', content: 'Simplify Complex Business Interruption Claims with ButFor' },
     { property: 'twitter:description', content: 'ButFor streamlines complex and catastrophic business interruption insurance claim preparation. Get expert guidance and maximize your recovery. Visit butfor.co' },
     { property: 'twitter:card', content: 'summary_large_image' },
-    { property: 'twitter:image', content: 'https://www.butfor.co/metal.jpg' }
+    { property: 'twitter:image', content: 'https://www.butfor.co/metal.jpg' },
     { property: 'linkedin:summary', content: 'ButFor helps automate business interruption claims.' },
     { property: 'linkedin:url', content: 'https://butfor.co' } ,
     { property: 'linkedin:image', content: 'https://www.butfor.co/metal.jpg' }
