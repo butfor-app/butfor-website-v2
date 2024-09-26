@@ -147,6 +147,11 @@ const router = createRouter({
       name: "cost-estimator",
       component: () => import("@/pages/CostEstimatorPage.vue"),
     },
+    {
+      path: "/pricing",
+      name: "pricing",
+      component: () => import("@/pages/PricingPage.vue"),
+    },
     ...thankyouRoutes,
     ...contactusRoutes,
     {
