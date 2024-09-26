@@ -64,14 +64,18 @@
         </DisclosureButton>
         <DisclosurePanel>
           <div class="col w-[200px]">
-            <div class="heading">OVERVIEW</div>
+            <div class="heading">Subscription</div>
             <div class="flex h-full flex-col justify-around">
-              <div class="pb-4">Get to know the <br />Butfor platform</div>
-              <button
-                class="h-[28px] w-[78px] rounded-lg bg-[#598392] font-aneklatin text-xs text-white"
+              <div class="pb-4">
+                Most affordable claim prep coverage in the world
+              </div>
+              <RouterLink
+                to="/subscription"
+                class="flex w-fit items-center justify-center rounded-lg bg-[#598392] px-3 py-1 font-aneklatin text-xs text-white"
+                @click="close"
               >
-                Learn More
-              </button>
+                Subscription Details
+              </RouterLink>
             </div>
           </div>
           <div class="col">
