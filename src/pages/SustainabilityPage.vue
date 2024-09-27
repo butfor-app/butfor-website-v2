@@ -2,7 +2,7 @@
   <HeroSection
     name="Climate Change and Disaster Recovery: <br> A Complex Relationship"
     desc="The Climate Crisis is here. ButFor helps businesses recover faster. Our innovative software automates the claim preparation process, saving businesses valuable time and resources in the aftermath of a disaster."
-    bg="/src/assets/images/sus_hero.png"
+    bg="/imgs/sus_hero.png"
   />
 
   <section
