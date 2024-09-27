@@ -93,7 +93,7 @@ const webinars = ref([]);
 
 getWebinars().then((resp) => {
   webinars.value = resp;
-  console.log(webinars.value);
+  // console.log(webinars.value);
 });
 
 const currentSlide = ref(0);
@@ -105,7 +105,7 @@ const groupedEvents = computed(() => {
   }
   return grouped;
 });
-console.log(groupedEvents.value);
+// console.log(groupedEvents.value);
 </script>
 <style lang="postcss" scoped>
 #hero_section {

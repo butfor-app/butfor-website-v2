@@ -94,7 +94,7 @@ const headerValues = [
 ];
 onBeforeRouteUpdate((to, from, next) => {
   if ("faq" in to.query) {
-    console.log("faq");
+    // console.log("faq");
     faqRef.value.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -104,7 +104,7 @@ onBeforeRouteUpdate((to, from, next) => {
 });
 onMounted(() => {
   if ("faq" in route.query) {
-    console.log("faq");
+    // console.log("faq");
     faqRef.value.scrollIntoView({
       behavior: "smooth",
       block: "start",

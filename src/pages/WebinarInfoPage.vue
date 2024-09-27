@@ -77,7 +77,7 @@ const webinar = ref({});
 const { getWebinar, getImageUrl } = useStrapi();
 
 const webinar_id = route.params.webinar_id;
-console.log(webinar_id);
+// console.log(webinar_id);
 
 getWebinar(webinar_id).then((resp) => {
   // console.log(resp);

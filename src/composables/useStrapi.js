@@ -74,7 +74,7 @@ function useStrapi() {
       },
     );
     const data = await resp.json();
-    console.log(data);
+    // console.log(data);
     const claim101 = data.data;
     return claim101;
   }

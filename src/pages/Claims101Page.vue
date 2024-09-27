@@ -88,7 +88,7 @@ const claim101 = ref({
 getClaims101().then((data) => {
   claim101.value = data.attributes;
   loading.value = false;
-  console.log(claim101.value);
+  // console.log(claim101.value);
 });
 
 const getTime = (time) => {

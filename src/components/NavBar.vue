@@ -327,7 +327,7 @@ const route = useRoute();
 watch(
   () => route.path,
   (oldValue, newValue) => {
-    console.log("Route changed", newValue);
+    // console.log("Route changed", newValue);
     mobile_popover_open.value = false;
     // const
   },

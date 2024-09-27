@@ -102,7 +102,7 @@ const fireSideChats = ref([]);
 
 getFireSideChats().then((resp) => {
   fireSideChats.value = resp;
-  console.log(fireSideChats.value);
+  // console.log(fireSideChats.value);
 });
 
 const currentSlide = ref(0);
@@ -114,7 +114,7 @@ const groupedEvents = computed(() => {
   }
   return grouped;
 });
-console.log(groupedEvents.value);
+// console.log(groupedEvents.value);
 </script>
 <style lang="postcss" scoped>
 #hero_section {

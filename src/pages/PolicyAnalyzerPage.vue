@@ -324,7 +324,7 @@ const handleSubmit = async () => {
     method: "POST",
     body: formData,
   });
-  console.log(resp);
+  // console.log(resp);
   formSubmitted.value = true;
 };
 </script>

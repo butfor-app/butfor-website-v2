@@ -30,7 +30,7 @@ const { getArticles } = useStrapi();
 
 const articles = ref([]);
 getArticles().then((resp) => {
-  console.log(resp);
+  // console.log(resp);
   articles.value = resp;
 });
 

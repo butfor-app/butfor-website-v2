@@ -79,10 +79,10 @@ const fireSideChat = ref({});
 const { getFireSideChat, getImageUrl } = useStrapi();
 
 const fireSideChat_id = route.params.fireSideChat_id;
-console.log(fireSideChat_id);
+// console.log(fireSideChat_id);
 
 getFireSideChat(fireSideChat_id).then((resp) => {
-  console.log(resp);
+  // console.log(resp);
   fireSideChat.value = resp;
 });
 const getImage = () => {

@@ -61,7 +61,7 @@ const { getCaseStudies } = useStrapi();
 
 const caseStudies = ref([]);
 getCaseStudies().then((resp) => {
-  console.log(resp);
+  // console.log(resp);
   caseStudies.value = resp;
 });
 

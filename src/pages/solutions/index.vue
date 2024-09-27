@@ -64,7 +64,7 @@ switch (solution_data.value.type) {
 watch(
   () => routeName.value,
   (newVal) => {
-    console.log("Route Changed to: ", newVal);
+    // console.log("Route Changed to: ", newVal);
     solution_data.value = generalData.getSolutionPageData(newVal);
     switch (solution_data.value.type) {
       case "company":

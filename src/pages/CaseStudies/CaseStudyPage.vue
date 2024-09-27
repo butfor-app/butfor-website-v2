@@ -60,7 +60,7 @@ const caseStudyId = route.params.caseStudyId;
 const caseStudy = ref({});
 
 getCaseStudy(caseStudyId).then((resp) => {
-  console.log(resp);
+  // console.log(resp);
   caseStudy.value = resp;
 });
 </script>
