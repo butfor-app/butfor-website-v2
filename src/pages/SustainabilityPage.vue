@@ -5,11 +5,22 @@
     bg="/src/assets/images/sus_hero.png"
   />
 
-  <section class="mx-auto flex max-w-7xl pt-10">
-    <div class="w-1/2">
-      <h2 class="!text-start">
-        How Climate Change Increases Natural Disasters
-      </h2>
+  <section
+    class="mx-auto flex max-w-7xl items-center gap-y-4 px-4 pt-10 lg:flex-row"
+  >
+    <div class="lg:w-1/2">
+      <div class="flex items-center">
+        <h2 class="w-1/2 !text-start lg:w-full">
+          How Climate Change Increases Natural Disasters
+        </h2>
+        <div class="block w-1/2 lg:hidden">
+          <img
+            class="mx-auto object-contain"
+            src="/src/assets/images/sus_i_1.png"
+            alt=""
+          />
+        </div>
+      </div>
       <div class="flex flex-col gap-6">
         <div>
           Warming Temperatures: Higher temperatures lead to increased
@@ -32,7 +43,7 @@
         </div>
       </div>
     </div>
-    <div class="w-1/2">
+    <div class="hidden w-1/2 lg:block">
       <img
         class="mx-auto w-2/3 object-contain"
         src="/src/assets/images/sus_i_1.png"
@@ -41,7 +52,7 @@
     </div>
   </section>
 
-  <section class="relative pt-10">
+  <section class="relative px-4 pt-10">
     <div
       class="absolute left-0 top-0 z-0 flex h-full w-full flex-col justify-end"
     >
@@ -54,18 +65,28 @@
       </svg>
     </div>
     <div class="relative z-10 mx-auto flex max-w-7xl">
-      <div class="w-1/2">
+      <div class="hidden w-1/2 lg:block">
         <img
-          class="mx-auto w-1/2 object-contain"
+          class="mx-auto object-contain"
           src="/src/assets/images/sus_i_3.png"
           alt=""
         />
       </div>
 
-      <div class="w-1/2">
-        <h2 class="!text-start">
-          butfor is changing the game. here’s how we help
-        </h2>
+      <div class="lg:w-1/2">
+        <div class="flex items-center">
+          <h2 class="w-1/2 !text-start lg:w-full">
+            butfor is changing the game. here’s how we help
+          </h2>
+          <div class="block w-1/2 lg:hidden">
+            <img
+              class="mx-auto w-3/4 object-contain"
+              src="/src/assets/images/sus_i_3.png"
+              alt=""
+            />
+          </div>
+        </div>
+
         <div class="flex flex-col gap-6">
           <div>
             Faster Claims Processing: Our AI-powered platform guides businesses
@@ -86,11 +107,21 @@
     </div>
   </section>
 
-  <section class="mx-auto flex max-w-7xl pt-10">
-    <div class="w-1/2">
-      <h2 class="!text-start">
-        Streamlining Business Interruption Claims for a More Resilient Future
-      </h2>
+  <section class="mx-auto flex max-w-7xl px-4 pt-10">
+    <div class="lg:w-1/2">
+      <div class="flex items-center">
+        <h2 class="w-2/3 !text-start lg:w-full">
+          Streamlining Business Interruption Claims for a More Resilient Future
+        </h2>
+        <div class="block w-1/3 lg:hidden">
+          <img
+            class="mx-auto w-full object-contain"
+            src="/src/assets/images/sus_i_2.png"
+            alt=""
+          />
+        </div>
+      </div>
+
       <div class="flex flex-col gap-6">
         <div>
           Climate change is a defining challenge of our time. With rising sea
@@ -111,7 +142,7 @@
         </div>
       </div>
     </div>
-    <div class="w-1/2">
+    <div class="hidden w-1/2 lg:block">
       <img
         class="mx-auto w-2/3 object-contain"
         src="/src/assets/images/sus_i_2.png"

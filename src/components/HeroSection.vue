@@ -65,13 +65,13 @@ watch(
 <style lang="postcss" scoped>
 #hero_section {
   @apply relative flex flex-col items-center justify-center;
-  @apply h-[calc(100vh)] py-4 text-center;
+  @apply px-4 py-20 text-center lg:h-[calc(100vh)] lg:py-40;
   @screen md {
     @apply h-[calc(100vh_-_144px)];
   }
   @apply bg-cover bg-top bg-no-repeat;
   > #heading {
-    @apply mb-10 text-[46px] font-extrabold uppercase text-white;
+    @apply mb-10 text-[46px] font-extrabold uppercase leading-[1.20] text-white;
   }
   > #sub_heading {
     @apply mb-9 font-aneklatin text-xl font-medium text-white md:max-w-[590px];
