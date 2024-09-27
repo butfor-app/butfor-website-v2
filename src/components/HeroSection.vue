@@ -8,9 +8,8 @@
           ? 'shadow-black [text-shadow:_5px_5px_15px_var(--tw-shadow-color)]'
           : ''
       "
-    >
-      {{ name }}
-    </div>
+      v-html="name"
+    ></div>
     <div
       id="sub_heading"
       class="z-20"
@@ -19,9 +18,8 @@
           ? 'shadow-black [text-shadow:_5px_5px_15px_var(--tw-shadow-color)]'
           : ''
       "
-    >
-      {{ desc }}
-    </div>
+      v-html="desc"
+    ></div>
     <button @click="scrollToContactForm" class="z-20">Learn More</button>
     <slot />
   </div>
