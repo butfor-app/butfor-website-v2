@@ -1,63 +1,79 @@
 <template>
   <!-- HERO -->
-  <section class="mx-auto max-w-7xl py-10">
-    <h1 class="text-center !text-4xl">
-      Comprehensive Coverage, Clear Pricing: <br />
-      Protect Your Business with Confidence
-    </h1>
-    <div class="flex py-10">
-      <div class="flex w-1/2 flex-col gap-4">
-        <div class="flex items-start gap-3">
-          <div class="h-6 w-6">
-            <img
-              class="h-full w-full object-contain"
-              src="/src/assets/icons/question.png"
-              alt=""
-            />
+  <section class="relative">
+    <div class="relative z-[1] mx-auto max-w-7xl">
+      <h1 class="text-center !text-4xl">
+        Comprehensive Coverage, Clear Pricing: <br />
+        Protect Your Business with Confidence
+      </h1>
+      <div class="flex py-10">
+        <div class="flex w-1/2 flex-col gap-4">
+          <div class="flex items-start gap-3">
+            <div class="h-6 w-6">
+              <img
+                class="h-full w-full object-contain"
+                src="/src/assets/icons/question.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1">
+              Are you an organization that has business interruption coverage
+              without claim preparation fee coverage?
+            </div>
           </div>
-          <div class="flex-1">
-            Are you an organization that has business interruption coverage
-            without claim preparation fee coverage?
+          <div class="flex items-start gap-3">
+            <div class="h-6 w-6">
+              <img
+                class="h-full w-full object-contain"
+                src="/src/assets/icons/question.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1">
+              Do you have prep coverage that is not sufficient?
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="h-6 w-6">
+              <img
+                class="h-full w-full object-contain"
+                src="/src/assets/icons/question.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1">
+              Are you an organization that has business interruption coverage
+              without claim preparation fee coverage?
+            </div>
           </div>
         </div>
-        <div class="flex items-start gap-3">
-          <div class="h-6 w-6">
-            <img
-              class="h-full w-full object-contain"
-              src="/src/assets/icons/question.png"
-              alt=""
-            />
-          </div>
-          <div class="flex-1">
-            Do you have prep coverage that is not sufficient?
-          </div>
-        </div>
-        <div class="flex items-start gap-3">
-          <div class="h-6 w-6">
-            <img
-              class="h-full w-full object-contain"
-              src="/src/assets/icons/question.png"
-              alt=""
-            />
-          </div>
-          <div class="flex-1">
-            Are you an organization that has business interruption coverage
-            without claim preparation fee coverage?
+        <div class="flex w-1/2 flex-col gap-4 pt-20">
+          <h2 class="text-center text-[33px] font-semibold leading-[1]">
+            Our guess? <br />
+            You probably don’t even know.
+          </h2>
+          <div class="text-end">
+            Based on your organization size, click below to sign up for coverage
+            in the event of an emergency or business income loss. In the event
+            you need to file a claim, we will prepare your claim free of cost
+            using our innovative software and team of consultants.
           </div>
         </div>
       </div>
-      <div class="flex w-1/2 flex-col gap-4 pt-20">
-        <h2 class="text-center text-[33px] font-semibold leading-[1]">
-          Our guess? <br />
-          You probably don’t even know.
-        </h2>
-        <div class="text-end">
-          Based on your organization size, click below to sign up for coverage
-          in the event of an emergency or business income loss. In the event you
-          need to file a claim, we will prepare your claim free of cost using
-          our innovative software and team of consultants.
-        </div>
-      </div>
+    </div>
+    <div
+      class="absolute left-0 top-0 z-0 flex h-full w-full flex-col justify-end"
+    >
+      <svg
+        class="object-contain"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="#12455910"
+          d="M0,256L48,245.3C96,235,192,213,288,181.3C384,149,480,107,576,117.3C672,128,768,192,864,186.7C960,181,1056,107,1152,74.7C1248,43,1344,53,1392,58.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
     </div>
   </section>
 
