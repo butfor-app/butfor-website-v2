@@ -6,8 +6,8 @@
         Comprehensive Coverage, Clear Pricing: <br />
         Protect Your Business with Confidence
       </h1>
-      <div class="flex py-10">
-        <div class="flex w-1/2 flex-col gap-4">
+      <div class="flex flex-col px-4 py-10 lg:flex-row">
+        <div class="flex flex-col gap-4 lg:w-1/2">
           <div class="flex items-start gap-3">
             <div class="h-6 w-6">
               <img
@@ -47,7 +47,7 @@
             </div>
           </div>
         </div>
-        <div class="flex w-1/2 flex-col gap-4 pt-20">
+        <div class="flex flex-col gap-4 pt-20 lg:w-1/2">
           <h2 class="text-center text-[33px] font-semibold leading-[1]">
             Our guess? <br />
             You probably don’t even know.
