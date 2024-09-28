@@ -139,7 +139,7 @@
           <button
             type="submit"
             class="flex !w-fit items-center gap-2 bg-[#124559] !px-10 text-white"
-            placeholder="Estimate Savings"
+            placeholder="Submit"
           >
             <svg
               v-if="submitting == true"
