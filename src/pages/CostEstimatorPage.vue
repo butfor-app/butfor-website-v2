@@ -192,7 +192,7 @@
         </div>
         <div class="mb-10">
           Check your insurance policy to understand your preparation coverage,
-          or simply upload/copy+paste your policy language here in our policy
+          or simply upload/copy+paste your policy language <a href=PolicyAnalyzerPage.vue>here</a> in our policy
           analyzer to understand what exactly is covered.
         </div>
       </div>
