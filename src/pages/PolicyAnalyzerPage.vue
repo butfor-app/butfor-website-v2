@@ -1,7 +1,7 @@
 <template>
   <section class="mx-auto max-w-5xl px-4 pb-10 text-[#8F8F8F]">
     <div class="flex flex-col-reverse gap-4 lg:flex-row">
-      <div class="flex w-full flex-col justify-center lg:w-1/2">
+      <div class="flex w-full flex-col justify-center lg:w-1/2 lg:pt-10">
         <div class="mb-10">
           By choosing ButFor Claim Prep, businesses gain a strategic advantage
           in mitigating the financial impact of disruptions. Our subscription
@@ -230,11 +230,13 @@
             industry-specific expertise for complex loss scenarios.
           </li>
         </ul>
-       <a href="https://hubs.ly/Q02QJyN00" target="_blank"><button
-          class="mx-auto mt-6 block !w-fit rounded-xl bg-[#124559] px-6 py-2 text-white"
+        <a href="https://hubs.ly/Q02QJyN00" target="_blank"
+          ><button
+            class="mx-auto mt-6 block !w-fit rounded-xl bg-[#124559] px-6 py-2 text-white"
+          >
+            View Example Results
+          </button></a
         >
-          View Example Results
-        </button></a>
       </div>
       <div class="w-full lg:w-1/2">
         <div class="mb-4 font-semibold">
