@@ -135,9 +135,34 @@
 
           <button
             type="submit"
-            class="!w-fit bg-[#124559] !px-10 text-white"
+            class="flex !w-fit items-center gap-2 bg-[#124559] !px-10 text-white"
             placeholder="Estimate Savings"
           >
+            <svg
+              v-if="submitting == true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"
+                opacity="0.25"
+              />
+              <path
+                fill="currentColor"
+                d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  dur="0.75s"
+                  repeatCount="indefinite"
+                  type="rotate"
+                  values="0 12 12;360 12 12"
+                />
+              </path>
+            </svg>
             Estimate Savings
           </button>
         </form>
@@ -269,6 +294,7 @@ import HubspotForm from "@/components/HubspotForm.vue";
 
 const generalData = useGeneralData();
 const formSubmitted = ref(false);
+const submitting = ref(false);
 
 const solution_cards_data = ref({});
 solution_cards_data.value = generalData.solutionsByClaimType;
@@ -285,6 +311,7 @@ const estimator_data = {
 };
 
 const handleSubmit = async () => {
+  submitting.value = true;
   const formData = new FormData();
 
   formData.append("name", estimator_data.name);
@@ -305,6 +332,7 @@ const handleSubmit = async () => {
   });
   // console.log(resp);
   formSubmitted.value = true;
+  submitting.value = false;
 };
 </script>
 <style lang="postcss" scoped>
