@@ -82,7 +82,7 @@ import { useRoute, onBeforeRouteUpdate } from "vue-router";
 
 
 import { watch, ref } from "vue";
-import { useHead } from "@vueuse/head";
+
 
 const title =
   "ButFor: Automate Business Interruption Claims and Maximize Lost Income"; // Replace with your desired title
@@ -208,6 +208,8 @@ useHead({
     { property: "linkedin:image", content: "https://www.butfor.co/metal.jpg" },
   ],
 });
+
+
 </script>
 
 <style lang="postcss" scoped>
