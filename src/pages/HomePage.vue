@@ -79,6 +79,18 @@ import FaqDisclosure from "@/components/FaqDisclosure.vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import { ref, onMounted } from "vue";
 import { useRoute, onBeforeRouteUpdate } from "vue-router";
+
+
+import { watch, ref } from "vue";
+import { useHead } from "@vueuse/head";
+
+const title =
+  "ButFor: Automate Business Interruption Claims and Maximize Lost Income"; // Replace with your desired title
+const description =
+  "ButFor: Automate Complex Business Interruption Claims & Recover More. Streamline the process, save time, get expert guidance, reduce costs, and maximize your lost income. Visit butfor.co"; // Replace with your description
+
+
+
 const generalData = useGeneralData();
 const route = useRoute();
 const faqRef = ref(null);
@@ -154,6 +166,7 @@ onMounted(() => {
     }, 1000);
   }, 5000);
 });
+
 useHead({
   title,
   meta: [
