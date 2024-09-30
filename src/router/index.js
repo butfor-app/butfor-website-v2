@@ -157,6 +157,11 @@ const router = createRouter({
       name: "sustainability",
       component: () => import("@/pages/SustainabilityPage.vue"),
     },
+    {
+      path: "/jobs",
+      name: "Jobs",
+      component: () => import("@/pages/JobsPage.vue"),
+    },
     ...thankyouRoutes,
     ...contactusRoutes,
     {
