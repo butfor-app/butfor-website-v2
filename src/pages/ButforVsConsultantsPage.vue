@@ -119,7 +119,12 @@ div {
   }
   .mid {
     writing-mode: vertical-rl;
-    text-orientation: sideways-right;
+    text-orientation: sideways;
+
+    @screen lg {
+      writing-mode: horizontal-tb;
+      text-orientation: upright;
+    }
     @apply flex h-full rotate-180 items-center border-b-0 border-t border-[#E0E0E0] font-semibold leading-[1] text-[#080808] lg:rotate-0 lg:border-b lg:border-t-0 lg:text-[25px] lg:font-medium;
   }
   .end {
