@@ -162,6 +162,11 @@ const router = createRouter({
       name: "Jobs",
       component: () => import("@/pages/JobsPage.vue"),
     },
+    {
+      path: "/butfor-vs-consultants",
+      name: "Butfor Vs Consultants",
+      component: () => import("@/pages/ButforVsConsultantsPage.vue"),
+    },
     ...thankyouRoutes,
     ...contactusRoutes,
     {
