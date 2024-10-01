@@ -263,7 +263,7 @@
                 leave-from-class="transform scale-100 opacity-100"
                 leave-to-class="transform scale-95 opacity-0"
               >
-                <MenuItems id="menu" class="w-[216px]">
+                <MenuItems id="menu" class="w-[250px]">
                   <div class="col">
                     <div class="content">
                       <RouterLink
@@ -371,6 +371,16 @@ const resourcesLinks = [
     name: "Fire Side Chats",
     link: "/fireside-chats",
     icon: new URL("/src/assets/icons/fireside_chats.svg", import.meta.url).href,
+  },
+  {
+    name: "Policy Analyzer",
+    link: "/policy-analyzer",
+    icon: new URL("/src/assets/icons/edit_document.png", import.meta.url).href,
+  },
+  {
+    name: "Cost Savings Estimator",
+    link: "/cost-saving-estimator",
+    icon: new URL("/src/assets/icons/attach_money.svg", import.meta.url).href,
   },
   // {
   //   name: "Claims Resource Hub",
