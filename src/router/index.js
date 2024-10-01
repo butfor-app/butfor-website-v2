@@ -167,6 +167,16 @@ const router = createRouter({
       name: "Butfor Vs Consultants",
       component: () => import("@/pages/ButforVsConsultantsPage.vue"),
     },
+    {
+      path: "/butfor-vs-excel",
+      name: "Butfor Vs Excel",
+      component: () => import("@/pages/ButforVsExcelPage.vue"),
+    },
+    {
+      path: "/butfor-vs-internal",
+      name: "Butfor Vs Internal",
+      component: () => import("@/pages/ButforVsInternal.vue"),
+    },
     ...thankyouRoutes,
     ...contactusRoutes,
     {

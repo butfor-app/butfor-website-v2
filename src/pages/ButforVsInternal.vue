@@ -2,8 +2,8 @@
   <HeroSection
     name="Why butfor Beats Traditional Consulting"
     desc="ButFor provides the same expert insights as traditional consultants at a fraction of the cost,
-          eliminating unnecessary fees and inefficiencies.
-          Our streamlined, tech-driven solutions deliver faster, tailored results, saving you both time and money."
+            eliminating unnecessary fees and inefficiencies.
+            Our streamlined, tech-driven solutions deliver faster, tailored results, saving you both time and money."
     bg="/imgs/butfor_vs_bg.png"
   />
 
@@ -21,55 +21,67 @@
       <div
         class="h-full w-full bg-[#E0E0E0] py-6 text-[22px] font-bold leading-[1] !text-black lg:text-[64px]"
       >
-        Traditional Consultants
+        Internal Claim Preparation
       </div>
 
       <div class="green">
-        Utilizes technology to streamline the process, reducing settlement time
-        by an average of 30-50%.
+        Leverages industry expertise and specialized knowledge in commercial
+        insurance, ensuring claims are handled efficiently and accurately.
       </div>
 
-      <div class="mid">Claim Settlement Time</div>
+      <div class="mid">Specialized Expertise</div>
 
       <div class="end">
-        Often takes months or even years to settle claims due to complex
-        negotiations and paperwork.
+        May lack the specialized knowledge required for complex claims, leading
+        to potential oversights and errors.
       </div>
 
       <div class="green">
-        Our technology standardizes the claims process and guarantees no formula
-        errors with high success every time.
+        Streamlines the claims process with automated workflows, allowing for
+        quicker resolution of claims and faster payouts.
       </div>
 
-      <div class="mid">Claim Success Rate</div>
+      <div class="mid">Time Efficiency</div>
 
       <div class="end">
-        May vary depending on the consultant’s experience and skills running
-        claims, with human error occurring often.
+        Often involves manual processes that can be slow, delaying claim
+        resolution and increasing administrative burden.
       </div>
 
       <div class="green">
-        Offers fixed fees, often resulting in substantial cost savings compared
-        to traditional consultants.
+        Reduces labor and operational costs through automation and efficient
+        processes.
       </div>
 
-      <div class="mid">Average Cost Savings</div>
+      <div class="mid">Cost Savings</div>
 
       <div class="end">
-        High hourly rates can lead to significant costs, especially for complex
-        claims.
+        Requires dedicated staff and resources, leading to higher operational
+        costs for the company.
       </div>
 
       <div class="green">
-        Provides a standardized approach to claims management, minimizing human
-        error and ensuring consistent application of policies.
+        Easily adapts to changing claims volumes and complexities, making it
+        suitable for businesses of all sizes and ensuring efficient handling
+        during peak times.
       </div>
 
-      <div class="mid">Consistency & Accuracy</div>
+      <div class="mid">Scalability</div>
 
       <div class="end">
-        Variability in approach and decision-making can lead to inconsistencies
-        and potential errors in claims handling.
+        May struggle to scale effectively during busy periods, resulting in
+        backlogs and increased processing times.
+      </div>
+      <div class="green">
+        Provides access to advanced technology and analytics tools that enhance
+        decision-making and optimize claims processing.
+      </div>
+
+      <div class="mid">Technology Access</div>
+
+      <div class="end">
+        Often relies on outdated systems or spreadsheets, which can hinder
+        efficiency and limit data insights.
       </div>
     </div>
   </section>
