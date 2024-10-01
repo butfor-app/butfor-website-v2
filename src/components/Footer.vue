@@ -37,7 +37,7 @@
             >
           </div>
           <div class="link_block">
-            <a href="/contact4">Jobs</a>
+            <RouterLink to="/careers">Jobs</RouterLink>
             <!-- <a href="#">Webinars</a> -->
             <RouterLink to="/webinars">Webinars</RouterLink>
             <a href="https://butfor.co/privacy-policy" class="lg:hidden"

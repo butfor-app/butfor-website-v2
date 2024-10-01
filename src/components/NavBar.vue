@@ -373,8 +373,8 @@ const resourcesLinks = [
     icon: new URL("/src/assets/icons/fireside_chats.svg", import.meta.url).href,
   },
   {
-    name: "Policy Analyzer",
-    link: "/policy-analyzer",
+    name: "Sustainability",
+    link: "/sustainability",
     icon: new URL("/src/assets/icons/edit_document.png", import.meta.url).href,
   },
   {
