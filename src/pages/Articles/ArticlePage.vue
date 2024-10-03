@@ -30,9 +30,17 @@
           <div class="text-3xl font-bold lg:text-5xl">
             {{ article.attributes.title }}
           </div>
-          <button class="self-end rounded-xl bg-primaryLight p-2">
+          <a
+            v-if="article.attributes.media_for_download.data"
+            :href="
+              'https://butfor.co/strapi' +
+              article.attributes.media_for_download.data.attributes.url
+            "
+            class="self-end rounded-xl bg-primaryLight p-2"
+            download
+          >
             Download
-          </button>
+          </a>
         </div>
         <div class="py-6" v-html="article.attributes.body"></div>
       </div>

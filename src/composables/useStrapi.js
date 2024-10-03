@@ -26,7 +26,7 @@ function useStrapi() {
     return articles;
   }
   async function getArticle(id) {
-    const resp = await fetch(STRAPI_API_BASE_URL + `/articles/${id}`, {
+    const resp = await fetch(STRAPI_API_BASE_URL + `/articles/${id}?populate[0]=media_for_download`, {
       headers: {
         ...STRAPI_HEADERS,
       },
