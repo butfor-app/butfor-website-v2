@@ -25,12 +25,14 @@
       </div>
       <div v-else class="rounded-3xl bg-primary p-10 text-white">
         <div
-          class="flex items-center justify-between border-b border-white py-10"
+          class="flex flex-col items-center justify-between border-b border-white py-10 lg:flex-row"
         >
-          <div class="text-5xl font-bold">
+          <div class="text-3xl font-bold lg:text-5xl">
             {{ article.attributes.title }}
           </div>
-          <button class="rounded-xl bg-primaryLight p-2">Download</button>
+          <button class="self-end rounded-xl bg-primaryLight p-2">
+            Download
+          </button>
         </div>
         <div class="py-6" v-html="article.attributes.body"></div>
       </div>
