@@ -88,12 +88,12 @@
             </li>
           </ul>
           <div class="flex justify-between">
-            <RouterLink to="/policy-analyzer" class="mx-auto">
+            <RouterLink to="/pricing" class="mx-auto">
               Subscription Pricing
             </RouterLink>
-            <RouterLink to="/policy-analyzer" class="mx-auto">
+            <button @click="scrollToContactForm" class="mx-auto">
               I Have Questions
-            </RouterLink>
+            </button>
           </div>
         </div>
       </div>
@@ -175,12 +175,18 @@ const generalData = useGeneralData();
 
 const solution_cards_data = ref({});
 solution_cards_data.value = generalData.solutionsByClaimType;
+const scrollToContactForm = () => {
+  const contact_form = document.querySelector("#contact_form");
+  if (contact_form)
+    contact_form.scrollIntoView({ behavior: "smooth", block: "start" });
+};
 </script>
 <style scoped>
 h2 {
   @apply mb-6 text-center text-[35px] font-bold uppercase leading-[1] text-black lg:text-left;
 }
-a {
+a,
+button {
   @apply block w-fit px-4 py-3 font-semibold text-primary;
   @apply rounded-2xl font-medium;
   @apply outline-none;
