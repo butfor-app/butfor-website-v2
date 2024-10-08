@@ -26,11 +26,14 @@ function useStrapi() {
     return articles;
   }
   async function getArticle(id) {
-    const resp = await fetch(STRAPI_API_BASE_URL + `/articles/${id}?populate[0]=media_for_download`, {
-      headers: {
-        ...STRAPI_HEADERS,
+    const resp = await fetch(
+      STRAPI_API_BASE_URL + `/articles/${id}?populate[0]=media_for_download`,
+      {
+        headers: {
+          ...STRAPI_HEADERS,
+        },
       },
-    });
+    );
     const data = await resp.json();
     const article = data.data;
     return article;
@@ -138,6 +141,22 @@ function useStrapi() {
     const fireSideChat = data.data;
     return fireSideChat;
   }
+  async function getLandingPage(landingPageId) {
+    const resp = await fetch(
+      STRAPI_API_BASE_URL +
+        "/landing-pages?filters[url][$eq]=" +
+        landingPageId +
+        "&populate[0]=background_image&populate[1]=feature_img",
+      {
+        headers: {
+          ...STRAPI_HEADERS,
+        },
+      },
+    );
+    const data = await resp.json();
+    const fireSideChat = data.data;
+    return fireSideChat;
+  }
   return {
     getImageUrl,
     getArticles,
@@ -149,6 +168,7 @@ function useStrapi() {
     getCaseStudy,
     getFireSideChats,
     getFireSideChat,
+    getLandingPage,
   };
 }
 

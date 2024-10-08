@@ -177,6 +177,11 @@ const router = createRouter({
       name: "Butfor Vs Internal",
       component: () => import("@/pages/ButforVsInternal.vue"),
     },
+    {
+      path: "/landing-page/:landingPageId",
+      name: "Landing Page",
+      component: () => import("@/pages/LandingPage/index.vue"),
+    },
     ...thankyouRoutes,
     ...contactusRoutes,
     {

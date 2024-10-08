@@ -30,7 +30,7 @@ const props = defineProps({
   },
   icon: {
     type: String,
-    required: true,
+    default: "",
   },
   bg: {
     type: String,
@@ -43,31 +43,31 @@ const props = defineProps({
 });
 const image = new URL(
   `/src/assets/images/solutions/${props.icon}`,
-  import.meta.url
+  import.meta.url,
 ).href;
 </script>
 <style lang="postcss" scoped>
 #feature_wrapper {
-  @apply flex flex-col gap-y-4 gap-x-2 items-center px-2;
+  @apply flex flex-col items-center gap-x-2 gap-y-4 px-2;
 
   @screen lg {
-    @apply flex-row justify-between items-center;
+    @apply flex-row items-center justify-between;
     @apply my-18;
   }
 
   > #content {
-    @apply flex flex-col max-w-[687px] my-0;
+    @apply my-0 flex max-w-[687px] flex-col;
     @screen lg {
       @apply my-18;
     }
     > #heading {
-      @apply text-4xl text-left font-bold mb-4 uppercase;
+      @apply mb-4 text-left text-4xl font-bold uppercase;
     }
     > #desc {
-      @apply text-xl font-medium font-aneklatin text-left text-primary;
+      @apply text-left font-aneklatin text-xl font-medium text-primary;
     }
     > #shadow_box {
-      @apply w-[100px] h-1 bg-[#1245591A] rounded-full mt-6;
+      @apply mt-6 h-1 w-[100px] rounded-full bg-[#1245591A];
     }
   }
   > img {

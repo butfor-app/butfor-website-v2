@@ -56,7 +56,7 @@ const scrollToContactForm = () => {
 watch(
   () => props.bg,
   () => {
-    console.log("bg changed");
+    // console.log("bg changed");
     // hero_bg_url.value = new URL(props.bg, import.meta.url).href;
     hero_bg_style.value = "background-image: url('" + props.bg + "');";
   },
