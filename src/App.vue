@@ -22,21 +22,6 @@ const description =
   "ButFor: Automate Complex Business Interruption Claims & Recover More. Streamline the process, save time, get expert guidance, reduce costs, and maximize your lost income. Visit butfor.co"; // Replace with your description
 const route = useRoute();
 const navRef = ref(null);
-watch(
-  () => route.query,
-  (query) => {
-    // console.log(route.path.includes("/product"));
-    // console.log("Scrolling to top");
-    if (route.path.includes("/product")) {
-    } else {
-      const navbarRef = document.querySelector("#scroll_anchor");
-      navbarRef.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }
-  },
-);
 
 useHead({
   title,
@@ -78,7 +63,44 @@ useHead({
     { property: "linkedin:url", content: "https://butfor.co" },
     { property: "linkedin:image", content: "https://www.butfor.co/metal.jpg" },
   ],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://butfor.co" + (route.path == "/" ? "" : route.path),
+    },
+  ],
 });
+
+watch(
+  () => route.query,
+  (query) => {
+    // console.log(route.path.includes("/product"));
+    // console.log("Scrolling to top");
+    if (route.path.includes("/product")) {
+    } else {
+      const navbarRef = document.querySelector("#scroll_anchor");
+      navbarRef.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  },
+);
+
+watch(
+  () => route.path,
+  () => {
+    scrollToFaqs();
+    useHead({
+      link: [
+        {
+          rel: "canonical",
+          href: "https://butfor.co" + route.path,
+        },
+      ],
+    });
+  },
+);
 </script>
 
 <style>
