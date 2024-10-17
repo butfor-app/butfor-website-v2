@@ -72,6 +72,7 @@ import Spinner from "@/components/General/Spinner.vue";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import useStrapi from "@/composables/useStrapi";
+import { useHead } from "@vueuse/head";
 
 const route = useRoute();
 const fireSideChat = ref({});
@@ -82,7 +83,21 @@ const fireSideChat_id = route.params.fireSideChat_id;
 // console.log(fireSideChat_id);
 
 getFireSideChat(fireSideChat_id).then((resp) => {
-  // console.log(resp);
+  if (resp.attributes.meta_tags.title) {
+    useHead({
+      title: resp.attributes.meta_tags.title,
+    });
+  }
+  if (resp.attributes.meta_tags.description) {
+    useHead({
+      meta: [
+        {
+          name: "description",
+          content: resp.attributes.meta_tags.description,
+        },
+      ],
+    });
+  }
   fireSideChat.value = resp;
 });
 const getImage = () => {

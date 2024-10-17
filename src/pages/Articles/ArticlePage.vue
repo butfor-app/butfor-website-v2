@@ -52,6 +52,7 @@ import { RouterLink, useRoute } from "vue-router";
 import { ref } from "vue";
 import Spinner from "@/components/General/Spinner.vue";
 import useStrapi from "@/composables/useStrapi";
+import { useHead } from "@vueuse/head";
 
 const route = useRoute();
 const { getArticle } = useStrapi();
@@ -60,7 +61,23 @@ const articleId = route.params.article_id;
 const article = ref({});
 
 getArticle(articleId).then((resp) => {
-  console.log(resp);
+  if (resp.attributes.meta_tags?.title) {
+    useHead({
+      title: resp.attributes.meta_tags.title,
+    });
+  }
+  if (resp.attributes.meta_tags?.description) {
+    useHead({
+      meta: [
+        {
+          name: "description",
+          content: resp.attributes.meta_tags.description,
+        },
+      ],
+    });
+  }
+
+  // console.log(resp);
   article.value = resp;
 });
 </script>

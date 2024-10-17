@@ -90,7 +90,7 @@ watch(
 watch(
   () => route.path,
   () => {
-    scrollToFaqs();
+    // scrollToFaqs();
     useHead({
       link: [
         {

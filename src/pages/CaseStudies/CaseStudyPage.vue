@@ -52,6 +52,7 @@ import { RouterLink, useRoute } from "vue-router";
 import { ref } from "vue";
 import Spinner from "@/components/General/Spinner.vue";
 import useStrapi from "@/composables/useStrapi";
+import { useHead } from "@vueuse/head";
 
 const route = useRoute();
 const { getCaseStudy } = useStrapi();
@@ -61,6 +62,23 @@ const caseStudy = ref({});
 
 getCaseStudy(caseStudyId).then((resp) => {
   // console.log(resp);
+
+  if (resp.attributes.meta_tags?.title) {
+    useHead({
+      title: resp.attributes.meta_tags.title,
+    });
+  }
+  if (resp.attributes.meta_tags?.description) {
+    useHead({
+      meta: [
+        {
+          name: "description",
+          content: resp.attributes.meta_tags.description,
+        },
+      ],
+    });
+  }
+
   caseStudy.value = resp;
 });
 </script>

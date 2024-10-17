@@ -71,16 +71,33 @@ import Spinner from "@/components/General/Spinner.vue";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import useStrapi from "@/composables/useStrapi";
+import { useHead } from "@vueuse/head";
 const route = useRoute();
 const webinar = ref({});
 
 const { getWebinar, getImageUrl } = useStrapi();
-
 const webinar_id = route.params.webinar_id;
 // console.log(webinar_id);
 
 getWebinar(webinar_id).then((resp) => {
-  // console.log(resp);
+  console.log(resp);
+
+  if (resp.attributes.meta_tags?.title) {
+    useHead({
+      title: resp.attributes.meta_tags.title,
+    });
+  }
+  if (resp.attributes.meta_tags?.description) {
+    useHead({
+      meta: [
+        {
+          name: "description",
+          content: resp.attributes.meta_tags.description,
+        },
+      ],
+    });
+  }
+
   webinar.value = resp;
 });
 const getImage = () => {

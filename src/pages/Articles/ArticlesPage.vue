@@ -25,12 +25,12 @@ import { ref } from "vue";
 import Spinner from "@/components/General/Spinner.vue";
 import ArticleCard from "@/components/Articles/ArticleCard.vue";
 import useStrapi from "@/composables/useStrapi";
+import { useHead } from "@vueuse/head";
 
 const { getArticles } = useStrapi();
 
 const articles = ref([]);
 getArticles().then((resp) => {
-  // console.log(resp);
   articles.value = resp;
 });
 
