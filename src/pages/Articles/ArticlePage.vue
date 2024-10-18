@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-[1200px] px-2 py-6 sm:px-4 md:px-18">
+  <div class="mx-auto max-w-[1200px] px-2 py-20 sm:px-4 md:px-18">
     <template v-if="!articleId || article == null">
       <div
         class="flex flex-col items-center gap-4 py-20 text-center text-xl font-medium"
@@ -23,12 +23,24 @@
         <!-- Loading... -->
         <Spinner />
       </div>
-      <div v-else class="rounded-3xl bg-primary p-10 text-white">
+      <div v-else class="rounded-3xl text-white shadow-xl shadow-gray-400">
         <div
-          class="flex flex-col items-center justify-between border-b border-white py-10 lg:flex-row"
+          class="flex flex-col items-center justify-between rounded-3xl border-b border-white bg-primary px-10 py-10 pt-10 lg:flex-row"
         >
-          <div class="text-3xl font-bold lg:text-5xl">
-            {{ article.attributes.title }}
+          <div class="flex flex-col-reverse items-center gap-y-4 lg:flex-row">
+            <div class="text-3xl font-bold lg:w-2/3 lg:text-5xl">
+              {{ article.attributes.title }}
+            </div>
+            <div class="h-fit lg:w-1/3">
+              <img
+                class="mx-auto rounded-xl"
+                :src="
+                  'https://butfor.co/strapi' +
+                  article.attributes.thumbnail.data.attributes.url
+                "
+                alt=""
+              />
+            </div>
           </div>
           <a
             v-if="article.attributes.media_for_download.data"
@@ -42,7 +54,10 @@
             Download
           </a>
         </div>
-        <div class="py-6" v-html="article.attributes.body"></div>
+        <div
+          class="flex flex-col gap-y-2 rounded-b-3xl bg-stone-100 px-10 py-10 text-black"
+          v-html="article.attributes.body"
+        ></div>
       </div>
     </template>
   </div>
@@ -77,7 +92,7 @@ getArticle(articleId).then((resp) => {
     });
   }
 
-  // console.log(resp);
+  console.log(resp);
   article.value = resp;
 });
 </script>

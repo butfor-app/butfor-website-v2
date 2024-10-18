@@ -28,7 +28,7 @@ function useStrapi() {
   async function getArticle(id) {
     const resp = await fetch(
       STRAPI_API_BASE_URL +
-        `/articles/${id}?populate[0]=media_for_download&populate[1]=meta_tags`,
+        `/articles/${id}?populate[0]=media_for_download&populate[1]=meta_tags&populate[2]=thumbnail`,
       {
         headers: {
           ...STRAPI_HEADERS,
@@ -56,7 +56,10 @@ function useStrapi() {
 
   async function getWebinar(webinarId) {
     const resp = await fetch(
-      STRAPI_API_BASE_URL + "/webinars/" + webinarId + "?populate[0]=thumbnail&populate[1]=meta_tags",
+      STRAPI_API_BASE_URL +
+        "/webinars/" +
+        webinarId +
+        "?populate[0]=thumbnail&populate[1]=meta_tags",
       {
         headers: {
           ...STRAPI_HEADERS,
