@@ -14,7 +14,8 @@ function useStrapi() {
 
   async function getArticles() {
     const resp = await fetch(
-      STRAPI_API_BASE_URL + "/articles?populate[0]=thumbnail",
+      STRAPI_API_BASE_URL +
+        "/articles?sort[0]=createdAt:desc&populate[0]=thumbnail",
       {
         headers: {
           ...STRAPI_HEADERS,
