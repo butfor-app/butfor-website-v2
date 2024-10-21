@@ -11,8 +11,8 @@
                 Live
               </button>
               <p class="hidden lg:inline">
-                CrowdStrike &amp; Business Interruption Fireside - Oct 24th,
-                3pm EST
+                CrowdStrike &amp; Business Interruption Fireside - Oct 24th, 3pm
+                EST
               </p>
             </RouterLink>
           </div>
@@ -375,6 +375,12 @@ const resourcesLinks = [
   {
     name: "Sustainability",
     link: "/sustainability",
+    icon: new URL("/src/assets/icons/manage_accounts.png", import.meta.url)
+      .href,
+  },
+  {
+    name: "White Papers",
+    link: "/white-papers",
     icon: new URL("/src/assets/icons/edit_document.png", import.meta.url).href,
   },
   {

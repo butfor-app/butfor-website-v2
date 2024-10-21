@@ -182,6 +182,16 @@ const router = createRouter({
       name: "Landing Page",
       component: () => import("@/pages/LandingPage/index.vue"),
     },
+    {
+      path: "/white-papers",
+      name: "White Papers",
+      component: () => import("@/pages/WhitePapers/WhitePapers.vue"),
+    },
+    {
+      path: "/white-papers/:whitePaperId",
+      name: "White Paper",
+      component: () => import("@/pages/WhitePapers/WhitePaper.vue"),
+    },
     ...thankyouRoutes,
     ...contactusRoutes,
     {

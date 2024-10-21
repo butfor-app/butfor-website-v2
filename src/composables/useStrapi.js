@@ -162,6 +162,36 @@ function useStrapi() {
     const fireSideChat = data.data;
     return fireSideChat;
   }
+
+  async function getWhitePapers() {
+    const resp = await fetch(
+      STRAPI_API_BASE_URL + "/white-papers?populate[0]=thumbnail",
+      {
+        headers: {
+          ...STRAPI_HEADERS,
+        },
+      },
+    );
+    const data = await resp.json();
+    const whitePapers = data.data;
+    return whitePapers;
+  }
+  async function getWhitePaper(whitePaperId) {
+    const resp = await fetch(
+      STRAPI_API_BASE_URL +
+        "/white-papers/" +
+        whitePaperId +
+        "?populate[0]=thumbnail&populate[1]=meta_tags",
+      {
+        headers: {
+          ...STRAPI_HEADERS,
+        },
+      },
+    );
+    const data = await resp.json();
+    const whitePaper = data.data;
+    return whitePaper;
+  }
   return {
     getImageUrl,
     getArticles,
@@ -174,6 +204,8 @@ function useStrapi() {
     getFireSideChats,
     getFireSideChat,
     getLandingPage,
+    getWhitePapers,
+    getWhitePaper,
   };
 }
 
