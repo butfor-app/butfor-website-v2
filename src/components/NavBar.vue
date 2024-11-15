@@ -11,7 +11,7 @@
                 Live
               </button>
               <p class="hidden lg:inline">
-                CrowdStrike &amp; Business Interruption Fireside - Oct 24th, 3pm
+                CrowdStrike &amp; Business Interruption Fireside - Dec 5th, 3pm
                 EST
               </p>
             </RouterLink>
