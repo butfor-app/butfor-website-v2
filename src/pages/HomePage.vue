@@ -155,7 +155,7 @@ onMounted(() => {
   }, 5000);
 });
 useHead({
-  title: "Butfor - Complex &amp; Catastrophic Business Interruption Claim Preparation",
+  title: "Butfor - Complex & Catastrophic Business Interruption Claim Preparation",
   meta: [
     {
       name: "description",
