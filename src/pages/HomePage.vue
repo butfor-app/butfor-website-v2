@@ -12,8 +12,17 @@
       </div>
       in one place
     </div>
+    <div id="video" class="px-4 py-8">
+      <video class="mx-auto w-full rounded-lg lg:w-1/2" autoplay muted controls>
+        <source
+          src="http://localhost:5173/videos/butfor.mp4"
+          type="video/mp4"
+        />
+        Video not supported in your browser
+      </video>
+    </div>
     <div id="buttons">
-    <!--- <a href="#" id="productVid">See Product Video</a> --->
+      <!--- <a href="#" id="productVid">See Product Video</a> --->
       <RouterLink to="/book_demo" id="demo">Book Demo</RouterLink>
     </div>
   </div>
@@ -155,7 +164,8 @@ onMounted(() => {
   }, 5000);
 });
 useHead({
-  title: "Butfor - Complex & Catastrophic Business Interruption Claim Preparation",
+  title:
+    "Butfor - Complex & Catastrophic Business Interruption Claim Preparation",
   meta: [
     {
       name: "description",
@@ -169,17 +179,17 @@ useHead({
 <style lang="postcss" scoped>
 #hero_section {
   @apply flex flex-col items-center justify-center;
-  @apply py-4 h-[calc(100vh)] text-center;
-  @apply bg-[url('@/assets/images/hero-bg.png')] bg-no-repeat	bg-cover bg-center;
+  @apply h-[80vh] py-14 text-center;
+  @apply bg-[url('@/assets/images/hero-bg.png')] bg-cover bg-center bg-no-repeat;
   @screen md {
-    @apply h-[calc(100vh_-_144px)];
+    /* @apply h-[calc(100vh_-_144px)]; */
   }
-  @apply flex items-center justify-center flex-col overflow-hidden;
+  @apply flex flex-col items-center justify-center overflow-hidden;
   > #heading {
-    @apply mb-10 text-[46px] font-extrabold text-white uppercase;
+    @apply mb-10 text-[46px] font-extrabold uppercase text-white;
   }
   > #subheading {
-    @apply mb-9 flex flex-wrap justify-center gap-x-1 text-xl font-medium font-aneklatin text-white;
+    @apply mb-9 flex flex-wrap justify-center gap-x-1 font-aneklatin text-xl font-medium text-white;
   }
   > #buttons {
     @apply flex flex-col items-center gap-x-8 gap-y-4;
@@ -187,8 +197,8 @@ useHead({
       @apply flex-row;
     }
     > a {
-      @apply w-44 h-11 bg-white rounded-full;
-      @apply flex justify-center items-center text-primary  font-semibold font-aneklatin;
+      @apply h-11 w-44 rounded-full bg-white;
+      @apply flex items-center justify-center font-aneklatin font-semibold text-primary;
     }
     > #productVid {
       @apply bg-primary text-white;
@@ -200,56 +210,56 @@ useHead({
 }
 
 #solutions {
-  @apply overflow-x-hidden flex flex-col items-center justify-center bg-[#5983921A];
+  @apply flex flex-col items-center justify-center overflow-x-hidden bg-[#5983921A];
   @apply pt-16;
   > #heading {
-    @apply text-[46px] font-extrabold text-center text-black mb-9;
+    @apply mb-9 text-center text-[46px] font-extrabold text-black;
   }
   > .solution_category {
-    @apply flex flex-col justify-center items-center text-black text-center font-semibold text-2xl mb-14;
+    @apply mb-14 flex flex-col items-center justify-center text-center text-2xl font-semibold text-black;
     > #heading {
-      @apply text-2xl font-semibold mb-12;
+      @apply mb-12 text-2xl font-semibold;
     }
     > button {
-      @apply text-primary text-base font-medium h-11 w-[168px] rounded-full border border-primary;
-      @apply cursor-pointer mt-9;
+      @apply h-11 w-[168px] rounded-full border border-primary text-base font-medium text-primary;
+      @apply mt-9 cursor-pointer;
     }
   }
 }
 #features {
   /* @apply hidden; */
-  @apply py-16 flex flex-col gap-y-10 items-center;
+  @apply flex flex-col items-center gap-y-10 py-16;
   @screen lg {
-    @apply gap-y-0 max-w-[1440px] mx-auto;
+    @apply mx-auto max-w-[1440px] gap-y-0;
   }
   > #header {
-    @apply text-black text-center font-extrabold text-[46px] mb-9;
+    @apply mb-9 text-center text-[46px] font-extrabold text-black;
   }
 }
 #about {
   @screen lg {
-    @apply h-[634px] pt-56 px-48;
+    @apply h-[634px] px-48 pt-56;
   }
-  @apply w-full relative p-20 px-2;
+  @apply relative w-full p-20 px-2;
   @screen lg {
     @apply pt-40;
   }
   > #bg {
-    @apply w-full -z-20 absolute top-0 left-0;
+    @apply absolute left-0 top-0 -z-20 w-full;
     > img {
     }
   }
   > #gradient {
-    @apply h-full w-full -z-10 absolute top-0 left-0;
+    @apply absolute left-0 top-0 -z-10 h-full w-full;
     @apply bg-primary opacity-70;
   }
   > #content {
     > #heading {
-      @apply text-[46px] text-center font-extrabold text-white;
+      @apply text-center text-[46px] font-extrabold text-white;
     }
     > #desc {
-      @apply text-white text-xl text-center font-aneklatin;
-      @apply px-6 mt-6 mb-9 mx-auto;
+      @apply text-center font-aneklatin text-xl text-white;
+      @apply mx-auto mb-9 mt-6 px-6;
       @apply font-medium;
       @screen lg {
         @apply w-[1000px];
@@ -258,14 +268,14 @@ useHead({
   }
 }
 #faq {
-  @apply max-w-[1200px] mx-auto;
+  @apply mx-auto max-w-[1200px];
   > #heading {
-    @apply text-center  font-extrabold text-[46px] mt-12 mb-16;
+    @apply mb-16 mt-12 text-center text-[46px] font-extrabold;
   }
   > #btn {
-    @apply w-full flex items-center justify-center mt-9 mb-16;
+    @apply mb-16 mt-9 flex w-full items-center justify-center;
     > button {
-      @apply text-primary text-base font-medium h-11 w-[168px] rounded-full border border-primary;
+      @apply h-11 w-[168px] rounded-full border border-primary text-base font-medium text-primary;
       @apply cursor-pointer;
     }
   }

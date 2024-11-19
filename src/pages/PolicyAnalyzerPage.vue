@@ -359,7 +359,7 @@ const handleSubmit = async () => {
   // console.log(resp);
 
   formSubmitted.value = true;
-  submitting = false;
+  submitting.value = false;
 };
 </script>
 <style lang="postcss" scoped>
