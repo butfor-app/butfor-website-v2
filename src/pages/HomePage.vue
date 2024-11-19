@@ -1,6 +1,8 @@
 <template>
   <div id="hero_section">
-    <div id="heading" ref="headerRef">Simplifying Complex Claims</div>
+    <div id="heading" ref="headerRef" class="h-[200px] md:h-auto">
+      Simplifying Complex Claims
+    </div>
     <div id="subheading">
       Butfor helps
       <div class="w-[100px]">
@@ -179,7 +181,7 @@ useHead({
 <style lang="postcss" scoped>
 #hero_section {
   @apply flex flex-col items-center justify-center;
-  @apply h-[80vh] py-14 text-center;
+  @apply py-14 text-center;
   @apply bg-[url('@/assets/images/hero-bg.png')] bg-cover bg-center bg-no-repeat;
   @screen md {
     /* @apply h-[calc(100vh_-_144px)]; */
