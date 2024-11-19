@@ -17,7 +17,7 @@
     <div id="video" class="px-4 py-8">
       <video class="mx-auto w-full rounded-lg lg:w-1/2" autoplay muted controls>
         <source
-          src="http://localhost:5173/videos/butfor.mp4"
+          src="/videos/butfor.mp4"
           type="video/mp4"
         />
         Video not supported in your browser
