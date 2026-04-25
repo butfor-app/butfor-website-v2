@@ -61,7 +61,7 @@
       <button id="learn_btn"><a href="https://www.butfor.co/book_demo">Learn More</a></button>
     </div>
   </div>
-  <ContactForm />
+  <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Webinars" />
 </template>
 <script setup>
 import { useHead } from "@vueuse/head";
@@ -69,7 +69,6 @@ import { computed, ref } from "vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import WebinarCard from "@/components/WebinarCard.vue";
-import ContactForm from "@/components/ContactForm.vue";
 import ButForForm from "@/components/ButForForm.vue";
 import useStrapi from "@/composables/useStrapi";
 
