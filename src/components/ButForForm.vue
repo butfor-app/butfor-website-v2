@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="!bare"
     id="contact_form"
     class="py-16 bg-[url('@/assets/images/contact-hero-bg.png')] bg-no-repeat bg-cover bg-center"
   >
@@ -125,6 +126,65 @@
       </form>
     </div>
   </div>
+
+  <!-- Bare mode: white card only, no background wrapper -->
+  <div v-else class="w-full bg-white rounded-2xl px-6 py-8">
+    <div class="mb-8 text-[46px] text-primary font-extrabold text-center">
+      {{ title }}
+    </div>
+
+    <div v-if="submitted" class="text-center py-6">
+      <div class="text-2xl font-extrabold text-primary mb-3">You're all set!</div>
+      <p class="text-gray-500 text-base">Thanks for reaching out — we'll be in touch shortly.</p>
+    </div>
+
+    <form v-else @submit.prevent="handleSubmit" class="flex flex-col gap-y-4" novalidate>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="flex flex-col gap-y-1">
+          <label class="text-xs font-semibold uppercase tracking-wide text-primaryDark">First Name <span class="text-red-500">*</span></label>
+          <input v-model="form.firstname" type="text" placeholder="Jane" :class="fieldClass(fieldErrors.firstname)" />
+          <p v-if="fieldErrors.firstname" class="text-xs text-red-500">{{ fieldErrors.firstname }}</p>
+        </div>
+        <div class="flex flex-col gap-y-1">
+          <label class="text-xs font-semibold uppercase tracking-wide text-primaryDark">Last Name <span class="text-red-500">*</span></label>
+          <input v-model="form.lastname" type="text" placeholder="Smith" :class="fieldClass(fieldErrors.lastname)" />
+          <p v-if="fieldErrors.lastname" class="text-xs text-red-500">{{ fieldErrors.lastname }}</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-y-1">
+        <label class="text-xs font-semibold uppercase tracking-wide text-primaryDark">Work Email <span class="text-red-500">*</span></label>
+        <input v-model="form.email" type="email" placeholder="jane@company.com" :class="fieldClass(fieldErrors.email)" @blur="validateEmail" />
+        <p v-if="fieldErrors.email" class="text-xs text-red-500">{{ fieldErrors.email }}</p>
+      </div>
+      <div class="flex flex-col gap-y-1">
+        <label class="text-xs font-semibold uppercase tracking-wide text-primaryDark">Company Name <span class="text-red-500">*</span></label>
+        <input v-model="form.company" type="text" placeholder="Acme Corp" :class="fieldClass(fieldErrors.company)" />
+        <p v-if="fieldErrors.company" class="text-xs text-red-500">{{ fieldErrors.company }}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="flex flex-col gap-y-1">
+          <label class="text-xs font-semibold uppercase tracking-wide text-primaryDark">Job Title <span class="text-red-500">*</span></label>
+          <input v-model="form.jobtitle" type="text" placeholder="Claims Manager" :class="fieldClass(fieldErrors.jobtitle)" />
+          <p v-if="fieldErrors.jobtitle" class="text-xs text-red-500">{{ fieldErrors.jobtitle }}</p>
+        </div>
+        <div class="flex flex-col gap-y-1">
+          <label class="text-xs font-semibold uppercase tracking-wide text-primaryDark">Phone</label>
+          <input v-model="form.phone" type="tel" placeholder="+1 (555) 000-0000" :class="fieldClass(null)" />
+        </div>
+      </div>
+      <p v-if="submitError" class="text-sm text-red-500 text-center -mb-1">{{ submitError }}</p>
+      <button type="submit" :disabled="loading" class="mt-2 w-full h-12 bg-primary text-white font-bold rounded-full uppercase tracking-widest hover:bg-primaryDark transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed">
+        <span v-if="loading" class="flex items-center justify-center gap-x-2">
+          <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+          </svg>
+          Submitting...
+        </span>
+        <span v-else>Submit</span>
+      </button>
+    </form>
+  </div>
 </template>
 
 <script setup>
@@ -134,6 +194,10 @@ const props = defineProps({
   title: {
     type: String,
     default: "LET'S GO",
+  },
+  bare: {
+    type: Boolean,
+    default: false,
   },
   pageName: {
     type: String,

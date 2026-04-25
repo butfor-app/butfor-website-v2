@@ -47,7 +47,7 @@
       Want to know when we host our next webinar with a risk, claims & insurtech leader?
     </div>
     <div class="max-w-lg w-full px-2">
-      <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Webinars" />
+      <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Webinars" :bare="true" />
     </div>
   </div>
   <div id="view_demo">

@@ -50,7 +50,7 @@
       leader?
     </div>
     <div class="w-full max-w-lg px-2">
-      <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Fireside Chats" />
+      <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Fireside Chats" :bare="true" />
     </div>
   </div>
   <div id="view_demo">
