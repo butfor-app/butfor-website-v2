@@ -27,8 +27,8 @@ const props = defineProps({
 });
 onMounted(() => {
   hbspt.forms.create({
-    region: "na1",
-    portalId: "39510047",
+    region: "na2",
+    portalId: "245822077",
     formId: props.formId,
     target: "#hubspotForm",
   });

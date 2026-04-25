@@ -193,15 +193,14 @@
     </div>
   </div>
   <!-- <HubspotFormBare formId="b20e853b-b330-4419-b345-060788b0c267" /> -->
-  <HubspotForm formId="83efaaa1-4ea3-4a48-b759-c2f345c5a1e3" />
+  <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Product Page" />
 </template>
 <script setup>
 import { useHead } from "@vueuse/head";
 import { Carousel, Pagination, Slide } from "vue3-carousel";
 import { onMounted, ref } from "vue";
 import { useRoute, onBeforeRouteUpdate } from "vue-router";
-import HubspotForm from "@/components/HubspotForm.vue";
-import HubspotFormBare from "@/components/HubspotFormBare.vue";
+import ButForForm from "@/components/ButForForm.vue";
 
 useHead({
   title: "Butfor - Product",
