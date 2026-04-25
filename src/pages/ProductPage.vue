@@ -192,7 +192,6 @@
       </div>
     </div>
   </div>
-  <!-- <HubspotFormBare formId="b20e853b-b330-4419-b345-060788b0c267" /> -->
   <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Product Page" />
 </template>
 <script setup>

@@ -1,8 +1,8 @@
 <template>
-  <HubspotForm :formId="formId" :title="title" />
+  <ButForForm :formId="formId" :title="title" pageName="Contact / Demo" />
 </template>
 <script setup>
-import HubspotForm from "@/components/HubspotForm.vue";
+import ButForForm from "@/components/ButForForm.vue";
 
 const props = defineProps({
   title: {

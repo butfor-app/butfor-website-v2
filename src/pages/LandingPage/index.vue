@@ -46,7 +46,7 @@
       :solutions="solution_cards_data"
     />
     <GetStarted />
-    <HubspotForm :formId="landing_page_data.attributes.hubspot_form_id" />
+    <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Landing Page" />
   </div>
   <div v-else>
     <div v-if="_404" class="py-44 text-center text-4xl font-bold text-gray-600">
@@ -66,7 +66,7 @@ import CompaniesSlider from "@/components/CompaniesSlider.vue";
 import HeroSection from "@/components/HeroSection.vue";
 import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import GetStarted from "@/components/GetStarted.vue";
-import HubspotForm from "@/components/HubspotForm.vue";
+import ButForForm from "@/components/ButForForm.vue";
 import { useHead } from "@vueuse/head";
 import { useGeneralData } from "@/stores/useGeneralData";
 import useStrapi from "@/composables/useStrapi.js";

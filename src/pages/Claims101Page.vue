@@ -47,7 +47,7 @@
             "
             alt=""
           />
-          <HubspotFormBare :formId="claim101.hubspot_form_id" />
+          <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Claims 101" />
         </div>
         <div
           v-else
@@ -64,7 +64,7 @@
 </template>
 
 <script setup>
-import HubspotFormBare from "@/components/HubspotFormBare.vue";
+import ButForForm from "@/components/ButForForm.vue";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import useStrapi from "@/composables/useStrapi.js";

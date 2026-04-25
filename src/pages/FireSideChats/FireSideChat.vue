@@ -52,13 +52,7 @@
               :src="getImage()"
               alt=""
             />
-            <HubspotFormBare
-              :formId="
-                fireSideChat.attributes.hubspot_form_id
-                  ? fireSideChat.attributes.hubspot_form_id
-                  : '83efaaa1-4ea3-4a48-b759-c2f345c5a1e3'
-              "
-            />
+            <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Fireside Chat" />
           </div>
         </div>
       </div>
@@ -67,7 +61,7 @@
 </template>
 
 <script setup>
-import HubspotFormBare from "@/components/HubspotFormBare.vue";
+import ButForForm from "@/components/ButForForm.vue";
 import Spinner from "@/components/General/Spinner.vue";
 import { ref } from "vue";
 import { useRoute } from "vue-router";

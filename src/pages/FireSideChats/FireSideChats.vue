@@ -50,7 +50,7 @@
       leader?
     </div>
     <div class="w-full max-w-lg px-2">
-      <HubspotFormBare formId="b20e853b-b330-4419-b345-060788b0c267" />
+      <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Fireside Chats" />
     </div>
   </div>
   <div id="view_demo">
@@ -79,7 +79,7 @@ import { useGeneralData } from "@/stores/useGeneralData";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import FireSideCard from "@/components/FireSideCard.vue";
 import ContactForm from "@/components/ContactForm.vue";
-import HubspotFormBare from "@/components/HubspotFormBare.vue";
+import ButForForm from "@/components/ButForForm.vue";
 import useStrapi from "@/composables/useStrapi";
 
 useHead({
