@@ -315,6 +315,8 @@ import GetStarted from "@/components/GetStarted.vue";
 import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import ButForForm from "@/components/ButForForm.vue";
+import { useHead } from "@vueuse/head";
+useHead({ title: "ButFor - Policy Analyzer" });
 
 const generalData = useGeneralData();
 const formSubmitted = ref(false);

@@ -6,6 +6,8 @@
 </template>
 <script setup>
 import { useRoute } from "vue-router";
+import { useHead } from "@vueuse/head";
+useHead({ title: "ButFor - Page Not Found" });
 const Route = useRoute();
 const currentPath = Route.path;
 </script>

@@ -196,7 +196,10 @@
     </section>
   </section>
 </template>
-<script setup></script>
+<script setup>
+import { useHead } from "@vueuse/head";
+useHead({ title: "ButFor - Privacy Policy" });
+</script>
 <style lang="postcss" scoped>
 .row {
   @apply text-base;

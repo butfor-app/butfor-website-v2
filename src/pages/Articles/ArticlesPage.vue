@@ -26,6 +26,7 @@ import Spinner from "@/components/General/Spinner.vue";
 import ArticleCard from "@/components/Articles/ArticleCard.vue";
 import useStrapi from "@/composables/useStrapi";
 import { useHead } from "@vueuse/head";
+useHead({ title: "ButFor - Articles" });
 
 const { getArticles } = useStrapi();
 

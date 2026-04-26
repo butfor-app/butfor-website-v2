@@ -26,6 +26,8 @@ import GetStarted from "@/components/GetStarted.vue";
 import ContactForm from "@/components/ContactForm.vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import { ref, onMounted } from "vue";
+import { useHead } from "@vueuse/head";
+useHead({ title: "ButFor - Solutions" });
 const generalData = useGeneralData();
 // const features = generalData.features;
 const solutionsByCompanyType = generalData.solutionsByCompanyType;

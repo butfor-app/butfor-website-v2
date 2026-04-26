@@ -54,8 +54,10 @@
 </template>
 <script setup>
 import { ref } from "vue";
+import { useHead } from "@vueuse/head";
 import Spinner from "@/components/General/Spinner.vue";
 import useStrapi from "@/composables/useStrapi";
+useHead({ title: "ButFor - Case Studies" });
 
 const { getCaseStudies } = useStrapi();
 

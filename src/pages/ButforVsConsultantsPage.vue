@@ -94,6 +94,8 @@ import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import ButForForm from "@/components/ButForForm.vue";
 import HeroSection from "@/components/HeroSection.vue";
+import { useHead } from "@vueuse/head";
+useHead({ title: "ButFor - ButFor vs Consultants" });
 
 const generalData = useGeneralData();
 

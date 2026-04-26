@@ -90,6 +90,8 @@
 import HeroSection from "@/components/HeroSection.vue";
 import ButForForm from "@/components/ButForForm.vue";
 import integrations_bg_new from "@/assets/images/integrations_bg_new.png";
+import { useHead } from "@vueuse/head";
+useHead({ title: "ButFor - Integrations" });
 </script>
 <style lang="postcss" scoped>
 .bg_logos {

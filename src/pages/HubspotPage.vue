@@ -3,6 +3,8 @@
 </template>
 <script setup>
 import ButForForm from "@/components/ButForForm.vue";
+import { useHead } from "@vueuse/head";
+useHead({ title: "ButFor - Contact" });
 
 const props = defineProps({
   title: {
