@@ -33,7 +33,10 @@
 </template>
 <script setup>
 import { ref } from "vue";
+import { useHead } from "@vueuse/head";
 import useStrapi from "@/composables/useStrapi.js";
+
+useHead({ title: "ButFor - White Papers" });
 
 const { getWhitePapers, getImageUrl } = useStrapi();
 
