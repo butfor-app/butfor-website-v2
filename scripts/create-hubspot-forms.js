@@ -49,6 +49,9 @@ const PAGES = [
   "Solutions - City Shutdowns",
   "Solutions - Pandemics",
   "Claims 101 Page",
+  "Webinar - CrowdStrike & Business Interruption",
+  "Fireside Chat - CrowdStrike & Business Interruption",
+  "White Paper - When Disaster Strikes",
 ];
 
 const token = process.env.HUBSPOT_API_TOKEN;
