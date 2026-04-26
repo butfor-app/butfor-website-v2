@@ -22,7 +22,7 @@
     :solutions="solution_cards_data"
   />
   <GetStarted />
-  <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Solutions" />
+  <ButForForm :formId="formId" pageName="Solutions" />
 </template>
 <script setup>
 import CompaniesSlider from "@/components/CompaniesSlider.vue";
@@ -33,15 +33,38 @@ import GetStarted from "@/components/GetStarted.vue";
 import ButForForm from "@/components/ButForForm.vue";
 import { useHead } from "@vueuse/head";
 import { useGeneralData } from "@/stores/useGeneralData";
-import { defineProps, ref, watch, toRef, onMounted } from "vue";
+import { ref, computed, watch } from "vue";
 import { useRoute, onBeforeRouteUpdate } from "vue-router";
+
+const SOLUTION_FORM_IDS = {
+  "enterprise":           "67499095-e2e3-4c9e-8603-612712e4adff",
+  "insurance-companies":  "570aaff6-2026-4103-a5bb-dddb8468e005",
+  "claim-managers":       "6928a319-b976-4f33-9e88-10d8522b0373",
+  "insurance-brokers":    "d8edf62d-d09e-4cd2-8485-0419becb799f",
+  "law-firms":            "5d7e7c38-e996-4d40-b35c-a76fdec1beb2",
+  "risk-compliance":      "479e2427-0ada-4b35-a072-583d96f2257e",
+  "finance-analysts":     "1cfec617-31f1-4026-8521-a5c8904cea71",
+  "forensic-accountants": "97f32196-7b5d-49ea-bbc8-0b321e583208",
+  "executive-teams":      "40d094d9-149b-439d-a7fc-82e62bb665e4",
+  "natural-disasters":    "1b91d01e-d6e8-421d-ae79-ce8e563cc628",
+  "fire-or-explosion":    "a9b35634-d5e9-4070-b938-d06ca77ec349",
+  "equipment-breakdown":  "3a001c4a-0665-419d-82c3-2583d7460261",
+  "cyber-attacks":        "8d8492b2-b288-4ad6-9307-6b283e6e9395",
+  "power-outages":        "0aef49a5-6160-48d3-80ca-e2f99321afba",
+  "city-shutdowns":       "4839eb4d-0250-472f-bf68-89e265ae5a4a",
+  "pandemics":            "6cc2e41c-4383-4ced-9ef5-fbb47bbba6c2",
+  "faulty-construction":  "e26d05ed-c1ab-4421-a81a-b07eb4071ed6",
+};
 const route = useRoute();
 const generalData = useGeneralData();
 
-const routeName = ref();
+const routeName = ref(route.params.solutionKey);
 const solution_cards_data = ref({});
 const solution_data = ref([]);
-routeName.value = route.params.solutionKey;
+
+const formId = computed(
+  () => SOLUTION_FORM_IDS[routeName.value] ?? "d67f1e97-d23d-4960-849a-4153be831abc"
+);
 
 onBeforeRouteUpdate((to, from) => {
   routeName.value = to.params.solutionKey;

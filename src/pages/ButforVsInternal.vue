@@ -96,7 +96,7 @@
       :solutions="solution_cards_data"
     />
   </section>
-  <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="ButFor vs Internal" />
+  <ButForForm formId="806e7b83-eff1-4e95-a043-3a1b5434dbc7" pageName="ButFor vs Internal" />
 </template>
 
 <script setup>

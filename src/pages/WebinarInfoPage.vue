@@ -50,7 +50,7 @@
               :src="getImage()"
               alt=""
             />
-            <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="Webinar" />
+            <ButForForm formId="ee347165-05ed-4624-ac37-26f820e1545f" pageName="Webinar" />
           </div>
         </div>
       </div>

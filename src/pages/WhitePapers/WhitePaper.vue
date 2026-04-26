@@ -53,7 +53,7 @@
               "
               alt=""
             />
-            <ButForForm formId="32e9d6a5-21fe-49b1-af99-0b06119c032d" pageName="White Paper" />
+            <ButForForm formId="b12ff694-4863-4630-9114-639a8ef86414" pageName="White Paper" />
           </div>
         </div>
       </div>
