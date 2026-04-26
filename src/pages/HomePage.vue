@@ -15,24 +15,11 @@
       in one place
     </div>
     <div id="video" class="px-4 py-8">
-      <div class="mx-auto w-full lg:w-1/2">
-        <div v-if="!videoActive" class="relative cursor-pointer rounded-lg overflow-hidden bg-black" style="aspect-ratio:16/9" @click="videoActive = true">
-          <img
-            :src="`https://i.ytimg.com/vi/${YOUTUBE_ID}/hqdefault.jpg`"
-            class="w-full h-full object-cover opacity-80"
-            alt="ButFor product video"
-          />
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg">
-              <svg class="w-6 h-6 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-          </div>
-        </div>
+      <div class="mx-auto w-full max-w-4xl">
         <iframe
-          v-else
           class="w-full rounded-lg"
           style="aspect-ratio:16/9"
-          :src="`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1`"
+          :src="`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&mute=1`"
           allow="autoplay; encrypted-media"
           allowfullscreen
         />
@@ -106,7 +93,6 @@ import { useGeneralData } from "@/stores/useGeneralData";
 import { ref, onMounted } from "vue";
 import { useRoute, onBeforeRouteUpdate } from "vue-router";
 const YOUTUBE_ID = 'jOnmxMxB_r4';
-const videoActive = ref(false);
 
 const generalData = useGeneralData();
 const route = useRoute();
