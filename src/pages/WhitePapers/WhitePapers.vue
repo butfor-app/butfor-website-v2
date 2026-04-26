@@ -25,7 +25,7 @@
           :to="'/white-papers/' + whitePaper.id"
           class="border border-primaryLight px-3 py-2 hover:bg-primaryLight hover:text-white"
         >
-          Register
+          Download
         </RouterLink>
       </div>
     </div>
