@@ -47,7 +47,7 @@
             "
             alt=""
           />
-          <ButForForm formId="79e72c6d-a330-48c4-9366-6fe0d1f8c02f" pageName="Claims 101" />
+          <Claims101Form />
         </div>
         <div
           v-else
@@ -64,7 +64,7 @@
 </template>
 
 <script setup>
-import ButForForm from "@/components/ButForForm.vue";
+import Claims101Form from "@/components/Claims101Form.vue";
 import { useHead } from "@vueuse/head";
 import { ref } from "vue";
 
