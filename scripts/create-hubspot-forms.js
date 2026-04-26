@@ -48,6 +48,7 @@ const PAGES = [
   "Solutions - Construction or Renovation",
   "Solutions - City Shutdowns",
   "Solutions - Pandemics",
+  "Claims 101 Page",
 ];
 
 const token = process.env.HUBSPOT_API_TOKEN;
@@ -188,6 +189,16 @@ async function probe() {
 }
 
 async function main() {
+  // Optional: pass a page name as argv to create only that one form
+  // e.g. node create-hubspot-forms.js "Claims 101 Page"
+  const filter = process.argv[2] ? process.argv[2].trim() : null;
+  const pagesToCreate = filter ? PAGES.filter((p) => p === filter) : PAGES;
+
+  if (filter && pagesToCreate.length === 0) {
+    console.error(`No page found matching "${filter}". Available pages:\n${PAGES.join("\n")}`);
+    process.exit(1);
+  }
+
   // --- Probe test ---
   try {
     await probe();
@@ -197,10 +208,12 @@ async function main() {
     process.exit(1);
   }
 
-  // --- Create all forms ---
-  const mapping = {};
+  // Load existing mappings so we don't overwrite already-created forms
+  const outPath = path.join(__dirname, "hubspot-form-ids.json");
+  const mapping = fs.existsSync(outPath) ? JSON.parse(fs.readFileSync(outPath, "utf8")) : {};
 
-  for (const pageName of PAGES) {
+  // --- Create filtered forms ---
+  for (const pageName of pagesToCreate) {
     process.stdout.write(`Creating form for "${pageName}"... `);
     try {
       const form = await request("POST", "/marketing/v3/forms", buildPayload(`ButFor - ${pageName}`));
@@ -212,7 +225,6 @@ async function main() {
     }
   }
 
-  const outPath = path.join(__dirname, "hubspot-form-ids.json");
   fs.writeFileSync(outPath, JSON.stringify(mapping, null, 2));
   console.log(`\nDone. Mapping saved to ${outPath}`);
   console.log(JSON.stringify(mapping, null, 2));
