@@ -22,7 +22,7 @@
     :solutions="solution_cards_data"
   />
   <GetStarted />
-  <ButForForm :formId="formId" pageName="Solutions" />
+  <ButForForm :formId="formId" :pageName="pageName" />
 </template>
 <script setup>
 import CompaniesSlider from "@/components/CompaniesSlider.vue";
@@ -64,6 +64,12 @@ const solution_data = ref([]);
 
 const formId = computed(
   () => SOLUTION_FORM_IDS[routeName.value] ?? "d67f1e97-d23d-4960-849a-4153be831abc"
+);
+
+const pageName = computed(() =>
+  solution_data.value?.title
+    ? `Solutions - ${solution_data.value.title}`
+    : `Solutions - ${routeName.value}`
 );
 
 onBeforeRouteUpdate((to, from) => {
