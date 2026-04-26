@@ -8,11 +8,10 @@
               <button
                 class="h-8 cursor-pointer rounded-2xl bg-white px-4 text-black"
               >
-                Live
+                Fireside Chat
               </button>
               <p class="hidden lg:inline">
-                CrowdStrike &amp; Business Interruption Fireside - Dec 5th, 3pm
-                EST
+                Cyber Incidents &amp; Business Interruption - May 20th, 3pm EST
               </p>
             </RouterLink>
           </div>
