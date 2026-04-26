@@ -161,7 +161,11 @@ async function handleSubmit() {
             { objectTypeId: '0-1', name: 'company',   value: form.value.company.trim() },
             { objectTypeId: '0-1', name: 'jobtitle',  value: form.value.jobtitle.trim() },
           ],
-          context: { pageUri: window.location.href, pageName: 'Claims 101' },
+          context: {
+            pageUri: window.location.href,
+            pageName: 'Claims 101',
+            hutk: document.cookie.split(';').find(c => c.trim().startsWith('hubspotutk='))?.split('=')?.[1] || undefined,
+          },
         }),
       }
     );

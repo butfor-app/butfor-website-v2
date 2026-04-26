@@ -311,6 +311,7 @@ async function handleSubmit() {
           context: {
             pageUri: window.location.href,
             pageName: props.pageName || document.title,
+            hutk: document.cookie.split(';').find(c => c.trim().startsWith('hubspotutk='))?.split('=')?.[1] || undefined,
           },
         }),
       }
