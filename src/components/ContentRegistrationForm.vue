@@ -1,11 +1,12 @@
 <template>
-  <div v-if="submitted" class="py-4 text-center">
-    <div class="text-lg font-semibold text-primary">
-      {{ downloadUrl ? 'Your download is starting!' : "You're registered!" }}
+  <div v-if="submitted" class="py-8 text-center">
+    <div class="text-2xl font-semibold text-primary">
+      {{ downloadUrl ? 'Thanks!' : "You're registered!" }}
     </div>
-    <p class="mt-1 text-sm text-gray-500">
-      {{ downloadUrl ? 'A copy has also been sent to your email.' : 'Check your email for details.' }}
+    <p class="mt-3 text-base text-gray-600">
+      {{ downloadUrl ? 'Your white paper has downloaded &amp; a copy has been sent to your email.' : 'Check your email for details.' }}
     </p>
+    <p class="mt-4 text-sm text-gray-400">— the ButFor team</p>
   </div>
 
   <form v-else @submit.prevent="handleSubmit" class="flex flex-col gap-y-3" novalidate>

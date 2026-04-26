@@ -59,7 +59,6 @@
               buttonText="Download Whitepaper"
               downloadUrl="https://butfor.co/strapi/uploads/White_Papers_How_to_File_a_Business_Interruption_Claim_red_be0d4db01e.pdf"
               sendDocumentUrl="https://butfor.co/strapi/api/white-paper/send-document"
-              redirectTo="/thankyou?type=whitepaper"
             />
           </div>
         </div>
