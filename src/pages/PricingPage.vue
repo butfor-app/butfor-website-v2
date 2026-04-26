@@ -364,7 +364,7 @@ import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import ButForForm from "@/components/ButForForm.vue";
 import { useHead } from "@vueuse/head";
-useHead({ title: "ButFor - Pricing" });
+useHead({ title: "ButFor - Pricing", meta: [{ name: "description", content: "Simple, transparent pricing for ButFor's business interruption claim management platform. Find the plan that fits your firm's needs." }] });
 
 const generalData = useGeneralData();
 

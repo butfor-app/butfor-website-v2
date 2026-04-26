@@ -26,7 +26,7 @@ import Spinner from "@/components/General/Spinner.vue";
 import ArticleCard from "@/components/Articles/ArticleCard.vue";
 import useStrapi from "@/composables/useStrapi";
 import { useHead } from "@vueuse/head";
-useHead({ title: "ButFor - Articles" });
+useHead({ title: "ButFor - Articles", meta: [{ name: "description", content: "Expert insights on business interruption insurance claims. Browse our library of articles to help you navigate complex claims with confidence." }] });
 
 const { getArticles } = useStrapi();
 

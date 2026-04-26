@@ -107,7 +107,7 @@ import { useGeneralData } from "@/stores/useGeneralData";
 import ButForForm from "@/components/ButForForm.vue";
 import HeroSection from "@/components/HeroSection.vue";
 import { useHead } from "@vueuse/head";
-useHead({ title: "ButFor - ButFor vs Internal Teams" });
+useHead({ title: "ButFor - ButFor vs Internal Teams", meta: [{ name: "description", content: "Compare ButFor to managing business interruption claims with internal teams. Discover how ButFor saves time, reduces errors, and improves claim outcomes." }] });
 
 const generalData = useGeneralData();
 

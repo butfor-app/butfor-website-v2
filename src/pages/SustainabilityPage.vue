@@ -172,7 +172,7 @@ import { useGeneralData } from "@/stores/useGeneralData";
 import ButForForm from "@/components/ButForForm.vue";
 import HeroSection from "@/components/HeroSection.vue";
 import { useHead } from "@vueuse/head";
-useHead({ title: "ButFor - Sustainability" });
+useHead({ title: "ButFor - Sustainability", meta: [{ name: "description", content: "ButFor's commitment to sustainability. Learn about our environmental and social responsibility initiatives and how we're building a better future." }] });
 
 const generalData = useGeneralData();
 

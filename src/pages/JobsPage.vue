@@ -38,7 +38,7 @@ import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import ButForForm from "@/components/ButForForm.vue";
 import { useHead } from "@vueuse/head";
-useHead({ title: "ButFor - Careers" });
+useHead({ title: "ButFor - Careers", meta: [{ name: "description", content: "Join the ButFor team. We're building the future of business interruption insurance claim management. View open roles and apply today." }] });
 
 const generalData = useGeneralData();
 const formSubmitted = ref(false);

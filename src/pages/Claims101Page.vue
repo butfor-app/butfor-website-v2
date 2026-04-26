@@ -68,7 +68,7 @@ import Claims101Form from "@/components/Claims101Form.vue";
 import { useHead } from "@vueuse/head";
 import { ref } from "vue";
 
-useHead({ title: "ButFor - Claims 101" });
+useHead({ title: "ButFor - Claims 101", meta: [{ name: "description", content: "Learn the fundamentals of business interruption insurance claims. ButFor's Claims 101 guide walks you through everything you need to know to maximize your recovery." }] });
 import { useRoute } from "vue-router";
 import useStrapi from "@/composables/useStrapi.js";
 const { getClaims101 } = useStrapi();

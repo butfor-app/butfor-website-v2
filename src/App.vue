@@ -25,6 +25,25 @@ const navRef = ref(null);
 
 useHead({
   title,
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ButFor",
+        "url": "https://butfor.co",
+        "logo": "https://butfor.co/logo.png",
+        "sameAs": ["https://www.linkedin.com/company/butfor"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hello@butfor.co",
+          "contactType": "customer support"
+        },
+        "description": "ButFor automates complex business interruption insurance claim preparation, helping consultants and firms save time, reduce errors, and maximize recoveries."
+      })
+    }
+  ],
   meta: [
     { charset: "utf-8" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },

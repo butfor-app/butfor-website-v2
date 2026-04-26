@@ -167,7 +167,7 @@ import subscription_3 from "@/assets/images/subscription_3.png";
 import { useHead } from "@vueuse/head";
 import HeroSection from "@/components/HeroSection.vue";
 import GetStarted from "@/components/GetStarted.vue";
-useHead({ title: "ButFor - Subscription" });
+useHead({ title: "ButFor - Subscription", meta: [{ name: "description", content: "Manage your ButFor subscription. Upgrade, downgrade, or update your plan at any time." }] });
 import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import ButForForm from "@/components/ButForForm.vue";

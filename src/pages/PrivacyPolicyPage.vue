@@ -198,7 +198,7 @@
 </template>
 <script setup>
 import { useHead } from "@vueuse/head";
-useHead({ title: "ButFor - Privacy Policy" });
+useHead({ title: "ButFor - Privacy Policy", meta: [{ name: "description", content: "ButFor's privacy policy. Learn how we collect, use, and protect your personal information when you use our platform." }] });
 </script>
 <style lang="postcss" scoped>
 .row {

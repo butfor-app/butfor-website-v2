@@ -57,7 +57,7 @@ import { ref } from "vue";
 import { useHead } from "@vueuse/head";
 import Spinner from "@/components/General/Spinner.vue";
 import useStrapi from "@/composables/useStrapi";
-useHead({ title: "ButFor - Case Studies" });
+useHead({ title: "ButFor - Case Studies", meta: [{ name: "description", content: "See how businesses use ButFor to simplify and accelerate their business interruption insurance claims. Real results from real clients." }] });
 
 const { getCaseStudies } = useStrapi();
 

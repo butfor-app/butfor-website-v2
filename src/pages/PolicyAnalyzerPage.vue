@@ -316,7 +316,7 @@ import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import ButForForm from "@/components/ButForForm.vue";
 import { useHead } from "@vueuse/head";
-useHead({ title: "ButFor - Policy Analyzer" });
+useHead({ title: "ButFor - Policy Analyzer", meta: [{ name: "description", content: "Instantly analyze your business interruption insurance policy with ButFor's AI-powered policy analyzer. Understand your coverage and identify gaps." }] });
 
 const generalData = useGeneralData();
 const formSubmitted = ref(false);

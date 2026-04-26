@@ -8,7 +8,7 @@ useHead({
   title: "Butfor - Contact Us",
   meta: [
     {
-      name: "Contact Us",
+      name: "description",
       content:
         "Butfor is a tool that automates business interruption insurance claims. Calculate your losses & build comprehensive reports in a fraction of the time.",
     },

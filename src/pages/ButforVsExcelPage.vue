@@ -106,7 +106,7 @@ import { useGeneralData } from "@/stores/useGeneralData";
 import ButForForm from "@/components/ButForForm.vue";
 import HeroSection from "@/components/HeroSection.vue";
 import { useHead } from "@vueuse/head";
-useHead({ title: "ButFor - ButFor vs Excel" });
+useHead({ title: "ButFor - ButFor vs Excel", meta: [{ name: "description", content: "Why spreadsheets fall short for business interruption claims. See how ButFor eliminates manual errors and automates the entire claim preparation process." }] });
 
 const generalData = useGeneralData();
 

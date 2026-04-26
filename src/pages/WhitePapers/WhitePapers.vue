@@ -36,7 +36,7 @@ import { ref } from "vue";
 import { useHead } from "@vueuse/head";
 import useStrapi from "@/composables/useStrapi.js";
 
-useHead({ title: "ButFor - White Papers" });
+useHead({ title: "ButFor - White Papers", meta: [{ name: "description", content: "Download free white papers on business interruption insurance claims. Expert guides to help you navigate complex claims and maximize your recovery." }] });
 
 const { getWhitePapers, getImageUrl } = useStrapi();
 

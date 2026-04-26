@@ -95,7 +95,7 @@ import { useGeneralData } from "@/stores/useGeneralData";
 import ButForForm from "@/components/ButForForm.vue";
 import HeroSection from "@/components/HeroSection.vue";
 import { useHead } from "@vueuse/head";
-useHead({ title: "ButFor - ButFor vs Consultants" });
+useHead({ title: "ButFor - ButFor vs Consultants", meta: [{ name: "description", content: "See how ButFor compares to hiring outside consultants for business interruption claims. Save time, reduce costs, and maximize your recovery with automated claim preparation." }] });
 
 const generalData = useGeneralData();
 

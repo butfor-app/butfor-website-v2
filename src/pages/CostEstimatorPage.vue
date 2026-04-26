@@ -292,7 +292,7 @@ import SolutionsSlider from "@/components/SolutionsSlider.vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import ButForForm from "@/components/ButForForm.vue";
 import { useHead } from "@vueuse/head";
-useHead({ title: "ButFor - Cost Estimator" });
+useHead({ title: "ButFor - Cost Estimator", meta: [{ name: "description", content: "Estimate your potential business interruption claim value with ButFor's free cost estimator. See how much you could recover in minutes." }] });
 
 const generalData = useGeneralData();
 const formSubmitted = ref(false);

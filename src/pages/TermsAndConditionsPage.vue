@@ -152,7 +152,7 @@
 </template>
 <script setup>
 import { useHead } from "@vueuse/head";
-useHead({ title: "ButFor - Terms & Conditions" });
+useHead({ title: "ButFor - Terms & Conditions", meta: [{ name: "description", content: "ButFor's terms and conditions of service. Please read these terms carefully before using the ButFor platform." }] });
 </script>
 <style lang="postcss" scoped>
 .row {
