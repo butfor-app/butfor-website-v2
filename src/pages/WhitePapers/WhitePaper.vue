@@ -53,7 +53,11 @@
               "
               alt=""
             />
-            <ButForForm formId="b12ff694-4863-4630-9114-639a8ef86414" pageName="White Paper" />
+            <ContentRegistrationForm
+              v-if="whitePaper.attributes.hubspot_form_id"
+              :formId="whitePaper.attributes.hubspot_form_id"
+              :pageName="'White Paper - ' + whitePaper.attributes.title"
+            />
           </div>
         </div>
       </div>
@@ -65,7 +69,7 @@
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import { useHead } from "@vueuse/head";
-import ButForForm from "@/components/ButForForm.vue";
+import ContentRegistrationForm from "@/components/ContentRegistrationForm.vue";
 import Spinner from "@/components/General/Spinner.vue";
 import useStrapi from "@/composables/useStrapi";
 

@@ -50,7 +50,11 @@
               :src="getImage()"
               alt=""
             />
-            <ButForForm formId="ee347165-05ed-4624-ac37-26f820e1545f" pageName="Webinar" />
+            <ContentRegistrationForm
+              v-if="webinar.attributes.hubspot_form_id"
+              :formId="webinar.attributes.hubspot_form_id"
+              :pageName="'Webinar - ' + webinar.attributes.title"
+            />
           </div>
         </div>
       </div>
@@ -59,7 +63,7 @@
 </template>
 
 <script setup>
-import ButForForm from "@/components/ButForForm.vue";
+import ContentRegistrationForm from "@/components/ContentRegistrationForm.vue";
 import Spinner from "@/components/General/Spinner.vue";
 
 import { ref } from "vue";

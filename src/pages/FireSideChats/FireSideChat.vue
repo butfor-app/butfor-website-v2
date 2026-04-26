@@ -52,7 +52,11 @@
               :src="getImage()"
               alt=""
             />
-            <ButForForm formId="dd8e6691-83d9-45ea-882c-fb209dc92d7b" pageName="Fireside Chat" />
+            <ContentRegistrationForm
+              v-if="fireSideChat.attributes.hubspot_form_id"
+              :formId="fireSideChat.attributes.hubspot_form_id"
+              :pageName="'Fireside Chat - ' + fireSideChat.attributes.title"
+            />
           </div>
         </div>
       </div>
@@ -61,7 +65,7 @@
 </template>
 
 <script setup>
-import ButForForm from "@/components/ButForForm.vue";
+import ContentRegistrationForm from "@/components/ContentRegistrationForm.vue";
 import Spinner from "@/components/General/Spinner.vue";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
