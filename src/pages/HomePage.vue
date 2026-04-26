@@ -19,7 +19,7 @@
         <iframe
           class="w-full rounded-lg"
           style="aspect-ratio:16/9"
-          :src="`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&mute=1`"
+          :src="`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&mute=1&modestbranding=1&rel=0`"
           allow="autoplay; encrypted-media"
           allowfullscreen
         />
