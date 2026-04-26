@@ -12,72 +12,72 @@
         <div class="flex justify-center">
           <div class="bg_logos">
             <div>
-              <img src="/integration_logos/clear-books.png" alt="" />
+              <img src="/integration_logos/clear-books.png" alt="Clear Books accounting software integration" />
             </div>
           </div>
         </div>
         <div class="flex justify-evenly">
           <div class="bg_logos">
             <div>
-              <img src="/integration_logos/dynamics-365.png" alt="" />
+              <img src="/integration_logos/dynamics-365.png" alt="Microsoft Dynamics 365 integration" />
             </div>
           </div>
           <div class="bg_logos">
             <div>
-              <img src="/integration_logos/freeagent.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-between px-10">
-          <div class="bg_logos">
-            <div>
-              <img src="/integration_logos/freshbooks.svg" alt="" />
-            </div>
-          </div>
-          <div class="bg_logos">
-            <div>
-              <img src="/integration_logos/intacct.png" alt="" />
+              <img src="/integration_logos/freeagent.png" alt="FreeAgent accounting software integration" />
             </div>
           </div>
         </div>
         <div class="flex justify-between px-10">
           <div class="bg_logos">
             <div>
-              <img src="/integration_logos/moneybird.webp" alt="" />
+              <img src="/integration_logos/freshbooks.svg" alt="FreshBooks accounting software integration" />
             </div>
           </div>
           <div class="bg_logos">
             <div>
-              <img src="/integration_logos/oracle-erp.svg" alt="" />
+              <img src="/integration_logos/intacct.png" alt="Sage Intacct ERP integration" />
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between px-10">
+          <div class="bg_logos">
+            <div>
+              <img src="/integration_logos/moneybird.webp" alt="Moneybird accounting software integration" />
+            </div>
+          </div>
+          <div class="bg_logos">
+            <div>
+              <img src="/integration_logos/oracle-erp.svg" alt="Oracle ERP Cloud integration" />
             </div>
           </div>
         </div>
         <div class="flex justify-evenly">
           <div class="bg_logos">
             <div>
-              <img src="/integration_logos/oracle-netsuite.png" alt="" />
+              <img src="/integration_logos/oracle-netsuite.png" alt="Oracle NetSuite ERP integration" />
             </div>
           </div>
           <div class="bg_logos">
             <div>
-              <img src="/integration_logos/quickbooks.svg" alt="" />
+              <img src="/integration_logos/quickbooks.svg" alt="QuickBooks accounting software integration" />
             </div>
           </div>
         </div>
         <div class="flex justify-around">
           <div class="bg_logos">
             <div>
-              <img src="/integration_logos/sap.png" alt="" />
+              <img src="/integration_logos/sap.png" alt="SAP ERP integration" />
             </div>
           </div>
           <div class="bg_logos">
             <div>
-              <img src="/integration_logos/xero.svg" alt="" />
+              <img src="/integration_logos/xero.svg" alt="Xero accounting software integration" />
             </div>
           </div>
           <div class="bg_logos">
             <div>
-              <img src="/integration_logos/zoho.webp" alt="" />
+              <img src="/integration_logos/zoho.webp" alt="Zoho Books accounting software integration" />
             </div>
           </div>
         </div>

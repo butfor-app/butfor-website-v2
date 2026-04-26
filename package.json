@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build",
+    "build": "node --experimental-vm-modules scripts/generate-sitemap.js && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
