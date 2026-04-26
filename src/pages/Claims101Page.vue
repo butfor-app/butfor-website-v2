@@ -65,7 +65,10 @@
 
 <script setup>
 import Claims101Form from "@/components/Claims101Form.vue";
+import { useHead } from "@vueuse/head";
 import { ref } from "vue";
+
+useHead({ title: "ButFor - Claims 101" });
 import { useRoute } from "vue-router";
 import useStrapi from "@/composables/useStrapi.js";
 const { getClaims101 } = useStrapi();
