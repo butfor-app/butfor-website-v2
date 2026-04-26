@@ -44,7 +44,7 @@
             class="flex flex-col gap-y-4 rounded-lg bg-white px-4 py-8 lg:w-[40%]"
           >
             <div class="text-center text-3xl font-semibold text-black">
-              Register Now!
+              Fill Out to Receive the White Paper
             </div>
             <img
               class="mx-auto h-72 w-full rounded-lg object-contain"
@@ -56,6 +56,10 @@
             <ContentRegistrationForm
               :formId="whitePaper.attributes.hubspot_form_id || '32e9d6a5-21fe-49b1-af99-0b06119c032d'"
               :pageName="'White Paper - ' + whitePaper.attributes.title"
+              buttonText="Download Whitepaper"
+              downloadUrl="https://butfor.co/strapi/uploads/White_Papers_How_to_File_a_Business_Interruption_Claim_red_be0d4db01e.pdf"
+              sendDocumentUrl="https://butfor.co/strapi/api/white-paper/send-document"
+              redirectTo="/thankyou?type=whitepaper"
             />
           </div>
         </div>

@@ -1,7 +1,11 @@
 <template>
   <div v-if="submitted" class="py-4 text-center">
-    <div class="text-lg font-semibold text-primary">You're registered!</div>
-    <p class="mt-1 text-sm text-gray-500">Check your email for details.</p>
+    <div class="text-lg font-semibold text-primary">
+      {{ downloadUrl ? 'Your download is starting!' : "You're registered!" }}
+    </div>
+    <p class="mt-1 text-sm text-gray-500">
+      {{ downloadUrl ? 'A copy has also been sent to your email.' : 'Check your email for details.' }}
+    </p>
   </div>
 
   <form v-else @submit.prevent="handleSubmit" class="flex flex-col gap-y-3" novalidate>
@@ -84,20 +88,27 @@
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
         </svg>
-        Registering...
+        {{ downloadUrl ? 'Submitting...' : 'Registering...' }}
       </span>
-      <span v-else>Register Now</span>
+      <span v-else>{{ buttonText }}</span>
     </button>
   </form>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 const props = defineProps({
-  formId:   { type: String, required: true },
-  pageName: { type: String, required: true },
+  formId:      { type: String, required: true },
+  pageName:    { type: String, required: true },
+  buttonText:      { type: String, default: 'Register Now' },
+  downloadUrl:     { type: String, default: '' },
+  sendDocumentUrl: { type: String, default: '' },
+  redirectTo:      { type: String, default: '' },
 });
+
+const router = useRouter();
 
 const PORTAL_ID = '245822077';
 
@@ -178,6 +189,28 @@ async function handleSubmit() {
       throw new Error(body?.message || `Request failed (${res.status})`);
     }
     submitted.value = true;
+    if (props.downloadUrl) {
+      const a = document.createElement('a');
+      a.href = props.downloadUrl;
+      a.download = '';
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+    if (props.sendDocumentUrl) {
+      fetch(props.sendDocumentUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: form.value.email.trim(),
+          firstname: form.value.firstname.trim(),
+        }),
+      }).catch(() => {});
+    }
+    if (props.redirectTo) {
+      router.push(props.redirectTo);
+    }
   } catch {
     submitError.value = 'Something went wrong — please try again or email us at hello@butfor.co.';
   } finally {
