@@ -14,7 +14,7 @@
       </div>
       in one place
     </div>
-    <div id="video" class="px-4 py-8">
+    <div id="video" class="w-full px-4 py-8">
       <div class="mx-auto w-full max-w-4xl">
         <iframe
           class="w-full rounded-lg"
