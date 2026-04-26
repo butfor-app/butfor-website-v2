@@ -10,7 +10,7 @@
               >
                 Fireside Chat
               </button>
-              <p class="hidden lg:inline">
+              <p class="hidden sm:inline text-sm lg:text-base">
                 Cyber Incidents &amp; Business Interruption - May 20th, 3pm EST
               </p>
             </RouterLink>
