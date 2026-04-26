@@ -53,8 +53,7 @@
               alt=""
             />
             <ContentRegistrationForm
-              v-if="fireSideChat.attributes.hubspot_form_id"
-              :formId="fireSideChat.attributes.hubspot_form_id"
+              :formId="fireSideChat.attributes.hubspot_form_id || '32e9d6a5-21fe-49b1-af99-0b06119c032d'"
               :pageName="'Fireside Chat - ' + fireSideChat.attributes.title"
             />
           </div>

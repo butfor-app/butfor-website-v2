@@ -54,8 +54,7 @@
               alt=""
             />
             <ContentRegistrationForm
-              v-if="whitePaper.attributes.hubspot_form_id"
-              :formId="whitePaper.attributes.hubspot_form_id"
+              :formId="whitePaper.attributes.hubspot_form_id || '32e9d6a5-21fe-49b1-af99-0b06119c032d'"
               :pageName="'White Paper - ' + whitePaper.attributes.title"
             />
           </div>
