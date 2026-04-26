@@ -49,9 +49,6 @@
       Want to know when we host our next webinar with a risk, claims & insurtech
       leader?
     </div>
-    <div class="w-full max-w-lg px-2">
-      <ButForForm formId="dd8e6691-83d9-45ea-882c-fb209dc92d7b" pageName="Fireside Chats" :bare="true" />
-    </div>
   </div>
   <div id="view_demo">
     <div id="heading">Want to see ButFor in action?</div>
@@ -70,7 +67,7 @@
       </button>
     </div>
   </div>
-  <ContactForm />
+  <ButForForm formId="dd8e6691-83d9-45ea-882c-fb209dc92d7b" pageName="Fireside Chats" />
 </template>
 <script setup>
 import { useHead } from "@vueuse/head";
@@ -78,7 +75,6 @@ import { computed, ref } from "vue";
 import { useGeneralData } from "@/stores/useGeneralData";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import FireSideCard from "@/components/FireSideCard.vue";
-import ContactForm from "@/components/ContactForm.vue";
 import ButForForm from "@/components/ButForForm.vue";
 import useStrapi from "@/composables/useStrapi";
 
