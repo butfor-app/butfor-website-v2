@@ -20,13 +20,49 @@ const GAS_URL = 'https://script.google.com/macros/s/AKfycbyHPmov8N810uIA690j8CSQ
 
 let _visitorIpData = null;
 
+function getOrCreateVisitorId() {
+  const name = 'bf_vid';
+  const match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+  if (match) return decodeURIComponent(match[1]);
+  const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+    const r = Math.random() * 16 | 0;
+    return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+  });
+  const exp = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toUTCString();
+  document.cookie = `${name}=${encodeURIComponent(uuid)}; expires=${exp}; path=/; SameSite=Lax`;
+  return uuid;
+}
+
+function getUtmParams() {
+  const stored = sessionStorage.getItem('bf_utm');
+  if (stored) return JSON.parse(stored);
+  const p = new URLSearchParams(window.location.search);
+  const utm = {
+    source: p.get('utm_source') || '',
+    medium: p.get('utm_medium') || '',
+    campaign: p.get('utm_campaign') || '',
+  };
+  sessionStorage.setItem('bf_utm', JSON.stringify(utm));
+  return utm;
+}
+
+function getReferrer() {
+  const stored = sessionStorage.getItem('bf_referrer');
+  if (stored !== null) return stored;
+  const ref = document.referrer || '';
+  sessionStorage.setItem('bf_referrer', ref);
+  return ref;
+}
+
 function sendVisit(pageUrl) {
   if (!GAS_URL.startsWith('http')) return;
+  const utm = getUtmParams();
   fetch(GAS_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'text/plain' },
     body: JSON.stringify({
       timestamp: new Date().toISOString(),
+      visitor_id: getOrCreateVisitorId(),
       ip: _visitorIpData?.ip ?? '',
       city: _visitorIpData?.city ?? '',
       region: _visitorIpData?.region ?? '',
@@ -34,6 +70,10 @@ function sendVisit(pageUrl) {
       org: _visitorIpData?.org ?? '',
       lat: _visitorIpData?.latitude ?? '',
       lon: _visitorIpData?.longitude ?? '',
+      referrer: getReferrer(),
+      utm_source: utm.source,
+      utm_medium: utm.medium,
+      utm_campaign: utm.campaign,
       url: pageUrl,
     }),
   }).catch(() => {});
