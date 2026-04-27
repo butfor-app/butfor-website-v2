@@ -26,11 +26,14 @@ const props = defineProps({
   },
 });
 onMounted(() => {
+  const vidMatch = document.cookie.match(/(?:^|; )bf_vid=([^;]*)/);
+  const visitorId = vidMatch ? decodeURIComponent(vidMatch[1]) : '';
   hbspt.forms.create({
     region: "na2",
     portalId: "245822077",
     formId: props.formId,
     target: "#hubspotForm",
+    hiddenFieldValues: { visitor_id: visitorId },
   });
 });
 </script>

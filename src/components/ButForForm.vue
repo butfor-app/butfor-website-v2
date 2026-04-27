@@ -209,6 +209,11 @@ const props = defineProps({
   },
 });
 
+function getVisitorId() {
+  const match = document.cookie.match(/(?:^|; )bf_vid=([^;]*)/);
+  return match ? decodeURIComponent(match[1]) : '';
+}
+
 const FREE_DOMAINS = new Set([
   'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com',
   'aol.com', 'icloud.com', 'me.com', 'mac.com',
@@ -294,6 +299,7 @@ async function handleSubmit() {
       { objectTypeId: '0-1', name: 'email',     value: form.value.email.trim() },
       { objectTypeId: '0-1', name: 'company',   value: form.value.company.trim() },
       { objectTypeId: '0-1', name: 'jobtitle',  value: form.value.jobtitle.trim() },
+      { objectTypeId: '0-1', name: 'visitor_id', value: getVisitorId() },
     ];
     if (form.value.phone.trim()) {
       fields.push({ objectTypeId: '0-1', name: 'phone', value: form.value.phone.trim() });
