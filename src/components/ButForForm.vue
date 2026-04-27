@@ -214,6 +214,23 @@ function getVisitorId() {
   return match ? decodeURIComponent(match[1]) : '';
 }
 
+function notifySlack(data) {
+  const hook = import.meta.env.VITE_SLACK_FORMS_WEBHOOK;
+  fetch(hook, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      text: '*New form submission*'
+        + '\n*Name:* ' + data.firstname + ' ' + data.lastname
+        + '\n*Email:* ' + data.email
+        + '\n*Company:* ' + data.company
+        + '\n*Title:* ' + data.jobtitle
+        + '\n*Page:* ' + window.location.href
+        + '\n*Form:* ' + data.formName,
+    }),
+  }).catch(() => {});
+}
+
 const FREE_DOMAINS = new Set([
   'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com',
   'aol.com', 'icloud.com', 'me.com', 'mac.com',
@@ -329,6 +346,7 @@ async function handleSubmit() {
     }
 
     submitted.value = true;
+    notifySlack({ ...form.value, formName: 'Contact / Demo' });
   } catch (err) {
     submitError.value =
       'Something went wrong — please try again or email us directly at hello@butfor.co.';
