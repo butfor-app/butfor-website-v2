@@ -30,14 +30,6 @@ const STATIC_ROUTES = [
   "/terms-and-conditions",
 ];
 
-const DYNAMIC_ROUTES = [
-  ...[1,2,3,4,5,6,7,8,9,10,11].map(id => `/article/${id}`),
-  ...[1,2,3].map(id => `/case-studies/${id}`),
-  "/webinars/5",
-  "/fireside-chat/1",
-  "/white-papers/1",
-];
-
 export default defineConfig({
   plugins: [
     vue(),
@@ -53,7 +45,7 @@ export default defineConfig({
     compression({ algorithm: "gzip" }),
     ...(process.env.VERCEL ? [] : [VitePrerender({
       staticDir: path.join(path.dirname(fileURLToPath(import.meta.url)), "dist"),
-      routes: [...STATIC_ROUTES, ...DYNAMIC_ROUTES],
+      routes: STATIC_ROUTES,
       renderer: new VitePrerender.PuppeteerRenderer({
         renderAfterTime: 3000,
         headless: true,
