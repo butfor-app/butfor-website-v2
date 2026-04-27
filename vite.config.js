@@ -51,7 +51,7 @@ export default defineConfig({
     }),
     compression({ algorithm: "brotliCompress" }),
     compression({ algorithm: "gzip" }),
-    VitePrerender({
+    ...(process.env.VERCEL ? [] : [VitePrerender({
       staticDir: path.join(path.dirname(fileURLToPath(import.meta.url)), "dist"),
       routes: [...STATIC_ROUTES, ...DYNAMIC_ROUTES],
       renderer: new VitePrerender.PuppeteerRenderer({
@@ -59,7 +59,7 @@ export default defineConfig({
         headless: true,
         args: ["--no-sandbox", "--disable-setuid-sandbox"],
       }),
-    }),
+    })]),
   ],
   resolve: {
     alias: {
