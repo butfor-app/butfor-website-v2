@@ -13,8 +13,31 @@
 import NavBar from "./components/NavBar.vue";
 import Footer from "./components/Footer.vue";
 import { RouterLink, RouterView, useRoute } from "vue-router";
-import { watch, ref } from "vue";
+import { watch, ref, onMounted } from "vue";
 import { useHead } from "@vueuse/head";
+
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyHPmov8N810uIA690j8CSQ4RgeBjuGACR0VFqgu1Jq2j5OnTC5IpuNX4iOiLsjhEOL/exec';
+
+let _visitorIpData = null;
+
+function sendVisit(pageUrl) {
+  if (!GAS_URL.startsWith('http')) return;
+  fetch(GAS_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify({
+      timestamp: new Date().toISOString(),
+      ip: _visitorIpData?.ip ?? '',
+      city: _visitorIpData?.city ?? '',
+      region: _visitorIpData?.region ?? '',
+      country: _visitorIpData?.country_name ?? '',
+      org: _visitorIpData?.org ?? '',
+      lat: _visitorIpData?.latitude ?? '',
+      lon: _visitorIpData?.longitude ?? '',
+      url: pageUrl,
+    }),
+  }).catch(() => {});
+}
 
 const title =
   "ButFor: Automate Business Interruption Claims and Maximize Lost Income"; // Replace with your desired title
@@ -90,6 +113,16 @@ useHead({
   ],
 });
 
+onMounted(async () => {
+  try {
+    const res = await fetch('https://ipapi.co/json/');
+    _visitorIpData = await res.json();
+  } catch {
+    _visitorIpData = {};
+  }
+  sendVisit(window.location.href);
+});
+
 watch(
   () => route.query,
   (query) => {
@@ -118,6 +151,9 @@ watch(
         },
       ],
     });
+    if (_visitorIpData !== null) {
+      sendVisit(window.location.href);
+    }
   },
 );
 </script>
