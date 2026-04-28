@@ -257,7 +257,7 @@
             industry-specific expertise for complex loss scenarios.
           </li>
         </ul>
-        <a href="https://hubs.ly/Q02QJyN00" target="_blank"
+        <a href="https://na2.hubs.ly/H059Dc50" target="_blank"
           ><button
             class="mx-auto mt-6 block !w-fit rounded-xl bg-[#124559] px-6 py-2 text-white"
           >
