@@ -153,6 +153,8 @@ useHead({
   ],
 });
 
+const COOKIE_EXEMPT = new Set(['US', 'CA']);
+
 onMounted(async () => {
   try {
     const res = await fetch('https://ipapi.co/json/');
@@ -161,6 +163,42 @@ onMounted(async () => {
     _visitorIpData = {};
   }
   sendVisit(window.location.href);
+
+  const cc = _visitorIpData?.country ?? '';
+  if (cc && !COOKIE_EXEMPT.has(cc)) {
+    window.CookieConsent?.run({
+      categories: {
+        necessary: { enabled: true, readOnly: true },
+        analytics: {},
+      },
+      language: {
+        default: 'en',
+        translations: {
+          en: {
+            consentModal: {
+              title: 'We use cookies',
+              description: 'This site uses cookies for analytics and marketing to improve your experience.',
+              acceptAllBtn: 'Accept',
+              rejectAllBtn: 'Decline',
+            },
+            preferencesModal: {
+              title: 'Cookie preferences',
+              acceptAllBtn: 'Accept all',
+              rejectAllBtn: 'Reject all',
+              savePreferencesBtn: 'Save',
+              sections: [
+                {
+                  title: 'Analytics & Marketing',
+                  description: 'These cookies help us understand site usage and enable marketing features.',
+                  linkedCategory: 'analytics',
+                },
+              ],
+            },
+          },
+        },
+      },
+    });
+  }
 });
 
 watch(
